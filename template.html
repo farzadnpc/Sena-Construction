@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -141,9 +141,24 @@
             <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
                 <a href="/" class="hover:text-sena-red transition-colors">Home</a>
                 <a href="/#about" class="hover:text-sena-red transition-colors">About</a>
-                <a href="/#services" class="hover:text-sena-red transition-colors">Services</a>
+                <a href="/#process" class="hover:text-sena-red transition-colors">Our Process</a>
+                
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <a href="/#services" class="hover:text-sena-red transition-colors flex items-center gap-1 py-2">Services <i class="fa-solid fa-chevron-down text-[10px]"></i></a>
+                    <div class="absolute left-0 mt-0 w-64 bg-white text-sena-dark shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border-t-2 border-sena-red rounded-b-sm z-50">
+                        <a href="/#services" class="block px-5 py-3 hover:bg-gray-100 border-b border-gray-100 transition-colors">Luxury Homes</a>
+                        <a href="/#services" class="block px-5 py-3 hover:bg-gray-100 border-b border-gray-100 transition-colors">Granny Flats</a>
+                        <a href="/#services" class="block px-5 py-3 hover:bg-gray-100 border-b border-gray-100 transition-colors">Duplexes</a>
+                        <a href="/#services" class="block px-5 py-3 hover:bg-gray-100 border-b border-gray-100 transition-colors">Knockdown Rebuilds</a>
+                        <a href="/#services" class="block px-5 py-3 hover:bg-gray-100 border-b border-gray-100 transition-colors">Renovations & Extensions</a>
+                        <a href="/#services" class="block px-5 py-3 hover:bg-gray-100 transition-colors">Building Maintenance</a>
+                    </div>
+                </div>
+
                 <a href="/#projects" class="hover:text-sena-red transition-colors">Projects</a>
-                <a href="#contact" class="bg-sena-red text-white px-6 py-2.5 rounded-sm hover:bg-red-700 transition shadow-lg shadow-sena-red/20">Get a Quote</a>
+                <a href="/#blogs" class="hover:text-sena-red transition-colors">Blogs</a>
+                <a href="#contact" class="bg-sena-red text-white px-6 py-2.5 rounded-sm hover:bg-red-700 transition shadow-lg shadow-sena-red/20">Contact</a>
             </nav>
 
             <!-- Mobile Hamburger -->
@@ -153,11 +168,31 @@
         </div>
 
         <!-- Mobile Menu Dropdown -->
-        <div id="mobile-menu" class="hidden flex-col items-center gap-4 bg-sena-dark w-full absolute top-full left-0 py-6 border-t border-gray-800 shadow-2xl">
-            <a href="/" class="text-lg hover:text-sena-red transition-colors w-full text-center py-2">Home</a>
-            <a href="/#about" class="text-lg hover:text-sena-red transition-colors w-full text-center py-2">About</a>
-            <a href="/#services" class="text-lg hover:text-sena-red transition-colors w-full text-center py-2">Services</a>
-            <a href="#contact" class="text-lg bg-sena-red text-white w-[80%] text-center py-3 rounded-sm mt-2">Get a Quote</a>
+        <div id="mobile-menu" class="hidden flex-col items-start gap-0 bg-sena-dark w-full absolute top-full left-0 py-4 border-t border-gray-800 shadow-2xl overflow-y-auto max-h-[80vh]">
+            <a href="/" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Home</a>
+            <a href="/#about" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">About</a>
+            <a href="/#process" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Our Process</a>
+            
+            <!-- Mobile Services Accordion -->
+            <div class="w-full">
+                <button id="mobile-services-btn" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800 flex justify-between items-center">
+                    Services <i class="fa-solid fa-chevron-down text-sm transition-transform duration-300" id="mobile-services-icon"></i>
+                </button>
+                <div id="mobile-services-menu" class="hidden bg-black w-full flex-col">
+                    <a href="/#services" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Luxury Homes</a>
+                    <a href="/#services" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Granny Flats</a>
+                    <a href="/#services" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Duplexes</a>
+                    <a href="/#services" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Knockdown Rebuilds</a>
+                    <a href="/#services" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Renovations & Extensions</a>
+                    <a href="/#services" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Building Maintenance</a>
+                </div>
+            </div>
+
+            <a href="/#projects" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Projects</a>
+            <a href="/#blogs" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Blogs</a>
+            <div class="px-6 py-4 w-full">
+                <a href="#contact" class="block w-full bg-sena-red text-white text-center py-3 rounded-sm font-bold shadow-lg">Contact Us</a>
+            </div>
         </div>
     </header>
 
@@ -192,7 +227,65 @@
         </section>
 
         <!-- ========================================== -->
-        <!-- QUOTE FORM & CONTACT SECTION (MOVED UP)    -->
+        <!-- LOCAL SEO INTRODUCTION & COUNCIL INFO      -->
+        <!-- ========================================== -->
+        <section class="py-24 bg-gray-50 relative">
+            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
+                
+                <!-- Main Content -->
+                <div class="lg:col-span-7">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4 text-sena-dark">Building Excellence in {{suburb_name}}</h2>
+                    <div class="w-20 h-1.5 bg-sena-red mb-10"></div>
+                    
+                    <div class="prose prose-lg max-w-none text-gray-600">
+                        <p class="text-2xl font-medium text-black leading-snug mb-8">{{unique_intro}}</p>
+                        
+                        <p class="mb-6">Finding the right construction partner in <strong>{{suburb_name}}</strong> is the most critical step in realizing your dream home. At Sena Constructions, we have extensive experience working deeply within the <strong>{{region}}</strong> area. We do not just build houses; we deliver high-end bespoke homes, highly functional duplexes, and seamless knockdown rebuilds tailored directly to your lifestyle and the local aesthetic.</p>
+                        
+                        <p class="mb-6">Our dedicated project managers understand the specific landscape, soil types, and residential nuances of postcode <strong>{{postcode}}</strong>. From sourcing premium, locally-approved materials to managing site logistics in quiet residential streets, our dedicated team ensures your project is completed on time, strictly within budget, and to the absolute highest standard of the Building Code of Australia (BCA).</p>
+                    </div>
+                </div>
+                
+                <!-- Council Compliance Sidebar -->
+                <div class="lg:col-span-5">
+                    <div class="bg-white border border-gray-200 p-10 rounded-sm relative overflow-hidden group hover:shadow-xl transition-shadow duration-300">
+                        <!-- Decorative element -->
+                        <div class="absolute top-0 right-0 w-32 h-32 bg-sena-red/10 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
+                        
+                        <div class="w-16 h-16 bg-sena-dark text-white flex items-center justify-center rounded-sm text-3xl mb-8 shadow-md">
+                            <i class="fa-solid fa-file-signature text-sena-red"></i>
+                        </div>
+                        <h3 class="text-3xl font-bold mb-4 text-sena-dark">{{council}} Approvals</h3>
+                        <p class="text-gray-600 mb-8 leading-relaxed">
+                            Building a new home or undertaking a major renovation involves strict compliance with local council regulations. Our architectural and planning teams have an in-depth understanding of the specific zoning laws required by the <strong>{{council}}</strong>.
+                        </p>
+                        <ul class="space-y-4 text-gray-800 font-medium mb-8">
+                            <li class="flex items-start gap-4">
+                                <i class="fa-solid fa-circle-check text-sena-red mt-1"></i> 
+                                <span>Complete DA & CDC Preparation and Council Submission</span>
+                            </li>
+                            <li class="flex items-start gap-4">
+                                <i class="fa-solid fa-circle-check text-sena-red mt-1"></i> 
+                                <span>Strict adherence to {{region}} zoning and heritage codes</span>
+                            </li>
+                        </ul>
+                        
+                        <!-- Local Building Tip Box -->
+                        <div class="bg-gray-50 p-5 border-l-4 border-sena-red shadow-sm rounded-sm">
+                            <div class="flex items-center gap-2 mb-2">
+                                <i class="fa-solid fa-lightbulb text-sena-red"></i>
+                                <h4 class="font-bold text-sena-dark text-sm uppercase tracking-wider">Local Building Tip</h4>
+                            </div>
+                            <p class="text-gray-700 text-sm font-medium leading-relaxed">
+                                {{local_building_tip}}
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+                <!-- ========================================== -->
+        <!-- QUOTE FORM & CONTACT SECTION               -->
         <!-- ========================================== -->
         <section id="contact" class="py-24 bg-sena-dark text-white relative overflow-hidden">
             <div class="absolute top-0 right-0 w-1/3 h-full bg-sena-red/5 -skew-x-12 translate-x-20 pointer-events-none"></div>
@@ -200,26 +293,30 @@
             <div class="max-w-7xl mx-auto px-6 relative z-10 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 
                 <!-- Contact Info Side -->
-                <div>
-                    <h2 class="text-4xl md:text-6xl font-extrabold mb-6 tracking-tight">Ready to Build in {{suburb_name}}?</h2>
-                    <div class="w-20 h-1.5 bg-sena-red mb-8"></div>
-                    <p class="text-xl text-gray-400 mb-10 leading-relaxed">
-                        Fill out the form to request a free quote and site inspection. Our team will review your project details and get back to you within 24 hours.
-                    </p>
-                    <ul class="space-y-6 text-lg font-medium text-gray-300">
-                        <li class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-white text-sena-dark rounded-full flex items-center justify-center text-xl"><i class="fa-solid fa-phone"></i></div>
-                            (02) 9885 0797
-                        </li>
-                        <li class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-white text-sena-dark rounded-full flex items-center justify-center text-xl"><i class="fa-solid fa-envelope"></i></div>
-                            office@senaconstructions.com.au
-                        </li>
-                        <li class="flex items-center gap-4">
-                            <div class="w-12 h-12 bg-white text-sena-dark rounded-full flex items-center justify-center text-xl"><i class="fa-solid fa-location-dot"></i></div>
-                            Servicing {{suburb_name}} & {{region}}
-                        </li>
-                    </ul>
+<div>
+    <h2 class="text-4xl md:text-5xl font-extrabold mb-6 tracking-tight leading-tight">Let's Discuss Your Vision for {{suburb_name}}</h2>
+    <div class="w-20 h-1.5 bg-sena-red mb-8"></div>
+    <p class="text-xl text-gray-400 mb-10 leading-relaxed">
+        Whether you have architectural plans ready or you're just starting to explore what's possible on your block, our experts are here to guide you. Share a few details below to request a free site inspection and consultation.
+    </p>
+    <ul class="space-y-6 text-lg font-medium text-gray-300">
+        <li>
+            <a href="tel:0298850797" class="flex items-center gap-4 hover:text-white transition-colors group">
+                <div class="w-12 h-12 bg-white text-sena-dark group-hover:bg-sena-red group-hover:text-white transition-colors rounded-full flex items-center justify-center text-xl"><i class="fa-solid fa-phone"></i></div>
+                (02) 9885 0797
+            </a>
+        </li>
+        <li>
+            <a href="mailto:office@senaconstructions.com.au" class="flex items-center gap-4 hover:text-white transition-colors group">
+                <div class="w-12 h-12 bg-white text-sena-dark group-hover:bg-sena-red group-hover:text-white transition-colors rounded-full flex items-center justify-center text-xl"><i class="fa-solid fa-envelope"></i></div>
+                office@senaconstructions.com.au
+            </a>
+        </li>
+        <li class="flex items-center gap-4">
+            <div class="w-12 h-12 bg-white text-sena-dark rounded-full flex items-center justify-center text-xl"><i class="fa-solid fa-location-dot"></i></div>
+            Servicing {{suburb_name}} & {{region}}
+        </li>
+    </ul>
                 </div>
 
                 <!-- Form Side -->
@@ -265,6 +362,7 @@
                             <div>
                                 <label class="block text-sm font-bold text-gray-700 mb-1">Architectural Plans?</label>
                                 <select name="has_plans" class="w-full border border-gray-300 p-3 rounded-sm focus:outline-none focus:border-sena-red bg-gray-50">
+                                    <option value="" disabled selected>Select</option>
                                     <option value="No, need design help">No, need design help</option>
                                     <option value="In Progress">In Progress</option>
                                     <option value="Yes, ready to build">Yes, ready to build</option>
@@ -289,133 +387,68 @@
         </section>
 
         <!-- ========================================== -->
-        <!-- LOCAL SEO INTRODUCTION & COUNCIL INFO      -->
+        <!-- COMPREHENSIVE SERVICES                     -->
         <!-- ========================================== -->
-        <section class="py-24 bg-white relative">
-            <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-16 items-start">
-                
-                <!-- Main Content -->
-                <div class="lg:col-span-7">
-                    <h2 class="text-3xl md:text-5xl font-bold mb-4 text-sena-dark">Building Excellence in {{suburb_name}}</h2>
-                    <div class="w-20 h-1.5 bg-sena-red mb-10"></div>
-                    
-                    <div class="prose prose-lg max-w-none text-gray-600">
-                        <p class="text-2xl font-medium text-black leading-snug mb-8">{{unique_intro}}</p>
-                        
-                        <p class="mb-6">Finding the right construction partner in <strong>{{suburb_name}}</strong> is the most critical step in realizing your dream home. At Sena Constructions, we have extensive experience working deeply within the <strong>{{region}}</strong> area. We do not just build houses; we deliver high-end bespoke homes, highly functional duplexes, and seamless knockdown rebuilds tailored directly to your lifestyle and the local aesthetic.</p>
-                        
-                        <p class="mb-6">Our dedicated project managers understand the specific landscape, soil types, and residential nuances of postcode <strong>{{postcode}}</strong>. From sourcing premium, locally-approved materials to managing site logistics in quiet residential streets, our dedicated team ensures your project is completed on time, strictly within budget, and to the absolute highest standard of the Building Code of Australia (BCA).</p>
-                    </div>
-                </div>
-                
-                <!-- Council Compliance Sidebar -->
-                <div class="lg:col-span-5">
-                    <div class="bg-sena-light border border-sena-border p-10 rounded-sm relative overflow-hidden group hover:shadow-2xl transition-shadow duration-300">
-                        <!-- Decorative element -->
-                        <div class="absolute top-0 right-0 w-32 h-32 bg-sena-red/10 rounded-bl-full -z-10 group-hover:scale-110 transition-transform"></div>
-                        
-                        <div class="w-16 h-16 bg-sena-dark text-white flex items-center justify-center rounded-sm text-3xl mb-8 shadow-md">
-                            <i class="fa-solid fa-file-signature text-sena-red"></i>
-                        </div>
-                        <h3 class="text-3xl font-bold mb-4 text-sena-dark">{{council}} Approvals</h3>
-                        <p class="text-gray-600 mb-8 leading-relaxed">
-                            Building a new home or undertaking a major renovation involves strict compliance with local council regulations. Our architectural and planning teams have an in-depth understanding of the specific zoning laws required by the <strong>{{council}}</strong>.
-                        </p>
-                        <ul class="space-y-4 text-gray-800 font-medium mb-8">
-                            <li class="flex items-start gap-4">
-                                <i class="fa-solid fa-circle-check text-sena-red mt-1"></i> 
-                                <span>Complete DA & CDC Preparation and Council Submission</span>
-                            </li>
-                            <li class="flex items-start gap-4">
-                                <i class="fa-solid fa-circle-check text-sena-red mt-1"></i> 
-                                <span>Strict adherence to {{region}} zoning and heritage codes</span>
-                            </li>
-                        </ul>
-                        
-                        <!-- NEW: Local Building Tip Box -->
-                        <div class="bg-white p-5 border-l-4 border-sena-red shadow-sm rounded-sm">
-                            <div class="flex items-center gap-2 mb-2">
-                                <i class="fa-solid fa-lightbulb text-sena-red"></i>
-                                <h4 class="font-bold text-sena-dark text-sm uppercase tracking-wider">Local Building Tip</h4>
-                            </div>
-                            <p class="text-gray-700 text-sm font-medium leading-relaxed">
-                                {{local_building_tip}}
-                            </p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-        <!-- ========================================== -->
-        <!-- COMPREHENSIVE SERVICES (6 ITEMS FROM SOURCE)-->
-        <!-- ========================================== -->
-        <section class="py-24 bg-sena-dark text-white relative">
+        <section id="services" class="py-24 bg-white text-sena-dark relative">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-20">
                     <span class="text-sena-red font-bold tracking-widest text-sm uppercase block mb-3">Our Expertise</span>
                     <h2 class="text-3xl md:text-5xl font-bold mb-6">Our Construction Services in {{suburb_name}}</h2>
                     <div class="w-20 h-1.5 bg-sena-red mx-auto mb-8"></div>
-                    <p class="text-gray-400 max-w-3xl mx-auto text-lg leading-relaxed">Delivering comprehensive, end-to-end residential building solutions designed to maximize the value, functionality, and aesthetic appeal of your property in the {{region}} region.</p>
+                    <p class="text-gray-600 max-w-3xl mx-auto text-lg leading-relaxed">Delivering comprehensive, end-to-end residential building solutions designed to maximize the value, functionality, and aesthetic appeal of your property in the {{region}} region.</p>
                 </div>
 
                 <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                     <!-- 1. Luxury Homes -->
-                    <div class="border border-gray-800 p-10 hover:border-sena-red transition-all duration-300 bg-black group relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-b from-sena-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="border border-gray-200 p-10 hover:border-sena-red transition-all duration-300 bg-gray-50 hover:bg-white hover:shadow-xl group relative rounded-sm">
                         <i class="fa-solid fa-gem text-5xl text-sena-red mb-8 group-hover:-translate-y-2 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold mb-4">Luxury Homes</h3>
-                        <p class="text-gray-400 leading-relaxed mb-4">
+                        <p class="text-gray-600 leading-relaxed mb-4">
                             Designing and constructing bespoke luxury homes is our specialty at Sena Constructions. If you are looking to build a high-end, custom-designed architectural masterpiece in {{suburb_name}}, our expert home builders are ready to bring your vision to life.
                         </p>
                     </div>
 
                     <!-- 2. Knockdown Rebuilds -->
-                    <div class="border border-gray-800 p-10 hover:border-sena-red transition-all duration-300 bg-black group relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-b from-sena-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="border border-gray-200 p-10 hover:border-sena-red transition-all duration-300 bg-gray-50 hover:bg-white hover:shadow-xl group relative rounded-sm">
                         <i class="fa-solid fa-truck-ramp-box text-5xl text-sena-red mb-8 group-hover:-translate-y-2 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold mb-4">Knockdown Rebuilds</h3>
-                        <p class="text-gray-400 leading-relaxed mb-4">
+                        <p class="text-gray-600 leading-relaxed mb-4">
                             Love your current address in postcode {{postcode}} but outgrown your existing house? Our knockdown rebuilds offer the perfect solution. Avoid the hassle of moving and exorbitant stamp duty costs by demolishing your old property.
                         </p>
                     </div>
 
                     <!-- 3. Duplexes -->
-                    <div class="border border-gray-800 p-10 hover:border-sena-red transition-all duration-300 bg-black group relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-b from-sena-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="border border-gray-200 p-10 hover:border-sena-red transition-all duration-300 bg-gray-50 hover:bg-white hover:shadow-xl group relative rounded-sm">
                         <i class="fa-solid fa-house-chimney-window text-5xl text-sena-red mb-8 group-hover:-translate-y-2 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold mb-4">Duplexes</h3>
-                        <p class="text-gray-400 leading-relaxed mb-4">
+                        <p class="text-gray-600 leading-relaxed mb-4">
                             Maximize the potential and financial yield of your land with our premium duplexes. Dual-occupancy properties are a highly sought-after investment strategy in {{suburb_name}}. We navigate all {{council}} regulations.
                         </p>
                     </div>
 
                     <!-- 4. Granny Flats -->
-                    <div class="border border-gray-800 p-10 hover:border-sena-red transition-all duration-300 bg-black group relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-b from-sena-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="border border-gray-200 p-10 hover:border-sena-red transition-all duration-300 bg-gray-50 hover:bg-white hover:shadow-xl group relative rounded-sm">
                         <i class="fa-solid fa-house-user text-5xl text-sena-red mb-8 group-hover:-translate-y-2 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold mb-4">Granny Flats</h3>
-                        <p class="text-gray-400 leading-relaxed mb-4">
+                        <p class="text-gray-600 leading-relaxed mb-4">
                             Adding granny flats to your backyard is a fantastic way to instantly increase your property's value or generate passive rental income. We handle CDC approvals required in the {{region}} area.
                         </p>
                     </div>
 
                     <!-- 5. Renovations and Extensions -->
-                    <div class="border border-gray-800 p-10 hover:border-sena-red transition-all duration-300 bg-black group relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-b from-sena-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="border border-gray-200 p-10 hover:border-sena-red transition-all duration-300 bg-gray-50 hover:bg-white hover:shadow-xl group relative rounded-sm">
                         <i class="fa-solid fa-hammer text-5xl text-sena-red mb-8 group-hover:-translate-y-2 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold mb-4">Renovations & Extensions</h3>
-                        <p class="text-gray-400 leading-relaxed mb-4">
+                        <p class="text-gray-600 leading-relaxed mb-4">
                             Transform your current space without starting from scratch. Our extensive renovations and extensions cater to growing families needing extra bedrooms, second-story additions, or open-plan transformations in {{suburb_name}}.
                         </p>
                     </div>
 
                     <!-- 6. Building Maintenance -->
-                    <div class="border border-gray-800 p-10 hover:border-sena-red transition-all duration-300 bg-black group relative overflow-hidden">
-                        <div class="absolute inset-0 bg-gradient-to-b from-sena-red/5 to-transparent opacity-0 group-hover:opacity-100 transition-opacity"></div>
+                    <div class="border border-gray-200 p-10 hover:border-sena-red transition-all duration-300 bg-gray-50 hover:bg-white hover:shadow-xl group relative rounded-sm">
                         <i class="fa-solid fa-toolbox text-5xl text-sena-red mb-8 group-hover:-translate-y-2 transition-transform duration-300"></i>
                         <h3 class="text-2xl font-bold mb-4">Building Maintenance</h3>
-                        <p class="text-gray-400 leading-relaxed mb-4">
+                        <p class="text-gray-600 leading-relaxed mb-4">
                             Protect your most valuable asset with our comprehensive building maintenance programs. Sena Constructions provides expert structural repairs and preventative upkeep for residential properties throughout {{postcode}}.
                         </p>
                     </div>
@@ -424,9 +457,61 @@
         </section>
 
         <!-- ========================================== -->
-        <!-- OUR PROCESS (PROVES EXPERTISE TO GOOGLE)   -->
+        <!-- RECENT PROJECTS / PORTFOLIO GALLERY        -->
         <!-- ========================================== -->
-        <section class="py-24 bg-sena-light">
+        <section id="projects" class="py-24 bg-sena-dark text-white">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-16">
+                    <div class="max-w-2xl">
+                        <span class="text-sena-red font-bold tracking-widest text-sm uppercase block mb-3">Our Portfolio</span>
+                        <h2 class="text-3xl md:text-5xl font-bold mb-6">Recent Work in the {{region}}</h2>
+                        <div class="w-20 h-1.5 bg-sena-red"></div>
+                    </div>
+                    <div class="mt-6 md:mt-0">
+                        <!-- You can link this to a full gallery page later -->
+                        <a href="#contact" class="text-white hover:text-sena-red transition-colors font-medium flex items-center gap-2">Start your project <i class="fa-solid fa-arrow-right"></i></a>
+                    </div>
+                </div>
+
+                <!-- Gallery Grid -->
+                <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                    
+                    <!-- REPLACE the src="..." below with your own image URLs -->
+                    
+                    <!-- Portfolio Item 1 -->
+                    <div class="group relative overflow-hidden rounded-sm aspect-[4/3] bg-black">
+                        <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?q=80&w=2070&auto=format&fit=crop" alt="Luxury Home Build" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h4 class="text-xl font-bold text-white mb-1">Luxury Custom Build</h4>
+                            <p class="text-sena-red text-sm font-medium">Completed Project</p>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Item 2 -->
+                    <div class="group relative overflow-hidden rounded-sm aspect-[4/3] bg-black">
+                        <img src="https://images.unsplash.com/photo-1556910103-1c02745aae4d?q=80&w=2070&auto=format&fit=crop" alt="Modern Kitchen Renovation" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h4 class="text-xl font-bold text-white mb-1">Open Plan Renovation</h4>
+                            <p class="text-sena-red text-sm font-medium">Kitchen & Living</p>
+                        </div>
+                    </div>
+
+                    <!-- Portfolio Item 3 -->
+                    <div class="group relative overflow-hidden rounded-sm aspect-[4/3] bg-black">
+                        <img src="https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=2070&auto=format&fit=crop" alt="Duplex Build" class="w-full h-full object-cover opacity-80 group-hover:opacity-100 group-hover:scale-110 transition-all duration-500">
+                        <div class="absolute inset-0 bg-gradient-to-t from-black/80 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-6">
+                            <h4 class="text-xl font-bold text-white mb-1">Dual Occupancy Duplex</h4>
+                            <p class="text-sena-red text-sm font-medium">Investment Build</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- OUR PROCESS                                -->
+        <!-- ========================================== -->
+        <section id="process" class="py-24 bg-gray-50">
             <div class="max-w-7xl mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-5xl font-bold mb-4 text-sena-dark">Our Process in {{suburb_name}}</h2>
@@ -467,17 +552,72 @@
         </section>
 
         <!-- ========================================== -->
-        <!-- ESTIMATION CALCULATOR                      -->
+        <!-- CUSTOMER REVIEWS & TESTIMONIALS            -->
         <!-- ========================================== -->
-        <section class="py-24 bg-sena-light border-t border-gray-200">
-            <div class="max-w-4xl mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-5xl font-bold mb-4 text-sena-dark">Project Estimator</h2>
+        <section class="py-24 bg-white border-t border-gray-200">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="text-center mb-16">
+                    <span class="text-sena-red font-bold tracking-widest text-sm uppercase block mb-3">Testimonials</span>
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4 text-sena-dark">What Our Clients Say</h2>
                     <div class="w-20 h-1.5 bg-sena-red mx-auto mb-6"></div>
-                    <p class="text-gray-600 max-w-2xl mx-auto text-lg">Get an instant, approximate calculation for your upcoming build in {{suburb_name}}.</p>
+                    <p class="text-gray-600 max-w-2xl mx-auto text-lg">Real feedback from homeowners we have built and renovated for.</p>
                 </div>
 
-                <div class="bg-white p-8 md:p-12 rounded-sm shadow-xl border-t-4 border-sena-red">
+                <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    <!-- Review 1 -->
+                    <div class="bg-gray-50 p-8 rounded-sm shadow-sm border border-gray-200 relative">
+                        <i class="fa-solid fa-quote-left text-4xl text-sena-red/20 absolute top-6 right-6"></i>
+                        <div class="flex text-yellow-400 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic mb-6 leading-relaxed">
+                            "Ali and the team at Sena Constructions helped us out with our {{suburb_name}} kitchen and home renovations, and we are thrilled with the results! He brought our vision to life, managed the {{council}} approvals smoothly, and met all our expectations. Will definitely be reaching out for our future knockdown rebuild plans. 👍🏼"
+                        </p>
+                        <h4 class="font-bold text-sena-dark">Sarah & Mark T.</h4>
+                        <p class="text-sm text-gray-500">Home Renovation</p>
+                    </div>
+
+                    <!-- Review 2 -->
+                    <div class="bg-gray-50 p-8 rounded-sm shadow-sm border border-gray-200 relative">
+                        <i class="fa-solid fa-quote-left text-4xl text-sena-red/20 absolute top-6 right-6"></i>
+                        <div class="flex text-yellow-400 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic mb-6 leading-relaxed">
+                            "We hired Sena Constructions for a custom duplex build in the {{region}} area, and the craftsmanship is outstanding. Their attention to detail, transparent pricing, and daily communication made the whole process stress-free. Highly recommend them for anyone looking for a reliable custom home builder in {{postcode}}."
+                        </p>
+                        <h4 class="font-bold text-sena-dark">James L.</h4>
+                        <p class="text-sm text-gray-500">Duplex Build</p>
+                    </div>
+
+                    <!-- Review 3 -->
+                    <div class="bg-gray-50 p-8 rounded-sm shadow-sm border border-gray-200 relative">
+                        <i class="fa-solid fa-quote-left text-4xl text-sena-red/20 absolute top-6 right-6"></i>
+                        <div class="flex text-yellow-400 mb-4 text-sm">
+                            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-gray-700 italic mb-6 leading-relaxed">
+                            "From the initial consultation to handing over the keys to our new luxury home, Sena Constructions was professional and efficient. They handled our tricky sloping block and local requirements effortlessly. The absolute best builders we've worked with in {{suburb_name}}!"
+                        </p>
+                        <h4 class="font-bold text-sena-dark">Emily R.</h4>
+                        <p class="text-sm text-gray-500">Custom Luxury Home</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- ESTIMATION CALCULATOR                      -->
+        <!-- ========================================== -->
+        <section class="py-24 bg-sena-dark border-t border-sena-red/20">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white">Project Estimator</h2>
+                    <div class="w-20 h-1.5 bg-sena-red mx-auto mb-6"></div>
+                    <p class="text-gray-400 max-w-2xl mx-auto text-lg">Get an instant, approximate calculation for your upcoming build in {{suburb_name}}.</p>
+                </div>
+
+                <div class="bg-white p-8 md:p-12 rounded-sm shadow-2xl border-t-4 border-sena-red">
                     <form id="estimator-form" class="space-y-6">
                         <!-- Service Selection -->
                         <div>
@@ -519,44 +659,44 @@
         <!-- ========================================== -->
         <!-- SEO FAQ SECTION (ACCORDION)                -->
         <!-- ========================================== -->
-        <section class="py-24 bg-white border-t border-sena-border">
+        <section class="py-24 bg-gray-50 border-t border-gray-200">
             <div class="max-w-4xl mx-auto px-6">
                 <div class="text-center mb-16">
                     <h2 class="text-3xl md:text-5xl font-bold mb-4 text-sena-dark">Frequently Asked Questions</h2>
                     <div class="w-20 h-1.5 bg-sena-red mx-auto mb-6"></div>
-                    <p class="text-gray-600">Common queries regarding building in {{suburb_name}}.</p>
+                    <p class="text-gray-600 text-lg">Common queries regarding building in {{suburb_name}}.</p>
                 </div>
 
                 <div class="space-y-4">
                     <!-- FAQ 1 -->
-                    <div class="border border-gray-200 rounded-sm overflow-hidden">
-                        <button class="faq-btn w-full text-left px-6 py-5 bg-sena-light hover:bg-gray-100 font-bold text-lg flex justify-between items-center transition">
+                    <div class="border border-gray-200 rounded-sm overflow-hidden shadow-sm">
+                        <button class="faq-btn w-full text-left px-6 py-5 bg-white hover:bg-gray-50 font-bold text-lg flex justify-between items-center transition text-sena-dark">
                             Do you handle {{council}} DA approvals for builds in {{suburb_name}}?
                             <i class="fa-solid fa-chevron-down text-sena-red transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-content hidden px-6 py-5 text-gray-600 bg-white border-t border-gray-200 leading-relaxed">
+                        <div class="faq-content hidden px-6 py-5 text-gray-600 bg-white border-t border-gray-100 leading-relaxed">
                             Yes, Sena Constructions fully manages the entire Development Application (DA) and Complying Development Certificate (CDC) process. Our team has extensive experience working specifically with {{council}} regulations to ensure a smooth, delay-free approval for your build.
                         </div>
                     </div>
 
                     <!-- FAQ 2 -->
-                    <div class="border border-gray-200 rounded-sm overflow-hidden">
-                        <button class="faq-btn w-full text-left px-6 py-5 bg-sena-light hover:bg-gray-100 font-bold text-lg flex justify-between items-center transition">
+                    <div class="border border-gray-200 rounded-sm overflow-hidden shadow-sm">
+                        <button class="faq-btn w-full text-left px-6 py-5 bg-white hover:bg-gray-50 font-bold text-lg flex justify-between items-center transition text-sena-dark">
                             How long does a knockdown rebuild take in {{suburb_name}}?
                             <i class="fa-solid fa-chevron-down text-sena-red transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-content hidden px-6 py-5 text-gray-600 bg-white border-t border-gray-200 leading-relaxed">
+                        <div class="faq-content hidden px-6 py-5 text-gray-600 bg-white border-t border-gray-100 leading-relaxed">
                             The timeline depends heavily on the complexity of the design and the speed of {{council}} approvals. Typically, demolition to final handover takes between 9 to 12 months. We provide a detailed, binding timeline during the consultation phase for all projects in the {{region}} area.
                         </div>
                     </div>
 
                     <!-- FAQ 3 -->
-                    <div class="border border-gray-200 rounded-sm overflow-hidden">
-                        <button class="faq-btn w-full text-left px-6 py-5 bg-sena-light hover:bg-gray-100 font-bold text-lg flex justify-between items-center transition">
+                    <div class="border border-gray-200 rounded-sm overflow-hidden shadow-sm">
+                        <button class="faq-btn w-full text-left px-6 py-5 bg-white hover:bg-gray-50 font-bold text-lg flex justify-between items-center transition text-sena-dark">
                             What custom building services do you offer in postcode {{postcode}}?
                             <i class="fa-solid fa-chevron-down text-sena-red transition-transform duration-300"></i>
                         </button>
-                        <div class="faq-content hidden px-6 py-5 text-gray-600 bg-white border-t border-gray-200 leading-relaxed">
+                        <div class="faq-content hidden px-6 py-5 text-gray-600 bg-white border-t border-gray-100 leading-relaxed">
                             We provide bespoke luxury homes, seamless knockdown rebuilds, profitable duplex designs, compliant granny flats, extensive renovations, and structural building maintenance. We cover the entire {{region}} region.
                         </div>
                     </div>
@@ -566,13 +706,15 @@
 
     </main>
   
-    <!-- ========================================== -->
+<!-- ========================================== -->
     <!-- COMPREHENSIVE FOOTER                       -->
     <!-- ========================================== -->
     <footer class="bg-black text-white pt-16 pb-8 border-t-[4px] border-sena-red">
+        
+        <!-- MAIN 4-COLUMN GRID -->
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
             
-            <!-- Brand -->
+            <!-- Column 1: Brand -->
             <div>
                 <a href="/" class="flex items-center gap-3 mb-6">
                     <span class="text-sena-red text-3xl"><i class="fa-solid fa-cube"></i></span>
@@ -583,12 +725,12 @@
                 </a>
                 <p class="text-gray-400 text-sm mb-6 leading-relaxed">Building Quality Homes and Lasting Relationships in Sydney. Proudly servicing {{suburb_name}} and the {{region}}.</p>
                 <div class="flex gap-4">
-                    <a href="#" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-sena-red transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="#" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-sena-red transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://www.facebook.com/p/Sena-Constructions-100040335197985/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-sena-red transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/senaconstructions/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-sena-red transition-colors"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
 
-            <!-- Quick Links -->
+            <!-- Column 2: Quick Links -->
             <div>
                 <h4 class="text-lg font-bold mb-6 uppercase tracking-wider text-gray-200">Company</h4>
                 <ul class="space-y-3 text-sm text-gray-400 font-medium">
@@ -599,7 +741,7 @@
                 </ul>
             </div>
 
-            <!-- Services -->
+            <!-- Column 3: Services -->
             <div>
                 <h4 class="text-lg font-bold mb-6 uppercase tracking-wider text-gray-200">Services</h4>
                 <ul class="space-y-3 text-sm text-gray-400 font-medium">
@@ -610,7 +752,7 @@
                 </ul>
             </div>
 
-            <!-- Contact Details -->
+            <!-- Column 4: Contact Details -->
             <div>
                 <h4 class="text-lg font-bold mb-6 uppercase tracking-wider text-gray-200">Contact</h4>
                 <ul class="space-y-4 text-sm text-gray-400">
@@ -618,14 +760,14 @@
                         <i class="fa-solid fa-phone text-sena-red mt-1"></i>
                         <div>
                             <p class="font-bold text-white mb-1">Phone</p>
-                            <p>(02) 9885 0797</p>
+                            <a href="tel:0298850797" class="hover:text-sena-red transition-colors">(02) 9885 0797</a>
                         </div>
                     </li>
                     <li class="flex items-start gap-3">
                         <i class="fa-solid fa-envelope text-sena-red mt-1"></i>
                         <div>
                             <p class="font-bold text-white mb-1">Email</p>
-                            <p>office@senaconstructions.com.au</p>
+                            <a href="mailto:office@senaconstructions.com.au" class="hover:text-sena-red transition-colors">office@senaconstructions.com.au</a>
                         </div>
                     </li>
                     <li class="flex items-start gap-3">
@@ -637,10 +779,15 @@
                     </li>
                 </ul>
             </div>
-        </div>
 
+        </div> <!-- THIS CLOSES THE 4-COLUMN GRID -->
+
+        <!-- BOTTOM COPYRIGHT BAR -->
         <div class="border-t border-gray-900 pt-8 text-center md:flex justify-between items-center max-w-7xl mx-auto px-6 text-sm text-gray-600 font-medium">
             <p>Copyright &copy; 2026 Sena Constructions. All Rights Reserved. Servicing {{suburb_name}}.</p>
+            <div class="mt-4 md:mt-0 space-x-4">
+                <a href="/sitemap.html" class="hover:text-sena-red transition-colors">Sitemap</a>
+            </div>
         </div>
     </footer>
 
@@ -665,7 +812,6 @@
         document.addEventListener('DOMContentLoaded', () => {
             
             // EmailJS Quote Form Logic
-            // IMPORTANT: Replace these 3 strings with your actual EmailJS keys
             emailjs.init("YOUR_PUBLIC_KEY"); 
 
             const quoteForm = document.getElementById('quote-form');
@@ -676,31 +822,25 @@
                 quoteForm.addEventListener('submit', function(e) {
                     e.preventDefault();
                     
-                    // Change button text while sending
                     const originalBtnText = submitBtn.textContent;
                     submitBtn.textContent = "Sending...";
                     submitBtn.disabled = true;
                     submitBtn.classList.add('opacity-70');
 
-                    // Send the form
-                    // Replace 'YOUR_SERVICE_ID' and 'YOUR_TEMPLATE_ID'
                     emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', this)
                         .then(() => {
-                            // Success
                             formStatus.textContent = "Message sent successfully! We will contact you soon.";
                             formStatus.classList.remove('hidden', 'bg-red-100', 'text-red-700');
                             formStatus.classList.add('block', 'bg-green-100', 'text-green-700');
                             quoteForm.reset();
                         })
                         .catch((error) => {
-                            // Error
                             console.error('EmailJS Error:', error);
                             formStatus.textContent = "Oops! Something went wrong. Please call us directly.";
                             formStatus.classList.remove('hidden', 'bg-green-100', 'text-green-700');
                             formStatus.classList.add('block', 'bg-red-100', 'text-red-700');
                         })
                         .finally(() => {
-                            // Restore button
                             submitBtn.textContent = originalBtnText;
                             submitBtn.disabled = false;
                             submitBtn.classList.remove('opacity-70');
@@ -727,6 +867,19 @@
                 });
             }
 
+            // Mobile Services Accordion Toggle
+            const mobileServicesBtn = document.getElementById('mobile-services-btn');
+            const mobileServicesMenu = document.getElementById('mobile-services-menu');
+            const mobileServicesIcon = document.getElementById('mobile-services-icon');
+
+            if(mobileServicesBtn) {
+                mobileServicesBtn.addEventListener('click', () => {
+                    mobileServicesMenu.classList.toggle('hidden');
+                    mobileServicesMenu.classList.toggle('flex');
+                    mobileServicesIcon.classList.toggle('rotate-180');
+                });
+            }
+
             // FAQ Accordion Toggle
             const faqBtns = document.querySelectorAll('.faq-btn');
             faqBtns.forEach(btn => {
@@ -734,10 +887,7 @@
                     const content = btn.nextElementSibling;
                     const chevron = btn.querySelector('i');
                     
-                    // Toggle visibility
                     content.classList.toggle('hidden');
-                    
-                    // Rotate chevron
                     if(content.classList.contains('hidden')) {
                         chevron.classList.remove('rotate-180');
                     } else {
@@ -758,7 +908,6 @@
                     const rate = parseFloat(serviceSelect.value);
                     const sqm = parseFloat(floorSpaceInput.value);
 
-                    // Form Validation
                     if (!rate) {
                         alert('Please select what you would like to build.');
                         return;
@@ -768,17 +917,14 @@
                         return;
                     }
 
-                    // Calculation
                     const totalCost = rate * sqm;
 
-                    // Format as AUD Currency
                     const formattedCost = new Intl.NumberFormat('en-AU', {
                         style: 'currency',
                         currency: 'AUD',
                         maximumFractionDigits: 0
                     }).format(totalCost);
 
-                    // Reveal UI
                     estimatedCostDisplay.textContent = formattedCost;
                     resultContainer.classList.remove('hidden');
                 });

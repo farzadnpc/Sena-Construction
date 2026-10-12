@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Areas We Serve | Sena Constructions Sydney</title>
+    <meta name="description" content="Sena Constructions builds custom luxury homes, duplexes, and knockdown rebuilds across Greater Sydney. Find your suburb to see our local building expertise.">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: { sena: { red: '#e3000f', dark: '#050505', light: '#f9f9f9', border: '#e5e7eb' } },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-gray-800 bg-gray-50 overflow-x-hidden antialiased pb-16 md:pb-0">
+
+    <!-- TOP BAR -->
+    <div class="bg-black text-gray-400 text-xs py-2 hidden md:block border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex gap-6">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-sena-red"></i> 74A Ringrose Ave, Greystanes NSW</span>
+            </div>
+            <div class="flex gap-6 items-center">
+                <a href="tel:0298850797" class="text-white font-bold hover:text-sena-red transition"><i class="fa-solid fa-phone text-sena-red mr-2"></i> (02) 9885 0797</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN NAVIGATION -->
+    <header class="bg-sena-dark text-white py-4 sticky top-0 z-50 shadow-xl border-b border-sena-red/20">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="/" class="flex items-center gap-3">
+                <span class="text-sena-red text-3xl"><i class="fa-solid fa-cube"></i></span>
+                <div>
+                    <h1 class="text-2xl font-extrabold tracking-[0.2em] leading-none">SENA</h1>
+                    <p class="text-[0.6rem] text-sena-red tracking-[0.1em] uppercase mt-1 font-semibold">Constructions</p>
+                </div>
+            </a>
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
+                <a href="/" class="hover:text-sena-red transition">Home</a>
+                <a href="/#about" class="hover:text-sena-red transition">About</a>
+                <a href="/#services" class="hover:text-sena-red transition">Services</a>
+                <a href="#contact" class="bg-sena-red text-white px-6 py-2.5 rounded-sm hover:bg-red-700 transition">Get a Quote</a>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <!-- HERO SECTION -->
+        <section class="relative h-[40vh] min-h-[350px] flex items-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop');">
+            <div class="absolute inset-0 bg-black/80 z-0"></div>
+            <div class="max-w-7xl mx-auto px-6 relative z-10 text-white w-full text-center">
+                <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">Areas We Serve</h1>
+                <div class="w-16 h-1.5 bg-sena-red mx-auto mb-6"></div>
+                <p class="text-xl text-gray-300">Proudly building custom luxury homes across Greater Sydney.</p>
+            </div>
+        </section>
+
+        <!-- DIRECTORY CONTENT WILL BE INJECTED HERE -->
+        <section class="py-20">
+            <div class="max-w-7xl mx-auto px-6">
+                {{DIRECTORY_CONTENT}}
+            </div>
+        </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="bg-black text-white pt-12 pb-8 border-t-[4px] border-sena-red text-center">
+        <p class="text-gray-500 text-sm">Copyright &copy; 2026 Sena Constructions. All Rights Reserved.</p>
+    </footer>
+
+</body>
+</html>
