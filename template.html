@@ -115,7 +115,7 @@
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
             <div class="flex gap-6">
                 <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-sena-red"></i> 74A Ringrose Ave, Greystanes NSW 2145</span>
-                <span class="flex items-center gap-2"><i class="fa-solid fa-clock text-sena-red"></i> Mon - Fri: 7:00 AM - 5:00 PM</span>
+                <span class="flex items-center gap-2"><i class="fa-solid fa-clock text-sena-red"></i> Mon - Fri: 9:00 AM - 5:00 PM</span>
             </div>
             <div class="flex gap-6 items-center">
                 <a href="mailto:office@senaconstructions.com.au" class="hover:text-white transition"><i class="fa-solid fa-envelope text-sena-red mr-2"></i> office@senaconstructions.com.au</a>
@@ -124,41 +124,38 @@
         </div>
     </div>
 
-    <!-- ========================================== -->
+ <!-- ========================================== -->
     <!-- MAIN NAVIGATION                            -->
     <!-- ========================================== -->
     <header class="bg-sena-dark text-white py-4 sticky top-0 z-50 shadow-xl border-b border-sena-red/20">
         <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
-            <a href="/" class="flex items-center gap-3 group">
-                <span class="text-sena-red text-3xl group-hover:rotate-12 transition-transform duration-300"><i class="fa-solid fa-cube"></i></span>
-                <div>
-                    <h1 class="text-2xl font-extrabold tracking-[0.2em] leading-none">SENA</h1>
-                    <p class="text-[0.6rem] text-sena-red tracking-[0.1em] uppercase mt-1 font-semibold">Constructions</p>
-                </div>
+            <a href="/" class="flex items-center group">
+                <!-- Using h-12 to keep it neatly sized in the nav bar. Change to h-10 (smaller) or h-16 (bigger) if needed -->
+                <img src="../images/senalogo.png" alt="Sena Constructions" class="h-12 w-auto group-hover:scale-105 transition-transform duration-300">
             </a>
             
             <!-- Desktop Nav -->
             <nav class="hidden lg:flex items-center gap-8 text-sm font-medium">
-                <a href="/" class="hover:text-sena-red transition-colors">Home</a>
-                <a href="/#about" class="hover:text-sena-red transition-colors">About</a>
-                <a href="/#process" class="hover:text-sena-red transition-colors">Our Process</a>
+                <a href="/index.html" class="hover:text-sena-red transition-colors">Home</a>
+                <a href="/about.html" class="hover:text-sena-red transition-colors">About</a>
+                <a href="/process.html" class="hover:text-sena-red transition-colors">Our Process</a>
                 
                 <!-- Services Dropdown -->
                 <div class="relative group">
-                    <a href="/#services" class="hover:text-sena-red transition-colors flex items-center gap-1 py-2">Services <i class="fa-solid fa-chevron-down text-[10px]"></i></a>
+                    <a href="/services.html" class="hover:text-sena-red transition-colors flex items-center gap-1 py-2">Services <i class="fa-solid fa-chevron-down text-[10px]"></i></a>
                     <div class="absolute left-0 mt-0 w-64 bg-white text-sena-dark shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border-t-2 border-sena-red rounded-b-sm z-50">
-                        <a href="/#services" class="block px-5 py-3 hover:bg-gray-100 border-b border-gray-100 transition-colors">Luxury Homes</a>
-                        <a href="/#services" class="block px-5 py-3 hover:bg-gray-100 border-b border-gray-100 transition-colors">Granny Flats</a>
-                        <a href="/#services" class="block px-5 py-3 hover:bg-gray-100 border-b border-gray-100 transition-colors">Duplexes</a>
-                        <a href="/#services" class="block px-5 py-3 hover:bg-gray-100 border-b border-gray-100 transition-colors">Knockdown Rebuilds</a>
-                        <a href="/#services" class="block px-5 py-3 hover:bg-gray-100 border-b border-gray-100 transition-colors">Renovations & Extensions</a>
-                        <a href="/#services" class="block px-5 py-3 hover:bg-gray-100 transition-colors">Building Maintenance</a>
+                        <a href="/luxury-homes.html" class="block px-5 py-3 hover:bg-gray-100 border-b border-gray-100 transition-colors">Luxury Homes</a>
+                        <a href="/granny-flats.html" class="block px-5 py-3 hover:bg-gray-100 border-b border-gray-100 transition-colors">Granny Flats</a>
+                        <a href="/duplexes.html" class="block px-5 py-3 hover:bg-gray-100 border-b border-gray-100 transition-colors">Duplexes</a>
+                        <a href="/knockdown-rebuilds.html" class="block px-5 py-3 hover:bg-gray-100 border-b border-gray-100 transition-colors">Knockdown Rebuilds</a>
+                        <a href="/renovations-extensions.html" class="block px-5 py-3 hover:bg-gray-100 border-b border-gray-100 transition-colors">Renovations & Extensions</a>
+                        <a href="/building-maintenance.html" class="block px-5 py-3 hover:bg-gray-100 transition-colors">Building Maintenance</a>
                     </div>
                 </div>
 
-                <a href="/#projects" class="hover:text-sena-red transition-colors">Projects</a>
-                <a href="/#blogs" class="hover:text-sena-red transition-colors">Blogs</a>
-                <a href="#contact" class="bg-sena-red text-white px-6 py-2.5 rounded-sm hover:bg-red-700 transition shadow-lg shadow-sena-red/20">Contact</a>
+                <a href="/projects.html" class="hover:text-sena-red transition-colors">Projects</a>
+                <a href="/blogs.html" class="hover:text-sena-red transition-colors">Blogs</a>
+                <a href="/contact.html" class="bg-sena-red text-white px-6 py-2.5 rounded-sm hover:bg-red-700 transition shadow-lg shadow-sena-red/20">Contact</a>
             </nav>
 
             <!-- Mobile Hamburger -->
@@ -169,9 +166,9 @@
 
         <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden flex-col items-start gap-0 bg-sena-dark w-full absolute top-full left-0 py-4 border-t border-gray-800 shadow-2xl overflow-y-auto max-h-[80vh]">
-            <a href="/" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Home</a>
-            <a href="/#about" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">About</a>
-            <a href="/#process" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Our Process</a>
+            <a href="/index.html" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Home</a>
+            <a href="/about.html" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">About</a>
+            <a href="/process.html" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Our Process</a>
             
             <!-- Mobile Services Accordion -->
             <div class="w-full">
@@ -179,19 +176,19 @@
                     Services <i class="fa-solid fa-chevron-down text-sm transition-transform duration-300" id="mobile-services-icon"></i>
                 </button>
                 <div id="mobile-services-menu" class="hidden bg-black w-full flex-col">
-                    <a href="/#services" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Luxury Homes</a>
-                    <a href="/#services" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Granny Flats</a>
-                    <a href="/#services" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Duplexes</a>
-                    <a href="/#services" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Knockdown Rebuilds</a>
-                    <a href="/#services" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Renovations & Extensions</a>
-                    <a href="/#services" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Building Maintenance</a>
+                    <a href="/luxury-homes.html" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Luxury Homes</a>
+                    <a href="/granny-flats.html" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Granny Flats</a>
+                    <a href="/duplexes.html" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Duplexes</a>
+                    <a href="/knockdown-rebuilds.html" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Knockdown Rebuilds</a>
+                    <a href="/renovations-extensions.html" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Renovations & Extensions</a>
+                    <a href="/building-maintenance.html" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Building Maintenance</a>
                 </div>
             </div>
 
-            <a href="/#projects" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Projects</a>
-            <a href="/#blogs" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Blogs</a>
+            <a href="/projects.html" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Projects</a>
+            <a href="/blogs.html" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Blogs</a>
             <div class="px-6 py-4 w-full">
-                <a href="#contact" class="block w-full bg-sena-red text-white text-center py-3 rounded-sm font-bold shadow-lg">Contact Us</a>
+                <a href="/contact.html" class="block w-full bg-sena-red text-white text-center py-3 rounded-sm font-bold shadow-lg">Contact Us</a>
             </div>
         </div>
     </header>
@@ -200,7 +197,7 @@
         <!-- ========================================== -->
         <!-- LOCALIZED HERO SECTION                     -->
         <!-- ========================================== -->
-        <section class="relative h-[75vh] min-h-[600px] flex items-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop');">
+        <section class="relative h-[75vh] min-h-[600px] flex items-center bg-cover bg-center" style="background-image: url('../images/senahome.webp');">
             <div class="absolute inset-0 bg-gradient-to-r from-black/90 to-black/60 z-0"></div>
             <div class="max-w-7xl mx-auto px-6 relative z-10 text-white w-full">
                 <div class="max-w-3xl">
@@ -550,7 +547,55 @@
                 </div>
             </div>
         </section>
+        <!-- ========================================== -->
+        <!-- ESTIMATION CALCULATOR                      -->
+        <!-- ========================================== -->
+        <section class="py-24 bg-sena-dark border-t border-sena-red/20">
+            <div class="max-w-4xl mx-auto px-6">
+                <div class="text-center mb-12">
+                    <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white">Project Estimator</h2>
+                    <div class="w-20 h-1.5 bg-sena-red mx-auto mb-6"></div>
+                    <p class="text-gray-400 max-w-2xl mx-auto text-lg">Get an instant, approximate calculation for your upcoming build in {{suburb_name}}.</p>
+                </div>
 
+                <div class="bg-white p-8 md:p-12 rounded-sm shadow-2xl border-t-4 border-sena-red">
+                    <form id="estimator-form" class="space-y-6">
+                        <!-- Service Selection -->
+                        <div>
+                            <label for="service-type" class="block text-lg font-bold text-sena-dark mb-2">What do you like to build?</label>
+                            <select id="service-type" class="w-full border border-gray-300 p-4 rounded-sm focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red text-gray-700 bg-gray-50">
+                                <option value="" disabled selected>Select a service</option>
+                                <option value="3500">Duplex</option>
+                                <option value="3000">Home</option>
+                                <option value="3250">Renovation</option>
+                                <option value="3250">Granny Flat</option>
+                                <option value="3250">Extension</option>
+                            </select>
+                        </div>
+
+                        <!-- Floor Space Input -->
+                        <div>
+                            <label for="floor-space" class="block text-lg font-bold text-sena-dark mb-2">Floor space (sqm)</label>
+                            <input type="number" id="floor-space" placeholder="Minimum 50 sqm" min="50" class="w-full border border-gray-300 p-4 rounded-sm focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red text-gray-700 bg-gray-50">
+                        </div>
+
+                        <!-- Calculate Button -->
+                        <button type="button" id="calculate-btn" class="w-full bg-sena-red hover:bg-red-700 text-white font-bold text-lg py-4 rounded-sm transition shadow-lg shadow-sena-red/30">
+                            Calculate Estimate
+                        </button>
+                    </form>
+
+                    <!-- Result Display -->
+                    <div id="result-container" class="hidden mt-8 p-6 bg-sena-dark text-white text-center rounded-sm border-l-4 border-sena-red">
+                        <p class="text-gray-400 mb-2">Estimated Build Cost</p>
+                        <h3 id="estimated-cost" class="text-4xl md:text-5xl font-extrabold mb-4 text-white">$0</h3>
+                        <p class="text-sm text-gray-400 italic">
+                            * Estimation is based on standard structure and finishes.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- ========================================== -->
         <!-- CUSTOMER REVIEWS & TESTIMONIALS            -->
         <!-- ========================================== -->
@@ -606,55 +651,7 @@
             </div>
         </section>
 
-        <!-- ========================================== -->
-        <!-- ESTIMATION CALCULATOR                      -->
-        <!-- ========================================== -->
-        <section class="py-24 bg-sena-dark border-t border-sena-red/20">
-            <div class="max-w-4xl mx-auto px-6">
-                <div class="text-center mb-12">
-                    <h2 class="text-3xl md:text-5xl font-bold mb-4 text-white">Project Estimator</h2>
-                    <div class="w-20 h-1.5 bg-sena-red mx-auto mb-6"></div>
-                    <p class="text-gray-400 max-w-2xl mx-auto text-lg">Get an instant, approximate calculation for your upcoming build in {{suburb_name}}.</p>
-                </div>
-
-                <div class="bg-white p-8 md:p-12 rounded-sm shadow-2xl border-t-4 border-sena-red">
-                    <form id="estimator-form" class="space-y-6">
-                        <!-- Service Selection -->
-                        <div>
-                            <label for="service-type" class="block text-lg font-bold text-sena-dark mb-2">What do you like to build?</label>
-                            <select id="service-type" class="w-full border border-gray-300 p-4 rounded-sm focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red text-gray-700 bg-gray-50">
-                                <option value="" disabled selected>Select a service</option>
-                                <option value="3500">Duplex</option>
-                                <option value="3000">Home</option>
-                                <option value="3250">Renovation</option>
-                                <option value="3250">Granny Flat</option>
-                                <option value="3250">Extension</option>
-                            </select>
-                        </div>
-
-                        <!-- Floor Space Input -->
-                        <div>
-                            <label for="floor-space" class="block text-lg font-bold text-sena-dark mb-2">Floor space (sqm)</label>
-                            <input type="number" id="floor-space" placeholder="Minimum 50 sqm" min="50" class="w-full border border-gray-300 p-4 rounded-sm focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red text-gray-700 bg-gray-50">
-                        </div>
-
-                        <!-- Calculate Button -->
-                        <button type="button" id="calculate-btn" class="w-full bg-sena-red hover:bg-red-700 text-white font-bold text-lg py-4 rounded-sm transition shadow-lg shadow-sena-red/30">
-                            Calculate Estimate
-                        </button>
-                    </form>
-
-                    <!-- Result Display -->
-                    <div id="result-container" class="hidden mt-8 p-6 bg-sena-dark text-white text-center rounded-sm border-l-4 border-sena-red">
-                        <p class="text-gray-400 mb-2">Estimated Build Cost</p>
-                        <h3 id="estimated-cost" class="text-4xl md:text-5xl font-extrabold mb-4 text-white">$0</h3>
-                        <p class="text-sm text-gray-400 italic">
-                            * Estimation is based on standard structure and finishes.
-                        </p>
-                    </div>
-                </div>
-            </div>
-        </section>
+    
 
         <!-- ========================================== -->
         <!-- SEO FAQ SECTION (ACCORDION)                -->
@@ -713,31 +710,27 @@
         
         <!-- MAIN 4-COLUMN GRID -->
         <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
-            
+
+
             <!-- Column 1: Brand -->
             <div>
-                <a href="/" class="flex items-center gap-3 mb-6">
-                    <span class="text-sena-red text-3xl"><i class="fa-solid fa-cube"></i></span>
-                    <div>
-                        <h1 class="text-2xl font-extrabold tracking-[0.2em] leading-none text-white">SENA</h1>
-                        <p class="text-[0.6rem] text-sena-red tracking-[0.1em] uppercase mt-1 font-bold">Constructions</p>
-                    </div>
+                <a href="/" class="inline-block mb-6">
+                    <img src="../images/senalogo.png" alt="Sena Constructions" loading="lazy" class="h-16 w-auto hover:opacity-80 transition-opacity">
                 </a>
                 <p class="text-gray-400 text-sm mb-6 leading-relaxed">Building Quality Homes and Lasting Relationships in Sydney. Proudly servicing {{suburb_name}} and the {{region}}.</p>
                 <div class="flex gap-4">
-                    <a href="https://www.facebook.com/p/Sena-Constructions-100040335197985/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-sena-red transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
-                    <a href="https://www.instagram.com/senaconstructions/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-sena-red transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-sena-red transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="#" class="w-10 h-10 rounded-full bg-gray-900 flex items-center justify-center hover:bg-sena-red transition-colors"><i class="fa-brands fa-instagram"></i></a>
                 </div>
             </div>
-
             <!-- Column 2: Quick Links -->
             <div>
                 <h4 class="text-lg font-bold mb-6 uppercase tracking-wider text-gray-200">Company</h4>
                 <ul class="space-y-3 text-sm text-gray-400 font-medium">
-                    <li><a href="/" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Home</a></li>
-                    <li><a href="/#about" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> About Us</a></li>
-                    <li><a href="/#process" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Our Process</a></li>
-                    <li><a href="/#projects" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Portfolio</a></li>
+                    <li><a href="/index.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Home</a></li>
+                    <li><a href="/about.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> About Us</a></li>
+                    <li><a href="/process.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Our Process</a></li>
+                    <li><a href="/projects.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Portfolio</a></li>
                 </ul>
             </div>
 
@@ -745,10 +738,10 @@
             <div>
                 <h4 class="text-lg font-bold mb-6 uppercase tracking-wider text-gray-200">Services</h4>
                 <ul class="space-y-3 text-sm text-gray-400 font-medium">
-                    <li><a href="/#services" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Luxury Homes</a></li>
-                    <li><a href="/#services" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Knockdown Rebuilds</a></li>
-                    <li><a href="/#services" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Duplexes & Granny Flats</a></li>
-                    <li><a href="/#services" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Renovations & Extensions</a></li>
+                    <li><a href="/services/luxury-homes.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Luxury Homes</a></li>
+                    <li><a href="/services/knockdown-rebuilds.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Knockdown Rebuilds</a></li>
+                    <li><a href="/services/duplexes.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Duplexes & Granny Flats</a></li>
+                    <li><a href="/services/renovations-extensions.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Renovations & Extensions</a></li>
                 </ul>
             </div>
 
