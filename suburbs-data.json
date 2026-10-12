@@ -1,0 +1,1577 @@
+[
+  {
+    "slug": "greystanes",
+    "suburb_name": "Greystanes",
+    "council": "Cumberland City Council",
+    "region": "Western Sydney",
+    "headline": "Premier Custom Home Builders & Duplex Specialists in Greystanes",
+    "unique_intro": "Based locally in Greystanes, Sena Constructions delivers bespoke luxury homes, modern duplexes, and turnkey renovations designed to maximize Cumberland block potential with quality craftsmanship.",
+    "postcode": 2145
+  },
+  {
+    "slug": "parramatta",
+    "suburb_name": "Parramatta",
+    "council": "City of Parramatta Council",
+    "region": "Western Sydney",
+    "headline": "Leading Knockdown Rebuild & Luxury Home Builders in Parramatta",
+    "unique_intro": "Transform your Parramatta property with Sena Constructions. We specialize in knockdown rebuilds, modern duplex developments, and tailored luxury residences navigating Parramatta council planning with ease.",
+    "postcode": 2150
+  },
+  {
+    "slug": "castle-hill",
+    "suburb_name": "Castle Hill",
+    "council": "The Hills Shire Council",
+    "region": "Hills District",
+    "headline": "Custom Luxury Home Builders & Modern Extensions in Castle Hill",
+    "unique_intro": "Bring your architectural aspirations to life in Castle Hill. Sena Constructions crafts high-end custom homes and expansive ground-floor renovations suited to generous Hills Shire residential allotments.",
+    "postcode": 2154
+  },
+  {
+    "slug": "blacktown",
+    "suburb_name": "Blacktown",
+    "council": "Blacktown City Council",
+    "region": "Western Sydney",
+    "headline": "Affordable Custom Homes & Secondary Dwelling Builders in Blacktown",
+    "unique_intro": "Unlock genuine property value in Blacktown with Sena Constructions. From dual-occupancy duplex projects to detached granny flats and family home rebuilds, we build durable, cost-effective spaces.",
+    "postcode": 2148
+  },
+  {
+    "slug": "penrith",
+    "suburb_name": "Penrith",
+    "council": "Penrith City Council",
+    "region": "Greater Western Sydney",
+    "headline": "Quality Knockdown Rebuilds & Family Home Builders in Penrith",
+    "unique_intro": "Build your lifelong family sanctuary in Penrith with Sena Constructions. We design climate-smart custom homes and manage knockdown rebuilds tailored to Greater Western Sydney lifestyles.",
+    "postcode": 2750
+  },
+  {
+    "slug": "liverpool",
+    "suburb_name": "Liverpool",
+    "council": "Liverpool City Council",
+    "region": "South Western Sydney",
+    "headline": "Master Duplex Builders & Custom Home Construction in Liverpool",
+    "unique_intro": "Maximize your residential parcel in Liverpool with Sena Constructions. Our team builds functional duplexes, secondary dwellings, and spacious modern custom homes compliant with local council guidelines.",
+    "postcode": 2170
+  },
+  {
+    "slug": "baulkham-hills",
+    "suburb_name": "Baulkham Hills",
+    "council": "The Hills Shire Council",
+    "region": "Hills District",
+    "headline": "Bespoke Home Renovations & Architectural Builders in Baulkham Hills",
+    "unique_intro": "Elevate your lifestyle in Baulkham Hills with custom home construction and seamless additions. Sena Constructions crafts luxury interiors and outdoor extensions tailored for growing families.",
+    "postcode": 2153
+  },
+  {
+    "slug": "ryde",
+    "suburb_name": "Ryde",
+    "council": "City of Ryde Council",
+    "region": "Northern Suburbs",
+    "headline": "Contemporary Duplex Design & Knockdown Rebuilds in Ryde",
+    "unique_intro": "Sena Constructions delivers contemporary duplex builds and architectural custom homes across Ryde, optimizing urban suburban blocks to yield spacious, light-filled, modern family living.",
+    "postcode": 2112
+  },
+  {
+    "slug": "epping",
+    "suburb_name": "Epping",
+    "council": "City of Parramatta Council",
+    "region": "Northern Suburbs",
+    "headline": "Premium Home Renovations & Custom Builders in Epping",
+    "unique_intro": "Revitalize your Epping property with Sena Constructions. We engineer premium custom residences, multi-generational duplex designs, and high-end second-storey additions aligned with local planning controls.",
+    "postcode": 2121
+  },
+  {
+    "slug": "kellyville",
+    "suburb_name": "Kellyville",
+    "council": "The Hills Shire Council",
+    "region": "Hills District",
+    "headline": "Luxury Home Construction & Modern Duplex Builders in Kellyville",
+    "unique_intro": "Craft your showpiece residence in Kellyville with Sena Constructions. We build master-crafted luxury homes and smart dual-occupancy duplexes delivering high aesthetic appeal and lasting structural integrity.",
+    "postcode": 2155
+  },
+  {
+    "slug": "bella-vista",
+    "suburb_name": "Bella Vista",
+    "council": "The Hills Shire Council",
+    "region": "Hills District",
+    "headline": "Architectural Custom Homes & High-End Renovations in Bella Vista",
+    "unique_intro": "Experience high-end bespoke craftsmanship in Bella Vista. Sena Constructions brings architectural precision to luxury new builds, extensive interior remodels, and sophisticated outdoor living spaces.",
+    "postcode": 2153
+  },
+  {
+    "slug": "rouse-hill",
+    "suburb_name": "Rouse Hill",
+    "council": "The Hills Shire Council",
+    "region": "Hills District",
+    "headline": "Complete Knockdown Rebuilds & Family Homes in Rouse Hill",
+    "unique_intro": "Embrace growing master-planned living in Rouse Hill with Sena Constructions. We manage custom knockdown rebuilds and stylish family homes crafted with premium inclusions and transparent pricing.",
+    "postcode": 2155
+  },
+  {
+    "slug": "strathfield",
+    "suburb_name": "Strathfield",
+    "council": "Strathfield Council",
+    "region": "Inner West",
+    "headline": "Prestige Custom Home Builders & Heritage Renovations in Strathfield",
+    "unique_intro": "Complement Strathfield's prestigious streetscapes with Sena Constructions. We execute high-spec luxury custom builds and sympathetic heritage-sensitive renovations to exacting standards.",
+    "postcode": 2135
+  },
+  {
+    "slug": "burwood",
+    "suburb_name": "Burwood",
+    "council": "Burwood Council",
+    "region": "Inner West",
+    "headline": "Bespoke Duplex Builders & Luxury Additions in Burwood",
+    "unique_intro": "Expand your property potential in Burwood with Sena Constructions. We build bespoke architectural duplexes, modern luxury homes, and premium extensions tailored to inner-west family living.",
+    "postcode": 2134
+  },
+  {
+    "slug": "concord",
+    "suburb_name": "Concord",
+    "council": "City of Canada Bay Council",
+    "region": "Inner West",
+    "headline": "Custom Water-Aspect Homes & Architectural Extensions in Concord",
+    "unique_intro": "Embrace Concord's waterside charm with Sena Constructions. We deliver architectural custom rebuilds and open-plan luxury transformations engineered for effortless modern family living.",
+    "postcode": 2137
+  },
+  {
+    "slug": "auburn",
+    "suburb_name": "Auburn",
+    "council": "Cumberland City Council",
+    "region": "Western Sydney",
+    "headline": "Turnkey Duplex Solutions & Quality Home Builders in Auburn",
+    "unique_intro": "Unlock dual-occupancy income and multi-generational flexibility in Auburn with Sena Constructions. We build durable, compliant duplexes and turnkey family residences across Cumberland City.",
+    "postcode": 2144
+  },
+  {
+    "slug": "merrylands",
+    "suburb_name": "Merrylands",
+    "council": "Cumberland City Council",
+    "region": "Western Sydney",
+    "headline": "Knockdown Rebuild Experts & Value-Adding Renovations in Merrylands",
+    "unique_intro": "Renew your residential address in Merrylands with Sena Constructions. From knockdown rebuilds to modern second dwellings and complete home renovations, we enhance livability and equity.",
+    "postcode": 2160
+  },
+  {
+    "slug": "westmead",
+    "suburb_name": "Westmead",
+    "council": "City of Parramatta Council",
+    "region": "Western Sydney",
+    "headline": "Custom Built Homes & Modern Secondary Dwellings in Westmead",
+    "unique_intro": "Build your custom dream home or modern secondary dwelling in Westmead with Sena Constructions, providing seamless approvals and high-grade construction minutes from health and transit hubs.",
+    "postcode": 2145
+  },
+  {
+    "slug": "carlingford",
+    "suburb_name": "Carlingford",
+    "council": "City of Parramatta Council",
+    "region": "Hills / Northern Suburbs",
+    "headline": "Spacious Duplex Developments & Custom Home Builders in Carlingford",
+    "unique_intro": "Maximize block frontage and family comfort in Carlingford with Sena Constructions. We deliver custom dual-occupancy duplexes and tailored multi-level family homes built to endure.",
+    "postcode": 2118
+  },
+  {
+    "slug": "bankstown",
+    "suburb_name": "Bankstown",
+    "council": "City of Canterbury-Bankstown Council",
+    "region": "South Western Sydney",
+    "headline": "Dual Occupancy Duplex Builders & Home Renovations in Bankstown",
+    "unique_intro": "Partner with Sena Constructions for high-yield duplex construction and transformative extensions across Bankstown, creating contemporary spaces tailored to Canterbury-Bankstown planning guidelines.",
+    "postcode": 2200
+  },
+  {
+    "slug": "panania",
+    "suburb_name": "Panania",
+    "council": "City of Canterbury-Bankstown Council",
+    "region": "South Western Sydney",
+    "headline": "Modern Duplex Construction & Luxury Home Builders in Panania",
+    "unique_intro": "Having built standout duplex projects in Panania, Sena Constructions delivers proven construction quality, elegant interior finishes, and stress-free project management from concept to completion.",
+    "postcode": 2213
+  },
+  {
+    "slug": "revesby",
+    "suburb_name": "Revesby",
+    "council": "City of Canterbury-Bankstown Council",
+    "region": "South Western Sydney",
+    "headline": "Comprehensive Knockdown Rebuilds & Custom Homes in Revesby",
+    "unique_intro": "Upgrade your Revesby property with Sena Constructions. We build low-maintenance custom homes, contemporary duplexes, and detached granny flats that elevate lifestyle and capital growth.",
+    "postcode": 2212
+  },
+  {
+    "slug": "padstow",
+    "suburb_name": "Padstow",
+    "council": "City of Canterbury-Bankstown Council",
+    "region": "South Western Sydney",
+    "headline": "Smart Granny Flat Additions & Home Renovations in Padstow",
+    "unique_intro": "Create valuable secondary rental income or extra in-law space in Padstow. Sena Constructions builds custom-designed granny flats, home extensions, and turnkey family rebuilds.",
+    "postcode": 2211
+  },
+  {
+    "slug": "hurstville",
+    "suburb_name": "Hurstville",
+    "council": "Georges River Council",
+    "region": "St George",
+    "headline": "Luxury Multi-Level Custom Home Builders in Hurstville",
+    "unique_intro": "Make an architectural statement in Hurstville with Sena Constructions. We build multi-storey luxury custom residences and extensive renovations tailored to Georges River community standards.",
+    "postcode": 2220
+  },
+  {
+    "slug": "kogarah",
+    "suburb_name": "Kogarah",
+    "council": "Georges River Council",
+    "region": "St George",
+    "headline": "Bespoke Home Renovations & Quality Extensions in Kogarah",
+    "unique_intro": "Modernize your Kogarah home with Sena Constructions. Our skilled crew handles structural additions, high-end kitchen and bathroom updates, and tailored custom residences with complete transparency.",
+    "postcode": 2217
+  },
+  {
+    "slug": "maroubra",
+    "suburb_name": "Maroubra",
+    "council": "Randwick City Council",
+    "region": "Eastern Suburbs",
+    "headline": "Coastal Luxury Custom Home & Extension Builders in Maroubra",
+    "unique_intro": "Embrace relaxed beachside living in Maroubra with Sena Constructions. We engineer weather-resilient coastal custom homes, modern second-storey additions, and luxury renovations built to last.",
+    "postcode": 2035
+  },
+  {
+    "slug": "cronulla",
+    "suburb_name": "Cronulla",
+    "council": "Sutherland Shire Council",
+    "region": "Sutherland Shire",
+    "headline": "Architectural Beachside Custom Homes & Rebuilds in Cronulla",
+    "unique_intro": "Create coastal architectural elegance in Cronulla with Sena Constructions. We deliver bespoke luxury custom homes and complete knockdown rebuilds designed for relaxed beachside living.",
+    "postcode": 2230
+  },
+  {
+    "slug": "miranda",
+    "suburb_name": "Miranda",
+    "council": "Sutherland Shire Council",
+    "region": "Sutherland Shire",
+    "headline": "High-Quality Duplex Living & Home Transformations in Miranda",
+    "unique_intro": "Sena Constructions designs and builds high-quality duplex homes and spacious family additions in Miranda, tailored to Sutherland Shire's distinct suburban coastal charm and lifestyle.",
+    "postcode": 2228
+  },
+  {
+    "slug": "mosman",
+    "suburb_name": "Mosman",
+    "council": "Mosman Council",
+    "region": "Lower North Shore",
+    "headline": "Ultra-Luxury Bespoke Home Builders & Extensions in Mosman",
+    "unique_intro": "Deliver prestige and world-class finishes to Mosman's scenic slopes with Sena Constructions, crafting bespoke luxury residences and architectural restorations with discreet craftsmanship.",
+    "postcode": 2088
+  },
+  {
+    "slug": "chatswood",
+    "suburb_name": "Chatswood",
+    "council": "Willoughby City Council",
+    "region": "Lower North Shore",
+    "headline": "Modern Architectural Homes & High-End Renovations in Chatswood",
+    "unique_intro": "Realize contemporary architectural excellence in Chatswood with Sena Constructions. We specialize in luxury custom homes, stylish duplexes, and designer renovations on Sydney's North Shore.",
+    "postcode": 2067
+  },
+  {
+    "slug": "north-parramatta",
+    "suburb_name": "North Parramatta",
+    "council": "City of Parramatta Council",
+    "region": "Western Sydney",
+    "headline": "Bespoke Custom Homes & Extensions in North Parramatta",
+    "unique_intro": "Build your high-end custom home or heritage-sensitive extension in North Parramatta with Sena Constructions, providing quality craftsmanship and seamless approvals.",
+    "postcode": 2151
+  },
+  {
+    "slug": "granville",
+    "suburb_name": "Granville",
+    "council": "City of Parramatta Council",
+    "region": "Western Sydney",
+    "headline": "High-Yield Duplex Builders & Knockdown Rebuilds in Granville",
+    "unique_intro": "Maximize your block with Sena Constructions in Granville. We deliver durable dual-occupancy duplexes and modern custom residences built to last.",
+    "postcode": 2142
+  },
+  {
+    "slug": "lidcombe",
+    "suburb_name": "Lidcombe",
+    "council": "Cumberland City Council",
+    "region": "Western Sydney",
+    "headline": "Turnkey Duplex Specialists & Architectural Builders in Lidcombe",
+    "unique_intro": "Unlock dual-occupancy potential in Lidcombe with Sena Constructions. We design and construct bespoke family homes and compliant luxury duplexes.",
+    "postcode": 2141
+  },
+  {
+    "slug": "wentworthville",
+    "suburb_name": "Wentworthville",
+    "council": "Cumberland City Council",
+    "region": "Western Sydney",
+    "headline": "Modern Family Home Builders & Secondary Dwellings in Wentworthville",
+    "unique_intro": "Sena Constructions crafts low-maintenance custom homes, contemporary duplexes, and detached granny flats across Wentworthville.",
+    "postcode": 2145
+  },
+  {
+    "slug": "stanhope-gardens",
+    "suburb_name": "Stanhope Gardens",
+    "council": "Blacktown City Council",
+    "region": "Western Sydney",
+    "headline": "Premium Family Living & Custom Additions in Stanhope Gardens",
+    "unique_intro": "Upgrade your Stanhope Gardens home with tailored single and double-storey custom builds engineered for growing modern families.",
+    "postcode": 2768
+  },
+  {
+    "slug": "the-ponds",
+    "suburb_name": "The Ponds",
+    "council": "Blacktown City Council",
+    "region": "Western Sydney",
+    "headline": "Architectural Luxury Builders & Master-Planned Living in The Ponds",
+    "unique_intro": "Sena Constructions brings superior building standards and contemporary designs to bespoke luxury residences across The Ponds.",
+    "postcode": 2769
+  },
+  {
+    "slug": "schofields",
+    "suburb_name": "Schofields",
+    "council": "Blacktown City Council",
+    "region": "Western Sydney",
+    "headline": "Rapid Growth Duplex Developments & Custom Homes in Schofields",
+    "unique_intro": "Capitalize on North-West growth in Schofields. We build high-yield duplexes, modern secondary dwellings, and turn-key custom family homes.",
+    "postcode": 2762
+  },
+  {
+    "slug": "marsden-park",
+    "suburb_name": "Marsden Park",
+    "council": "Blacktown City Council",
+    "region": "Western Sydney",
+    "headline": "Turnkey House Designs & Knockdown Rebuilds in Marsden Park",
+    "unique_intro": "Sena Constructions constructs designer family residences and dual living properties tailored to expanding precincts in Marsden Park.",
+    "postcode": 2765
+  },
+  {
+    "slug": "mount-druitt",
+    "suburb_name": "Mount Druitt",
+    "council": "Blacktown City Council",
+    "region": "Western Sydney",
+    "headline": "Cost-Effective Custom Builds & Dual Occupancy in Mount Druitt",
+    "unique_intro": "Deliver strong rental yields and modern family spaces in Mount Druitt with durable, council-compliant duplexes and granny flats.",
+    "postcode": 2770
+  },
+  {
+    "slug": "fairfield",
+    "suburb_name": "Fairfield",
+    "council": "Fairfield City Council",
+    "region": "Western Sydney",
+    "headline": "Dual Occupancy Specialists & Custom Home Builders in Fairfield",
+    "unique_intro": "Maximize block value in Fairfield with Sena Constructions. We build high-standard duplexes, secondary dwellings, and spacious modern family homes.",
+    "postcode": 2165
+  },
+  {
+    "slug": "cabramatta",
+    "suburb_name": "Cabramatta",
+    "council": "Fairfield City Council",
+    "region": "Western Sydney",
+    "headline": "Multi-Generational Luxury Homes & Duplex Builders in Cabramatta",
+    "unique_intro": "Sena Constructions creates spacious multi-generational family homes and modern dual-occupancy builds tailored to Cabramatta blocks.",
+    "postcode": 2166
+  },
+  {
+    "slug": "canley-vale",
+    "suburb_name": "Canley Vale",
+    "council": "Fairfield City Council",
+    "region": "Western Sydney",
+    "headline": "Knockdown Rebuilds & Modern Granny Flats in Canley Vale",
+    "unique_intro": "Transform your property in Canley Vale with bespoke rebuilds, quality extensions, and income-generating detached secondary dwellings.",
+    "postcode": 2166
+  },
+  {
+    "slug": "wetherill-park",
+    "suburb_name": "Wetherill Park",
+    "council": "Fairfield City Council",
+    "region": "Western Sydney",
+    "headline": "Contemporary Custom Residences & Duplex Builders in Wetherill Park",
+    "unique_intro": "Build expansive custom family residences and compliant duplex properties in Wetherill Park with expert design-and-construct services.",
+    "postcode": 2164
+  },
+  {
+    "slug": "bossley-park",
+    "suburb_name": "Bossley Park",
+    "council": "Fairfield City Council",
+    "region": "Western Sydney",
+    "headline": "Architectural Home Extensions & Luxury Builds in Bossley Park",
+    "unique_intro": "Sena Constructions delivers high-end custom transformations, alfresco entertainment spaces, and luxury duplexes in Bossley Park.",
+    "postcode": 2176
+  },
+  {
+    "slug": "casula",
+    "suburb_name": "Casula",
+    "council": "Liverpool City Council",
+    "region": "South Western Sydney",
+    "headline": "Custom Family Home Builders & Duplex Specialists in Casula",
+    "unique_intro": "Build enduring quality in Casula with Sena Constructions. We deliver modern dual-occupancy duplexes and tailored family residences.",
+    "postcode": 2170
+  },
+  {
+    "slug": "moorebank",
+    "suburb_name": "Moorebank",
+    "council": "Liverpool City Council",
+    "region": "South Western Sydney",
+    "headline": "Turnkey Knockdown Rebuilds & Luxury Homes in Moorebank",
+    "unique_intro": "Sena Constructions designs and builds high-specification custom homes and smart duplexes suited to modern Moorebank residential allotments.",
+    "postcode": 2170
+  },
+  {
+    "slug": "prestons",
+    "suburb_name": "Prestons",
+    "council": "Liverpool City Council",
+    "region": "South Western Sydney",
+    "headline": "Dual-Living Solutions & Custom Home Builders in Prestons",
+    "unique_intro": "Realize your property vision in Prestons with functional duplex developments, attached secondary dwellings, and bespoke family residences.",
+    "postcode": 2170
+  },
+  {
+    "slug": "middleton-grange",
+    "suburb_name": "Middleton Grange",
+    "council": "Liverpool City Council",
+    "region": "South Western Sydney",
+    "headline": "Master-Crafted Modern Homes & Additions in Middleton Grange",
+    "unique_intro": "Sena Constructions provides premium architectural custom builds and luxury finishes for growing families across Middleton Grange.",
+    "postcode": 2171
+  },
+  {
+    "slug": "glenmore-park",
+    "suburb_name": "Glenmore Park",
+    "council": "Penrith City Council",
+    "region": "Greater Western Sydney",
+    "headline": "Spacious Custom Family Homes & Knockdown Rebuilds in Glenmore Park",
+    "unique_intro": "Sena Constructions crafts sprawling family homes and architectural rebuilds engineered to maximize views and outdoor lifestyles in Glenmore Park.",
+    "postcode": 2745
+  },
+  {
+    "slug": "st-marys",
+    "suburb_name": "St Marys",
+    "council": "Penrith City Council",
+    "region": "Greater Western Sydney",
+    "headline": "Strategic Duplex Builds & Secondary Dwellings in St Marys",
+    "unique_intro": "Capitalize on transit connectivity in St Marys with high-yield duplex construction and council-compliant secondary dwellings.",
+    "postcode": 2760
+  },
+  {
+    "slug": "jordan-springs",
+    "suburb_name": "Jordan Springs",
+    "council": "Penrith City Council",
+    "region": "Greater Western Sydney",
+    "headline": "Turnkey Modern Residences & Custom Extensions in Jordan Springs",
+    "unique_intro": "Experience stress-free turnkey construction in Jordan Springs with energy-efficient custom designs and luxury inclusions.",
+    "postcode": 2747
+  },
+  {
+    "slug": "cranebrook",
+    "suburb_name": "Cranebrook",
+    "council": "Penrith City Council",
+    "region": "Greater Western Sydney",
+    "headline": "Semi-Rural & Residential Custom Builders in Cranebrook",
+    "unique_intro": "From generous parcels to modern subdivisions, Sena Constructions designs tailored family rebuilds and duplexes in Cranebrook.",
+    "postcode": 2749
+  },
+  {
+    "slug": "camden",
+    "suburb_name": "Camden",
+    "council": "Camden Council",
+    "region": "South Western Sydney",
+    "headline": "Heritage-Sympathetic & Luxury Custom Builders in Camden",
+    "unique_intro": "Honour Camden's historic streetscapes with bespoke luxury residences and sympathetic architectural designs by Sena Constructions.",
+    "postcode": 2570
+  },
+  {
+    "slug": "gregory-hills",
+    "suburb_name": "Gregory Hills",
+    "council": "Camden Council",
+    "region": "South Western Sydney",
+    "headline": "Contemporary Duplexes & Turnkey Family Homes in Gregory Hills",
+    "unique_intro": "Maximize modern estate living in Gregory Hills with Sena Constructions' premium duplex developments and custom turnkey homes.",
+    "postcode": 2557
+  },
+  {
+    "slug": "oran-park",
+    "suburb_name": "Oran Park",
+    "council": "Camden Council",
+    "region": "South Western Sydney",
+    "headline": "Master-Planned Custom Builds & Knockdown Rebuilds in Oran Park",
+    "unique_intro": "Build your dream home in vibrant Oran Park. We deliver tailored architectural designs, smart floorplans, and quality craftsmanship.",
+    "postcode": 2570
+  },
+  {
+    "slug": "narellan",
+    "suburb_name": "Narellan",
+    "council": "Camden Council",
+    "region": "South Western Sydney",
+    "headline": "High-Yield Duplex Construction & Renovations in Narellan",
+    "unique_intro": "Unlock the full potential of your Narellan block with modern dual-occupancy developments and comprehensive home rebuilds.",
+    "postcode": 2567
+  },
+  {
+    "slug": "harrington-park",
+    "suburb_name": "Harrington Park",
+    "council": "Camden Council",
+    "region": "South Western Sydney",
+    "headline": "Prestige Luxury Homes & Expansive Extensions in Harrington Park",
+    "unique_intro": "Sena Constructions crafts executive custom homes and seamless outdoor extensions across Harrington Park's premium leafy estates.",
+    "postcode": 2567
+  },
+  {
+    "slug": "campbelltown",
+    "suburb_name": "Campbelltown",
+    "council": "Campbelltown City Council",
+    "region": "South Western Sydney",
+    "headline": "Knockdown Rebuilds & Dual-Occupancy Duplexes in Campbelltown",
+    "unique_intro": "Transform your Campbelltown parcel into high-performing equity with Sena Constructions' custom rebuilds and modern duplexes.",
+    "postcode": 2560
+  },
+  {
+    "slug": "ingleburn",
+    "suburb_name": "Ingleburn",
+    "council": "Campbelltown City Council",
+    "region": "South Western Sydney",
+    "headline": "Versatile Family Homes & Granny Flat Builders in Ingleburn",
+    "unique_intro": "Sena Constructions designs durable custom homes, granny flats, and multi-generational layouts tailored to Ingleburn.",
+    "postcode": 2565
+  },
+  {
+    "slug": "glenfield",
+    "suburb_name": "Glenfield",
+    "council": "Campbelltown City Council",
+    "region": "South Western Sydney",
+    "headline": "Transit-Adjacent Duplex Developments & Builds in Glenfield",
+    "unique_intro": "Capitalize on key rail connectivity in Glenfield with modern duplex developments and architecturally crafted residences.",
+    "postcode": 2167
+  },
+  {
+    "slug": "minto",
+    "suburb_name": "Minto",
+    "council": "Campbelltown City Council",
+    "region": "South Western Sydney",
+    "headline": "Quality Turnkey Homes & Secondary Dwellings in Minto",
+    "unique_intro": "Deliver low-maintenance custom homes and profitable secondary dwellings in Minto with complete council compliance.",
+    "postcode": 2566
+  },
+  {
+    "slug": "macarthur",
+    "suburb_name": "Macarthur",
+    "council": "Campbelltown City Council",
+    "region": "South Western Sydney",
+    "headline": "Executive Custom Residences & Expansive Builds in Macarthur",
+    "unique_intro": "Sena Constructions delivers bespoke multi-level executive homes and luxury extensions throughout the Macarthur region.",
+    "postcode": 2560
+  },
+  {
+    "slug": "norwest",
+    "suburb_name": "Norwest",
+    "council": "The Hills Shire Council",
+    "region": "Hills District",
+    "headline": "Modern Architectural Builds & Corporate-Luxe Homes in Norwest",
+    "unique_intro": "Elevate modern residential luxury in Norwest with striking custom homes, smart automation, and refined interior styling.",
+    "postcode": 2153
+  },
+  {
+    "slug": "box-hill",
+    "suburb_name": "Box Hill",
+    "council": "The Hills Shire Council",
+    "region": "Hills District",
+    "headline": "High-Growth Custom Homes & Duplex Builders in Box Hill",
+    "unique_intro": "Build standout luxury residences and dual-occupancy developments in booming Box Hill with Sena Constructions.",
+    "postcode": 2765
+  },
+  {
+    "slug": "hornsby",
+    "suburb_name": "Hornsby",
+    "council": "Hornsby Shire Council",
+    "region": "Upper North Shore",
+    "headline": "Architectural Bushland-Aspect Custom Homes in Hornsby",
+    "unique_intro": "Navigate sloping blocks and bushfire ratings with ease in Hornsby. Sena Constructions builds resilient, luxury custom homes.",
+    "postcode": 2077
+  },
+  {
+    "slug": "pennant-hills",
+    "suburb_name": "Pennant Hills",
+    "council": "Hornsby Shire Council",
+    "region": "Upper North Shore",
+    "headline": "Bespoke Renovations & Custom Family Homes in Pennant Hills",
+    "unique_intro": "Sena Constructions crafts classic-meets-contemporary family homes and sympathetic extensions across leafy Pennant Hills.",
+    "postcode": 2120
+  },
+  {
+    "slug": "cherrybrook",
+    "suburb_name": "Cherrybrook",
+    "council": "Hornsby Shire Council",
+    "region": "Hills / Northern Suburbs",
+    "headline": "Prestige School-Catchment Home Renovations in Cherrybrook",
+    "unique_intro": "Maximize your footprint in Cherrybrook with high-end second-storey additions, custom kitchen remodels, and luxury rebuilds.",
+    "postcode": 2126
+  },
+  {
+    "slug": "berowra",
+    "suburb_name": "Berowra",
+    "council": "Hornsby Shire Council",
+    "region": "Upper North Shore",
+    "headline": "Bush-Retreat Custom Builds & Second Storey Additions in Berowra",
+    "unique_intro": "Build serene, nature-connected custom homes and expansive additions in Berowra designed for contemporary family living.",
+    "postcode": 2081
+  },
+  {
+    "slug": "thornleigh",
+    "suburb_name": "Thornleigh",
+    "council": "Hornsby Shire Council",
+    "region": "Upper North Shore",
+    "headline": "Modern Knockdown Rebuilds & Extensions in Thornleigh",
+    "unique_intro": "Renew your residential address in Thornleigh with high-performance knockdown rebuilds and seamless ground-floor expansions.",
+    "postcode": 2120
+  },
+  {
+    "slug": "pymble",
+    "suburb_name": "Pymble",
+    "council": "Ku-ring-gai Council",
+    "region": "Upper North Shore",
+    "headline": "Grand Estate Custom Builders & Prestige Renovations in Pymble",
+    "unique_intro": "Sena Constructions delivers timeless architectural custom builds and luxury heritage-sensitive renovations across Pymble.",
+    "postcode": 2073
+  },
+  {
+    "slug": "turramurra",
+    "suburb_name": "Turramurra",
+    "council": "Ku-ring-gai Council",
+    "region": "Upper North Shore",
+    "headline": "Luxury Leafy-Suburban Living & Bespoke Homes in Turramurra",
+    "unique_intro": "Create your dream family sanctuary in Turramurra with architectural custom designs, pool pavilions, and modern luxury finishes.",
+    "postcode": 2074
+  },
+  {
+    "slug": "lindfield",
+    "suburb_name": "Lindfield",
+    "council": "Ku-ring-gai Council",
+    "region": "Upper North Shore",
+    "headline": "Architectural Period Restorations & Modern Additions in Lindfield",
+    "unique_intro": "Sena Constructions blends Federation charm with state-of-the-art open plan additions across heritage Lindfield properties.",
+    "postcode": 2070
+  },
+  {
+    "slug": "gordon",
+    "suburb_name": "Gordon",
+    "council": "Ku-ring-gai Council",
+    "region": "Upper North Shore",
+    "headline": "Prestige Multi-Level Homes & Master-Crafted Builds in Gordon",
+    "unique_intro": "Experience architectural excellence in Gordon with bespoke custom homes engineered for privacy, light, and sophistication.",
+    "postcode": 2072
+  },
+  {
+    "slug": "st-ives",
+    "suburb_name": "St Ives",
+    "council": "Ku-ring-gai Council",
+    "region": "Upper North Shore",
+    "headline": "Contemporary Luxury Residences & Extensions in St Ives",
+    "unique_intro": "Sena Constructions crafts light-filled custom homes and expansive family additions tailored to generous St Ives allotments.",
+    "postcode": 2075
+  },
+  {
+    "slug": "roseville",
+    "suburb_name": "Roseville",
+    "council": "Ku-ring-gai Council",
+    "region": "Upper North Shore",
+    "headline": "Heritage-Sensitive Custom Renovations & Rebuilds in Roseville",
+    "unique_intro": "Preserve character while introducing ultra-modern luxury in Roseville with Sena Constructions' bespoke construction services.",
+    "postcode": 2069
+  },
+  {
+    "slug": "north-sydney",
+    "suburb_name": "North Sydney",
+    "council": "North Sydney Council",
+    "region": "Lower North Shore",
+    "headline": "Urban Luxury Terrace Renovations & Custom Builds in North Sydney",
+    "unique_intro": "Transform compact urban parcels and heritage terraces into architectural showcases across North Sydney with Sena Constructions.",
+    "postcode": 2060
+  },
+  {
+    "slug": "crows-nest",
+    "suburb_name": "Crows Nest",
+    "council": "North Sydney Council",
+    "region": "Lower North Shore",
+    "headline": "Bespoke Inner-City Terrace Remodels & Extensions in Crows Nest",
+    "unique_intro": "Sena Constructions specializes in precision structural additions and contemporary internal transformations in dynamic Crows Nest.",
+    "postcode": 2065
+  },
+  {
+    "slug": "neutral-bay",
+    "suburb_name": "Neutral Bay",
+    "council": "North Sydney Council",
+    "region": "Lower North Shore",
+    "headline": "Prestige Harbour-Aspect Custom Renovations in Neutral Bay",
+    "unique_intro": "Elevate your lifestyle in Neutral Bay with bespoke multi-storey renovations and luxury coastal architectural finishes.",
+    "postcode": 2089
+  },
+  {
+    "slug": "cammeray",
+    "suburb_name": "Cammeray",
+    "council": "North Sydney Council",
+    "region": "Lower North Shore",
+    "headline": "Architectural Haven Rebuilds & Modern Additions in Cammeray",
+    "unique_intro": "Sena Constructions delivers serene, high-end family rebuilds and architectural additions capturing Cammeray's leafy charm.",
+    "postcode": 2062
+  },
+  {
+    "slug": "wollstonecraft",
+    "suburb_name": "Wollstonecraft",
+    "council": "North Sydney Council",
+    "region": "Lower North Shore",
+    "headline": "Refined Waterfront & Bushland Bespoke Homes in Wollstonecraft",
+    "unique_intro": "Craft an exclusive residential masterpiece in Wollstonecraft with bespoke structural engineering and elite finishes.",
+    "postcode": 2065
+  },
+  {
+    "slug": "willoughby",
+    "suburb_name": "Willoughby",
+    "council": "Willoughby City Council",
+    "region": "Lower North Shore",
+    "headline": "Contemporary Custom Family Homes & Additions in Willoughby",
+    "unique_intro": "Sena Constructions delivers light-filled custom homes, modern second-storey additions, and entertainer renovations in Willoughby.",
+    "postcode": 2068
+  },
+  {
+    "slug": "castlecrag",
+    "suburb_name": "Castlecrag",
+    "council": "Willoughby City Council",
+    "region": "Lower North Shore",
+    "headline": "Architectural Organic Custom Residences in Castlecrag",
+    "unique_intro": "Honour Castlecrag's Griffin heritage with sympathetic, stone-and-timber architectural homes crafted to perfection.",
+    "postcode": 2068
+  },
+  {
+    "slug": "artarmon",
+    "suburb_name": "Artarmon",
+    "council": "Willoughby City Council",
+    "region": "Lower North Shore",
+    "headline": "Heritage Conservation Renovations & New Homes in Artarmon",
+    "unique_intro": "Seamlessly balance heritage guidelines with cutting-edge interior luxury in Artarmon with Sena Constructions.",
+    "postcode": 2064
+  },
+  {
+    "slug": "roseville-chase",
+    "suburb_name": "Roseville Chase",
+    "council": "Willoughby City Council",
+    "region": "Lower North Shore",
+    "headline": "Water-View Luxury Homes & Sloping-Site Builders in Roseville Chase",
+    "unique_intro": "Specialized engineering and architectural luxury for hillside, water-glimpse residences in picturesque Roseville Chase.",
+    "postcode": 2069
+  },
+  {
+    "slug": "lane-cove",
+    "suburb_name": "Lane Cove",
+    "council": "Lane Cove Council",
+    "region": "Lower North Shore",
+    "headline": "Turnkey Architectural Rebuilds & Renovations in Lane Cove",
+    "unique_intro": "Sena Constructions creates sophisticated family sanctuaries and premium knockdown rebuilds tailored to Lane Cove.",
+    "postcode": 2066
+  },
+  {
+    "slug": "riverview",
+    "suburb_name": "Riverview",
+    "council": "Lane Cove Council",
+    "region": "Lower North Shore",
+    "headline": "Prestige Waterfront Custom Home Construction in Riverview",
+    "unique_intro": "Deliver unparalleled luxury and river vistas with Sena Constructions' bespoke architectural builds in Riverview.",
+    "postcode": 2066
+  },
+  {
+    "slug": "greenwich",
+    "suburb_name": "Greenwich",
+    "council": "Lane Cove Council",
+    "region": "Lower North Shore",
+    "headline": "Harbourside Bespoke Living & Period Restorations in Greenwich",
+    "unique_intro": "Craft refined custom homes and sensitive period renovations overlooking Sydney Harbour in prestigious Greenwich.",
+    "postcode": 2065
+  },
+  {
+    "slug": "linley-point",
+    "suburb_name": "Linley Point",
+    "council": "Lane Cove Council",
+    "region": "Lower North Shore",
+    "headline": "Exclusive Peninsular Custom Homes & Additions in Linley Point",
+    "unique_intro": "Bespoke architectural construction tailored for intimate peninsular living and elevated water aspects in Linley Point.",
+    "postcode": 2066
+  },
+  {
+    "slug": "longueville",
+    "suburb_name": "Longueville",
+    "council": "Lane Cove Council",
+    "region": "Lower North Shore",
+    "headline": "Ultra-Prestige Waterfront Custom Builders in Longueville",
+    "unique_intro": "Sena Constructions executes world-class architectural residences and extensive luxury restorations in Longueville.",
+    "postcode": 2066
+  },
+  {
+    "slug": "hunters-hill",
+    "suburb_name": "Hunters Hill",
+    "council": "Municipality of Hunters Hill",
+    "region": "Lower North Shore",
+    "headline": "Sandstone Heritage Restorations & Luxury Homes in Hunters Hill",
+    "unique_intro": "Master stonework and conservation expertise meet modern luxury in historic Hunters Hill with Sena Constructions.",
+    "postcode": 2110
+  },
+  {
+    "slug": "woolwich",
+    "suburb_name": "Woolwich",
+    "council": "Municipality of Hunters Hill",
+    "region": "Lower North Shore",
+    "headline": "Bespoke Peninsular Harbourside Mansions in Woolwich",
+    "unique_intro": "Engineered for generational luxury, Sena Constructions delivers bespoke peninsular estates across premier Woolwich.",
+    "postcode": 2110
+  },
+  {
+    "slug": "huntleys-point",
+    "suburb_name": "Huntleys Point",
+    "council": "Municipality of Hunters Hill",
+    "region": "Lower North Shore",
+    "headline": "Waterfront Architectural Residences in Huntleys Point",
+    "unique_intro": "Capture sweeping harbour panoramas with modern architectural construction and high-spec finishes in Huntleys Point.",
+    "postcode": 2111
+  },
+  {
+    "slug": "gladesville",
+    "suburb_name": "Gladesville",
+    "council": "Municipality of Hunters Hill",
+    "region": "Northern Suburbs",
+    "headline": "Contemporary Family Homes & Duplex Developments in Gladesville",
+    "unique_intro": "Sena Constructions builds versatile family homes and premium duplexes navigating local council approvals with ease.",
+    "postcode": 2111
+  },
+  {
+    "slug": "manly",
+    "suburb_name": "Manly",
+    "council": "Northern Beaches Council",
+    "region": "Northern Beaches",
+    "headline": "Iconic Coastal Custom Homes & Beachside Additions in Manly",
+    "unique_intro": "Sena Constructions builds resilient luxury beach houses and architectural renovations crafted for Manly's coastal lifestyle.",
+    "postcode": 2095
+  },
+  {
+    "slug": "dee-why",
+    "suburb_name": "Dee Why",
+    "council": "Northern Beaches Council",
+    "region": "Northern Beaches",
+    "headline": "Modern Coastal Duplexes & Custom Residences in Dee Why",
+    "unique_intro": "Deliver exceptional living spaces and strong property yields in Dee Why with modern dual-occupancy and custom builds.",
+    "postcode": 2099
+  },
+  {
+    "slug": "mona-vale",
+    "suburb_name": "Mona Vale",
+    "council": "Northern Beaches Council",
+    "region": "Northern Beaches",
+    "headline": "Beachside Family Sanctuaries & Knockdown Rebuilds in Mona Vale",
+    "unique_intro": "Craft relaxed coastal architecture and expansive family homes built to withstand oceanic weather in Mona Vale.",
+    "postcode": 2103
+  },
+  {
+    "slug": "brookvale",
+    "suburb_name": "Brookvale",
+    "council": "Northern Beaches Council",
+    "region": "Northern Beaches",
+    "headline": "Innovative Urban Residences & Custom Living in Brookvale",
+    "unique_intro": "Sena Constructions crafts bold modern homes and dual-living projects in dynamic Brookvale on the Northern Beaches.",
+    "postcode": 2100
+  },
+  {
+    "slug": "freshwater",
+    "suburb_name": "Freshwater",
+    "council": "Northern Beaches Council",
+    "region": "Northern Beaches",
+    "headline": "Prestige Coastal Living & Luxury Home Builders in Freshwater",
+    "unique_intro": "Bring luxury coastal elegance to life with architectural custom residences and master renovations in Freshwater.",
+    "postcode": 2096
+  },
+  {
+    "slug": "avalon-beach",
+    "suburb_name": "Avalon Beach",
+    "council": "Northern Beaches Council",
+    "region": "Northern Beaches",
+    "headline": "Architectural Beach Houses & Eco-Luxe Homes in Avalon Beach",
+    "unique_intro": "Integrate natural materials and coastal breezes with bespoke, eco-conscious architectural builds in Avalon Beach.",
+    "postcode": 2107
+  },
+  {
+    "slug": "sydney-cbd",
+    "suburb_name": "Sydney CBD",
+    "council": "City of Sydney",
+    "region": "City Centre",
+    "headline": "High-End Penthouse Refurbishments & Luxury Living in Sydney CBD",
+    "unique_intro": "Sena Constructions brings discreet, ultra-luxury craftsmanship and structural expertise to premier City of Sydney residences.",
+    "postcode": 2000
+  },
+  {
+    "slug": "surry-hills",
+    "suburb_name": "Surry Hills",
+    "council": "City of Sydney",
+    "region": "City Fringe",
+    "headline": "Architectural Heritage Terrace Conversions in Surry Hills",
+    "unique_intro": "Transform historic Victorian terraces into open-plan, light-filled modern masterworks in trend-setting Surry Hills.",
+    "postcode": 2010
+  },
+  {
+    "slug": "pyrmont",
+    "suburb_name": "Pyrmont",
+    "council": "City of Sydney",
+    "region": "City Fringe",
+    "headline": "Harbourside Luxury Living & Bespoke Renovations in Pyrmont",
+    "unique_intro": "Sena Constructions delivers contemporary structural rebuilds and high-spec interiors across harbourside Pyrmont.",
+    "postcode": 2009
+  },
+  {
+    "slug": "alexandria",
+    "suburb_name": "Alexandria",
+    "council": "City of Sydney",
+    "region": "City Fringe",
+    "headline": "Industrial-Chic Architectural Residences in Alexandria",
+    "unique_intro": "Combine heritage brickwork with modern steel and timber in bespoke residential rebuilds across vibrant Alexandria.",
+    "postcode": 2015
+  },
+  {
+    "slug": "redfern",
+    "suburb_name": "Redfern",
+    "council": "City of Sydney",
+    "region": "City Fringe",
+    "headline": "Urban Terrace Restorations & Modern Additions in Redfern",
+    "unique_intro": "Sena Constructions specializes in sympathetic heritage restorations and striking contemporary extensions in Redfern.",
+    "postcode": 2016
+  },
+  {
+    "slug": "balmain",
+    "suburb_name": "Balmain",
+    "council": "Inner West Council",
+    "region": "Inner West",
+    "headline": "Maritime Heritage Restorations & Luxury Additions in Balmain",
+    "unique_intro": "Navigate narrow inner-west allotments with precision. Sena Constructions creates stunning bespoke terraces in Balmain.",
+    "postcode": 2041
+  },
+  {
+    "slug": "leichhardt",
+    "suburb_name": "Leichhardt",
+    "council": "Inner West Council",
+    "region": "Inner West",
+    "headline": "Classic Italianate Restorations & Modern Homes in Leichhardt",
+    "unique_intro": "Blend heritage character with modern open-plan indoor/outdoor living in Leichhardt with Sena Constructions.",
+    "postcode": 2040
+  },
+  {
+    "slug": "marrickville",
+    "suburb_name": "Marrickville",
+    "council": "Inner West Council",
+    "region": "Inner West",
+    "headline": "Creative Architectural Builds & Heritage Upgrades in Marrickville",
+    "unique_intro": "Sena Constructions crafts bespoke, character-filled custom homes and modern duplex additions in eclectic Marrickville.",
+    "postcode": 2204
+  },
+  {
+    "slug": "annandale",
+    "suburb_name": "Annandale",
+    "council": "Inner West Council",
+    "region": "Inner West",
+    "headline": "Wide-Street Victorian & Federation Custom Renovations in Annandale",
+    "unique_intro": "Restore grand period facades while expanding modern interior volumes with Sena Constructions in Annandale.",
+    "postcode": 2038
+  },
+  {
+    "slug": "dulwich-hill",
+    "suburb_name": "Dulwich Hill",
+    "council": "Inner West Council",
+    "region": "Inner West",
+    "headline": "Charm-Filled Period Rebuilds & Extensions in Dulwich Hill",
+    "unique_intro": "Deliver high-craftsmanship family homes and dual-living transformations throughout historic Dulwich Hill.",
+    "postcode": 2203
+  },
+  {
+    "slug": "newtown",
+    "suburb_name": "Newtown",
+    "council": "Inner West Council",
+    "region": "Inner West",
+    "headline": "Architectural Terrace Transformations in Newtown",
+    "unique_intro": "Maximize space, light, and modern comfort within historic terrace envelopes in Newtown with Sena Constructions.",
+    "postcode": 2042
+  },
+  {
+    "slug": "rhodes",
+    "suburb_name": "Rhodes",
+    "council": "City of Canada Bay Council",
+    "region": "Inner West",
+    "headline": "Water-Aspect Modern Living & High-End Renovations in Rhodes",
+    "unique_intro": "Sena Constructions delivers bespoke interior rebuilds and premium coastal additions across scenic Rhodes.",
+    "postcode": 2138
+  },
+  {
+    "slug": "drummoyne",
+    "suburb_name": "Drummoyne",
+    "council": "City of Canada Bay Council",
+    "region": "Inner West",
+    "headline": "Waterfront Luxury Rebuilds & Architectural Homes in Drummoyne",
+    "unique_intro": "Capture panoramic water views with high-specification custom home builds and prestige renovations in Drummoyne.",
+    "postcode": 2047
+  },
+  {
+    "slug": "five-dock",
+    "suburb_name": "Five Dock",
+    "council": "City of Canada Bay Council",
+    "region": "Inner West",
+    "headline": "Expansive Custom Family Homes & Duplexes in Five Dock",
+    "unique_intro": "Sena Constructions designs and builds high-quality duplex homes and spacious family additions in Five Dock.",
+    "postcode": 2046
+  },
+  {
+    "slug": "breakfast-point",
+    "suburb_name": "Breakfast Point",
+    "council": "City of Canada Bay Council",
+    "region": "Inner West",
+    "headline": "Hampton-Style Luxury Renovations in Breakfast Point",
+    "unique_intro": "Execute high-end coastal interior remodels and architectural upgrades suited to Breakfast Point's master-planned beauty.",
+    "postcode": 2137
+  },
+  {
+    "slug": "cabarita",
+    "suburb_name": "Cabarita",
+    "council": "City of Canada Bay Council",
+    "region": "Inner West",
+    "headline": "Waterfront Peninsular Mansions & Custom Builds in Cabarita",
+    "unique_intro": "Prestige custom construction engineered for riverfront elegance and private luxury living in Cabarita.",
+    "postcode": 2137
+  },
+  {
+    "slug": "enfield",
+    "suburb_name": "Enfield",
+    "council": "Burwood Council",
+    "region": "Inner West",
+    "headline": "Heritage-Sensitive Extensions & Modern Duplexes in Enfield",
+    "unique_intro": "Sena Constructions delivers quality knockdown rebuilds and contemporary dual-occupancy duplexes in Enfield.",
+    "postcode": 2136
+  },
+  {
+    "slug": "burwood-heights",
+    "suburb_name": "Burwood Heights",
+    "council": "Burwood Council",
+    "region": "Inner West",
+    "headline": "Bespoke Family Residences & Luxury Additions in Burwood Heights",
+    "unique_intro": "Craft tailored multi-level family homes and modern extensions designed for long-term comfort in Burwood Heights.",
+    "postcode": 2136
+  },
+  {
+    "slug": "croydon",
+    "suburb_name": "Croydon",
+    "council": "Burwood Council",
+    "region": "Inner West",
+    "headline": "Period Federation Restorations & Architectural Rebuilds in Croydon",
+    "unique_intro": "Preserve iconic heritage street appeal while crafting luxurious modern living spaces in Croydon.",
+    "postcode": 2132
+  },
+  {
+    "slug": "strathfield-south",
+    "suburb_name": "Strathfield South",
+    "council": "Strathfield Council",
+    "region": "Inner West",
+    "headline": "Contemporary Duplex Living & Custom Homes in Strathfield South",
+    "unique_intro": "Unlock site value in Strathfield South with high-spec duplex developments and turnkey family residences.",
+    "postcode": 2136
+  },
+  {
+    "slug": "homebush",
+    "suburb_name": "Homebush",
+    "council": "Strathfield Council",
+    "region": "Inner West",
+    "headline": "Architectural Rebuilds & Dual-Occupancy Builders in Homebush",
+    "unique_intro": "Sena Constructions delivers custom knockdown rebuilds and compliant duplexes in central, connected Homebush.",
+    "postcode": 2140
+  },
+  {
+    "slug": "homebush-west",
+    "suburb_name": "Homebush West",
+    "council": "Strathfield Council",
+    "region": "Inner West",
+    "headline": "Modern Multi-Dwelling & Family Home Construction in Homebush West",
+    "unique_intro": "Build high-quality custom homes and modern duplex investments with transparent pricing in Homebush West.",
+    "postcode": 2140
+  },
+  {
+    "slug": "campsie",
+    "suburb_name": "Campsie",
+    "council": "City of Canterbury-Bankstown Council",
+    "region": "South Western Sydney",
+    "headline": "High-Yield Duplex Construction & Renovations in Campsie",
+    "unique_intro": "Sena Constructions unlocks property equity in Campsie with modern dual-occupancy projects and turnkey family homes.",
+    "postcode": 2194
+  },
+  {
+    "slug": "greenacre",
+    "suburb_name": "Greenacre",
+    "council": "City of Canterbury-Bankstown Council",
+    "region": "South Western Sydney",
+    "headline": "Spacious Custom Homes & Modern Duplex Builders in Greenacre",
+    "unique_intro": "Build expansive luxury custom residences and compliant dual-occupancy duplexes in high-demand Greenacre.",
+    "postcode": 2190
+  },
+  {
+    "slug": "punchbowl",
+    "suburb_name": "Punchbowl",
+    "council": "City of Canterbury-Bankstown Council",
+    "region": "South Western Sydney",
+    "headline": "Knockdown Rebuilds & Secondary Dwellings in Punchbowl",
+    "unique_intro": "Transform your Punchbowl property with cost-effective family rebuilds, quality duplexes, and detached granny flats.",
+    "postcode": 2196
+  },
+  {
+    "slug": "chester-hill",
+    "suburb_name": "Chester Hill",
+    "council": "City of Canterbury-Bankstown Council",
+    "region": "South Western Sydney",
+    "headline": "Reliable Duplex Builders & Custom Residences in Chester Hill",
+    "unique_intro": "Sena Constructions brings dependable construction excellence and smart duplex designs to Chester Hill.",
+    "postcode": 2162
+  },
+  {
+    "slug": "beverly-hills",
+    "suburb_name": "Beverly Hills",
+    "council": "Georges River Council",
+    "region": "St George",
+    "headline": "Quality Duplex Living & Family Home Additions in Beverly Hills",
+    "unique_intro": "Maximize wide frontage in Beverly Hills with Sena Constructions' bespoke duplexes and second-storey additions.",
+    "postcode": 2209
+  },
+  {
+    "slug": "mortdale",
+    "suburb_name": "Mortdale",
+    "council": "Georges River Council",
+    "region": "St George",
+    "headline": "Contemporary Knockdown Rebuilds & Duplexes in Mortdale",
+    "unique_intro": "Sena Constructions builds low-maintenance custom homes and profitable dual-occupancy duplexes in friendly Mortdale.",
+    "postcode": 2223
+  },
+  {
+    "slug": "oatley",
+    "suburb_name": "Oatley",
+    "council": "Georges River Council",
+    "region": "St George",
+    "headline": "Prestige Bushland & Water-Aspect Custom Homes in Oatley",
+    "unique_intro": "Create a private luxury sanctuary in Oatley with architectural custom homes built to harmonize with natural bushland.",
+    "postcode": 2223
+  },
+  {
+    "slug": "penshurst",
+    "suburb_name": "Penshurst",
+    "council": "Georges River Council",
+    "region": "St George",
+    "headline": "Modern Family Residences & Bespoke Additions in Penshurst",
+    "unique_intro": "Sena Constructions delivers turnkey knockdown rebuilds and stylish home renovations across Penshurst.",
+    "postcode": 2222
+  },
+  {
+    "slug": "kingsgrove",
+    "suburb_name": "Kingsgrove",
+    "council": "Georges River Council",
+    "region": "St George",
+    "headline": "Dual Occupancy Developments & Custom Homes in Kingsgrove",
+    "unique_intro": "Unlock strong suburban returns in Kingsgrove with architecturally designed duplexes and custom family rebuilds.",
+    "postcode": 2208
+  },
+  {
+    "slug": "rockdale",
+    "suburb_name": "Rockdale",
+    "council": "Bayside Council",
+    "region": "St George / Bayside",
+    "headline": "Architectural Duplex Builders & Home Renovations in Rockdale",
+    "unique_intro": "Transform your practical block with Sena Constructions' turnkey duplex developments and modern custom rebuilds.",
+    "postcode": 2216
+  },
+  {
+    "slug": "brighton-le-sands",
+    "suburb_name": "Brighton-Le-Sands",
+    "council": "Bayside Council",
+    "region": "St George / Bayside",
+    "headline": "Coastal Luxury Custom Homes & Renovations in Brighton-Le-Sands",
+    "unique_intro": "Embrace beachside living in Brighton-Le-Sands with weather-resilient coastal architecture and high-spec interiors.",
+    "postcode": 2216
+  },
+  {
+    "slug": "mascot",
+    "suburb_name": "Mascot",
+    "council": "Bayside Council",
+    "region": "Inner South",
+    "headline": "Contemporary Urban Rebuilds & Dual-Occupancy in Mascot",
+    "unique_intro": "Sena Constructions delivers sound-attenuated luxury custom homes and modern duplexes across bustling Mascot.",
+    "postcode": 2020
+  },
+  {
+    "slug": "botany",
+    "suburb_name": "Botany",
+    "council": "Bayside Council",
+    "region": "Inner South",
+    "headline": "Modern Coastal-Industrial Family Homes in Botany",
+    "unique_intro": "Build stylish, open-plan custom residences and low-maintenance luxury duplexes in flourishing Botany.",
+    "postcode": 2019
+  },
+  {
+    "slug": "arncliffe",
+    "suburb_name": "Arncliffe",
+    "council": "Bayside Council",
+    "region": "St George / Bayside",
+    "headline": "Hilltop Custom Homes & Modern Panoramic Additions in Arncliffe",
+    "unique_intro": "Engineered for sloping parcels, Sena Constructions delivers multi-storey custom homes capturing views across Arncliffe.",
+    "postcode": 2205
+  },
+  {
+    "slug": "sans-souci",
+    "suburb_name": "Sans Souci",
+    "council": "Bayside Council",
+    "region": "St George / Bayside",
+    "headline": "Bespoke Coastal Mansions & Duplex Living in Sans Souci",
+    "unique_intro": "Craft waterside luxury custom homes and high-end dual occupancy builds along Sans Souci's peninsular avenues.",
+    "postcode": 2219
+  },
+  {
+    "slug": "caringbah",
+    "suburb_name": "Caringbah",
+    "council": "Sutherland Shire Council",
+    "region": "Sutherland Shire",
+    "headline": "Turnkey Duplex Projects & Knockdown Rebuilds in Caringbah",
+    "unique_intro": "Sena Constructions designs and builds high-yield duplexes and bespoke coastal family homes across Caringbah.",
+    "postcode": 2229
+  },
+  {
+    "slug": "gymea",
+    "suburb_name": "Gymea",
+    "council": "Sutherland Shire Council",
+    "region": "Sutherland Shire",
+    "headline": "Bespoke Family Homes & Leafy Additions in Gymea",
+    "unique_intro": "Elevate your Shire lifestyle in Gymea with architectural single and double-storey rebuilds and luxury entertaining areas.",
+    "postcode": 2227
+  },
+  {
+    "slug": "sutherland",
+    "suburb_name": "Sutherland",
+    "council": "Sutherland Shire Council",
+    "region": "Sutherland Shire",
+    "headline": "Modern Duplex Developments & Custom Residences in Sutherland",
+    "unique_intro": "Capitalize on central transit hubs in Sutherland with compliant duplex developments and turnkey custom builds.",
+    "postcode": 2232
+  },
+  {
+    "slug": "engadine",
+    "suburb_name": "Engadine",
+    "council": "Sutherland Shire Council",
+    "region": "Sutherland Shire",
+    "headline": "National Park Aspect Custom Homes in Engadine",
+    "unique_intro": "Build durable, bushfire-compliant luxury family homes and modern extensions backing nature reserves in Engadine.",
+    "postcode": 2233
+  },
+  {
+    "slug": "jannali",
+    "suburb_name": "Jannali",
+    "council": "Sutherland Shire Council",
+    "region": "Sutherland Shire",
+    "headline": "Contemporary Sloping Site Builders & Additions in Jannali",
+    "unique_intro": "Sena Constructions navigates undulating topography with tailored split-level homes and light-filled additions in Jannali.",
+    "postcode": 2226
+  },
+  {
+    "slug": "randwick",
+    "suburb_name": "Randwick",
+    "council": "Randwick City Council",
+    "region": "Eastern Suburbs",
+    "headline": "Grand Heritage Restorations & Luxury Homes in Randwick",
+    "unique_intro": "Sena Constructions combines racecourse prestige and heritage craftsmanship with ultra-modern architectural extensions in Randwick.",
+    "postcode": 2031
+  },
+  {
+    "slug": "coogee",
+    "suburb_name": "Coogee",
+    "council": "Randwick City Council",
+    "region": "Eastern Suburbs",
+    "headline": "Architectural Ocean-View Custom Homes in Coogee",
+    "unique_intro": "Engineered for coastal exposure and ocean vistas, Sena Constructions builds bespoke luxury sanctuaries in Coogee.",
+    "postcode": 2034
+  },
+  {
+    "slug": "kingsford",
+    "suburb_name": "Kingsford",
+    "council": "Randwick City Council",
+    "region": "Eastern Suburbs",
+    "headline": "Modern Multi-Generation Homes & Duplex Builders in Kingsford",
+    "unique_intro": "Build high-yield dual living residences and custom family rebuilds walking distance from light rail in Kingsford.",
+    "postcode": 2032
+  },
+  {
+    "slug": "kensington",
+    "suburb_name": "Kensington",
+    "council": "Randwick City Council",
+    "region": "Eastern Suburbs",
+    "headline": "Prestige Architectural Additions & Custom Homes in Kensington",
+    "unique_intro": "Sena Constructions restores period bungalows while adding dramatic contemporary open-plan pavilions in Kensington.",
+    "postcode": 2033
+  },
+  {
+    "slug": "clovelly",
+    "suburb_name": "Clovelly",
+    "council": "Randwick City Council",
+    "region": "Eastern Suburbs",
+    "headline": "Coastal Bespoke Sanctuaries & Knockdown Rebuilds in Clovelly",
+    "unique_intro": "Craft ultra-luxury coastal residences and second-storey additions capturing sea breezes in tranquil Clovelly.",
+    "postcode": 2031
+  },
+  {
+    "slug": "bondi",
+    "suburb_name": "Bondi",
+    "council": "Waverley Council",
+    "region": "Eastern Suburbs",
+    "headline": "Architectural Terrace Modernization & Custom Homes in Bondi",
+    "unique_intro": "Sena Constructions delivers sophisticated modern terrace rebuilds and luxury custom living minutes from Bondi Beach.",
+    "postcode": 2026
+  },
+  {
+    "slug": "bondi-beach",
+    "suburb_name": "Bondi Beach",
+    "council": "Waverley Council",
+    "region": "Eastern Suburbs",
+    "headline": "World-Class Coastal Architectural Homes in Bondi Beach",
+    "unique_intro": "Execute high-end bespoke residences and luxury penthouse-level finishes in world-renowned Bondi Beach.",
+    "postcode": 2026
+  },
+  {
+    "slug": "bronte",
+    "suburb_name": "Bronte",
+    "council": "Waverley Council",
+    "region": "Eastern Suburbs",
+    "headline": "Gully & Ocean-Aspect Luxury Custom Builders in Bronte",
+    "unique_intro": "Mastering difficult steep blocks, Sena Constructions creates architectural marvels tailored to Bronte's coastal slopes.",
+    "postcode": 2024
+  },
+  {
+    "slug": "waverley",
+    "suburb_name": "Waverley",
+    "council": "Waverley Council",
+    "region": "Eastern Suburbs",
+    "headline": "Contemporary Family Residences & Heritage Additions in Waverley",
+    "unique_intro": "Blend heritage character with modern family living in Waverley through bespoke extensions and turnkey rebuilds.",
+    "postcode": 2024
+  },
+  {
+    "slug": "tamarama",
+    "suburb_name": "Tamarama",
+    "council": "Waverley Council",
+    "region": "Eastern Suburbs",
+    "headline": "Exclusive Coastal Architectural Masterpieces in Tamarama",
+    "unique_intro": "Sena Constructions builds bespoke, multi-level luxury homes engineered for dramatic ocean views in Tamarama.",
+    "postcode": 2026
+  },
+  {
+    "slug": "double-bay",
+    "suburb_name": "Double Bay",
+    "council": "Woollahra Municipal Council",
+    "region": "Eastern Suburbs",
+    "headline": "European Elegance & Ultra-Prestige Custom Homes in Double Bay",
+    "unique_intro": "Sena Constructions brings refined luxury, bespoke stonework, and elite architectural finishes to Double Bay.",
+    "postcode": 2028
+  },
+  {
+    "slug": "rose-bay",
+    "suburb_name": "Rose Bay",
+    "council": "Woollahra Municipal Council",
+    "region": "Eastern Suburbs",
+    "headline": "Harbourside Mansions & Architectural Rebuilds in Rose Bay",
+    "unique_intro": "Deliver world-class harbourside living in Rose Bay with bespoke architectural homes and prestige renovations.",
+    "postcode": 2029
+  },
+  {
+    "slug": "woollahra",
+    "suburb_name": "Woollahra",
+    "council": "Woollahra Municipal Council",
+    "region": "Eastern Suburbs",
+    "headline": "Conservation-Area Heritage Renovations in Woollahra",
+    "unique_intro": "Uncompromising heritage authenticity paired with contemporary interior luxury across iconic Woollahra terraces.",
+    "postcode": 2025
+  },
+  {
+    "slug": "bellevue-hill",
+    "suburb_name": "Bellevue Hill",
+    "council": "Woollahra Municipal Council",
+    "region": "Eastern Suburbs",
+    "headline": "Grand Architectural Estates & High-End Builders in Bellevue Hill",
+    "unique_intro": "Sena Constructions executes multi-million dollar luxury estates and prestige hillside renovations in Bellevue Hill.",
+    "postcode": 2023
+  },
+  {
+    "slug": "vaucluse",
+    "suburb_name": "Vaucluse",
+    "council": "Woollahra Municipal Council",
+    "region": "Eastern Suburbs",
+    "headline": "Panoramic Harbour & Ocean Custom Mansions in Vaucluse",
+    "unique_intro": "Architectural drama and bespoke engineering for multi-level cliffside and harbour-view residences in Vaucluse.",
+    "postcode": 2030
+  },
+  {
+    "slug": "point-piper",
+    "suburb_name": "Point Piper",
+    "council": "Woollahra Municipal Council",
+    "region": "Eastern Suburbs",
+    "headline": "Ultra-Luxury World-Class Waterfront Homes in Point Piper",
+    "unique_intro": "Discreet, master-crafted luxury construction and heritage restorations on Sydney's premier peninsula in Point Piper.",
+    "postcode": 2027
+  },
+  {
+    "slug": "clifton-gardens",
+    "suburb_name": "Clifton Gardens",
+    "council": "Mosman Council",
+    "region": "Lower North Shore",
+    "headline": "Harbourside Sanctuary Custom Builders in Clifton Gardens",
+    "unique_intro": "Nestled in natural harbour beauty, Sena Constructions builds bespoke luxury retreats in Clifton Gardens.",
+    "postcode": 2088
+  },
+  {
+    "slug": "beauty-point",
+    "suburb_name": "Beauty Point",
+    "council": "Mosman Council",
+    "region": "Lower North Shore",
+    "headline": "Elevated Water-View Bespoke Architecture in Beauty Point",
+    "unique_intro": "Specialized hillside engineering and floor-to-ceiling glass luxury residences overlooking Middle Harbour in Beauty Point.",
+    "postcode": 2088
+  },
+  {
+    "slug": "balmoral",
+    "suburb_name": "Balmoral",
+    "council": "Mosman Council",
+    "region": "Lower North Shore",
+    "headline": "Beachside Architectural Masterpieces in Balmoral",
+    "unique_intro": "Experience the zenith of coastal living with Sena Constructions' bespoke luxury custom builds in Balmoral.",
+    "postcode": 2088
+  },
+  {
+    "slug": "windsor",
+    "suburb_name": "Windsor",
+    "council": "Hawkesbury City Council",
+    "region": "Hawkesbury",
+    "headline": "Historic Flood-Resilient & Custom Home Builders in Windsor",
+    "unique_intro": "Sena Constructions builds elevated, flood-resilient custom homes and heritage additions in historic Windsor.",
+    "postcode": 2756
+  },
+  {
+    "slug": "richmond",
+    "suburb_name": "Richmond",
+    "council": "Hawkesbury City Council",
+    "region": "Hawkesbury",
+    "headline": "Generous Allotment Custom Family Residences in Richmond",
+    "unique_intro": "Spacious acreage designs, modern family homes, and secondary dwellings engineered for Richmond living.",
+    "postcode": 2753
+  },
+  {
+    "slug": "kurrajong",
+    "suburb_name": "Kurrajong",
+    "council": "Hawkesbury City Council",
+    "region": "Hawkesbury",
+    "headline": "Foothills Luxury Acreage & Custom Timber Homes in Kurrajong",
+    "unique_intro": "Craft picturesque mountain-view retreats and modern country estates with Sena Constructions in Kurrajong.",
+    "postcode": 2758
+  },
+  {
+    "slug": "pitt-town",
+    "suburb_name": "Pitt Town",
+    "council": "Hawkesbury City Council",
+    "region": "Hawkesbury",
+    "headline": "Master-Planned Rural-Residential Custom Builds in Pitt Town",
+    "unique_intro": "Sena Constructions crafts sprawling single-storey executive residences and custom sheds in Pitt Town.",
+    "postcode": 2756
+  },
+  {
+    "slug": "north-richmond",
+    "suburb_name": "North Richmond",
+    "council": "Hawkesbury City Council",
+    "region": "Hawkesbury",
+    "headline": "Riverview Modern Custom Homes & Rebuilds in North Richmond",
+    "unique_intro": "Tailored family homes, knock-down rebuilds, and generous outdoor entertaining areas across North Richmond.",
+    "postcode": 2754
+  },
+  {
+    "slug": "katoomba",
+    "suburb_name": "Katoomba",
+    "council": "Blue Mountains City Council",
+    "region": "Blue Mountains",
+    "headline": "Climate-Smart Mountain Lodges & Custom Homes in Katoomba",
+    "unique_intro": "Sena Constructions builds high-performance, thermally efficient custom mountain homes in picturesque Katoomba.",
+    "postcode": 2780
+  },
+  {
+    "slug": "springwood",
+    "suburb_name": "Springwood",
+    "council": "Blue Mountains City Council",
+    "region": "Blue Mountains",
+    "headline": "Bushfire-Compliant Bespoke Family Homes in Springwood",
+    "unique_intro": "Build resilient, BAL-rated architectural family homes and leafy extensions with Sena Constructions in Springwood.",
+    "postcode": 2777
+  },
+  {
+    "slug": "leura",
+    "suburb_name": "Leura",
+    "council": "Blue Mountains City Council",
+    "region": "Blue Mountains",
+    "headline": "Charming Architectural Cottages & Luxury Homes in Leura",
+    "unique_intro": "Seamlessly blend artisan timber detailing and contemporary luxury living in the garden village of Leura.",
+    "postcode": 2780
+  },
+  {
+    "slug": "glenbrook",
+    "suburb_name": "Glenbrook",
+    "council": "Blue Mountains City Council",
+    "region": "Blue Mountains",
+    "headline": "Lower Mountains Prestige Custom Rebuilds in Glenbrook",
+    "unique_intro": "Gateway to the Mountains: Sena Constructions delivers bespoke luxury residences and modern rebuilds in Glenbrook.",
+    "postcode": 2773
+  },
+  {
+    "slug": "wentworth-falls",
+    "suburb_name": "Wentworth Falls",
+    "council": "Blue Mountains City Council",
+    "region": "Blue Mountains",
+    "headline": "Eco-Luxe Escapes & Architectural Builds in Wentworth Falls",
+    "unique_intro": "Custom cliff-edge and valley-view mountain homes engineered for sustainability and timeless beauty in Wentworth Falls.",
+    "postcode": 2782
+  },
+  {
+    "slug": "picton",
+    "suburb_name": "Picton",
+    "council": "Wollondilly Shire Council",
+    "region": "Macarthur / Wollondilly",
+    "headline": "Historic Semi-Rural Custom Homes & Additions in Picton",
+    "unique_intro": "Sena Constructions crafts durable rural-residential retreats and sympathetic heritage extensions in Picton.",
+    "postcode": 2571
+  },
+  {
+    "slug": "wilton",
+    "suburb_name": "Wilton",
+    "council": "Wollondilly Shire Council",
+    "region": "Macarthur / Wollondilly",
+    "headline": "New Growth Precinct Custom Homes & Duplexes in Wilton",
+    "unique_intro": "Build future-proof family homes and profitable dual-occupancy properties in the expanding Wilton growth area.",
+    "postcode": 2571
+  },
+  {
+    "slug": "tahmoor",
+    "suburb_name": "Tahmoor",
+    "council": "Wollondilly Shire Council",
+    "region": "Macarthur / Wollondilly",
+    "headline": "Affordable Acreage Builds & Secondary Dwellings in Tahmoor",
+    "unique_intro": "Sena Constructions designs functional family residences, detached secondary dwellings, and sheds in Tahmoor.",
+    "postcode": 2573
+  },
+  {
+    "slug": "appin",
+    "suburb_name": "Appin",
+    "council": "Wollondilly Shire Council",
+    "region": "Macarthur / Wollondilly",
+    "headline": "Master-Planned Residential Homes & Additions in Appin",
+    "unique_intro": "Capitalize on Appin's historic charm and new development opportunities with bespoke custom home construction.",
+    "postcode": 2560
+  },
+  {
+    "slug": "silverdale",
+    "suburb_name": "Silverdale",
+    "council": "Wollondilly Shire Council",
+    "region": "Macarthur / Wollondilly",
+    "headline": "Expansive Acreage Living & Custom Homes in Silverdale",
+    "unique_intro": "Sena Constructions builds custom lifestyle residences tailored to Silverdale's wide open spaces and tranquil surrounds.",
+    "postcode": 2752
+  }
+]

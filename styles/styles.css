@@ -1,0 +1,25 @@
+/* Custom CSS for elements that are too complex for pure inline Tailwind utilities */
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* The red border offset behind images (like the About section) */
+.offset-border::before {
+    content: '';
+    position: absolute;
+    top: 20px;
+    right: -20px;
+    bottom: -20px;
+    left: 20px;
+    border: 3px solid #e3000f; /* Sena Red */
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Adjust layout on small screens so the border doesn't break out of container */
+@media (max-width: 768px) {
+    .offset-border::before {
+        display: none;
+    }
+}

@@ -1,0 +1,790 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sena Constructions</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="styles.css">
+
+    <!-- Tailwind CSS via CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sena: {
+                            red: '#e3000f',
+                            dark: '#050505',
+                            light: '#f9f9f9',
+                            gray: '#333333'
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-sena-gray bg-white overflow-x-hidden antialiased">
+
+    <!-- Header / Navbar -->
+    <header class="bg-sena-dark text-white py-4 sticky top-0 z-50 shadow-lg">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            
+            <!-- Logo -->
+            <div class="flex items-center gap-3">
+                <span class="text-sena-red text-3xl"><i class="fa-solid fa-cube"></i></span>
+                <div>
+                    <h1 class="text-2xl font-bold tracking-[0.2em] leading-none">SENA</h1>
+                    <p class="text-[0.6rem] text-sena-red tracking-[0.1em] uppercase mt-1">Constructions</p>
+                </div>
+            </div>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden md:flex items-center gap-8 text-sm font-medium">
+                <a href="#home" class="hover:text-sena-red transition-colors">Home</a>
+                <a href="#about" class="hover:text-sena-red transition-colors">About</a>
+                <a href="#process" class="hover:text-sena-red transition-colors">Our Process</a>
+                <a href="#services" class="hover:text-sena-red transition-colors flex items-center gap-1">Services <i class="fa-solid fa-chevron-down text-xs"></i></a>
+                <a href="#projects" class="hover:text-sena-red transition-colors">Projects</a>
+                <a href="#blogs" class="hover:text-sena-red transition-colors">Blogs</a>
+                <a href="#contact" class="hover:text-sena-red transition-colors">Contact</a>
+            </nav>
+
+            <!-- Socials -->
+            <div class="hidden md:flex gap-4 text-lg">
+                <a href="#" class="hover:text-sena-red transition-colors"><i class="fa-brands fa-facebook"></i></a>
+                <a href="#" class="hover:text-sena-red transition-colors"><i class="fa-brands fa-instagram"></i></a>
+            </div>
+
+            <!-- Hamburger (Mobile) -->
+            <button id="hamburger" class="md:hidden text-2xl focus:outline-none">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden flex-col items-center gap-6 bg-sena-dark w-full absolute top-full left-0 py-8 shadow-xl border-t border-gray-800">
+            <a href="#home" class="text-lg hover:text-sena-red transition-colors mobile-link">Home</a>
+            <a href="#about" class="text-lg hover:text-sena-red transition-colors mobile-link">About</a>
+            <a href="#process" class="text-lg hover:text-sena-red transition-colors mobile-link">Our Process</a>
+            <a href="#services" class="text-lg hover:text-sena-red transition-colors mobile-link">Services</a>
+            <a href="#projects" class="text-lg hover:text-sena-red transition-colors mobile-link">Projects</a>
+            <a href="#contact" class="text-lg hover:text-sena-red transition-colors mobile-link">Contact</a>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="relative h-[80vh] flex items-center bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?q=80&w=2075&auto=format&fit=crop');">
+        <div class="absolute inset-0 bg-black/60 z-0"></div>
+        <div class="max-w-7xl mx-auto px-6 relative z-10 text-white w-full">
+            <h2 class="text-4xl md:text-6xl font-bold mb-4">From Conception To Construction</h2>
+            <p class="text-lg md:text-xl text-gray-200 mb-8 max-w-2xl">Redefining Luxury and Excellence in Sydney's Custom Home Building</p>
+            <div class="flex flex-col sm:flex-row gap-4">
+                <a href="#" class="bg-sena-red hover:bg-red-700 text-white px-8 py-3 rounded-sm font-medium transition text-center group">
+                    Get Free Quote <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+                </a>
+                <a href="#" class="border border-white hover:bg-white hover:text-sena-dark px-8 py-3 rounded-sm font-medium transition text-center">
+                    Get In Touch
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section id="about" class="py-24">
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div>
+                <h2 class="text-4xl font-semibold mb-2">Why Choose Sena Constructions?</h2>
+                <div class="w-16 h-1 bg-sena-red mb-8"></div>
+                <h3 class="text-2xl font-medium mb-4">Experience The Sena Constructions Difference</h3>
+                <div class="space-y-4 text-gray-600">
+                    <p>At Sena Constructions, we pride ourselves on our unparalleled expertise, customer-focused approach, and unwavering commitment to quality and sustainability.</p>
+                    <p>As one of Sydney's premier custom home builders, we take the time to understand your unique needs and preferences to create a home that reflects your personality and lifestyle.</p>
+                    <p>Choose Sena Constructions for a seamless, stress-free, and enjoyable building experience that exceeds your expectations.</p>
+                </div>
+                <div class="mt-8">
+                    <p class="text-gray-500 font-medium mb-1"><i class="fa-solid fa-phone text-sena-red mr-2"></i> Call Us Today</p>
+                    <h4 class="text-2xl font-bold text-sena-dark">(02) 9885 0797</h4>
+                </div>
+            </div>
+            <div class="p-4 md:p-8">
+                <div class="offset-border relative">
+                    <img src="<!DOCTYPE html>
+                    <html lang="en" class="scroll-smooth">
+                    <head>
+                        <meta charset="UTF-8">
+                        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+                        <title>Sena Constructions | Custom Home Builder Sydney</title>
+                        
+                        <!-- Fonts & Icons -->
+                        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+                        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+                        
+                        <!-- Tailwind CSS -->
+                        <script src="https://cdn.tailwindcss.com"></script>
+                        <script>
+                            tailwind.config = {
+                                theme: {
+                                    extend: {
+                                        fontFamily: {
+                                            sans: ['Inter', 'sans-serif'],
+                                        },
+                                        colors: {
+                                            'sena-red': '#c41230',
+                                            'sena-dark': '#000000',
+                                            'sena-gray': '#1a1a1a'
+                                        }
+                                    }
+                                }
+                            }
+                        </script>
+                        <style>
+                            body {
+                                font-family: 'Inter', sans-serif;
+                                -webkit-font-smoothing: antialiased;
+                            }
+                            /* Custom Scrollbar for aesthetic */
+                            ::-webkit-scrollbar {
+                                width: 10px;
+                            }
+                            ::-webkit-scrollbar-track {
+                                background: #f1f1f1;
+                            }
+                            ::-webkit-scrollbar-thumb {
+                                background: #c41230;
+                            }
+                            ::-webkit-scrollbar-thumb:hover {
+                                background: #a00f26;
+                            }
+                        </style>
+                    </head>
+                    <body class="bg-white min-h-screen text-gray-800">
+                    
+                        <header class="fixed top-0 left-0 right-0 z-50 bg-black text-white px-6 py-4 lg:px-12 shadow-md transition-all duration-300">
+                            <div class="max-w-7xl mx-auto flex justify-between items-center">
+                                
+                                <!-- Logo Section -->
+                                <a href="#" class="flex items-center space-x-3 group">
+                                    <div class="flex flex-col gap-[2px]">
+                                        <svg width="32" height="32" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg" class="transform group-hover:scale-105 transition-transform">
+                                            <rect x="20" y="0" width="20" height="20" transform="rotate(45 20 0)" fill="#c41230"/>
+                                            <rect x="20" y="14" width="20" height="20" transform="rotate(45 20 14)" stroke="#c41230" stroke-width="2"/>
+                                        </svg>
+                                    </div>
+                                    <div class="flex flex-col justify-center">
+                                        <span class="text-xl md:text-2xl font-bold tracking-widest leading-none">SENA</span>
+                                        <span class="text-[10px] md:text-xs font-medium tracking-widest text-gray-300 leading-tight">CONSTRUCTIONS</span>
+                                        <span class="text-[7px] text-sena-red tracking-widest mt-1">FROM CONCEPT TO CREATION</span>
+                                    </div>
+                                </a>
+                    
+                                <!-- Navigation Links -->
+                                <nav class="hidden lg:flex items-center space-x-8 text-sm font-medium">
+                                    <a href="#" class="hover:text-sena-red transition">Home</a>
+                                    <a href="#about" class="hover:text-sena-red transition">About</a>
+                                    <a href="#process" class="hover:text-sena-red transition">Our Process</a>
+                                    <div class="relative group cursor-pointer">
+                                        <a href="#services" class="flex items-center hover:text-sena-red transition">
+                                            Services <i class="fa-solid fa-chevron-down text-[10px] ml-1 mt-[2px] transition-transform group-hover:rotate-180"></i>
+                                        </a>
+                                    </div>
+                                    <a href="#projects" class="hover:text-sena-red transition">Projects</a>
+                                    <a href="#blogs" class="hover:text-sena-red transition">Blogs</a>
+                                    <a href="#contact" class="hover:text-sena-red transition">Contact</a>
+                                </nav>
+                    
+                                <!-- Social Icons & Mobile Toggle -->
+                                <div class="flex items-center space-x-6">
+                                    <div class="hidden md:flex items-center space-x-4">
+                                        <a href="#" class="text-white hover:text-sena-red transition"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                                        <a href="#" class="text-white hover:text-sena-red transition"><i class="fa-brands fa-instagram text-sm"></i></a>
+                                    </div>
+                                    <button class="lg:hidden text-white text-2xl hover:text-sena-red transition">
+                                        <i class="fa-solid fa-bars"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </header>
+                    
+                        <section class="relative w-full h-screen min-h-[600px] flex items-center justify-center pt-20">
+                            <!-- Background Image with Overlay -->
+                            <div class="absolute inset-0 z-0">
+                                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" alt="Modern Luxury Home" class="w-full h-full object-cover">
+                                <div class="absolute inset-0 bg-black/60"></div>
+                            </div>
+                            
+                            <!-- Hero Content -->
+                            <div class="relative z-10 text-center px-4 max-w-5xl mx-auto flex flex-col items-center mt-16">
+                                <h1 class="text-4xl md:text-6xl lg:text-7xl font-bold text-white mb-6 tracking-tight leading-tight">
+                                    From Conception To Construction
+                                </h1>
+                                <p class="text-lg md:text-xl text-gray-200 mb-10 max-w-3xl font-light">
+                                    Redefining Luxury and Excellence in Sydney's Custom Home Building
+                                </p>
+                                <div class="flex flex-col sm:flex-row gap-4 sm:gap-6 w-full sm:w-auto">
+                                    <a href="#quote" class="bg-sena-red hover:bg-red-700 text-white font-medium py-3 px-8 text-center transition-colors">
+                                        Get Free Quote &rarr;
+                                    </a>
+                                    <a href="#contact" class="bg-transparent border-2 border-white text-white hover:bg-white hover:text-black font-medium py-3 px-8 text-center transition-colors">
+                                        Get In Touch
+                                    </a>
+                                </div>
+                            </div>
+                        </section>
+                    
+                        <section id="why-us" class="py-20 lg:py-28 bg-white overflow-hidden">
+                            <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                                
+                                <!-- Left Text Content -->
+                                <div class="w-full lg:w-1/2 flex flex-col justify-center">
+                                    <h2 class="text-3xl md:text-4xl lg:text-5xl font-semibold text-gray-900 mb-4 tracking-tight">
+                                        Why Choose Sena Constructions?
+                                    </h2>
+                                    <div class="w-16 h-1 bg-sena-red mb-8"></div>
+                                    
+                                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mb-6">
+                                        Experience The Sena Constructions Difference
+                                    </h3>
+                                    
+                                    <div class="space-y-6 text-gray-600 leading-relaxed">
+                                        <p>
+                                            At Sena Constructions, we pride ourselves on our unparalleled expertise, customer-focused approach, and unwavering commitment to quality and sustainability.
+                                        </p>
+                                        <p>
+                                            As one of Sydney's premier custom home builders, we take the time to understand your unique needs and preferences to create a home that reflects your personality and lifestyle.
+                                        </p>
+                                        <p>
+                                            Choose Sena Constructions for a seamless, stress-free, and enjoyable building experience that exceeds your expectations.
+                                        </p>
+                                    </div>
+                    
+                                    <div class="mt-10">
+                                        <div class="flex items-center text-sena-red font-medium mb-2">
+                                            <i class="fa-solid fa-phone mr-2"></i>
+                                            <span class="tracking-wide text-sm uppercase">Call Us Today</span>
+                                        </div>
+                                        <a href="tel:0298850797" class="text-3xl md:text-4xl font-bold text-gray-900 hover:text-sena-red transition">
+                                            (02) 9885 0797
+                                        </a>
+                                    </div>
+                                </div>
+                    
+                                <!-- Right Image Content -->
+                                <div class="w-full lg:w-1/2 mt-12 lg:mt-0 px-4 sm:px-8">
+                                    <div class="relative w-full max-w-lg mx-auto aspect-[4/5]">
+                                        <!-- Offset Border (Top Right) -->
+                                        <div class="absolute border-[3px] border-sena-red w-full h-full -top-6 -right-6 z-0"></div>
+                                        <!-- Image -->
+                                        <div class="relative z-10 w-full h-full bg-gray-200 shadow-xl">
+                                            <img src="https://images.unsplash.com/photo-1556910103-1c02745a872f?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Custom Kitchen" class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                            </div>
+                        </section>
+                    
+                        <section class="relative py-24 w-full flex items-center justify-center bg-fixed bg-center bg-cover" style="background-image: url('https://images.unsplash.com/photo-1600566753190-17f0baa2a6c3?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+                            <div class="absolute inset-0 bg-black/70"></div>
+                            <div class="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
+                                <div class="w-12 h-1 bg-sena-red mb-6 mx-auto"></div>
+                                <h2 class="text-3xl md:text-5xl font-bold text-white mb-6">Get A Free Consultation</h2>
+                                <p class="text-gray-300 mb-10 text-lg">
+                                    Let's discuss your dream home and how Sena Constructions can turn your vision into a reality.
+                                </p>
+                                <a href="#contact" class="bg-sena-red hover:bg-red-700 text-white font-medium py-3 px-8 text-center transition-colors">
+                                    Get A Free Consultation &rarr;
+                                </a>
+                            </div>
+                        </section>
+                    
+                        <section id="services" class="py-20 lg:py-28 bg-white overflow-hidden">
+                            <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col-reverse lg:flex-row items-start gap-16 lg:gap-20">
+                                
+                                <!-- Left Image Content -->
+                                <div class="w-full lg:w-[45%] mt-12 lg:mt-0 px-4 sm:px-8">
+                                    <div class="relative w-full aspect-[3/4] max-w-md mx-auto lg:mr-auto lg:ml-0">
+                                        <!-- Offset Border (Top Left) -->
+                                        <div class="absolute border-[3px] border-sena-red w-full h-full -top-6 -left-6 z-0"></div>
+                                        <div class="relative z-10 w-full h-full bg-gray-200 shadow-xl">
+                                            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern Outdoor Patio" class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                                <!-- Right Text & Grid Content -->
+                                <div class="w-full lg:w-[55%] flex flex-col">
+                                    <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4 tracking-tight">Our Services</h2>
+                                    <div class="w-16 h-1 bg-sena-red mb-6"></div>
+                                    
+                                    <p class="text-gray-600 mb-10 text-base md:text-lg">
+                                        Sena Constructions offers a wide range of services to cater to your specific building requirements:
+                                    </p>
+                    
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-x-8 gap-y-10">
+                                        <!-- Service 1 -->
+                                        <div class="flex items-start">
+                                            <div class="text-sena-red text-2xl mr-4 mt-1"><i class="fa-regular fa-square"></i></div>
+                                            <div>
+                                                <h4 class="text-lg font-bold text-gray-900 mb-2">Luxury Homes</h4>
+                                                <p class="text-sm text-gray-600 leading-relaxed">Experience the epitome of elegance with our bespoke designs, crafted to the highest standards of quality and style.</p>
+                                            </div>
+                                        </div>
+                                        <!-- Service 2 -->
+                                        <div class="flex items-start">
+                                            <div class="text-sena-red text-2xl mr-4 mt-1"><i class="fa-solid fa-pen-ruler"></i></div>
+                                            <div>
+                                                <h4 class="text-lg font-bold text-gray-900 mb-2">Knockdown Rebuilds</h4>
+                                                <p class="text-sm text-gray-600 leading-relaxed">Transform your existing property into a stunning, modern masterpiece that suits your evolving lifestyle.</p>
+                                            </div>
+                                        </div>
+                                        <!-- Service 3 -->
+                                        <div class="flex items-start">
+                                            <div class="text-sena-red text-2xl mr-4 mt-1"><i class="fa-solid fa-images"></i></div>
+                                            <div>
+                                                <h4 class="text-lg font-bold text-gray-900 mb-2">Duplexes</h4>
+                                                <p class="text-sm text-gray-600 leading-relaxed">Our innovative duplex designs maximize space and style, delivering exceptional functionality and aesthetic appeal.</p>
+                                            </div>
+                                        </div>
+                                        <!-- Service 4 -->
+                                        <div class="flex items-start">
+                                            <div class="text-sena-red text-2xl mr-4 mt-1"><i class="fa-solid fa-object-ungroup"></i></div>
+                                            <div>
+                                                <h4 class="text-lg font-bold text-gray-900 mb-2">Granny Flats</h4>
+                                                <p class="text-sm text-gray-600 leading-relaxed">Add value to your property with a stylish and practical granny flat designed to complement your existing home.</p>
+                                            </div>
+                                        </div>
+                                        <!-- Service 5 -->
+                                        <div class="flex items-start">
+                                            <div class="text-sena-red text-2xl mr-4 mt-1"><i class="fa-solid fa-hammer"></i></div>
+                                            <div>
+                                                <h4 class="text-lg font-bold text-gray-900 mb-2">Renovations & Extensions</h4>
+                                                <p class="text-sm text-gray-600 leading-relaxed">Give your home a fresh look and enhanced functionality with our expert renovation and extension services.</p>
+                                            </div>
+                                        </div>
+                                        <!-- Service 6 -->
+                                        <div class="flex items-start">
+                                            <div class="text-sena-red text-2xl mr-4 mt-1"><i class="fa-solid fa-screwdriver-wrench"></i></div>
+                                            <div>
+                                                <h4 class="text-lg font-bold text-gray-900 mb-2">Building Maintenance</h4>
+                                                <p class="text-sm text-gray-600 leading-relaxed">Trust our professional team to preserve the beauty and value of your property through expert building maintenance.</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                            </div>
+                        </section>
+                    
+                        <section class="relative py-24 w-full flex items-center justify-center bg-fixed bg-center bg-cover" style="background-image: url('https://images.unsplash.com/photo-1556911220-bff31c812dba?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80');">
+                            <div class="absolute inset-0 bg-black/70"></div>
+                            <div class="relative z-10 text-center px-6 max-w-4xl mx-auto flex flex-col items-center">
+                                <div class="w-12 h-1 bg-sena-red mb-6 mx-auto"></div>
+                                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">Transform Your Space With Our Granny Flats</h2>
+                                <p class="text-gray-300 mb-10 text-lg font-light">Customised Granny Flat Solutions Tailored to Your Needs</p>
+                                <a href="#granny-flats" class="bg-sena-red hover:bg-red-700 text-white font-medium py-3 px-8 text-center transition-colors">
+                                    Explore Granny Flat Options &rarr;
+                                </a>
+                            </div>
+                        </section>
+                    
+                        <section id="about" class="py-20 lg:py-28 bg-white overflow-hidden">
+                            <div class="max-w-7xl mx-auto px-6 lg:px-12 flex flex-col lg:flex-row items-center gap-16 lg:gap-24">
+                                
+                                <!-- Left Text Content -->
+                                <div class="w-full lg:w-1/2 flex flex-col justify-center">
+                                    <h2 class="text-3xl md:text-4xl font-semibold text-gray-900 mb-4 tracking-tight">About Sena Constructions</h2>
+                                    <div class="w-16 h-1 bg-sena-red mb-8"></div>
+                                    
+                                    <h3 class="text-xl md:text-2xl font-semibold text-gray-800 mb-6">Building A Legacy Of Excellence</h3>
+                                    
+                                    <div class="space-y-6 text-gray-600 leading-relaxed">
+                                        <p>
+                                            Sena Constructions was founded by Alisena Zafari with a vision to redefine customer expectations and experiences in the Sydney construction industry. With a strong focus on sustainability, fairness, and outstanding customer experiences, our mission is to deliver quality homes within client timeframes and budgets.
+                                        </p>
+                                        <p>
+                                            Alisena's passion for building and exceptional family history in the construction industry has established Sena Constructions as a reliable and trusted partner for all your building needs.
+                                        </p>
+                                    </div>
+                    
+                                    <div class="mt-10">
+                                        <div class="flex items-center text-sena-red font-medium mb-2">
+                                            <i class="fa-solid fa-phone mr-2"></i>
+                                            <span class="tracking-wide text-sm uppercase">Call Us Today</span>
+                                        </div>
+                                        <a href="tel:0298850797" class="text-3xl md:text-4xl font-bold text-gray-900 hover:text-sena-red transition">
+                                            (02) 9885 0797
+                                        </a>
+                                    </div>
+                                </div>
+                    
+                                <!-- Right Image Content -->
+                                <div class="w-full lg:w-1/2 mt-12 lg:mt-0 px-4 sm:px-8">
+                                    <div class="relative w-full max-w-md mx-auto aspect-square">
+                                        <!-- Offset Border (Top Right) -->
+                                        <div class="absolute border-[3px] border-sena-red w-full h-full -top-6 -right-6 z-0"></div>
+                                        <div class="relative z-10 w-full h-full bg-gray-200 shadow-xl">
+                                            <img src="https://images.unsplash.com/photo-1600585154526-990dced4e56d?ixlib=rb-4.0.3&auto=format&fit=crop&w=800&q=80" alt="Modern House Exterior" class="w-full h-full object-cover">
+                                        </div>
+                                    </div>
+                                </div>
+                    
+                            </div>
+                        </section>
+                    
+                        <section class="py-24 bg-black text-center px-6">
+                            <div class="max-w-4xl mx-auto flex flex-col items-center">
+                                <h4 class="text-white text-lg md:text-xl font-medium mb-4">Ready To Discuss Your New Build?</h4>
+                                <div class="w-12 h-1 bg-sena-red mb-8 mx-auto"></div>
+                                <h2 class="text-4xl md:text-5xl font-bold text-white mb-8">Let's Start Your Dream Project</h2>
+                                <p class="text-gray-400 mb-10 text-base md:text-lg leading-relaxed max-w-3xl">
+                                    At Sena Constructions, we're eager to help you turn your vision into a reality. Contact us today to discuss your new build, and discover how our team of experts can create a home that's uniquely tailored to your needs and preferences.<br><br>
+                                    Schedule a free consultation, and begin your journey towards the home of your dreams.
+                                </p>
+                                <a href="#contact" class="bg-sena-red hover:bg-red-700 text-white font-medium py-3 px-10 transition-colors">
+                                    Contact Us
+                                </a>
+                            </div>
+                        </section>
+                    
+                        <section class="py-24 bg-gray-50">
+                            <div class="max-w-7xl mx-auto px-6 lg:px-12">
+                                
+                                <div class="text-center mb-16 flex flex-col items-center">
+                                    <h2 class="text-3xl md:text-4xl font-bold text-gray-900 mb-4">Discover The Sena Constructions Difference</h2>
+                                    <div class="w-12 h-1 bg-sena-red mb-6"></div>
+                                    <h3 class="text-lg md:text-xl text-gray-700 font-medium">Exceptional Craftsmanship And Unparalleled Customer Experience</h3>
+                                </div>
+                    
+                                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
+                                    <!-- Card 1 -->
+                                    <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-sena-red text-center hover:-translate-y-2 transition-transform duration-300">
+                                        <h4 class="text-xl font-bold text-gray-900 mb-4">Unmatched Quality</h4>
+                                        <p class="text-sm text-gray-600 leading-relaxed">
+                                            Our skilled crew members use the best quality materials and modern building techniques to deliver superior construction for each project.
+                                        </p>
+                                    </div>
+                                    <!-- Card 2 -->
+                                    <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-sena-red text-center hover:-translate-y-2 transition-transform duration-300">
+                                        <h4 class="text-xl font-bold text-gray-900 mb-4">Customised Solutions</h4>
+                                        <p class="text-sm text-gray-600 leading-relaxed">
+                                            Our team of experts provide customised services and individual designs to make sure your needs are met and your vision is realised.
+                                        </p>
+                                    </div>
+                                    <!-- Card 3 -->
+                                    <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-sena-red text-center hover:-translate-y-2 transition-transform duration-300">
+                                        <h4 class="text-xl font-bold text-gray-900 mb-4">Communication</h4>
+                                        <p class="text-sm text-gray-600 leading-relaxed">
+                                            We ensure that you are kept up to date and in control at all stages of the build, from the initial design to the final completion.
+                                        </p>
+                                    </div>
+                                    <!-- Card 4 -->
+                                    <div class="bg-white p-8 rounded-xl shadow-lg border-2 border-sena-red text-center hover:-translate-y-2 transition-transform duration-300">
+                                        <h4 class="text-xl font-bold text-gray-900 mb-4">Sustainable Practices</h4>
+                                        <p class="text-sm text-gray-600 leading-relaxed">
+                                            Sena Constructions strive to use sustainable solutions to reduce our environmental impact and create healthier spaces for our clients.
+                                        </p>
+                                    </div>
+                                </div>
+                                
+                            </div>
+                        </section>
+                    
+                        <section class="py-24 bg-black">
+                            <div class="max-w-6xl mx-auto px-6 lg:px-12 flex flex-col items-center">
+                                <h4 class="text-white text-lg font-medium mb-4">Customer Testimonials</h4>
+                                <div class="w-12 h-1 bg-sena-red mb-6"></div>
+                                <h2 class="text-3xl md:text-5xl font-bold text-white mb-4">What Our Clients Say</h2>
+                                <p class="text-gray-400 mb-12 text-center">Real Google reviews from Sydney homeowners we've built and renovated for.</p>
+                    
+                                <!-- Testimonial Box -->
+                                <div class="relative w-full bg-sena-gray p-8 md:p-12 lg:p-16 flex items-center justify-between shadow-2xl">
+                                    <!-- Left Arrow -->
+                                    <button class="text-gray-400 hover:text-white transition hidden md:block text-2xl absolute left-4">
+                                        <i class="fa-solid fa-chevron-left"></i>
+                                    </button>
+                                    
+                                    <!-- Review Content -->
+                                    <div class="text-center w-full px-4 md:px-12">
+                                        <p class="text-gray-300 italic text-lg md:text-xl leading-relaxed mb-8">
+                                            "Thank you Sena Construction for the wonderful renovation of our first family home. We were inexperienced and Sena Construction took great care of us. Ali, your guidance, flexibility, advice and great communication made this journey easy and smooth for us. We wouldn't hesitate recommending Sena Construction to anyone considering to build or renovate their homes."
+                                        </p>
+                                        <h5 class="text-white font-bold text-lg mb-2">Pherouz Ali Arjmand</h5>
+                                        <div class="flex justify-center text-yellow-500 text-sm space-x-1 mb-1">
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                            <i class="fa-solid fa-star"></i>
+                                        </div>
+                                        <span class="text-gray-500 text-xs">Google Review</span>
+                                    </div>
+                    
+                                    <!-- Right Arrow -->
+                                    <button class="text-gray-400 hover:text-white transition hidden md:block text-2xl absolute right-4">
+                                        <i class="fa-solid fa-chevron-right"></i>
+                                    </button>
+                                </div>
+                                
+                                <!-- Mobile Arrows (visible only on small screens) -->
+                                <div class="flex md:hidden space-x-8 mt-6">
+                                     <button class="text-gray-400 hover:text-white transition text-xl"><i class="fa-solid fa-chevron-left"></i></button>
+                                     <button class="text-gray-400 hover:text-white transition text-xl"><i class="fa-solid fa-chevron-right"></i></button>
+                                </div>
+                            </div>
+                        </section>
+                    
+                        <footer class="bg-black text-white pt-16 border-t-2 border-sena-red">
+                            <div class="max-w-7xl mx-auto px-6 lg:px-12 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 pb-16 border-b border-gray-800">
+                                
+                                <!-- Column 1: Brand -->
+                                <div>
+                                    <div class="flex items-center space-x-3 mb-6">
+                                        <div class="flex flex-col gap-[2px]">
+                                            <svg width="28" height="28" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <rect x="20" y="0" width="20" height="20" transform="rotate(45 20 0)" fill="#c41230"/>
+                                                <rect x="20" y="14" width="20" height="20" transform="rotate(45 20 14)" stroke="#c41230" stroke-width="2"/>
+                                            </svg>
+                                        </div>
+                                        <div class="flex flex-col justify-center">
+                                            <span class="text-xl font-bold tracking-widest leading-none">SENA</span>
+                                            <span class="text-[10px] font-medium tracking-widest text-gray-300 leading-tight">CONSTRUCTIONS</span>
+                                        </div>
+                                    </div>
+                                    <p class="text-gray-400 text-sm mb-6 leading-relaxed">
+                                        Building Quality Homes and Lasting Relationships in Sydney
+                                    </p>
+                                    <div class="flex space-x-4">
+                                        <a href="#" class="w-8 h-8 flex items-center justify-center border border-gray-600 rounded-sm hover:border-sena-red hover:text-sena-red transition"><i class="fa-brands fa-facebook-f text-sm"></i></a>
+                                        <a href="#" class="w-8 h-8 flex items-center justify-center border border-gray-600 rounded-sm hover:border-sena-red hover:text-sena-red transition"><i class="fa-brands fa-instagram text-sm"></i></a>
+                                    </div>
+                                </div>
+                    
+                                <!-- Column 2: Our Company -->
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-6">Our Company</h4>
+                                    <ul class="space-y-3 text-sm text-gray-400">
+                                        <li><a href="#" class="hover:text-white transition">Home</a></li>
+                                        <li><a href="#about" class="hover:text-white transition">About</a></li>
+                                        <li><a href="#services" class="hover:text-white transition">Services</a></li>
+                                        <li><a href="#contact" class="hover:text-white transition">Contact Us</a></li>
+                                    </ul>
+                                </div>
+                    
+                                <!-- Column 3: Our Services -->
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-6">Our Services</h4>
+                                    <ul class="space-y-3 text-sm text-gray-400">
+                                        <li><a href="#" class="hover:text-white transition">Knockdown Rebuilds</a></li>
+                                        <li><a href="#" class="hover:text-white transition">Duplexes</a></li>
+                                        <li><a href="#" class="hover:text-white transition">Granny Flats</a></li>
+                                        <li><a href="#" class="hover:text-white transition">Luxury Homes</a></li>
+                                    </ul>
+                                </div>
+                    
+                                <!-- Column 4: Contact Details -->
+                                <div>
+                                    <h4 class="text-lg font-semibold mb-6">Contact Details</h4>
+                                    <ul class="space-y-4 text-sm text-gray-400">
+                                        <li><a href="tel:0298850797" class="hover:text-white transition">(02) 9885 0797</a></li>
+                                        <li><a href="mailto:office@senaconstructions.com.au" class="hover:text-white transition">office@senaconstructions.com.au</a></li>
+                                        <li class="leading-relaxed">74A Ringrose Ave, Greystanes NSW<br>2145</li>
+                                    </ul>
+                                </div>
+                                
+                            </div>
+                    
+                            <!-- Copyright Bottom Bar -->
+                            <div class="max-w-7xl mx-auto px-6 lg:px-12 py-6 flex flex-col md:flex-row justify-between items-center text-xs text-gray-500">
+                                <p>Copyright &copy; 2026 Sena Constructions</p>
+                                <p class="mt-2 md:mt-0">Website by MindSite</p>
+                            </div>
+                        </footer>
+                    
+                    </body>
+                    </html> alt="Modern Kitchen" class="w-full h-auto shadow-xl relative z-10">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Free Consultation Banner -->
+    <section class="relative py-24 text-center bg-fixed bg-cover bg-center" style="background-image: url('https://images.unsplash.com/photo-1600566753376-12c8ab7fb75b?q=80&w=2070&auto=format&fit=crop');">
+        <div class="absolute inset-0 bg-black/70"></div>
+        <div class="relative z-10 max-w-3xl mx-auto px-6 text-white">
+            <h2 class="text-4xl font-semibold mb-4">Get A Free Consultation</h2>
+            <p class="text-gray-300 text-lg mb-8">Let's discuss your dream home and how Sena Constructions can turn your vision into a reality.</p>
+            <a href="#" class="inline-block bg-sena-red hover:bg-red-700 text-white px-8 py-3 rounded-sm font-medium transition group">
+                Get A Free Consultation <i class="fa-solid fa-arrow-right ml-2 group-hover:translate-x-1 transition-transform"></i>
+            </a>
+        </div>
+    </section>
+
+    <!-- Our Services -->
+    <section id="services" class="py-24 bg-sena-light">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="mb-16">
+                <h2 class="text-4xl font-semibold mb-2">Our Services</h2>
+                <div class="w-16 h-1 bg-sena-red mb-6"></div>
+                <p class="text-gray-600">Sena Constructions offers a wide range of services to cater to your specific building requirements:</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-10">
+                <!-- Service Item -->
+                <div class="flex items-start gap-4">
+                    <i class="fa-regular fa-square text-3xl text-sena-red mt-1"></i>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Luxury Homes</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">Experience the epitome of elegance with our bespoke designs, crafted to the highest standards of quality and style.</p>
+                    </div>
+                </div>
+                <!-- Service Item -->
+                <div class="flex items-start gap-4">
+                    <i class="fa-solid fa-pen-ruler text-3xl text-sena-red mt-1"></i>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Knockdown Rebuilds</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">Transform your existing property into a stunning, modern masterpiece that suits your evolving lifestyle.</p>
+                    </div>
+                </div>
+                <!-- Service Item -->
+                <div class="flex items-start gap-4">
+                    <i class="fa-solid fa-house-chimney-window text-3xl text-sena-red mt-1"></i>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Duplexes</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">Our innovative duplex designs maximize space and style, delivering exceptional functionality and aesthetic appeal.</p>
+                    </div>
+                </div>
+                <!-- Service Item -->
+                <div class="flex items-start gap-4">
+                    <i class="fa-solid fa-house-user text-3xl text-sena-red mt-1"></i>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Granny Flats</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">Add value to your property with a stylish and practical granny flat designed to complement your existing home.</p>
+                    </div>
+                </div>
+                <!-- Service Item -->
+                <div class="flex items-start gap-4">
+                    <i class="fa-solid fa-hammer text-3xl text-sena-red mt-1"></i>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Renovations & Extensions</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">Give your home a fresh look and enhanced functionality with our expert renovation and extension services.</p>
+                    </div>
+                </div>
+                <!-- Service Item -->
+                <div class="flex items-start gap-4">
+                    <i class="fa-solid fa-toolbox text-3xl text-sena-red mt-1"></i>
+                    <div>
+                        <h4 class="text-xl font-semibold mb-2">Building Maintenance</h4>
+                        <p class="text-gray-600 text-sm leading-relaxed">Trust our professional team to preserve the beauty and value of your property through expert building maintenance.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Differences Section -->
+    <section class="py-24">
+        <div class="max-w-7xl mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-semibold mb-2">Discover The Sena Constructions Difference</h2>
+                <div class="w-16 h-1 bg-sena-red mx-auto mb-6"></div>
+                <p class="text-gray-600">Exceptional Craftsmanship And Unparalleled Customer Experience</p>
+            </div>
+
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <div class="border-2 border-sena-red rounded-lg p-8 text-center bg-white hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+                    <h4 class="text-lg font-semibold mb-4">Unmatched Quality</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Our skilled crew members use the best quality materials and modern building techniques to deliver superior construction for each project.</p>
+                </div>
+                <div class="border-2 border-sena-red rounded-lg p-8 text-center bg-white hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+                    <h4 class="text-lg font-semibold mb-4">Customised Solutions</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Our team of experts provide customised services and individual designs to make sure your needs are met and your vision is realised.</p>
+                </div>
+                <div class="border-2 border-sena-red rounded-lg p-8 text-center bg-white hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+                    <h4 class="text-lg font-semibold mb-4">Communication</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">We ensure that you are kept up to date and in control at all stages of the build, from the initial design to the final completion.</p>
+                </div>
+                <div class="border-2 border-sena-red rounded-lg p-8 text-center bg-white hover:-translate-y-2 hover:shadow-2xl transition duration-300">
+                    <h4 class="text-lg font-semibold mb-4">Sustainable Practices</h4>
+                    <p class="text-gray-500 text-sm leading-relaxed">Sena Constructions strive to use sustainable solutions to reduce our environmental impact and create healthier spaces for our clients.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-black text-white pt-2">
+        <div class="w-full h-[2px] bg-sena-red mb-16"></div>
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
+            
+            <!-- Footer Brand -->
+            <div>
+                <div class="flex items-center gap-2 mb-6">
+                    <span class="text-sena-red text-2xl"><i class="fa-solid fa-cube"></i></span>
+                    <div>
+                        <h1 class="text-xl font-bold tracking-[0.2em] leading-none">SENA</h1>
+                        <p class="text-[0.5rem] text-sena-red tracking-[0.1em] uppercase mt-1">Constructions</p>
+                    </div>
+                </div>
+                <p class="text-gray-400 text-sm mb-6">Building Quality Homes and Lasting Relationships in Sydney</p>
+                <div class="flex gap-3">
+                    <a href="#" class="bg-gray-800 p-2 rounded hover:bg-sena-red transition-colors"><i class="fa-brands fa-facebook w-5 text-center"></i></a>
+                    <a href="#" class="bg-gray-800 p-2 rounded hover:bg-sena-red transition-colors"><i class="fa-brands fa-instagram w-5 text-center"></i></a>
+                </div>
+            </div>
+
+            <!-- Links -->
+            <div>
+                <h4 class="text-lg font-semibold mb-6">Our Company</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li><a href="#" class="hover:text-sena-red transition">Home</a></li>
+                    <li><a href="#" class="hover:text-sena-red transition">About</a></li>
+                    <li><a href="#" class="hover:text-sena-red transition">Services</a></li>
+                    <li><a href="#" class="hover:text-sena-red transition">Contact Us</a></li>
+                </ul>
+            </div>
+
+            <!-- Services -->
+            <div>
+                <h4 class="text-lg font-semibold mb-6">Our Services</h4>
+                <ul class="space-y-3 text-sm text-gray-400">
+                    <li><a href="#" class="hover:text-sena-red transition">Knockdown Rebuilds</a></li>
+                    <li><a href="#" class="hover:text-sena-red transition">Duplexes</a></li>
+                    <li><a href="#" class="hover:text-sena-red transition">Granny Flats</a></li>
+                    <li><a href="#" class="hover:text-sena-red transition">Luxury Homes</a></li>
+                </ul>
+            </div>
+
+            <!-- Contact -->
+            <div>
+                <h4 class="text-lg font-semibold mb-6">Contact Details</h4>
+                <div class="space-y-3 text-sm text-gray-400">
+                    <p>(02) 9885 0797</p>
+                    <p>office@senaconstructions.com.au</p>
+                    <p>74A Ringrose Ave, Greystanes NSW 2145</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="border-t border-gray-800 py-6 text-center md:flex justify-between max-w-7xl mx-auto px-6 text-sm text-gray-500">
+            <p>Copyright © 2026 Sena Constructions</p>
+            <p class="mt-2 md:mt-0">Website by MindSite</p>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+</html>
