@@ -155,7 +155,8 @@
             <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 
                 <!-- Signature Image Overlay -->
-                <div class="relative h-[600px] w-full rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.2)]">
+                <!-- CHANGED: Replaced h-[600px] with h-72 md:h-96 lg:h-[600px] -->
+                <div class="relative h-72 md:h-96 lg:h-72 md:h-96 lg:h-[600px] w-full rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.2)]">
                     <img src="images/duplexe.webp" alt="Sena Constructions Duplex" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
                     <div class="absolute inset-0 border-[6px] border-white/20 rounded-3xl z-10 m-6 pointer-events-none"></div>
                 </div>
@@ -199,7 +200,7 @@
                 </div>
 
                 <!-- Signature Image Overlay -->
-                <div class="relative h-[600px] w-full rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.2)] order-1 lg:order-2">
+                <div class="relative h-72 md:h-96 lg:h-[600px] w-full rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.2)] order-1 lg:order-2">
                     <img src="images/dup20.jpg" alt="Duplex Exterior Detail" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700 object-right">
                     <div class="absolute inset-0 border-[6px] border-white/20 rounded-3xl z-10 m-6 pointer-events-none"></div>
                 </div>
@@ -227,7 +228,7 @@
             <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 
                 <!-- Signature Image Overlay -->
-                <div class="relative h-[600px] w-full rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.2)]">
+                <div class="relative h-72 md:h-96 lg:h-[600px] w-full rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.2)]">
                     <img src="images/nicephoto.jpg" alt="Luxury Architectural Detail" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
                     <div class="absolute inset-0 border-[6px] border-white/20 rounded-3xl z-10 m-6 pointer-events-none"></div>
                 </div>
@@ -418,11 +419,37 @@
         <!-- ========================================== -->
         <!-- VIDEO SECTION                              -->
         <!-- ========================================== -->
-        <section class="py-24 bg-white">
-            <div class="max-w-5xl mx-auto px-6">
-                <!-- Replace 'your-video-file.mp4' with your actual video link if you have one, or swap for a YouTube iframe -->
-                <div class="rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.3)] bg-black aspect-video relative group">
-                        <iframe controls class="w-full h-full object-cover" src="https://www.youtube.com/embed/nNZ3ChfoZyo?si=wzEmLRM771P-Ba4g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+        <section class="py-24 bg-white relative overflow-hidden border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    
+                    <!-- Text Side: Fills the empty space on laptops -->
+                    <div class="text-center lg:text-left order-2 lg:order-1">
+                        <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6 text-sena-dark leading-tight">Tour Our Duplex Masterpiece</h2>
+                        <div class="w-20 h-1.5 bg-sena-red mb-8 rounded-full mx-auto lg:mx-0"></div>
+                        
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">Take a virtual walk through one of our recently completed duplex builds. Notice the superior architectural finishes, the seamless open-plan flow, and the incredible attention to detail our team brings to every corner of the property.</p>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-10">Maximizing your block's potential has never looked this good. Press play to see the Sena Constructions difference firsthand.</p>
+                        
+                        <a href="/contact" class="inline-flex bg-sena-red hover:bg-red-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition items-center shadow-[0_10px_20px_rgba(227,0,15,0.3)] hover:-translate-y-1">
+                            Discuss Your Duplex Build <i class="fa-solid fa-arrow-right ml-3"></i>
+                        </a>
+                    </div>
+
+                    <!-- Video Side: Keeps the vertical aspect ratio safe -->
+                    <div class="max-w-sm mx-auto w-full order-1 lg:order-2">
+                        <div class="rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.3)] bg-black relative group aspect-[9/16]">
+                            <iframe
+                                loading="lazy" 
+                                title="Gumlet video player"
+                                src="https://play.gumlet.io/embed/6aced98fff3a37d65a67843d?background=false&autoplay=true&loop=false&disable_player_controls=false"
+                                style="border:none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
+                                referrerpolicy="origin"
+                                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write;">
+                            </iframe>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>
