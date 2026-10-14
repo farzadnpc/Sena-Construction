@@ -4,25 +4,63 @@ const path = require('path');
 // 1. Load Data
 const suburbsData = JSON.parse(fs.readFileSync(path.join(__dirname, '../suburbs-data.json'), 'utf8'));
 
-console.log('Generating HTML Sitemap...');
+console.log('Grouping suburbs by council and generating HTML Sitemap...');
 
-// 2. Generate the Suburb Links Grid
-let suburbLinksHtml = '';
+// 2. Group Suburbs by Council / LGA / Region
+const councilGroups = {};
+
 suburbsData.forEach(suburb => {
-    suburbLinksHtml += `
-        <a href="/${suburb.slug}" class="text-gray-600 hover:text-sena-red transition-colors text-sm py-1 border-b border-gray-100 flex items-center gap-2">
-            <i class="fa-solid fa-angle-right text-sena-red text-[10px]"></i> ${suburb.suburb_name}
-        </a>`;
+    // Falls back to region or 'Greater Sydney' if council key isn't specified
+    const councilName = suburb.council || suburb.lga || suburb.region || 'Greater Sydney';
+    
+    if (!councilGroups[councilName]) {
+        councilGroups[councilName] = [];
+    }
+    
+    councilGroups[councilName].push(suburb);
 });
 
-// 3. Build the full HTML Page
+// Sort councils alphabetically
+const sortedCouncils = Object.keys(councilGroups).sort();
+
+// 3. Build the Council Accordion / Grouped HTML
+let councilsHtml = '';
+
+sortedCouncils.forEach(council => {
+    const suburbsInCouncil = councilGroups[council];
+    // Sort suburbs within council alphabetically
+    suburbsInCouncil.sort((a, b) => a.suburb_name.localeCompare(b.suburb_name));
+
+    let linksHtml = '';
+    suburbsInCouncil.forEach(suburb => {
+        const postcodeStr = suburb.postcode ? ` <span class="text-xs text-gray-400">(${suburb.postcode})</span>` : '';
+        linksHtml += `
+            <a href="/${suburb.slug}" class="text-gray-600 hover:text-sena-red transition-colors text-sm py-1 border-b border-gray-100 flex items-center justify-between group">
+                <span><i class="fa-solid fa-angle-right text-sena-red text-[10px] mr-1 group-hover:translate-x-1 transition-transform inline-block"></i> ${suburb.suburb_name}</span>
+                ${postcodeStr}
+            </a>`;
+    });
+
+    councilsHtml += `
+        <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm hover:shadow-md transition-shadow">
+            <div class="flex justify-between items-center mb-6 pb-3 border-b-2 border-sena-red/20">
+                <h3 class="text-xl font-serif font-bold text-sena-dark">${council}</h3>
+                <span class="bg-red-50 text-sena-red text-xs font-bold px-3 py-1 rounded-full">${suburbsInCouncil.length} Suburbs</span>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-x-6 gap-y-1">
+                ${linksHtml}
+            </div>
+        </div>`;
+});
+
+// 4. Build the Full HTML Page
 const fullHtml = `<!DOCTYPE html>
 <html lang="en" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Site Map | Sena Constructions Sydney</title>
-    <meta name="description" content="Explore the complete site map for Sena Constructions to find our custom home building services and the 750+ Sydney suburbs we service.">
+    <title>Site Map & Service Areas by Council | Sena Constructions Sydney</title>
+    <meta name="description" content="Explore all 700+ Sydney suburbs serviced by Sena Constructions, organized by Council area and postcode.">
     
     <!-- Google Fonts & FontAwesome -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -84,47 +122,51 @@ const fullHtml = `<!DOCTYPE html>
         <!-- HERO SECTION -->
         <section class="relative h-[30vh] min-h-[300px] flex items-center bg-sena-dark">
             <div class="max-w-7xl mx-auto px-6 relative z-10 text-white w-full">
-                <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4 drop-shadow-lg">Site Map</h1>
+                <h1 class="text-4xl md:text-5xl font-serif font-bold mb-4 drop-shadow-lg">Site Map & Service Areas</h1>
                 <div class="w-20 h-1.5 bg-sena-red rounded-full"></div>
             </div>
         </section>
 
-        <section class="py-24 bg-white relative">
+        <section class="py-24 bg-gray-50 relative">
             <div class="max-w-7xl mx-auto px-6">
                 
                 <!-- Main Pages & Services -->
-                <div class="grid grid-cols-1 md:grid-cols-2 gap-16 mb-20">
-                    <div>
-                        <h2 class="text-3xl font-serif font-bold mb-6 text-sena-dark border-b-2 border-sena-red/20 pb-4">Main Pages</h2>
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                        <h2 class="text-2xl font-serif font-bold mb-6 text-sena-dark border-b-2 border-sena-red/20 pb-3">Main Pages</h2>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <a href="/" class="text-lg text-gray-700 hover:text-sena-red font-medium transition-colors">Home</a>
-                            <a href="/about" class="text-lg text-gray-700 hover:text-sena-red font-medium transition-colors">About Us</a>
-                            <a href="/process" class="text-lg text-gray-700 hover:text-sena-red font-medium transition-colors">Our Process</a>
-                            <a href="/projects" class="text-lg text-gray-700 hover:text-sena-red font-medium transition-colors">Our Projects</a>
-                            <a href="/blogs" class="text-lg text-gray-700 hover:text-sena-red font-medium transition-colors">Insights & News</a>
-                            <a href="/contact" class="text-lg text-gray-700 hover:text-sena-red font-medium transition-colors">Contact Us</a>
+                            <a href="/" class="text-base text-gray-700 hover:text-sena-red font-medium transition-colors"><i class="fa-solid fa-angle-right text-sena-red text-xs mr-2"></i> Home</a>
+                            <a href="/about" class="text-base text-gray-700 hover:text-sena-red font-medium transition-colors"><i class="fa-solid fa-angle-right text-sena-red text-xs mr-2"></i> About Us</a>
+                            <a href="/process" class="text-base text-gray-700 hover:text-sena-red font-medium transition-colors"><i class="fa-solid fa-angle-right text-sena-red text-xs mr-2"></i> Our Process</a>
+                            <a href="/projects" class="text-base text-gray-700 hover:text-sena-red font-medium transition-colors"><i class="fa-solid fa-angle-right text-sena-red text-xs mr-2"></i> Our Projects</a>
+                            <a href="/blogs" class="text-base text-gray-700 hover:text-sena-red font-medium transition-colors"><i class="fa-solid fa-angle-right text-sena-red text-xs mr-2"></i> Insights & News</a>
+                            <a href="/contact" class="text-base text-gray-700 hover:text-sena-red font-medium transition-colors"><i class="fa-solid fa-angle-right text-sena-red text-xs mr-2"></i> Contact Us</a>
                         </div>
                     </div>
 
-                    <div>
-                        <h2 class="text-3xl font-serif font-bold mb-6 text-sena-dark border-b-2 border-sena-red/20 pb-4">Our Services</h2>
+                    <div class="bg-white p-8 rounded-2xl border border-gray-100 shadow-sm">
+                        <h2 class="text-2xl font-serif font-bold mb-6 text-sena-dark border-b-2 border-sena-red/20 pb-3">Our Services</h2>
                         <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                            <a href="/services" class="text-lg text-gray-700 hover:text-sena-red font-medium transition-colors">All Services Overview</a>
-                            <a href="/luxury-homes" class="text-lg text-gray-700 hover:text-sena-red font-medium transition-colors">Luxury Homes</a>
-                            <a href="/granny-flats" class="text-lg text-gray-700 hover:text-sena-red font-medium transition-colors">Granny Flats</a>
-                            <a href="/duplexes" class="text-lg text-gray-700 hover:text-sena-red font-medium transition-colors">Duplexes</a>
-                            <a href="/knockdown-rebuilds" class="text-lg text-gray-700 hover:text-sena-red font-medium transition-colors">Knockdown Rebuilds</a>
-                            <a href="/renovations-extensions" class="text-lg text-gray-700 hover:text-sena-red font-medium transition-colors">Renovations & Extensions</a>
-                            <a href="/building-maintenance" class="text-lg text-gray-700 hover:text-sena-red font-medium transition-colors">Building Maintenance</a>
+                            <a href="/services" class="text-base text-gray-700 hover:text-sena-red font-medium transition-colors"><i class="fa-solid fa-angle-right text-sena-red text-xs mr-2"></i> All Services</a>
+                            <a href="/luxury-homes" class="text-base text-gray-700 hover:text-sena-red font-medium transition-colors"><i class="fa-solid fa-angle-right text-sena-red text-xs mr-2"></i> Luxury Homes</a>
+                            <a href="/granny-flats" class="text-base text-gray-700 hover:text-sena-red font-medium transition-colors"><i class="fa-solid fa-angle-right text-sena-red text-xs mr-2"></i> Granny Flats</a>
+                            <a href="/duplexes" class="text-base text-gray-700 hover:text-sena-red font-medium transition-colors"><i class="fa-solid fa-angle-right text-sena-red text-xs mr-2"></i> Duplexes</a>
+                            <a href="/knockdown-rebuilds" class="text-base text-gray-700 hover:text-sena-red font-medium transition-colors"><i class="fa-solid fa-angle-right text-sena-red text-xs mr-2"></i> Knockdown Rebuilds</a>
+                            <a href="/renovations-extensions" class="text-base text-gray-700 hover:text-sena-red font-medium transition-colors"><i class="fa-solid fa-angle-right text-sena-red text-xs mr-2"></i> Renovations & Extensions</a>
+                            <a href="/building-maintenance" class="text-base text-gray-700 hover:text-sena-red font-medium transition-colors"><i class="fa-solid fa-angle-right text-sena-red text-xs mr-2"></i> Building Maintenance</a>
                         </div>
                     </div>
                 </div>
 
-                <!-- Suburb Grid Directory -->
+                <!-- Suburbs Grouped by Council -->
                 <div>
-                    <h2 class="text-3xl font-serif font-bold mb-8 text-sena-dark border-b-2 border-sena-red/20 pb-4">Areas We Service</h2>
-                    <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-5 gap-x-6 gap-y-2">
-                        ${suburbLinksHtml}
+                    <div class="mb-10">
+                        <h2 class="text-3xl font-serif font-bold text-sena-dark mb-2">Service Areas by Council & Postcode</h2>
+                        <p class="text-gray-600">Browse all Sydney suburbs serviced by Sena Constructions grouped by Local Government Area.</p>
+                    </div>
+
+                    <div class="space-y-10">
+                        ${councilsHtml}
                     </div>
                 </div>
 
@@ -137,7 +179,7 @@ const fullHtml = `<!DOCTYPE html>
         <div class="border-t border-gray-900 pt-8 text-center md:flex justify-between items-center max-w-7xl mx-auto px-6 text-sm text-gray-600 font-medium">
             <p>Copyright &copy; 2026 Sena Constructions. All Rights Reserved.</p>
             <div class="mt-4 md:mt-0 space-x-4">
-                <a href="/sitemap.html" class="hover:text-sena-red transition-colors text-sena-red">HTML Site Map</a>
+                <a href="/sitemap.html" class="hover:text-sena-red transition-colors text-sena-red">Site Map</a>
             </div>
         </div>
     </footer>
@@ -146,7 +188,7 @@ const fullHtml = `<!DOCTYPE html>
 </body>
 </html>`;
 
-// 4. Save the file
+// 5. Save the file
 fs.writeFileSync(path.join(__dirname, '../sitemap.html'), fullHtml);
 
-console.log('🎉 Success! sitemap.html has been created with all main links and Suburb areas.');
+console.log(`🎉 Success! Generated sitemap.html with ${sortedCouncils.length} Council groups.`);
