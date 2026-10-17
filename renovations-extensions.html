@@ -137,7 +137,7 @@
         <!-- ========================================== -->
         <!-- HERO SECTION (RENOVATIONS)                 -->
         <!-- ========================================== -->
-        <section class="relative h-[55vh] min-h-[450px] flex items-center bg-cover bg-center" style="background-image: url('images/kitchenreno.webp');">
+        <section class="relative h-[55vh] min-h-[450px] flex items-center bg-cover bg-center" style="background-image: url('images/dup20.jpg');">
             <div class="absolute inset-0 bg-sena-dark/60 z-0"></div>
             <div class="max-w-7xl mx-auto px-6 relative z-10 text-white w-full">
                 <div class="max-w-3xl">
@@ -156,12 +156,8 @@
             <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
                 
                 <!-- Signature Video Overlay (Referencing Screenshot) -->
-                <div class="relative h-72 md:h-96 lg:h-[600px] w-full rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.2)] bg-black">
-                    <!-- If you don't have a video for this spot yet, an image poster will display -->
-                    <video controls class="w-full h-full object-cover" poster="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2070&auto=format&fit=crop">
-                        <source src="your-renovation-video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                <div class="relative h-72 md:h-96 lg:h-[600px] w-full rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.2)]">
+                    <img src="images/whitekitchen.jpg" alt="Beautifully Renovated Kitchen space" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
                     <div class="absolute inset-0 border-[6px] border-white/20 rounded-3xl z-10 m-6 pointer-events-none"></div>
                 </div>
 
@@ -205,7 +201,7 @@
 
                 <!-- Signature Image Overlay -->
                 <div class="relative h-72 md:h-96 lg:h-[600px] w-full rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.2)] order-1 lg:order-2">
-                    <img src="https://images.unsplash.com/photo-1556912172-45b7ee8819d3?q=80&w=2070&auto=format&fit=crop" alt="Pristine Modern Kitchen Renovation" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                    <img src="images/kitchreno.jpg" alt="Pristine Modern Kitchen Renovation" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
                     <div class="absolute inset-0 border-[6px] border-white/20 rounded-3xl z-10 m-6 pointer-events-none"></div>
                 </div>
             </div>
@@ -233,7 +229,7 @@
                 
                 <!-- Signature Image Overlay -->
                 <div class="relative h-72 md:h-96 lg:h-[600px] w-full rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.2)]">
-                    <img src="images/kitchenreno.webp" alt="Beautifully Renovated Kitchen space" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
+                    <img src="images/renov.jpg" alt="Beautifully Renovated Kitchen space" loading="lazy" class="w-full h-full object-cover hover:scale-105 transition-transform duration-700">
                     <div class="absolute inset-0 border-[6px] border-white/20 rounded-3xl z-10 m-6 pointer-events-none"></div>
                 </div>
 
@@ -300,17 +296,37 @@
         <!-- ========================================== -->
         <!-- VIDEO SECTION                              -->
         <!-- ========================================== -->
-        <section class="py-24 bg-white border-t border-gray-200">
-            <div class="max-w-5xl mx-auto px-6">
-                <div class="text-center mb-10">
-                    <h3 class="text-3xl font-serif font-bold text-sena-dark">Darling Street, Greystanes</h3>
-                </div>
-                <!-- Replace 'your-renovation-video.mp4' with your actual video link if you have one, or swap for a YouTube iframe -->
-                <div class="rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.3)] bg-black aspect-video relative group">
-                    <video controls class="w-full h-full object-cover" poster="https://images.unsplash.com/photo-1484154218962-a197022b5858?q=80&w=2070&auto=format&fit=crop">
-                        <source src="your-renovation-video.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+        <section class="py-24 bg-white relative overflow-hidden border-t border-gray-100">
+            <div class="max-w-7xl mx-auto px-6">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+                    
+                    <!-- Text Side: Fills the empty space on laptops -->
+                    <div class="text-center lg:text-left order-2 lg:order-1">
+                        <h2 class="text-4xl md:text-5xl font-serif font-bold mb-6 text-sena-dark leading-tight">Transforming Sydney Homes</h2>
+                        <div class="w-20 h-1.5 bg-sena-red mb-8 rounded-full mx-auto lg:mx-0"></div>
+                        
+                        <p class="text-gray-600 text-lg leading-relaxed mb-6">Watch how we breathe new life into existing spaces. Whether it is a complete internal strip-out, a modern rear extension, or a luxury second-story addition, our team handles every renovation with precision and care.</p>
+                        <p class="text-gray-600 text-lg leading-relaxed mb-10">Press play to see the level of craftsmanship and dedication we bring to every renovation project across Sydney.</p>
+                        
+                        <a href="/contact" class="inline-flex bg-sena-red hover:bg-red-700 text-white px-8 py-4 rounded-xl font-semibold text-lg transition items-center shadow-[0_10px_20px_rgba(227,0,15,0.3)] hover:-translate-y-1">
+                            Discuss Your Renovation <i class="fa-solid fa-arrow-right ml-3"></i>
+                        </a>
+                    </div>
+
+                    <!-- Video Side: aspect-[9/16] keeps the vertical format perfect -->
+                    <div class="max-w-sm mx-auto w-full order-1 lg:order-2">
+                        <div class="rounded-3xl overflow-hidden shadow-[0_20px_50px_-12px_rgba(0,0,0,0.3)] bg-black relative group aspect-[9/16]">
+                            <iframe
+                                loading="lazy" 
+                                title="Gumlet video player"
+                                src="https://play.gumlet.io/embed/6aced950c2006a01b07a6456?background=false&autoplay=true&loop=true&disable_player_controls=true"
+                                style="border:none; position: absolute; top: 0; left: 0; height: 100%; width: 100%;"
+                                referrerpolicy="origin"
+                                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write;">
+                            </iframe>
+                        </div>
+                    </div>
+
                 </div>
             </div>
         </section>

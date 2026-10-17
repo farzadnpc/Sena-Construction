@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>The Top 5 Benefits Of Building A Custom Home In Sydney | Sena Constructions</title>
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=typography"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sena: { red: '#e3000f', dark: '#050505', light: '#f9f9f9', gray: '#333333', border: '#e5e7eb' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-sena-gray bg-gray-50 overflow-x-hidden antialiased flex flex-col min-h-screen">
+
+    <!-- TOP CONTACT BAR -->
+    <div class="bg-black text-gray-400 text-xs py-2 hidden md:block border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex gap-6">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-sena-red"></i> 74A Ringrose Ave, Greystanes NSW 2145</span>
+                <span class="flex items-center gap-2"><i class="fa-solid fa-clock text-sena-red"></i> Mon - Fri: 9:00 AM - 5:00 PM</span>
+            </div>
+            <div class="flex gap-6 items-center">
+                <a href="mailto:office@senaconstructions.com.au" class="hover:text-white transition"><i class="fa-solid fa-envelope text-sena-red mr-2"></i> office@senaconstructions.com.au</a>
+                <a href="tel:0298850797" class="text-white font-bold hover:text-sena-red transition"><i class="fa-solid fa-phone text-sena-red mr-2"></i> (02) 9885 0797</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- MAIN NAVIGATION                            -->
+    <!-- ========================================== -->
+    <header class="bg-sena-dark text-white py-4 sticky top-0 z-50 shadow-xl border-b border-sena-red/20">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="/" class="flex items-center group">
+                <img src="images/senalogo.png" alt="Sena Constructions" class="h-12 w-auto group-hover:scale-105 transition-transform duration-300">
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide">
+                <a href="/index.html" class="hover:text-sena-red transition-colors">Home</a>
+                <a href="/about.html" class="hover:text-sena-red transition-colors">About</a>
+                <a href="/process.html" class="hover:text-sena-red transition-colors">Our Process</a>
+                
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <a href="/services.html" class="hover:text-sena-red transition-colors flex items-center gap-1 py-2">Services <i class="fa-solid fa-chevron-down text-[10px]"></i></a>
+                    <div class="absolute left-0 mt-0 w-64 bg-white text-sena-dark shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border-t-2 border-sena-red rounded-xl z-50 overflow-hidden">
+                        <a href="/luxury-homes.html" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Luxury Homes</a>
+                        <a href="/granny-flats.html" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Granny Flats</a>
+                        <a href="/duplexes.html" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Duplexes</a>
+                        <a href="/knockdown-rebuilds.html" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Knockdown Rebuilds</a>
+                        <a href="/renovations-extensions.html" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Renovations & Extensions</a>
+                        <a href="/building-maintenance.html" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red transition-colors">Building Maintenance</a>
+                    </div>
+                </div>
+
+                <a href="/projects.html" class="hover:text-sena-red transition-colors">Projects</a>
+                <a href="/blogs.html" class="hover:text-sena-red transition-colors">Blogs</a>
+                <a href="/contact.html" class="bg-sena-red text-white px-6 py-2.5 rounded-xl hover:bg-red-700 transition shadow-lg shadow-sena-red/20">Contact</a>
+            </nav>
+
+            <!-- Mobile Hamburger -->
+            <button id="mobile-menu-btn" class="lg:hidden text-2xl focus:outline-none text-white hover:text-sena-red">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden flex-col items-start gap-0 bg-sena-dark w-full absolute top-full left-0 py-4 border-t border-gray-800 shadow-2xl overflow-y-auto max-h-[80vh]">
+            <a href="/index.html" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Home</a>
+            <a href="/about.html" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">About</a>
+            <a href="/process.html" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Our Process</a>
+            
+            <!-- Mobile Services Accordion -->
+            <div class="w-full">
+                <button id="mobile-services-btn" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800 flex justify-between items-center">
+                    Services <i class="fa-solid fa-chevron-down text-sm transition-transform duration-300" id="mobile-services-icon"></i>
+                </button>
+                <div id="mobile-services-menu" class="hidden bg-black w-full flex-col">
+                    <a href="/luxury-homes.html" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Luxury Homes</a>
+                    <a href="/granny-flats.html" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Granny Flats</a>
+                    <a href="/duplexes.html" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Duplexes</a>
+                    <a href="/knockdown-rebuilds.html" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Knockdown Rebuilds</a>
+                    <a href="/renovations-extensions.html" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Renovations & Extensions</a>
+                    <a href="/building-maintenance.html" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Building Maintenance</a>
+                </div>
+            </div>
+
+            <a href="/projects.html" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Projects</a>
+            <a href="/blogs.html" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Blogs</a>
+            <div class="px-6 py-4 w-full">
+                <a href="/contact.html" class="block w-full bg-sena-red text-white text-center py-3 rounded-xl font-bold shadow-lg">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main class="bg-gray-50 pb-24 flex-grow">
+        
+        <!-- HERO IMAGE (FULL WIDTH CONTAINER) -->
+        <div class="max-w-[85rem] mx-auto px-6 pt-10 mb-10">
+            <img src="images/luxuryhome.jpg" alt="Custom Home in Sydney" class="w-full h-[50vh] md:h-[70vh] object-cover shadow-md">
+        </div>
+
+        <!-- BLOG TITLE & SOCIAL SHARE -->
+        <div class="max-w-4xl mx-auto px-6 text-center mb-10">
+            <h1 class="text-3xl md:text-5xl font-serif font-bold text-sena-dark mb-6 leading-tight">
+                The Top 5 Benefits Of Building A Custom Home In Sydney
+            </h1>
+            
+<div class="flex justify-center gap-5 text-2xl">
+                <a href="https://www.facebook.com/p/Sena-Constructions-100040335197985/" target="_blank" rel="noopener noreferrer" class="text-[#3b5998] hover:opacity-80 transition-opacity"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://www.instagram.com/senaconstructions/" target="_blank" rel="noopener noreferrer" class="text-[#E1306C] hover:opacity-80 transition-opacity"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://au.linkedin.com/in/alisena-zafari-5a034b252" target="_blank" rel="noopener noreferrer" class="text-[#0072b1] hover:opacity-80 transition-opacity"><i class="fa-brands fa-linkedin"></i></a>
+            </div>
+        </div>
+
+        <!-- MAIN ARTICLE CONTENT (WHITE BOX) -->
+        <div class="max-w-5xl mx-auto px-6">
+            <div class="bg-white p-8 md:p-16 shadow-[0_5px_30px_-15px_rgba(0,0,0,0.1)]">
+                <article class="prose prose-lg md:prose-xl prose-headings:font-serif prose-headings:text-sena-dark prose-a:text-sena-red hover:prose-a:text-red-700 max-w-none text-gray-600">
+                    
+                    <p>Building a custom home in Sydney can be an exciting and rewarding experience for homeowners who are looking for a property that perfectly suits their lifestyle and needs. Custom homes allow homeowners to design their dream homes from scratch and make them truly one-of-a-kind. Here are the top 5 benefits of building a custom home in Sydney:</p>
+
+                    <ol>
+                        <li>
+                            <strong>Tailored to Your Lifestyle</strong><br>
+                            When you choose to build a custom home, you can design a home that is tailored to your lifestyle. From the layout of the home to the number of rooms, you have full control over how your home looks and functions. This means you can add specific features that cater to your lifestyle such as a home office, a gym, or a theatre room. Sena Constructions can help you incorporate all these features while staying within your budget.
+                        </li>
+                        <li>
+                            <strong>Custom Design and Finishes</strong><br>
+                            With a custom home, you have the freedom to choose every aspect of the design, from the floor plan to the finishes. This allows you to create a unique and personalised home that is a true reflection of your style and taste. Sena Constructions can work with you to create a custom home design that is both functional and aesthetically pleasing.
+                        </li>
+                        <li>
+                            <strong>Energy Efficiency and Sustainability</strong><br>
+                            Building a custom home allows you to incorporate energy-efficient features and sustainable materials into your home's design. This not only benefits the environment but also your wallet in the long run, by lowering your energy bills. Sena Constructions has the knowledge and expertise to ensure your custom home is designed to maximize energy efficiency and sustainability.
+                        </li>
+                        <li>
+                            <strong>Future Proofing Building</strong><br>
+                            A custom home allows you to future proof your home with the latest technology and features. Whether it's smart home automation or energy-efficient appliances, you can incorporate the latest trends into your custom home design. Sena Constructions stays up-to-date with the latest technology trends, ensuring your home is equipped with all the features you need.
+                        </li>
+                        <li>
+                            <strong>Higher Resale Value</strong><br>
+                            A custom-built home has a higher resale value than a standard home. This is because it is unique and tailored to the homeowner's specific needs, making it more desirable to potential buyers. Sena Constructions can help you create a custom home that not only suits your current needs but also has long-term resale value.
+                        </li>
+                    </ol>
+
+                    <p>In conclusion, building a custom home in Sydney offers a wide range of benefits, from creating a personalized space that caters to your lifestyle to future-proofing your home with the latest technology. At Sena Constructions, we are committed to working with you every step of the way to ensure your custom home meets all your needs and exceeds your expectations. Contact us today to start building your dream home.</p>
+                </article>
+            </div>
+
+            <!-- PREVIOUS POST LINK -->
+            <div class="mt-8 mb-12">
+                <a href="Maximizing-Your-Property-Value-With-Home-Renovations-In-Sydney" class="text-sena-red hover:text-red-700 transition-colors font-medium flex items-center gap-2">
+                    &larr; Previous Post
+                </a>
+            </div>
+
+            <!-- RELATED POSTS SECTION -->
+            <div class="bg-white p-8 md:p-12 shadow-[0_5px_30px_-15px_rgba(0,0,0,0.1)]">
+                <h2 class="text-3xl font-serif font-bold text-sena-dark mb-8">Related Posts</h2>
+                
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-10">
+                    
+                    <!-- Related Post 1 -->
+                    <div class="group">
+                        <a href="Granny-Flats-In-Sydney-The-Perfect-Addition-To-Your-Property" class="block overflow-hidden mb-5 aspect-[4/3]">
+                            <img src="images/grannyflat.webp" alt="Granny Flats" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </a>
+                        <h3 class="text-xl font-bold text-sena-dark group-hover:text-sena-red transition-colors mb-2">
+                            <a href="Granny-Flats-In-Sydney-The-Perfect-Addition-To-Your-Property">Granny Flats In Sydney: The Perfect Addition To Your Property</a>
+                        </h3>
+                        <p class="text-sm text-sena-red">
+                            Building Blogs / By Farzad
+                        </p>
+                    </div>
+
+                    <!-- Related Post 2 -->
+                    <div class="group">
+                        <a href="Benefits-Of-Building-A-Duplex-In-Sydney" class="block overflow-hidden mb-5 aspect-[4/3]">
+                            <img src="images/duplexe.webp" alt="Duplexes" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500">
+                        </a>
+                        <h3 class="text-xl font-bold text-sena-dark group-hover:text-sena-red transition-colors mb-2">
+                            <a href="Benefits-Of-Building-A-Duplex-In-Sydney">Benefits Of Building A Duplex In Sydney</a>
+                        </h3>
+                        <p class="text-sm text-sena-red">
+                            Building Blogs / By Farzad
+                        </p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+    <!-- ========================================== -->
+    <!-- COMPREHENSIVE FOOTER                       -->
+    <!-- ========================================== -->
+    <footer class="bg-black text-white pt-16 pb-8 border-t-[4px] border-sena-red">
+        
+        <!-- MAIN 4-COLUMN GRID -->
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            
+            <!-- Column 1: Brand -->
+            <div>
+                <a href="/" class="inline-block mb-6">
+                    <img src="images/senalogo.png" alt="Sena Constructions" loading="lazy" class="h-16 w-auto hover:opacity-80 transition-opacity">
+                </a>
+                <p class="text-gray-400 text-sm mb-6 leading-relaxed">Building Quality Homes and Lasting Relationships in Sydney. Proudly servicing Berowra Heights and the Upper North Shore.</p>
+                <div class="flex gap-4">
+                    <a href="https://www.facebook.com/p/Sena-Constructions-100040335197985/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-gray-900 flex items-center justify-center hover:bg-sena-red transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/senaconstructions/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-gray-900 flex items-center justify-center hover:bg-sena-red transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 uppercase tracking-wider text-gray-200">Company</h4>
+                <ul class="space-y-3 text-sm text-gray-400 font-medium">
+                    <li><a href="/index.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Home</a></li>
+                    <li><a href="/about.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> About Us</a></li>
+                    <li><a href="/process.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Our Process</a></li>
+                    <li><a href="/projects.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Portfolio</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Services -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 uppercase tracking-wider text-gray-200">Services</h4>
+                <ul class="space-y-3 text-sm text-gray-400 font-medium">
+                    <li><a href="/luxury-homes.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Luxury Homes</a></li>
+                    <li><a href="/knockdown-rebuilds.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Knockdown Rebuilds</a></li>
+                    <li><a href="/duplexes.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Duplexes & Granny Flats</a></li>
+                    <li><a href="/renovations-extensions.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Renovations & Extensions</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact Details -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 uppercase tracking-wider text-gray-200">Contact</h4>
+                <ul class="space-y-4 text-sm text-gray-400">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-phone text-sena-red mt-1"></i>
+                        <div>
+                            <p class="font-bold text-white mb-1">Phone</p>
+                            <a href="tel:0298850797" class="hover:text-sena-red transition-colors">(02) 9885 0797</a>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-envelope text-sena-red mt-1"></i>
+                        <div>
+                            <p class="font-bold text-white mb-1">Email</p>
+                            <a href="mailto:office@senaconstructions.com.au" class="hover:text-sena-red transition-colors">office@senaconstructions.com.au</a>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot text-sena-red mt-1"></i>
+                        <div>
+                            <p class="font-bold text-white mb-1">Office</p>
+                            <p>74A Ringrose Ave<br>Greystanes NSW 2145</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM COPYRIGHT BAR -->
+        <div class="border-t border-gray-900 pt-8 text-center md:flex justify-between items-center max-w-7xl mx-auto px-6 text-sm text-gray-600 font-medium">
+            <p>Copyright &copy; 2026 Sena Constructions. All Rights Reserved. Servicing Berowra Heights.</p>
+            <div class="mt-4 md:mt-0 space-x-4">
+                <a href="/sitemap" class="hover:text-sena-red transition-colors">Sitemap</a> 
+            </div>
+        </div>
+    </footer>
+
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
