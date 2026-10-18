@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Page Not Found | Sena Constructions</title>
+    
+    <!-- Google Fonts & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sena: { red: '#e3000f', dark: '#050505', light: '#f9f9f9', gray: '#333333', border: '#e5e7eb' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'], serif: ['Playfair Display', 'serif'] }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="font-sans text-sena-gray bg-gray-50 overflow-x-hidden antialiased flex flex-col min-h-screen">
+
+    <!-- ========================================== -->
+    <!-- TOP CONTACT BAR                            -->
+    <!-- ========================================== -->
+    <div class="bg-black text-gray-400 text-xs py-2 hidden md:block border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex gap-6">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-sena-red"></i> 74A Ringrose Ave, Greystanes NSW 2145</span>
+                <span class="flex items-center gap-2"><i class="fa-solid fa-clock text-sena-red"></i> Mon - Fri: 9:00 AM - 5:00 PM</span>
+            </div>
+            <div class="flex gap-6 items-center">
+                <a href="mailto:office@senaconstructions.com.au" class="hover:text-white transition"><i class="fa-solid fa-envelope text-sena-red mr-2"></i> office@senaconstructions.com.au</a>
+                <a href="tel:0298850797" class="text-white font-bold hover:text-sena-red transition"><i class="fa-solid fa-phone text-sena-red mr-2"></i> (02) 9885 0797</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- MAIN NAVIGATION                            -->
+    <!-- ========================================== -->
+    <header class="bg-sena-dark text-white py-4 sticky top-0 z-50 shadow-xl border-b border-sena-red/20">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="/" class="flex items-center group">
+                <img src="images/senalogo.png" alt="Sena Constructions" class="h-12 w-auto group-hover:scale-105 transition-transform duration-300">
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide">
+                <a href="/index.html" class="hover:text-sena-red transition-colors">Home</a>
+                <a href="/about.html" class="hover:text-sena-red transition-colors">About</a>
+                <a href="/process.html" class="hover:text-sena-red transition-colors">Our Process</a>
+                
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <a href="/services.html" class="hover:text-sena-red transition-colors flex items-center gap-1 py-2">Services <i class="fa-solid fa-chevron-down text-[10px]"></i></a>
+                    <div class="absolute left-0 mt-0 w-64 bg-white text-sena-dark shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border-t-2 border-sena-red rounded-xl z-50 overflow-hidden">
+                        <a href="/luxury-homes.html" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Luxury Homes</a>
+                        <a href="/granny-flats.html" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Granny Flats</a>
+                        <a href="/duplexes.html" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Duplexes</a>
+                        <a href="/knockdown-rebuilds.html" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Knockdown Rebuilds</a>
+                        <a href="/renovations-extensions.html" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Renovations & Extensions</a>
+                        <a href="/building-maintenance.html" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red transition-colors">Building Maintenance</a>
+                    </div>
+                </div>
+
+                <a href="/projects.html" class="hover:text-sena-red transition-colors">Projects</a>
+                <a href="/blogs.html" class="hover:text-sena-red transition-colors">Blogs</a>
+                <a href="/contact.html" class="bg-sena-red text-white px-6 py-2.5 rounded-xl hover:bg-red-700 transition shadow-lg shadow-sena-red/20">Contact</a>
+            </nav>
+
+            <!-- Mobile Hamburger -->
+            <button id="mobile-menu-btn" class="lg:hidden text-2xl focus:outline-none text-white hover:text-sena-red">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden flex-col items-start gap-0 bg-sena-dark w-full absolute top-full left-0 py-4 border-t border-gray-800 shadow-2xl overflow-y-auto max-h-[80vh]">
+            <a href="/index.html" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Home</a>
+            <a href="/about.html" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">About</a>
+            <a href="/process.html" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Our Process</a>
+            
+            <!-- Mobile Services Accordion -->
+            <div class="w-full">
+                <button id="mobile-services-btn" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800 flex justify-between items-center">
+                    Services <i class="fa-solid fa-chevron-down text-sm transition-transform duration-300" id="mobile-services-icon"></i>
+                </button>
+                <div id="mobile-services-menu" class="hidden bg-black w-full flex-col">
+                    <a href="/luxury-homes.html" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Luxury Homes</a>
+                    <a href="/granny-flats.html" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Granny Flats</a>
+                    <a href="/duplexes.html" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Duplexes</a>
+                    <a href="/knockdown-rebuilds.html" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Knockdown Rebuilds</a>
+                    <a href="/renovations-extensions.html" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Renovations & Extensions</a>
+                    <a href="/building-maintenance.html" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Building Maintenance</a>
+                </div>
+            </div>
+
+            <a href="/projects.html" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Projects</a>
+            <a href="/blogs.html" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Blogs</a>
+            <div class="px-6 py-4 w-full">
+                <a href="/contact.html" class="block w-full bg-sena-red text-white text-center py-3 rounded-xl font-bold shadow-lg">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+<!-- 404 MAIN CONTENT -->
+<main class="bg-gray-50 flex-grow flex items-center justify-center py-20 md:py-32">
+    <div class="max-w-4xl w-full mx-auto px-6">
+        <div class="bg-white p-12 md:p-24 shadow-[0_5px_30px_-15px_rgba(0,0,0,0.1)] text-center">
+            
+            <h1 class="text-4xl md:text-5xl font-serif font-bold text-[#e3000f] mb-6 leading-tight">
+                This Page Doesn't Seem To<br>Exist.
+            </h1>
+            
+            <p class="text-gray-600 text-lg md:text-xl mb-10">
+                It looks like the link pointing here was faulty, or the page has been moved.
+            </p>
+            
+            <a href="/" class="inline-flex bg-sena-dark hover:bg-sena-red text-white px-8 py-4 rounded-xl font-semibold transition items-center shadow-md hover:-translate-y-0.5">
+                Return to Homepage <i class="fa-solid fa-house ml-3"></i>
+            </a>
+        </div>
+    </div>
+</main>
+
+  <!-- ========================================== -->
+    <!-- COMPREHENSIVE FOOTER                       -->
+    <!-- ========================================== -->
+    <footer class="bg-black text-white pt-16 pb-8 border-t-[4px] border-sena-red">
+        
+        <!-- MAIN 4-COLUMN GRID -->
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            
+            <!-- Column 1: Brand -->
+            <div>
+                <a href="/" class="inline-block mb-6">
+                    <img src="images/senalogo.png" alt="Sena Constructions" loading="lazy" class="h-16 w-auto hover:opacity-80 transition-opacity">
+                </a>
+                <p class="text-gray-400 text-sm mb-6 leading-relaxed">Building Quality Homes and Lasting Relationships in Sydney. Proudly servicing Abbotsbury and the Western Sydney.</p>
+                <div class="flex gap-4">
+                    <a href="https://www.facebook.com/p/Sena-Constructions-100040335197985/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-gray-900 flex items-center justify-center hover:bg-sena-red transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/senaconstructions/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-gray-900 flex items-center justify-center hover:bg-sena-red transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 uppercase tracking-wider text-gray-200">Company</h4>
+                <ul class="space-y-3 text-sm text-gray-400 font-medium">
+                    <li><a href="/index.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Home</a></li>
+                    <li><a href="/about.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> About Us</a></li>
+                    <li><a href="/process.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Our Process</a></li>
+                    <li><a href="/projects.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Portfolio</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Services -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 uppercase tracking-wider text-gray-200">Services</h4>
+                <ul class="space-y-3 text-sm text-gray-400 font-medium">
+                    <li><a href="/luxury-homes.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Luxury Homes</a></li>
+                    <li><a href="/knockdown-rebuilds.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Knockdown Rebuilds</a></li>
+                    <li><a href="/duplexes.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Duplexes & Granny Flats</a></li>
+                    <li><a href="/renovations-extensions.html" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Renovations & Extensions</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact Details -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 uppercase tracking-wider text-gray-200">Contact</h4>
+                <ul class="space-y-4 text-sm text-gray-400">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-phone text-sena-red mt-1"></i>
+                        <div>
+                            <p class="font-bold text-white mb-1">Phone</p>
+                            <a href="tel:0298850797" class="hover:text-sena-red transition-colors">(02) 9885 0797</a>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-envelope text-sena-red mt-1"></i>
+                        <div>
+                            <p class="font-bold text-white mb-1">Email</p>
+                            <a href="mailto:office@senaconstructions.com.au" class="hover:text-sena-red transition-colors">office@senaconstructions.com.au</a>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot text-sena-red mt-1"></i>
+                        <div>
+                            <p class="font-bold text-white mb-1">Office</p>
+                            <p>74A Ringrose Ave<br>Greystanes NSW 2145</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+    <script src="/scripts/scripts.js"></script>
+</body>
+</html>
