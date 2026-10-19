@@ -82,6 +82,7 @@ const fullHtml = `<!DOCTYPE html>
             }
         }
     </script>
+<link rel="icon" type="image/png" href="/images/senasmalllogo.png">
 </head>
 <body class="font-sans text-sena-gray bg-gray-50 overflow-x-hidden antialiased pb-16 md:pb-0">
 
