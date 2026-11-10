@@ -112,6 +112,17 @@ const fullHtml = `<!DOCTYPE html>
                 <a href="/about" class="hover:text-sena-red transition-colors">About</a>
                 <a href="/process" class="hover:text-sena-red transition-colors">Our Process</a>
                 <a href="/services" class="hover:text-sena-red transition-colors">Services</a>
+                <!-- Calculators Dropdown -->
+                <div class="relative group">
+                    <a href="/calculators" class="hover:text-sena-red transition-colors flex items-center gap-1 py-2">Calculators <i class="fa-solid fa-chevron-down text-[10px]"></i></a>
+                    <div class="absolute left-0 mt-0 w-64 bg-white text-sena-dark shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border-t-2 border-sena-red rounded-xl z-50 overflow-hidden">
+                        <a href="/duplex-cost-calculator" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Duplex Cost Calculator</a>
+                        <a href="/renovation-cost-calculator" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Renovation Cost Calculator</a>
+                        <a href="/custom-home-cost-calculator" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Custom Home Calculator</a>
+                        <a href="/calculators" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red transition-colors font-semibold">All Calculators <i class="fa-solid fa-arrow-right text-xs ml-1"></i></a>
+                    </div>
+                </div>
+
                 <a href="/projects" class="hover:text-sena-red transition-colors">Projects</a>
                 <a href="/blogs" class="hover:text-sena-red transition-colors">Blogs</a>
                 <a href="/contact" class="bg-sena-red text-white px-6 py-2.5 rounded-xl hover:bg-red-700 transition shadow-lg shadow-sena-red/20">Contact</a>
@@ -140,6 +151,7 @@ const fullHtml = `<!DOCTYPE html>
                             <a href="/about" class="text-base text-gray-700 hover:text-sena-red font-medium transition-colors"><i class="fa-solid fa-angle-right text-sena-red text-xs mr-2"></i> About Us</a>
                             <a href="/process" class="text-base text-gray-700 hover:text-sena-red font-medium transition-colors"><i class="fa-solid fa-angle-right text-sena-red text-xs mr-2"></i> Our Process</a>
                             <a href="/projects" class="text-base text-gray-700 hover:text-sena-red font-medium transition-colors"><i class="fa-solid fa-angle-right text-sena-red text-xs mr-2"></i> Our Projects</a>
+                            <a href="/calculators" class="text-base text-gray-700 hover:text-sena-red font-medium transition-colors"><i class="fa-solid fa-angle-right text-sena-red text-xs mr-2"></i> Cost Calculators</a>
                             <a href="/blogs" class="text-base text-gray-700 hover:text-sena-red font-medium transition-colors"><i class="fa-solid fa-angle-right text-sena-red text-xs mr-2"></i> Insights & News</a>
                             <a href="/contact" class="text-base text-gray-700 hover:text-sena-red font-medium transition-colors"><i class="fa-solid fa-angle-right text-sena-red text-xs mr-2"></i> Contact Us</a>
                         </div>
