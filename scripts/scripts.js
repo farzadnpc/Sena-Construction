@@ -72,6 +72,17 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     }
 
+    // 3b. Other mobile menu accordions (e.g. Calculators)
+    document.querySelectorAll('[data-mobile-accordion]').forEach((btn) => {
+        btn.addEventListener('click', () => {
+            const panel = btn.nextElementSibling;
+            panel.classList.toggle('hidden');
+            panel.classList.toggle('flex');
+            const chevron = btn.querySelector('i');
+            if (chevron) chevron.classList.toggle('rotate-180');
+        });
+    });
+
     // 4. FAQ Accordion Toggle
     const faqBtns = document.querySelectorAll('.faq-btn');
     faqBtns.forEach(btn => {
