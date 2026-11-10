@@ -1,0 +1,506 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ========================================== -->
+    <!-- ADVANCED SEO META TAGS                     -->
+    <!-- ========================================== -->
+    <title>Duplex Cost Calculator Sydney | Sena Constructions</title>
+    <meta name="description" content="Estimate the cost of building a duplex in Sydney with our free calculator. Choose your site, slope, size, finish level, facade and extras for an instant price range.">
+    <link rel="canonical" href="https://senaconstructions.com.au/duplex-cost-calculator">
+    <meta property="og:title" content="Duplex Cost Calculator Sydney | Sena Constructions">
+    <meta property="og:description" content="Get an instant, indicative price range for your Sydney duplex build.">
+    <meta property="og:type" content="website">
+    
+    <!-- Preload Hero Image -->
+    <link rel="preload" as="image" href="images/duplexe.webp">
+
+    <!-- EmailJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- Google Fonts: Inter (Modern) + Playfair Display (Luxury Serif) & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sena: {
+                            red: '#e3000f',
+                            dark: '#050505',
+                            light: '#f9f9f9',
+                            gray: '#333333',
+                            border: '#e5e7eb'
+                        }
+                    },
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'] 
+                    }
+                }
+            }
+        }
+    </script>
+<link rel="icon" type="image/png" href="/images/senasmalllogo.png">
+</head>
+<body class="font-sans text-sena-gray bg-gray-50 overflow-x-hidden antialiased pb-16 md:pb-0">
+
+    <!-- ========================================== -->
+    <!-- TOP CONTACT BAR                            -->
+    <!-- ========================================== -->
+    <div class="bg-black text-gray-400 text-xs py-2 hidden md:block border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex gap-6">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-sena-red"></i> 74A Ringrose Ave, Greystanes NSW 2145</span>
+                <span class="flex items-center gap-2"><i class="fa-solid fa-clock text-sena-red"></i> Mon - Fri: 9:00 AM - 5:00 PM</span>
+            </div>
+            <div class="flex gap-6 items-center">
+                <a href="mailto:office@senaconstructions.com.au" class="hover:text-white transition"><i class="fa-solid fa-envelope text-sena-red mr-2"></i> office@senaconstructions.com.au</a>
+                <a href="tel:0298850797" class="text-white font-bold hover:text-sena-red transition"><i class="fa-solid fa-phone text-sena-red mr-2"></i> (02) 9885 0797</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- MAIN NAVIGATION                            -->
+    <!-- ========================================== -->
+    <header class="bg-sena-dark text-white py-4 sticky top-0 z-50 shadow-xl border-b border-sena-red/20">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="/" class="flex items-center group">
+                <img src="images/senalogo.png" alt="Sena Constructions" class="h-12 w-auto group-hover:scale-105 transition-transform duration-300">
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide">
+                <a href="/" class="hover:text-sena-red transition-colors">Home</a>
+                <a href="/about" class="hover:text-sena-red transition-colors">About</a>
+                <a href="/process" class="hover:text-sena-red transition-colors">Our Process</a>
+                
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <a href="/services" class="hover:text-sena-red transition-colors flex items-center gap-1 py-2">Services <i class="fa-solid fa-chevron-down text-[10px]"></i></a>
+                    <div class="absolute left-0 mt-0 w-64 bg-white text-sena-dark shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border-t-2 border-sena-red rounded-xl z-50 overflow-hidden">
+                        <a href="/luxury-homes" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Luxury Homes</a>
+                        <a href="/granny-flats" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Granny Flats</a>
+                        <a href="/duplexes" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Duplexes</a>
+                        <a href="/knockdown-rebuilds" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Knockdown Rebuilds</a>
+                        <a href="/renovations-extensions" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Renovations & Extensions</a>
+                        <a href="/building-maintenance" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red transition-colors">Building Maintenance</a>
+                    </div>
+                </div>
+
+                <a href="/projects" class="hover:text-sena-red transition-colors">Projects</a>
+                <a href="/blogs" class="hover:text-sena-red transition-colors">Blogs</a>
+                <a href="/contact" class="bg-sena-red text-white px-6 py-2.5 rounded-xl hover:bg-red-700 transition shadow-lg shadow-sena-red/20">Contact</a>
+            </nav>
+
+            <!-- Mobile Hamburger -->
+            <button id="mobile-menu-btn" class="lg:hidden text-2xl focus:outline-none text-white hover:text-sena-red">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden flex-col items-start gap-0 bg-sena-dark w-full absolute top-full left-0 py-4 border-t border-gray-800 shadow-2xl overflow-y-auto max-h-[80vh]">
+            <a href="/" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Home</a>
+            <a href="/about" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">About</a>
+            <a href="/process" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Our Process</a>
+            
+            <!-- Mobile Services Accordion -->
+            <div class="w-full">
+                <button id="mobile-services-btn" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800  flex justify-between items-center">
+                    Services <i class="fa-solid fa-chevron-down text-sm transition-transform duration-300" id="mobile-services-icon"></i>
+                </button>
+                <div id="mobile-services-menu" class="hidden bg-black w-full flex-col">
+                    <a href="/luxury-homes" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Luxury Homes</a>
+                    <a href="/granny-flats" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Granny Flats</a>
+                    <a href="/duplexes" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Duplexes</a>
+                    <a href="/knockdown-rebuilds" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Knockdown Rebuilds</a>
+                    <a href="/renovations-extensions" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Renovations & Extensions</a>
+                    <a href="/building-maintenance" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Building Maintenance</a>
+                </div>
+            </div>
+
+            <a href="/projects" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Projects</a>
+            <a href="/blogs" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Blogs</a>
+            <div class="px-6 py-4 w-full">
+                <a href="/contact" class="block w-full bg-sena-red text-white text-center py-3 rounded-xl font-bold shadow-lg">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========================================== -->
+        <!-- HERO                                       -->
+        <!-- ========================================== -->
+        <section class="relative min-h-[360px] md:min-h-[420px] flex items-center bg-cover bg-center" style="background-image: url('images/duplexe.webp');">
+            <div class="absolute inset-0 bg-gradient-to-r from-sena-dark/90 via-sena-dark/75 to-sena-dark/40 z-0"></div>
+            <div class="max-w-7xl mx-auto px-6 py-16 relative z-10 text-white w-full">
+                <div class="max-w-3xl">
+                    <p class="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
+                        <i class="fa-solid fa-calculator text-sena-red"></i> Free Instant Estimate
+                    </p>
+                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-5 leading-tight drop-shadow-lg">
+                        Duplex Cost Calculator
+                    </h1>
+                    <p class="text-lg md:text-xl text-gray-200 max-w-2xl leading-relaxed mb-6">
+                        Get an indicative price range for building a duplex in Sydney in under a minute. Adjust the options and watch your estimate update live.
+                    </p>
+                    <div class="w-20 h-1.5 bg-sena-red rounded-full"></div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- CALCULATOR                                 -->
+        <!-- ========================================== -->
+        <section class="py-12 md:py-20">
+            <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_400px] gap-8 items-start">
+
+                <!-- Steps (rendered by scripts/calculator.js from the config below) -->
+                <div id="calc-steps" class="space-y-6">
+                    <noscript>
+                        <div class="bg-white rounded-3xl p-8 border border-gray-100">Please enable JavaScript to use the calculator, or <a href="/contact" class="text-sena-red font-semibold underline">contact us</a> for a quote.</div>
+                    </noscript>
+                </div>
+
+                <!-- Results -->
+                <aside id="calc-results" class="lg:sticky lg:top-28 scroll-mt-28" aria-live="polite">
+                    <div class="bg-sena-dark text-white rounded-3xl shadow-2xl overflow-hidden border border-white/5">
+                        <div class="p-6 md:p-8 bg-[radial-gradient(circle_at_top_right,rgba(227,0,15,0.35),transparent_60%)]">
+                            <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-3">Your estimated build cost</p>
+                            <p class="font-serif font-bold leading-tight">
+                                <span id="calc-low" class="block text-3xl md:text-4xl">$0</span>
+                                <span class="block text-sm font-sans font-medium text-gray-400 my-1">to</span>
+                                <span id="calc-high" class="block text-3xl md:text-4xl text-sena-red">$0</span>
+                            </p>
+                            <div class="mt-5 inline-flex items-center gap-2 bg-white/10 rounded-xl px-4 py-2 text-sm">
+                                <i class="fa-solid fa-house-chimney text-sena-red"></i>
+                                <span class="text-gray-300">Per dwelling:</span>
+                                <span id="calc-per-unit" class="font-semibold">$0</span>
+                            </div>
+                        </div>
+
+                        <div class="px-6 md:px-8 pb-2">
+                            <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-1 pt-2">Cost breakdown</p>
+                            <ul id="calc-breakdown" class="text-sm"></ul>
+                        </div>
+
+                        <div class="p-6 md:p-8 pt-4 space-y-3">
+                            <a href="#calc-quote" class="w-full bg-sena-red hover:bg-red-700 text-white font-bold py-4 rounded-xl transition-all shadow-[0_8px_20px_rgba(227,0,15,0.35)] hover:-translate-y-0.5 flex justify-center items-center gap-2">
+                                Get My Exact Quote <i class="fa-solid fa-arrow-right"></i>
+                            </a>
+                            <div class="grid grid-cols-2 gap-3">
+                                <button type="button" id="calc-copy" class="border border-white/15 hover:border-white/40 text-gray-300 hover:text-white text-sm font-semibold py-3 rounded-xl transition flex justify-center items-center gap-2">
+                                    <i class="fa-solid fa-link"></i> Share
+                                </button>
+                                <button type="button" id="calc-reset" class="border border-white/15 hover:border-white/40 text-gray-300 hover:text-white text-sm font-semibold py-3 rounded-xl transition flex justify-center items-center gap-2">
+                                    <i class="fa-solid fa-rotate-left"></i> Reset
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-gray-500 leading-relaxed mt-4 px-2">
+                        <i class="fa-solid fa-circle-info text-sena-red mr-1"></i>
+                        Indicative estimate only, not a quote. Final pricing depends on your design, site investigations, council requirements and selections. Excludes land, DA/CDC fees, subdivision and strata costs unless stated.
+                    </p>
+                </aside>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- QUOTE FORM (sent via EmailJS in scripts.js) -->
+        <!-- ========================================== -->
+        <section id="calc-quote" class="py-16 md:py-24 bg-white border-t border-gray-100 scroll-mt-24">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                <div class="text-center mb-10">
+                    <h2 class="text-3xl md:text-5xl font-serif font-bold mb-4 text-sena-dark">Turn your estimate into a fixed quote</h2>
+                    <p class="text-gray-600 text-lg max-w-2xl mx-auto">Send us your details and our team will review your estimate and get back to you with a tailored quote. Your calculator selections are attached automatically.</p>
+                    <div class="w-20 h-1.5 bg-sena-red rounded-full mx-auto mt-6"></div>
+                </div>
+
+                <form id="quote-form" class="bg-gray-50 border border-gray-100 rounded-3xl p-6 md:p-10 shadow-sm space-y-5">
+                    <input type="hidden" name="service_type" value="Duplex">
+                    <input type="hidden" name="message" id="calc-message">
+
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2" for="q-name">Full Name *</label>
+                            <input id="q-name" type="text" name="user_name" required autocomplete="name" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2" for="q-phone">Phone Number *</label>
+                            <input id="q-phone" type="tel" name="user_phone" required autocomplete="tel" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2" for="q-email">Email Address *</label>
+                            <input id="q-email" type="email" name="user_email" required autocomplete="email" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white transition-all">
+                        </div>
+                        <div>
+                            <label class="block text-sm font-semibold text-gray-700 mb-2" for="q-suburb">Project Suburb *</label>
+                            <input id="q-suburb" type="text" name="project_suburb" required placeholder="e.g. Parramatta" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white transition-all">
+                        </div>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2" for="q-plans">Do you have plans?</label>
+                        <select id="q-plans" name="has_plans" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white transition-all cursor-pointer">
+                            <option value="" disabled selected>Select</option>
+                            <option value="No, need design help">No, need design help</option>
+                            <option value="In Progress">In Progress</option>
+                            <option value="Yes, ready to build">Yes, ready to build</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label class="block text-sm font-semibold text-gray-700 mb-2" for="calc-notes">Anything else we should know?</label>
+                        <textarea id="calc-notes" rows="4" placeholder="Block size, timeline, whether you plan to sell or keep both dwellings..." class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white resize-none transition-all"></textarea>
+                    </div>
+
+                    <button type="submit" id="submit-btn" class="w-full bg-sena-red hover:bg-red-700 text-white font-bold text-lg py-4 px-10 rounded-xl transition-all shadow-[0_8px_20px_rgba(227,0,15,0.25)] hover:-translate-y-0.5 inline-flex justify-center items-center gap-3">
+                        Send My Estimate <i class="fa-solid fa-paper-plane"></i>
+                    </button>
+                    <div id="form-status" class="hidden p-4 rounded-xl text-center font-semibold"></div>
+                </form>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- FAQ                                        -->
+        <!-- ========================================== -->
+        <section class="py-16 md:py-24 bg-gray-50">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                <div class="mb-10">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-sena-dark">Duplex cost FAQs</h2>
+                    <div class="w-20 h-1.5 bg-sena-red rounded-full"></div>
+                </div>
+                <div class="space-y-4">
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-white">
+                        <button class="faq-btn w-full text-left px-6 md:px-8 py-6 hover:bg-gray-50 font-bold text-lg flex justify-between items-center transition text-sena-dark">
+                            How is this duplex estimate calculated?
+                            <div class="bg-red-50 text-sena-red w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ml-4"><i class="fa-solid fa-chevron-down transition-transform duration-300"></i></div>
+                        </button>
+                        <div class="faq-content hidden px-6 md:px-8 py-6 text-gray-600 bg-gray-50 border-t border-gray-100 leading-relaxed">
+                            We multiply your total floor area by a base build rate for your chosen finish level, then add site costs (vacant block or knockdown, plus slope), BASIX compliance and any facade upgrade. A customisation allowance and any optional extras are added as a low–high range to give you a realistic budget window.
+                        </div>
+                    </div>
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-white">
+                        <button class="faq-btn w-full text-left px-6 md:px-8 py-6 hover:bg-gray-50 font-bold text-lg flex justify-between items-center transition text-sena-dark">
+                            What floor area should I enter?
+                            <div class="bg-red-50 text-sena-red w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ml-4"><i class="fa-solid fa-chevron-down transition-transform duration-300"></i></div>
+                        </button>
+                        <div class="faq-content hidden px-6 md:px-8 py-6 text-gray-600 bg-gray-50 border-t border-gray-100 leading-relaxed">
+                            Enter the combined floor area of both dwellings, including garages and alfresco areas. If you're not sure, most Sydney duplexes fall between 350 and 500 m² in total. Our team can confirm the right size for your block during a consultation.
+                        </div>
+                    </div>
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-white">
+                        <button class="faq-btn w-full text-left px-6 md:px-8 py-6 hover:bg-gray-50 font-bold text-lg flex justify-between items-center transition text-sena-dark">
+                            Why does a knockdown rebuild cost more in site costs?
+                            <div class="bg-red-50 text-sena-red w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ml-4"><i class="fa-solid fa-chevron-down transition-transform duration-300"></i></div>
+                        </button>
+                        <div class="faq-content hidden px-6 md:px-8 py-6 text-gray-600 bg-gray-50 border-t border-gray-100 leading-relaxed">
+                            A knockdown rebuild includes demolishing the existing home, disconnecting and reconnecting services, and clearing the site before construction starts. These costs are built into the knockdown site allowance so there are no surprises later.
+                        </div>
+                    </div>
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-white">
+                        <button class="faq-btn w-full text-left px-6 md:px-8 py-6 hover:bg-gray-50 font-bold text-lg flex justify-between items-center transition text-sena-dark">
+                            Is this a fixed price?
+                            <div class="bg-red-50 text-sena-red w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ml-4"><i class="fa-solid fa-chevron-down transition-transform duration-300"></i></div>
+                        </button>
+                        <div class="faq-content hidden px-6 md:px-8 py-6 text-gray-600 bg-gray-50 border-t border-gray-100 leading-relaxed">
+                            No. The calculator gives an indicative range to help you plan your budget. Every block and design is different, so we provide a detailed, fixed-price quote once we've reviewed your site and plans. Send your estimate through the form above to get started.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Mobile mini estimate bar (sits above the sticky call bar) -->
+    <a id="calc-mobile-bar" href="#calc-results" class="md:hidden fixed left-3 right-3 bottom-[68px] z-[90] bg-white text-sena-dark rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.25)] border border-gray-200 px-4 py-3 flex items-center justify-between gap-3 transition-transform duration-300">
+        <span class="min-w-0">
+            <span class="block text-[10px] uppercase tracking-widest text-gray-500 font-semibold">Your estimate</span>
+            <span id="calc-mobile-total" class="block font-bold text-sm truncate">$0</span>
+        </span>
+        <span class="flex-shrink-0 text-sena-red text-sm font-bold flex items-center gap-1">Breakdown <i class="fa-solid fa-chevron-up text-xs"></i></span>
+    </a>
+
+    <!-- ========================================== -->
+    <!-- COMPREHENSIVE FOOTER                       -->
+    <!-- ========================================== -->
+    <footer class="bg-black text-white pt-16 pb-8 border-t-[4px] border-sena-red">
+        
+        <!-- MAIN 4-COLUMN GRID -->
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            
+            <!-- Column 1: Brand -->
+            <div>
+                <a href="/" class="inline-block mb-6">
+                    <img src="images/senalogo.png" alt="Sena Constructions" loading="lazy" class="h-16 w-auto hover:opacity-80 transition-opacity">
+                </a>
+                <p class="text-gray-400 text-sm mb-6 leading-relaxed">Building Quality Homes and Lasting Relationships in Sydney. Proudly servicing Greater Sydney.</p>
+                <div class="flex gap-4">
+                    <a href="https://www.facebook.com/p/Sena-Constructions-100040335197985/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-gray-900 flex items-center justify-center hover:bg-sena-red transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/senaconstructions/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-gray-900 flex items-center justify-center hover:bg-sena-red transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 uppercase tracking-wider text-gray-200">Company</h4>
+                <ul class="space-y-3 text-sm text-gray-400 font-medium">
+                    <li><a href="/" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Home</a></li>
+                    <li><a href="/about" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> About Us</a></li>
+                    <li><a href="/process" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Our Process</a></li>
+                    <li><a href="/projects" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Portfolio</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Services -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 uppercase tracking-wider text-gray-200">Services</h4>
+                <ul class="space-y-3 text-sm text-gray-400 font-medium">
+                    <li><a href="/luxury-homes" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Luxury Homes</a></li>
+                    <li><a href="/knockdown-rebuilds" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Knockdown Rebuilds</a></li>
+                    <li><a href="/duplexes" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Duplexes & Granny Flats</a></li>
+                    <li><a href="/renovations-extensions" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Renovations & Extensions</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact Details -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 uppercase tracking-wider text-gray-200">Contact</h4>
+                <ul class="space-y-4 text-sm text-gray-400">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-phone text-sena-red mt-1"></i>
+                        <div>
+                            <p class="font-bold text-white mb-1">Phone</p>
+                            <a href="tel:0298850797" class="hover:text-sena-red transition-colors">(02) 9885 0797</a>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-envelope text-sena-red mt-1"></i>
+                        <div>
+                            <p class="font-bold text-white mb-1">Email</p>
+                            <a href="mailto:office@senaconstructions.com.au" class="hover:text-sena-red transition-colors">office@senaconstructions.com.au</a>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot text-sena-red mt-1"></i>
+                        <div>
+                            <p class="font-bold text-white mb-1">Office</p>
+                            <p>74A Ringrose Ave<br>Greystanes NSW 2145</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM COPYRIGHT BAR -->
+        <div class="border-t border-gray-900 pt-8 text-center md:flex justify-between items-center max-w-7xl mx-auto px-6 text-sm text-gray-600 font-medium">
+            <p>Copyright &copy; 2026 Sena Constructions. All Rights Reserved.</p>
+            <div class="mt-4 md:mt-0 space-x-4">
+                <a href="/sitemap" class="hover:text-sena-red transition-colors">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- STICKY MOBILE ACTION BAR (PHONE ONLY)      -->
+    <!-- ========================================== -->
+    <div class="md:hidden fixed bottom-0 left-0 w-full bg-sena-dark z-[100] flex border-t border-sena-red/30 shadow-[0_-10px_20px_rgba(0,0,0,0.2)]">
+        <a href="tel:0298850797" class="flex-1 py-4 flex items-center justify-center gap-2 border-r border-gray-700 active:bg-gray-800 transition text-white">
+            <i class="fa-solid fa-phone text-sena-red text-lg"></i> 
+            <span class="font-bold text-sm tracking-wide">Call Now</span>
+        </a>
+        <a href="/contact" class="flex-1 py-4 flex items-center justify-center gap-2 bg-sena-red active:bg-red-700 transition text-white">
+            <i class="fa-solid fa-calendar-check text-white text-lg"></i> 
+            <span class="font-bold text-sm tracking-wide">Book Consult</span>
+        </a>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- INTERACTIVE SCRIPTS                        -->
+    <!-- ========================================== -->
+    <!-- ========================================== -->
+    <!-- CALCULATOR PRICING CONFIG                  -->
+    <!-- Edit prices here. All amounts in AUD.      -->
+    <!-- ========================================== -->
+    <script>
+        window.SENA_CALC = {
+            name: 'Duplex Cost Calculator',
+            roundTo: 1000,
+            perUnit: { count: 2 },
+            area: { summary: 'Floor area', label: 'Total floor area (both dwellings)', unit: 'm²', min: 200, max: 900, step: 5, default: 400,
+                    hint: 'Include both homes, garages and alfresco areas. Most Sydney duplexes are 350–500 m² in total.' },
+
+            // Breakdown rows, in display order
+            lines: [
+                { id: 'base',      label: 'Base build' },
+                { id: 'site',      label: 'Site costs & preparation' },
+                { id: 'basix',     label: 'BASIX compliance' },
+                { id: 'facade',    label: 'Facade', zeroText: 'Included' },
+                { id: 'variation', label: 'Customisation allowance' },
+                { id: 'addons',    label: 'Optional extras', zeroText: 'None selected' }
+            ],
+
+            // Applied to every build
+            always: [ { line: 'basix', fixed: 25000 } ],
+
+            groups: [
+                { id: 'site', summary: 'Site', title: 'What are you building on?', subtitle: 'Knockdown site costs include demolition.', default: 'vacant',
+                  options: [
+                    { id: 'vacant',    label: 'Vacant block',      icon: 'fa-map-location-dot', desc: 'Empty land ready for construction.',          tag: '$90,000 site costs',  costs: [ { line: 'site', fixed: 90000 } ] },
+                    { id: 'knockdown', label: 'Knockdown rebuild', icon: 'fa-house-crack',      desc: 'Demolish the existing home and build new.',  tag: '$130,000 site costs', costs: [ { line: 'site', fixed: 130000 } ] }
+                  ] },
+
+                { id: 'slope', summary: 'Slope', title: 'How sloped is the block?', subtitle: 'Sloping sites need extra excavation and retaining.', default: 'flat', cols: 'grid-cols-1 sm:grid-cols-3',
+                  options: [
+                    { id: 'flat',     label: 'Flat',           icon: 'fa-grip-lines',        desc: 'Less than 1 m fall.',  tag: '+$0',       costs: [] },
+                    { id: 'moderate', label: 'Moderate slope', icon: 'fa-arrow-trend-down',  desc: 'Around 1–3 m fall.',   tag: '+$60,000',  short: 'Moderate slope', costs: [ { line: 'site', fixed: 60000 } ] },
+                    { id: 'steep',    label: 'Steep slope',    icon: 'fa-mountain',          desc: 'More than 3 m fall.',  tag: '+$130,000', short: 'Steep slope',    costs: [ { line: 'site', fixed: 130000 } ] }
+                  ] },
+
+                { id: 'area', type: 'area', title: 'How big is your duplex?', subtitle: 'Drag the slider or type a number.' },
+
+                { id: 'tier', summary: 'Finish level', title: 'Choose your finish level', subtitle: 'Sets the build rate and a customisation allowance for upgrades and variations.', default: 'premium', cols: 'grid-cols-1 sm:grid-cols-3',
+                  options: [
+                    { id: 'standard', label: 'Standard', icon: 'fa-star',              desc: 'Quality inclusions, smart value.',            tag: '$2,500 / m²', costs: [ { line: 'base', rate: 2500 }, { line: 'variation', min: 40000,  max: 140000 } ] },
+                    { id: 'premium',  label: 'Premium',  icon: 'fa-star-half-stroke',  desc: 'Upgraded finishes, stone and fixtures.',      tag: '$3,000 / m²', costs: [ { line: 'base', rate: 3000 }, { line: 'variation', min: 140000, max: 320000 } ] },
+                    { id: 'luxury',   label: 'Luxury',   icon: 'fa-gem',               desc: 'Designer selections throughout.',             tag: '$3,500 / m²', costs: [ { line: 'base', rate: 3500 }, { line: 'variation', min: 320000, max: 540000 } ] }
+                  ] },
+
+                { id: 'facade', summary: 'Facade', title: 'Pick a facade style', default: 'hamptons', cols: 'grid-cols-1 sm:grid-cols-2',
+                  options: [
+                    { id: 'hamptons',      label: 'Hamptons',      icon: 'fa-house',          desc: 'Classic coastal look.',                     tag: 'Included',   costs: [] },
+                    { id: 'modern',        label: 'Modern',        icon: 'fa-building',       desc: 'Clean lines and contemporary materials.',   tag: '+$20,000',   costs: [ { line: 'facade', fixed: 20000 } ] },
+                    { id: 'provincial',    label: 'Provincial',    icon: 'fa-house-chimney',  desc: 'French-inspired detailing and mouldings.',  tag: '+$50,000',   costs: [ { line: 'facade', fixed: 50000 } ] },
+                    { id: 'mediterranean', label: 'Mediterranean', icon: 'fa-sun',            desc: 'Rendered arches and warm textures.',        tag: '+$60,000',   costs: [ { line: 'facade', fixed: 60000 } ] }
+                  ] },
+
+                { id: 'addons', type: 'multi', summary: 'Extras', title: 'Add optional extras', subtitle: 'Select as many as you like.', default: [], compact: true, cols: 'grid-cols-1 sm:grid-cols-2 xl:grid-cols-3',
+                  options: [
+                    { id: 'pool',      label: 'Swimming pool',       icon: 'fa-water-ladder',      tag: '$55k – $95k', costs: [ { line: 'addons', min: 55000, max: 95000 } ] },
+                    { id: 'landscape', label: 'Full landscaping',    icon: 'fa-tree',              tag: '$25k – $55k', costs: [ { line: 'addons', min: 25000, max: 55000 } ] },
+                    { id: 'driveway',  label: 'Driveway & paths',    icon: 'fa-road',              tag: '$28k – $40k', costs: [ { line: 'addons', min: 28000, max: 40000 } ] },
+                    { id: 'kitchen',   label: 'Premium kitchen',     icon: 'fa-kitchen-set',       tag: '$20k – $45k', costs: [ { line: 'addons', min: 20000, max: 45000 } ] },
+                    { id: 'alfresco',  label: 'Alfresco upgrade',    icon: 'fa-umbrella-beach',    tag: '$18k – $35k', costs: [ { line: 'addons', min: 18000, max: 35000 } ] },
+                    { id: 'solar',     label: 'Solar + battery',     icon: 'fa-solar-panel',       tag: '$18k – $32k', costs: [ { line: 'addons', min: 18000, max: 32000 } ] },
+                    { id: 'theatre',   label: 'Home theatre',        icon: 'fa-film',              tag: '$15k – $30k', costs: [ { line: 'addons', min: 15000, max: 30000 } ] },
+                    { id: 'smart',     label: 'Smart home pre-wire', icon: 'fa-wifi',              tag: '$8k – $16k',  costs: [ { line: 'addons', min: 8000,  max: 16000 } ] },
+                    { id: 'ev',        label: 'EV charger',          icon: 'fa-charging-station',  tag: '$2.5k – $5k', costs: [ { line: 'addons', min: 2500,  max: 5000 } ] }
+                  ] }
+            ]
+        };
+    </script>
+    <script src="scripts/calculator.js" defer></script>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
