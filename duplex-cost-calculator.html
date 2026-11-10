@@ -8,10 +8,10 @@
     <!-- ADVANCED SEO META TAGS                     -->
     <!-- ========================================== -->
     <title>Duplex Cost Calculator Sydney | Sena Constructions</title>
-    <meta name="description" content="Estimate the cost of building a duplex in Sydney with our free calculator. Choose your site, slope, size, finish level, facade and extras for an instant price range.">
+    <meta name="description" content="How much does a duplex cost to build in Sydney? Answer 6 quick questions about your block, design and finishes to get a free, instant estimate from Sena Constructions.">
     <link rel="canonical" href="https://senaconstructions.com.au/duplex-cost-calculator">
     <meta property="og:title" content="Duplex Cost Calculator Sydney | Sena Constructions">
-    <meta property="og:description" content="Get an instant, indicative price range for your Sydney duplex build.">
+    <meta property="og:description" content="Get a free, instant estimate for your Sydney duplex build.">
     <meta property="og:type" content="website">
     
     <!-- Preload Hero Image -->
@@ -50,6 +50,11 @@
         }
     </script>
 <link rel="icon" type="image/png" href="/images/senasmalllogo.png">
+    <style>
+        .wiz-enter { animation: wizIn .35s ease both; }
+        @keyframes wizIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+        @media (prefers-reduced-motion: reduce) { .wiz-enter { animation: none; } }
+    </style>
 </head>
 <body class="font-sans text-sena-gray bg-gray-50 overflow-x-hidden antialiased pb-16 md:pb-0">
 
@@ -139,142 +144,145 @@
 
     <main>
         <!-- ========================================== -->
-        <!-- HERO                                       -->
+        <!-- DUPLEX CALCULATOR WIZARD                   -->
+        <!-- Steps are rendered by scripts/calculator.js -->
         <!-- ========================================== -->
-        <section class="relative min-h-[360px] md:min-h-[420px] flex items-center bg-cover bg-center" style="background-image: url('images/duplexe.webp');">
-            <div class="absolute inset-0 bg-gradient-to-r from-sena-dark/90 via-sena-dark/75 to-sena-dark/40 z-0"></div>
-            <div class="max-w-7xl mx-auto px-6 py-16 relative z-10 text-white w-full">
-                <div class="max-w-3xl">
-                    <p class="inline-flex items-center gap-2 bg-white/10 backdrop-blur border border-white/20 text-xs font-semibold uppercase tracking-widest px-4 py-2 rounded-full mb-6">
-                        <i class="fa-solid fa-calculator text-sena-red"></i> Free Instant Estimate
-                    </p>
-                    <h1 class="text-4xl sm:text-5xl md:text-6xl font-serif font-bold mb-5 leading-tight drop-shadow-lg">
-                        Duplex Cost Calculator
-                    </h1>
-                    <p class="text-lg md:text-xl text-gray-200 max-w-2xl leading-relaxed mb-6">
-                        Get an indicative price range for building a duplex in Sydney in under a minute. Adjust the options and watch your estimate update live.
-                    </p>
-                    <div class="w-20 h-1.5 bg-sena-red rounded-full"></div>
-                </div>
-            </div>
-        </section>
+        <section class="bg-gray-100 py-6 md:py-14">
+            <div class="max-w-6xl mx-auto px-3 sm:px-6">
+                <div id="wiz" class="bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-gray-100 scroll-mt-24">
 
-        <!-- ========================================== -->
-        <!-- CALCULATOR                                 -->
-        <!-- ========================================== -->
-        <section class="py-12 md:py-20">
-            <div class="max-w-7xl mx-auto px-4 sm:px-6 grid grid-cols-1 lg:grid-cols-[minmax(0,1fr)_400px] gap-8 items-start">
+                    <!-- Card header -->
+                    <div class="flex items-center justify-between gap-4 px-5 md:px-10 pt-6 md:pt-8 pb-5">
+                        <div class="flex items-center gap-4">
+                            <span class="flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-sena-dark text-white flex items-center justify-center shadow-md"><i class="fa-solid fa-calculator"></i></span>
+                            <div class="leading-tight">
+                                <p class="hidden sm:block text-[11px] font-bold uppercase tracking-[0.25em] text-gray-400">Sena Constructions</p>
+                                <p class="font-serif text-base sm:text-lg md:text-xl font-bold text-sena-dark">Duplex Build Calculator</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <p id="wiz-counter" class="hidden whitespace-nowrap text-[11px] uppercase tracking-[0.2em] text-gray-400 font-semibold"></p>
+                            <a href="tel:0298850797" class="hidden md:flex items-center gap-2 font-bold text-sena-dark hover:text-sena-red transition-colors"><span class="w-2 h-2 rounded-full bg-sena-red"></span>(02) 9885 0797</a>
+                        </div>
+                    </div>
 
-                <!-- Steps (rendered by scripts/calculator.js from the config below) -->
-                <div id="calc-steps" class="space-y-6">
-                    <noscript>
-                        <div class="bg-white rounded-3xl p-8 border border-gray-100">Please enable JavaScript to use the calculator, or <a href="/contact" class="text-sena-red font-semibold underline">contact us</a> for a quote.</div>
-                    </noscript>
-                </div>
+                    <!-- Progress -->
+                    <div id="wiz-progress" class="flex gap-1.5 md:gap-2 px-5 md:px-10 pb-5 border-b border-gray-100" aria-hidden="true"></div>
 
-                <!-- Results -->
-                <aside id="calc-results" class="lg:sticky lg:top-28 scroll-mt-28" aria-live="polite">
-                    <div class="bg-sena-dark text-white rounded-3xl shadow-2xl overflow-hidden border border-white/5">
-                        <div class="p-6 md:p-8 bg-[radial-gradient(circle_at_top_right,rgba(227,0,15,0.35),transparent_60%)]">
-                            <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-3">Your estimated build cost</p>
-                            <p class="font-serif font-bold leading-tight">
-                                <span id="calc-low" class="block text-3xl md:text-4xl">$0</span>
-                                <span class="block text-sm font-sans font-medium text-gray-400 my-1">to</span>
-                                <span id="calc-high" class="block text-3xl md:text-4xl text-sena-red">$0</span>
-                            </p>
-                            <div class="mt-5 inline-flex items-center gap-2 bg-white/10 rounded-xl px-4 py-2 text-sm">
-                                <i class="fa-solid fa-house-chimney text-sena-red"></i>
-                                <span class="text-gray-300">Per dwelling:</span>
-                                <span id="calc-per-unit" class="font-semibold">$0</span>
+                    <!-- Screens -->
+                    <div class="px-4 sm:px-6 md:px-10 py-8 md:py-12">
+
+                        <!-- INTRO -->
+                        <div data-screen="intro" class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                            <div>
+                                <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-sena-red bg-red-50 rounded-full px-4 py-2 mb-6">Free instant estimate</span>
+                                <h1 class="font-serif text-4xl md:text-6xl font-bold text-sena-dark leading-[1.05] mb-6">How much will your <em class="text-sena-red italic">duplex</em> cost to build?</h1>
+                                <p class="text-gray-600 text-lg leading-relaxed mb-8">Answer six quick questions about your block, your design and your finishes. We'll give you an indicative price range based on Sena's Sydney build rates.</p>
+                                <ul class="space-y-4 mb-10">
+                                    <li class="flex items-center gap-4"><span class="w-8 h-8 rounded-full bg-red-50 text-sena-red flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-check text-sm"></i></span><span><b class="text-sena-dark">See your estimate straight away</b>, no sign-up needed</span></li>
+                                    <li class="flex items-center gap-4"><span class="w-8 h-8 rounded-full bg-red-50 text-sena-red flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-check text-sm"></i></span><span><b class="text-sena-dark">Based on Sydney build costs</b> for site, design and finishes</span></li>
+                                    <li class="flex items-center gap-4"><span class="w-8 h-8 rounded-full bg-red-50 text-sena-red flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-check text-sm"></i></span><span><b class="text-sena-dark">Tailored to your choices</b>: block, size, look and extras</span></li>
+                                </ul>
+                                <div class="grid grid-cols-3 gap-4 pt-8 border-t border-gray-100">
+                                    <div><p class="font-serif text-3xl font-bold text-sena-dark">6</p><p class="text-[10px] uppercase tracking-[0.18em] text-gray-400 mt-1">Quick steps</p></div>
+                                    <div><p class="font-serif text-3xl font-bold text-sena-dark">~2 min</p><p class="text-[10px] uppercase tracking-[0.18em] text-gray-400 mt-1">To complete</p></div>
+                                    <div><p class="font-serif text-3xl font-bold text-sena-dark">Free</p><p class="text-[10px] uppercase tracking-[0.18em] text-gray-400 mt-1">No obligation</p></div>
+                                </div>
+                            </div>
+                            <div class="relative rounded-3xl overflow-hidden min-h-[320px] lg:min-h-[520px] bg-sena-dark text-white flex flex-col justify-end p-6 md:p-8">
+                                <img src="images/duplexe.webp" alt="Duplex built by Sena Constructions" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                                <div class="absolute inset-0 bg-gradient-to-t from-sena-dark via-sena-dark/40 to-transparent"></div>
+                                <div class="relative">
+                                    <p class="font-serif italic text-3xl md:text-4xl font-bold mb-3">From concept to creation.</p>
+                                    <p class="text-[11px] font-bold uppercase tracking-[0.25em] text-sena-red mb-6">Sena Constructions · Sydney</p>
+                                    <div class="flex items-start gap-3 bg-white/10 backdrop-blur border border-white/15 rounded-2xl p-4">
+                                        <i class="fa-solid fa-star text-sena-red mt-1"></i>
+                                        <div>
+                                            <p class="font-bold text-sm">Duplex specialists</p>
+                                            <p class="text-sm text-gray-300">Custom duplexes, knockdown rebuilds and dual occupancy across Greater Sydney.</p>
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         </div>
 
-                        <div class="px-6 md:px-8 pb-2">
-                            <p class="text-xs uppercase tracking-widest text-gray-400 font-semibold mb-1 pt-2">Cost breakdown</p>
-                            <ul id="calc-breakdown" class="text-sm"></ul>
-                        </div>
+                        <!-- STEPS (rendered by JS) -->
+                        <div data-screen="step" class="hidden"></div>
 
-                        <div class="p-6 md:p-8 pt-4 space-y-3">
-                            <a href="#calc-quote" class="w-full bg-sena-red hover:bg-red-700 text-white font-bold py-4 rounded-xl transition-all shadow-[0_8px_20px_rgba(227,0,15,0.35)] hover:-translate-y-0.5 flex justify-center items-center gap-2">
-                                Get My Exact Quote <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                            <div class="grid grid-cols-2 gap-3">
-                                <button type="button" id="calc-copy" class="border border-white/15 hover:border-white/40 text-gray-300 hover:text-white text-sm font-semibold py-3 rounded-xl transition flex justify-center items-center gap-2">
-                                    <i class="fa-solid fa-link"></i> Share
-                                </button>
-                                <button type="button" id="calc-reset" class="border border-white/15 hover:border-white/40 text-gray-300 hover:text-white text-sm font-semibold py-3 rounded-xl transition flex justify-center items-center gap-2">
-                                    <i class="fa-solid fa-rotate-left"></i> Reset
-                                </button>
+                        <!-- RESULT -->
+                        <div data-screen="result" class="hidden">
+                            <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-sena-red bg-red-50 rounded-full px-4 py-2 mb-5">Your indicative estimate</span>
+                            <h2 class="font-serif text-3xl md:text-5xl font-bold text-sena-dark leading-tight mb-4">Your <em class="text-sena-red italic">duplex</em> build estimate.</h2>
+                            <p class="hidden sm:block text-gray-600 md:text-lg leading-relaxed max-w-3xl mb-6 md:mb-8">Based on your answers and Sena's current Sydney build rates. Request a callback and we'll prepare an accurate quote for your site.</p>
+
+                            <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] gap-6 items-start">
+                                <div class="relative overflow-hidden rounded-3xl bg-sena-dark text-white p-6 md:p-10" aria-live="polite">
+                                    <div class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-sena-red/25 blur-3xl pointer-events-none"></div>
+                                    <div class="relative">
+                                        <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-sena-red mb-4">Indicative duplex build cost</p>
+                                        <p id="res-range" class="font-serif text-4xl sm:text-5xl xl:text-6xl font-bold leading-tight mb-4 whitespace-nowrap"></p>
+                                        <p id="res-sub" class="text-gray-300"></p>
+                                        <p class="inline-flex items-center gap-2 bg-white/10 rounded-xl px-4 py-2 text-sm mt-5"><i class="fa-solid fa-house-chimney text-sena-red"></i><span class="text-gray-300">Per dwelling:</span> <b id="res-per"></b></p>
+                                        <div id="res-stats" class="grid grid-cols-2 sm:grid-cols-4 gap-5 mt-8 pt-6 border-t border-white/10"></div>
+                                    </div>
+                                </div>
+
+                                <form id="quote-form" class="rounded-3xl border border-gray-100 bg-gray-50 p-6 md:p-8 space-y-3">
+                                    <h3 class="font-serif text-2xl font-bold text-sena-dark">Get an accurate quote</h3>
+                                    <p class="text-gray-600 text-sm mb-2">A Sena specialist will review your answers and call you to talk through your project.</p>
+                                    <input type="hidden" name="service_type" value="Duplex">
+                                    <input type="hidden" name="message" id="calc-message">
+                                    <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                        <input type="text" name="user_name" required autocomplete="name" placeholder="Your name *" aria-label="Your name" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white">
+                                        <input type="tel" name="user_phone" required autocomplete="tel" placeholder="Phone *" aria-label="Phone" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white">
+                                    </div>
+                                    <input type="email" name="user_email" required autocomplete="email" placeholder="Email *" aria-label="Email" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white">
+                                    <input type="text" name="project_suburb" placeholder="Suburb or postcode" aria-label="Suburb or postcode" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white">
+                                    <button type="submit" id="submit-btn" class="w-full bg-sena-red hover:bg-red-700 text-white font-bold py-4 rounded-xl transition-all shadow-[0_8px_20px_rgba(227,0,15,0.25)] hover:-translate-y-0.5 flex justify-center items-center gap-2">Request my callback <i class="fa-solid fa-arrow-right"></i></button>
+                                    <div id="form-status" class="hidden p-4 rounded-xl text-center font-semibold"></div>
+                                    <p class="text-xs text-gray-400 text-center">By submitting, you agree to be contacted by Sena Constructions.</p>
+                                </form>
+                            </div>
+
+                            <div class="mt-6 rounded-3xl border border-gray-100 p-6 md:p-8">
+                                <h3 class="font-serif text-xl font-bold text-sena-dark mb-5">What's included in your estimate</h3>
+                                <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3 text-gray-700">
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check text-sena-red mt-1"></i>Base build and structure for both dwellings</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check text-sena-red mt-1"></i>Facade in your chosen style</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check text-sena-red mt-1"></i>Site costs and preparation (incl. demolition for knockdowns)</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check text-sena-red mt-1"></i>Allowance for slope and site conditions</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check text-sena-red mt-1"></i>BASIX sustainability compliance</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check text-sena-red mt-1"></i>Customisation allowance for your finish level and any extras</li>
+                                </ul>
+                            </div>
+
+                            <div class="mt-6 rounded-2xl bg-amber-50 border-l-4 border-amber-400 p-5 text-sm text-gray-700 leading-relaxed">
+                                <b class="text-sena-dark">Indicative guide only.</b> This is not a quote. Your final price depends on your block, council requirements, design choices and a site assessment. Excludes land, subdivision, and DA/CDC and authority fees.
+                            </div>
+
+                            <div class="mt-6 flex flex-wrap gap-6">
+                                <button type="button" data-wiz-back class="text-sm font-semibold text-gray-500 hover:text-sena-red transition-colors"><i class="fa-solid fa-arrow-left mr-1"></i> Change my answers</button>
+                                <button type="button" data-wiz-restart class="text-sm font-semibold text-gray-500 hover:text-sena-red transition-colors"><i class="fa-solid fa-rotate-left mr-1"></i> Start again</button>
                             </div>
                         </div>
                     </div>
-                    <p class="text-xs text-gray-500 leading-relaxed mt-4 px-2">
-                        <i class="fa-solid fa-circle-info text-sena-red mr-1"></i>
-                        Indicative estimate only, not a quote. Final pricing depends on your design, site investigations, council requirements and selections. Excludes land, DA/CDC fees, subdivision and strata costs unless stated.
-                    </p>
-                </aside>
-            </div>
-        </section>
 
-        <!-- ========================================== -->
-        <!-- QUOTE FORM (sent via EmailJS in scripts.js) -->
-        <!-- ========================================== -->
-        <section id="calc-quote" class="py-16 md:py-24 bg-white border-t border-gray-100 scroll-mt-24">
-            <div class="max-w-4xl mx-auto px-4 sm:px-6">
-                <div class="text-center mb-10">
-                    <h2 class="text-3xl md:text-5xl font-serif font-bold mb-4 text-sena-dark">Turn your estimate into a fixed quote</h2>
-                    <p class="text-gray-600 text-lg max-w-2xl mx-auto">Send us your details and our team will review your estimate and get back to you with a tailored quote. Your calculator selections are attached automatically.</p>
-                    <div class="w-20 h-1.5 bg-sena-red rounded-full mx-auto mt-6"></div>
+                    <!-- Card footer / navigation (sticks to the bottom of the screen while scrolling) -->
+                    <div id="wiz-footer" class="sticky bottom-[60px] md:bottom-0 z-20 bg-white/95 backdrop-blur border-t border-gray-100 rounded-b-3xl px-4 sm:px-6 md:px-10 py-4 flex items-center justify-between gap-4">
+                        <p class="hidden sm:flex items-center gap-2 text-sm text-gray-500 min-w-0"><span class="w-1.5 h-1.5 rounded-full bg-sena-red flex-shrink-0"></span><span id="wiz-hint" class="truncate"></span></p>
+                        <div class="flex gap-3 ml-auto w-full sm:w-auto">
+                            <button type="button" id="wiz-back" class="hidden flex-1 sm:flex-none border-2 border-gray-200 hover:border-sena-dark text-sena-dark font-bold px-6 py-3 rounded-xl transition-colors"><i class="fa-solid fa-arrow-left mr-1"></i> Back</button>
+                            <button type="button" id="wiz-next" class="flex-[2] sm:flex-none bg-sena-red hover:bg-red-700 text-white font-bold px-8 py-3 rounded-xl transition-all shadow-[0_8px_20px_rgba(227,0,15,0.25)] hover:-translate-y-0.5"><span id="wiz-next-label">Let's start</span> <i class="fa-solid fa-arrow-right ml-1"></i></button>
+                        </div>
+                    </div>
                 </div>
-
-                <form id="quote-form" class="bg-gray-50 border border-gray-100 rounded-3xl p-6 md:p-10 shadow-sm space-y-5">
-                    <input type="hidden" name="service_type" value="Duplex">
-                    <input type="hidden" name="message" id="calc-message">
-
-                    <div class="grid grid-cols-1 md:grid-cols-2 gap-5">
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2" for="q-name">Full Name *</label>
-                            <input id="q-name" type="text" name="user_name" required autocomplete="name" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white transition-all">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2" for="q-phone">Phone Number *</label>
-                            <input id="q-phone" type="tel" name="user_phone" required autocomplete="tel" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white transition-all">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2" for="q-email">Email Address *</label>
-                            <input id="q-email" type="email" name="user_email" required autocomplete="email" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white transition-all">
-                        </div>
-                        <div>
-                            <label class="block text-sm font-semibold text-gray-700 mb-2" for="q-suburb">Project Suburb *</label>
-                            <input id="q-suburb" type="text" name="project_suburb" required placeholder="e.g. Parramatta" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white transition-all">
-                        </div>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-2" for="q-plans">Do you have plans?</label>
-                        <select id="q-plans" name="has_plans" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white transition-all cursor-pointer">
-                            <option value="" disabled selected>Select</option>
-                            <option value="No, need design help">No, need design help</option>
-                            <option value="In Progress">In Progress</option>
-                            <option value="Yes, ready to build">Yes, ready to build</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label class="block text-sm font-semibold text-gray-700 mb-2" for="calc-notes">Anything else we should know?</label>
-                        <textarea id="calc-notes" rows="4" placeholder="Block size, timeline, whether you plan to sell or keep both dwellings..." class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white resize-none transition-all"></textarea>
-                    </div>
-
-                    <button type="submit" id="submit-btn" class="w-full bg-sena-red hover:bg-red-700 text-white font-bold text-lg py-4 px-10 rounded-xl transition-all shadow-[0_8px_20px_rgba(227,0,15,0.25)] hover:-translate-y-0.5 inline-flex justify-center items-center gap-3">
-                        Send My Estimate <i class="fa-solid fa-paper-plane"></i>
-                    </button>
-                    <div id="form-status" class="hidden p-4 rounded-xl text-center font-semibold"></div>
-                </form>
             </div>
         </section>
 
         <!-- ========================================== -->
         <!-- FAQ                                        -->
         <!-- ========================================== -->
-        <section class="py-16 md:py-24 bg-gray-50">
+        <section class="py-16 md:py-24 bg-white">
             <div class="max-w-4xl mx-auto px-4 sm:px-6">
                 <div class="mb-10">
                     <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-sena-dark">Duplex cost FAQs</h2>
@@ -283,11 +291,11 @@
                 <div class="space-y-4">
                     <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-white">
                         <button class="faq-btn w-full text-left px-6 md:px-8 py-6 hover:bg-gray-50 font-bold text-lg flex justify-between items-center transition text-sena-dark">
-                            How is this duplex estimate calculated?
+                            How is my duplex estimate calculated?
                             <div class="bg-red-50 text-sena-red w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ml-4"><i class="fa-solid fa-chevron-down transition-transform duration-300"></i></div>
                         </button>
                         <div class="faq-content hidden px-6 md:px-8 py-6 text-gray-600 bg-gray-50 border-t border-gray-100 leading-relaxed">
-                            We multiply your total floor area by a base build rate for your chosen finish level, then add site costs (vacant block or knockdown, plus slope), BASIX compliance and any facade upgrade. A customisation allowance and any optional extras are added as a low–high range to give you a realistic budget window.
+                            We start with your combined floor area and the build rate for your finish level, then add site costs (vacant block or knockdown, plus slope), BASIX compliance and your facade style. A customisation allowance and any extras you pick are added as a range, which gives you a realistic budget window.
                         </div>
                     </div>
                     <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-white">
@@ -296,16 +304,16 @@
                             <div class="bg-red-50 text-sena-red w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ml-4"><i class="fa-solid fa-chevron-down transition-transform duration-300"></i></div>
                         </button>
                         <div class="faq-content hidden px-6 md:px-8 py-6 text-gray-600 bg-gray-50 border-t border-gray-100 leading-relaxed">
-                            Enter the combined floor area of both dwellings, including garages and alfresco areas. If you're not sure, most Sydney duplexes fall between 350 and 500 m² in total. Our team can confirm the right size for your block during a consultation.
+                            Enter the combined area of both dwellings, including garages, porches and alfresco areas. If you're unsure, leave the default and our team can confirm the right size for your block during a consultation.
                         </div>
                     </div>
                     <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-white">
                         <button class="faq-btn w-full text-left px-6 md:px-8 py-6 hover:bg-gray-50 font-bold text-lg flex justify-between items-center transition text-sena-dark">
-                            Why does a knockdown rebuild cost more in site costs?
+                            Why does a knockdown rebuild cost more?
                             <div class="bg-red-50 text-sena-red w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ml-4"><i class="fa-solid fa-chevron-down transition-transform duration-300"></i></div>
                         </button>
                         <div class="faq-content hidden px-6 md:px-8 py-6 text-gray-600 bg-gray-50 border-t border-gray-100 leading-relaxed">
-                            A knockdown rebuild includes demolishing the existing home, disconnecting and reconnecting services, and clearing the site before construction starts. These costs are built into the knockdown site allowance so there are no surprises later.
+                            A knockdown rebuild includes demolishing the existing home, disconnecting and reconnecting services, and clearing the site before construction starts. These costs are included in the knockdown site allowance.
                         </div>
                     </div>
                     <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-white">
@@ -314,22 +322,13 @@
                             <div class="bg-red-50 text-sena-red w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ml-4"><i class="fa-solid fa-chevron-down transition-transform duration-300"></i></div>
                         </button>
                         <div class="faq-content hidden px-6 md:px-8 py-6 text-gray-600 bg-gray-50 border-t border-gray-100 leading-relaxed">
-                            No. The calculator gives an indicative range to help you plan your budget. Every block and design is different, so we provide a detailed, fixed-price quote once we've reviewed your site and plans. Send your estimate through the form above to get started.
+                            No. The calculator gives an indicative range to help you plan your budget. Every block and design is different, so we provide a detailed, fixed-price quote after reviewing your site and plans.
                         </div>
                     </div>
                 </div>
             </div>
         </section>
     </main>
-
-    <!-- Mobile mini estimate bar (sits above the sticky call bar) -->
-    <a id="calc-mobile-bar" href="#calc-results" class="md:hidden fixed left-3 right-3 bottom-[68px] z-[90] bg-white text-sena-dark rounded-2xl shadow-[0_10px_30px_rgba(0,0,0,0.25)] border border-gray-200 px-4 py-3 flex items-center justify-between gap-3 transition-transform duration-300">
-        <span class="min-w-0">
-            <span class="block text-[10px] uppercase tracking-widest text-gray-500 font-semibold">Your estimate</span>
-            <span id="calc-mobile-total" class="block font-bold text-sm truncate">$0</span>
-        </span>
-        <span class="flex-shrink-0 text-sena-red text-sm font-bold flex items-center gap-1">Breakdown <i class="fa-solid fa-chevron-up text-xs"></i></span>
-    </a>
 
     <!-- ========================================== -->
     <!-- COMPREHENSIVE FOOTER                       -->
@@ -430,77 +429,199 @@
     <!-- INTERACTIVE SCRIPTS                        -->
     <!-- ========================================== -->
     <!-- ========================================== -->
-    <!-- CALCULATOR PRICING CONFIG                  -->
+    <!-- CALCULATOR CONFIG: PRICES + QUESTIONS      -->
     <!-- Edit prices here. All amounts in AUD.      -->
+    <!-- Customers only ever see the final range.   -->
     <!-- ========================================== -->
     <script>
-        window.SENA_CALC = {
-            name: 'Duplex Cost Calculator',
-            roundTo: 1000,
-            perUnit: { count: 2 },
-            area: { summary: 'Floor area', label: 'Total floor area (both dwellings)', unit: 'm²', min: 200, max: 900, step: 5, default: 400,
-                    hint: 'Include both homes, garages and alfresco areas. Most Sydney duplexes are 350–500 m² in total.' },
+        (function () {
+            // Simple facade illustrations (swap for real photos any time: replace `art` with an <img>)
+            const svg = (inner) => `<svg viewBox="0 0 320 200" class="w-full h-full" xmlns="http://www.w3.org/2000/svg" aria-hidden="true"><rect width="320" height="200" fill="#f4f4f5"/><rect y="174" width="320" height="26" fill="#d9e4d0"/>${inner}</svg>`;
+            const facades = {
+                modern: svg(`
+                    <rect x="36" y="56" width="248" height="8" fill="#18181b"/>
+                    <rect x="40" y="64" width="240" height="56" fill="#fff" stroke="#27272a" stroke-width="2"/>
+                    <rect x="40" y="120" width="240" height="54" fill="#fafafa" stroke="#27272a" stroke-width="2"/>
+                    <rect x="146" y="64" width="28" height="110" fill="#27272a"/>
+                    <rect x="54" y="76" width="78" height="30" fill="#cbd5e1" stroke="#27272a" stroke-width="2"/>
+                    <rect x="188" y="76" width="78" height="30" fill="#cbd5e1" stroke="#27272a" stroke-width="2"/>
+                    <rect x="54" y="134" width="60" height="40" fill="#d4d4d8" stroke="#27272a" stroke-width="2"/>
+                    <rect x="206" y="134" width="60" height="40" fill="#d4d4d8" stroke="#27272a" stroke-width="2"/>
+                    <rect x="122" y="138" width="16" height="36" fill="#e3000f"/><rect x="182" y="138" width="16" height="36" fill="#e3000f"/>`),
+                hamptons: svg(`
+                    <rect x="40" y="82" width="240" height="92" fill="#fff" stroke="#3f3f46" stroke-width="2"/>
+                    ${Array.from({ length: 13 }, (_, i) => `<line x1="41" x2="279" y1="${88 + i * 6.5}" y2="${88 + i * 6.5}" stroke="#e4e4e7"/>`).join('')}
+                    <polygon points="34,84 100,36 166,84" fill="#52525b"/><polygon points="154,84 220,36 286,84" fill="#52525b"/>
+                    <polygon points="52,82 100,48 148,82" fill="#fff" stroke="#3f3f46" stroke-width="2"/><polygon points="172,82 220,48 268,82" fill="#fff" stroke="#3f3f46" stroke-width="2"/>
+                    <rect x="92" y="60" width="16" height="16" fill="#cbd5e1" stroke="#3f3f46" stroke-width="2"/><rect x="212" y="60" width="16" height="16" fill="#cbd5e1" stroke="#3f3f46" stroke-width="2"/>
+                    <g fill="#cbd5e1" stroke="#3f3f46" stroke-width="2"><rect x="58" y="96" width="26" height="30"/><rect x="236" y="96" width="26" height="30"/><rect x="116" y="96" width="26" height="30"/><rect x="178" y="96" width="26" height="30"/></g>
+                    <g stroke="#3f3f46"><line x1="71" x2="71" y1="96" y2="126"/><line x1="249" x2="249" y1="96" y2="126"/><line x1="129" x2="129" y1="96" y2="126"/><line x1="191" x2="191" y1="96" y2="126"/></g>
+                    <rect x="52" y="138" width="58" height="36" fill="#f4f4f5" stroke="#3f3f46" stroke-width="2"/><rect x="210" y="138" width="58" height="36" fill="#f4f4f5" stroke="#3f3f46" stroke-width="2"/>
+                    <rect x="124" y="140" width="16" height="34" fill="#1e3a5f"/><rect x="180" y="140" width="16" height="34" fill="#1e3a5f"/>
+                    <g fill="#fff" stroke="#3f3f46" stroke-width="1.5"><rect x="116" y="134" width="4" height="40"/><rect x="144" y="134" width="4" height="40"/><rect x="172" y="134" width="4" height="40"/><rect x="200" y="134" width="4" height="40"/></g>`),
+                provincial: svg(`
+                    <polygon points="30,84 74,44 246,44 290,84" fill="#3f3f46"/>
+                    <rect x="40" y="84" width="240" height="90" fill="#fafaf9" stroke="#3f3f46" stroke-width="2"/>
+                    <g fill="#d6d3d1">${[0, 1, 2, 3, 4, 5].map((i) => `<rect x="${i % 2 ? 40 : 40}" y="${86 + i * 14}" width="${i % 2 ? 8 : 12}" height="12"/><rect x="${i % 2 ? 272 : 268}" y="${86 + i * 14}" width="${i % 2 ? 8 : 12}" height="12"/><rect x="${i % 2 ? 156 : 154}" y="${86 + i * 14}" width="${i % 2 ? 8 : 12}" height="12"/>`).join('')}</g>
+                    <g fill="#cbd5e1" stroke="#3f3f46" stroke-width="2"><rect x="64" y="96" width="22" height="34"/><rect x="112" y="96" width="22" height="34"/><rect x="186" y="96" width="22" height="34"/><rect x="234" y="96" width="22" height="34"/></g>
+                    <g fill="#a8a29e"><rect x="72" y="90" width="6" height="6"/><rect x="120" y="90" width="6" height="6"/><rect x="194" y="90" width="6" height="6"/><rect x="242" y="90" width="6" height="6"/></g>
+                    <rect x="58" y="142" width="58" height="32" fill="#e7e5e4" stroke="#3f3f46" stroke-width="2"/><rect x="204" y="142" width="58" height="32" fill="#e7e5e4" stroke="#3f3f46" stroke-width="2"/>
+                    <path d="M126 174v-26a8 8 0 0 1 16 0v26z" fill="#292524"/><path d="M178 174v-26a8 8 0 0 1 16 0v26z" fill="#292524"/>`),
+                mediterranean: svg(`
+                    <polygon points="28,82 78,60 242,60 292,82" fill="#c2410c"/>
+                    <rect x="40" y="82" width="240" height="92" fill="#fdf6e3" stroke="#78350f" stroke-width="2"/>
+                    <g fill="#bfdbfe" stroke="#78350f" stroke-width="2">
+                        <path d="M60 128v-22a11 11 0 0 1 22 0v22z"/><path d="M106 128v-22a11 11 0 0 1 22 0v22z"/>
+                        <path d="M192 128v-22a11 11 0 0 1 22 0v22z"/><path d="M238 128v-22a11 11 0 0 1 22 0v22z"/></g>
+                    <g stroke="#1c1917" stroke-width="1.5">${[56, 102, 188, 234].map((x) => `<line x1="${x}" x2="${x + 30}" y1="120" y2="120"/>` + [0, 6, 12, 18, 24, 30].map((d) => `<line x1="${x + d}" x2="${x + d}" y1="120" y2="128"/>`).join('')).join('')}</g>
+                    <path d="M52 174v-26a14 14 0 0 1 28 0v26z" fill="#fde68a" stroke="#78350f" stroke-width="2"/><path d="M240 174v-26a14 14 0 0 1 28 0v26z" fill="#fde68a" stroke="#78350f" stroke-width="2"/>
+                    <rect x="92" y="144" width="50" height="30" fill="#e7e5e4" stroke="#78350f" stroke-width="2"/><rect x="178" y="144" width="50" height="30" fill="#e7e5e4" stroke="#78350f" stroke-width="2"/>
+                    <circle cx="160" cy="110" r="6" fill="#78350f"/>`)
+            };
 
-            // Breakdown rows, in display order
-            lines: [
-                { id: 'base',      label: 'Base build' },
-                { id: 'site',      label: 'Site costs & preparation' },
-                { id: 'basix',     label: 'BASIX compliance' },
-                { id: 'facade',    label: 'Facade', zeroText: 'Included' },
-                { id: 'variation', label: 'Customisation allowance' },
-                { id: 'addons',    label: 'Optional extras', zeroText: 'None selected' }
-            ],
+            window.SENA_CALC = {
+                name: 'Duplex Cost Calculator estimate',
+                roundTo: 1000,
+                perUnit: 2,
+                introHint: 'Indicative estimate based on Sena Sydney build rates',
+                resultHint: 'Excludes land and subdivision · Subject to site assessment',
 
-            // Applied to every build
-            always: [ { line: 'basix', fixed: 25000 } ],
+                // Applied to every build
+                always: [ { fixed: 25000 } ], // BASIX compliance
 
-            groups: [
-                { id: 'site', summary: 'Site', title: 'What are you building on?', subtitle: 'Knockdown site costs include demolition.', default: 'vacant',
-                  options: [
-                    { id: 'vacant',    label: 'Vacant block',      icon: 'fa-map-location-dot', desc: 'Empty land ready for construction.',          tag: '$90,000 site costs',  costs: [ { line: 'site', fixed: 90000 } ] },
-                    { id: 'knockdown', label: 'Knockdown rebuild', icon: 'fa-house-crack',      desc: 'Demolish the existing home and build new.',  tag: '$130,000 site costs', costs: [ { line: 'site', fixed: 130000 } ] }
-                  ] },
+                steps: [
+                    {
+                        eyebrow: 'Your block', title: 'Where will your *duplex* be built?',
+                        text: 'Site conditions are one of the biggest budget variables. Whether you start with a vacant block or knock down an existing home, plus the slope of your land, all shape the cost.',
+                        tip: { label: 'Good to know', text: "Not sure of your frontage? You'll find it on your property survey or title plan, or our team can check it for you." },
+                        stats: [['2', 'Site types'], ['3', 'Slope levels'], ['Free', 'Site advice']],
+                        hint: 'Site conditions are a major budget variable',
+                        fields: [
+                            { id: 'site', type: 'choice', label: 'Existing dwelling on site?', summary: 'Site', default: 'vacant', options: [
+                                { id: 'vacant',    label: 'Vacant block',      desc: 'Ready to build',            icon: 'fa-map-location-dot', costs: [ { fixed: 90000 } ] },
+                                { id: 'knockdown', label: 'Knockdown rebuild', desc: 'Existing home to demolish', icon: 'fa-house-crack',      costs: [ { fixed: 130000 } ] }
+                            ] },
+                            { id: 'frontage', type: 'slider', label: 'Block frontage', summary: 'Frontage', unit: 'm', min: 10, max: 22, step: 0.5, default: 15, maxLabel: '22+',
+                              ticks: () => ['10 m', '14 m', '17 m', '22 m+'],
+                              note: (v, s) => v < 12
+                                ? '<b>Narrow frontage.</b> Talk to us about what may be possible on your block.'
+                                : v < 17
+                                    ? `<b>${v} m suits a duplex</b> with a single garage per dwelling. Double garages generally need about 17 m+ or a corner block.`
+                                    : `<b>${v >= 22 ? '22 m+' : v + ' m'} is a wide frontage</b>, with room to consider double garages on both dwellings.` },
+                            { id: 'corner', type: 'toggle', title: 'Corner block', summary: 'Corner block', desc: 'Two street frontages, which can allow double garages on narrower blocks' },
+                            { id: 'slope', type: 'choice', label: 'Site slope', summary: 'Slope', default: 'flat', cols: 'grid-cols-1 sm:grid-cols-3', options: [
+                                { id: 'flat',     label: 'Flat',     desc: 'Up to 1 m fall', icon: 'fa-grip-lines',       costs: [] },
+                                { id: 'moderate', label: 'Moderate', desc: '1–3 m fall',     icon: 'fa-arrow-trend-down', costs: [ { fixed: 60000 } ] },
+                                { id: 'steep',    label: 'Steep',    desc: '3 m+ fall',      icon: 'fa-mountain',         costs: [ { fixed: 130000 } ] }
+                            ] }
+                        ]
+                    },
+                    {
+                        eyebrow: 'Your duplex', title: 'The *home* you want.',
+                        text: 'Combined floor area is the total build area across both dwellings, including garages, porches and alfresco areas.',
+                        tip: { label: "What's counted", text: 'Count everything under roof for both homes: living areas, garages, porches and alfresco. Your consultant will confirm exact areas from your plans.' },
+                        stats: [['2', 'Dwellings'], ['3–5', 'Bedrooms'], ['Custom', 'Designs']],
+                        hint: 'Combined floor area includes garages, porches and alfresco',
+                        fields: [
+                            { id: 'area', type: 'slider', isArea: true, label: 'Combined floor area', sublabel: 'Both dwellings, incl. garage, porch & alfresco', summary: 'Floor area', unit: 'm²', min: 300, max: 700, step: 5, default: 450,
+                              ticks: (v) => ['300 m²', `≈ ${Math.round(v / 2)} m² per dwelling`, '700 m²'] },
+                            { id: 'storeys', type: 'choice', label: 'Storeys', summary: 'Storeys', default: 'double', options: [
+                                { id: 'single', label: 'Single storey', desc: 'Easy living, no stairs',     icon: 'fa-house' },
+                                { id: 'double', label: 'Double storey', desc: 'More space on a smaller footprint', icon: 'fa-building' }
+                            ] },
+                            { id: 'beds', type: 'choice', label: 'Bedrooms', sublabel: 'per dwelling', summary: 'Bedrooms per dwelling', default: '4', cols: 'grid-cols-1 sm:grid-cols-3', options: [
+                                { id: '3', label: '3 bedrooms', desc: 'Compact',          iconText: '3' },
+                                { id: '4', label: '4 bedrooms', desc: 'Family favourite', iconText: '4' },
+                                { id: '5', label: '5 bedrooms', desc: 'Larger families',  iconText: '5' }
+                            ] },
+                            { id: 'garage', type: 'choice', label: 'Garage', sublabel: 'per dwelling', summary: 'Garage', default: 'single', options: [
+                                { id: 'single', label: 'Single garage', desc: 'One car space',  icon: 'fa-car' },
+                                { id: 'double', label: 'Double garage', desc: 'Two car spaces', icon: 'fa-car-side',
+                                  disabledIf: (s) => (s.frontage >= 17 || s.corner ? false : 'Needs about 17 m+ frontage or a corner block') }
+                            ] }
+                        ]
+                    },
+                    {
+                        layout: 'wide', eyebrow: 'Choose a look', title: 'What *look* do you have in mind?',
+                        text: "This sets the facade, which is how your duplex looks from the street. Pick the style you like and our design team will adapt it to your block, council and taste.",
+                        hint: 'Your chosen look sets the facade only',
+                        fields: [
+                            { id: 'facade', type: 'choice', variant: 'image', summary: 'Facade', default: 'modern', cols: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-4', options: [
+                                { id: 'modern',        label: 'Modern',        desc: 'Clean lines, render and brick or cladding, large windows.', art: facades.modern,        costs: [ { fixed: 20000 } ] },
+                                { id: 'hamptons',      label: 'Hamptons',      desc: 'Weatherboard look, gables and a light coastal palette.',     art: facades.hamptons,      costs: [] },
+                                { id: 'provincial',    label: 'Provincial',    desc: 'Render, mouldings and French-inspired symmetry.',             art: facades.provincial,    costs: [ { fixed: 50000 } ] },
+                                { id: 'mediterranean', label: 'Mediterranean', desc: 'Arches, warm render and terracotta tones.',                   art: facades.mediterranean, costs: [ { fixed: 60000 } ] }
+                            ] }
+                        ]
+                    },
+                    {
+                        layout: 'wide', eyebrow: 'Finish level', title: 'Pick your *finish* level.',
+                        text: 'Every Sena home starts with quality inclusions. Upgrade for more premium materials, fixtures and finishes.',
+                        hint: 'Every build starts with quality inclusions',
+                        fields: [
+                            { id: 'tier', type: 'choice', variant: 'tier', summary: 'Finish level', default: 'premium', cols: 'grid-cols-1 md:grid-cols-3', options: [
+                                { id: 'standard', number: '1', label: 'Standard', desc: 'Quality inclusions that cover everything you need.',
+                                  swatch: 'bg-gradient-to-br from-gray-100 to-gray-300', swatchText: 'text-sena-dark',
+                                  costs: [ { rate: 2500 }, { min: 40000, max: 140000 } ] },
+                                { id: 'premium', number: '2', label: 'Premium', desc: 'Upgraded finishes, stone and fixtures throughout.',
+                                  swatch: 'bg-gradient-to-br from-sena-red to-red-900', swatchText: 'text-white',
+                                  costs: [ { rate: 3000 }, { min: 140000, max: 320000 } ] },
+                                { id: 'luxury', number: '3', label: 'Luxury', desc: 'Designer selections and statement detailing.',
+                                  swatch: 'bg-gradient-to-br from-sena-dark via-zinc-800 to-amber-700', swatchText: 'text-white',
+                                  costs: [ { rate: 3500 }, { min: 320000, max: 540000 } ] }
+                            ] }
+                        ]
+                    },
+                    {
+                        eyebrow: 'Optional extras', title: 'Add the things that make it *home*.',
+                        text: "Tick anything you'd like included in your estimate. Your final quote will price each item exactly after a site assessment.",
+                        tip: { label: 'Tip', text: 'Extras are easier and often cheaper to include during the build than to add later, especially pools, solar and pre-wiring.' },
+                        stats: [['9', 'Extras'], ['Mix', '& match'], ['Exact', 'Quote later']],
+                        hint: 'Select as many as you like, or none',
+                        fields: [
+                            { id: 'extras', type: 'multi', summary: 'Extras', default: [], options: [
+                                { id: 'pool',      label: 'Swimming pool',       desc: 'In-ground pool',               icon: 'fa-water-ladder',     costs: [ { min: 55000, max: 95000 } ] },
+                                { id: 'landscape', label: 'Full landscaping',    desc: 'Turf, gardens and planting',   icon: 'fa-tree',             costs: [ { min: 25000, max: 55000 } ] },
+                                { id: 'driveway',  label: 'Driveway & paths',    desc: 'Concrete driveway and paths',  icon: 'fa-road',             costs: [ { min: 28000, max: 40000 } ] },
+                                { id: 'kitchen',   label: 'Premium kitchen',     desc: 'Stone island, butler’s pantry', icon: 'fa-kitchen-set',     costs: [ { min: 20000, max: 45000 } ] },
+                                { id: 'alfresco',  label: 'Alfresco upgrade',    desc: 'Outdoor kitchen and entertaining', icon: 'fa-umbrella-beach', costs: [ { min: 18000, max: 35000 } ] },
+                                { id: 'solar',     label: 'Solar + battery',     desc: 'Rooftop solar with battery',   icon: 'fa-solar-panel',      costs: [ { min: 18000, max: 32000 } ] },
+                                { id: 'theatre',   label: 'Home theatre',        desc: 'Dedicated media room',         icon: 'fa-film',             costs: [ { min: 15000, max: 30000 } ] },
+                                { id: 'smart',     label: 'Smart home pre-wire', desc: 'Network, security, lighting',  icon: 'fa-wifi',             costs: [ { min: 8000,  max: 16000 } ] },
+                                { id: 'ev',        label: 'EV charger',          desc: 'Home charging point',          icon: 'fa-charging-station', costs: [ { min: 2500,  max: 5000 } ] }
+                            ] }
+                        ]
+                    },
+                    {
+                        eyebrow: 'Almost done', title: 'Tell us about your *plans*.',
+                        text: "Two last questions to help our team prepare. Nothing is binding; we just want to make your consultation as useful as possible.",
+                        tip: { label: 'What happens next', text: 'You will see your estimate straight away. If you request a callback, a Sena specialist reviews your answers and contacts you to discuss next steps.' },
+                        stats: [['Free', 'Consultation'], ['No', 'Obligation'], ['Local', 'Sydney team']],
+                        hint: 'Your estimate is on the next screen',
+                        fields: [
+                            { id: 'purpose', type: 'choice', label: 'Build purpose', summary: 'Purpose', default: 'liverent', cols: 'grid-cols-1 sm:grid-cols-3', options: [
+                                { id: 'liveboth',  label: 'Live in both',    desc: 'Family or extended family', icon: 'fa-people-roof' },
+                                { id: 'liverent',  label: 'Live + rent',     desc: 'Live in one, rent one',     icon: 'fa-house-user' },
+                                { id: 'invest',    label: 'Investment',      desc: 'Sell or rent both',         icon: 'fa-chart-line' }
+                            ] },
+                            { id: 'timeline', type: 'choice', label: 'When are you looking to start?', summary: 'Timeline', default: '6-12', cols: 'grid-cols-1 sm:grid-cols-2 xl:grid-cols-4', options: [
+                                { id: 'asap',  label: 'ASAP',        desc: 'Ready now',   icon: 'fa-bolt' },
+                                { id: '3-6',   label: '3–6 months',  desc: 'Planning',    icon: 'fa-calendar' },
+                                { id: '6-12',  label: '6–12 months', desc: 'Researching', icon: 'fa-calendar-days' },
+                                { id: '12+',   label: '12 months+',  desc: 'Early stage', icon: 'fa-hourglass-half' }
+                            ] }
+                        ]
+                    }
+                ],
 
-                { id: 'slope', summary: 'Slope', title: 'How sloped is the block?', subtitle: 'Sloping sites need extra excavation and retaining.', default: 'flat', cols: 'grid-cols-1 sm:grid-cols-3',
-                  options: [
-                    { id: 'flat',     label: 'Flat',           icon: 'fa-grip-lines',        desc: 'Less than 1 m fall.',  tag: '+$0',       costs: [] },
-                    { id: 'moderate', label: 'Moderate slope', icon: 'fa-arrow-trend-down',  desc: 'Around 1–3 m fall.',   tag: '+$60,000',  short: 'Moderate slope', costs: [ { line: 'site', fixed: 60000 } ] },
-                    { id: 'steep',    label: 'Steep slope',    icon: 'fa-mountain',          desc: 'More than 3 m fall.',  tag: '+$130,000', short: 'Steep slope',    costs: [ { line: 'site', fixed: 130000 } ] }
-                  ] },
-
-                { id: 'area', type: 'area', title: 'How big is your duplex?', subtitle: 'Drag the slider or type a number.' },
-
-                { id: 'tier', summary: 'Finish level', title: 'Choose your finish level', subtitle: 'Sets the build rate and a customisation allowance for upgrades and variations.', default: 'premium', cols: 'grid-cols-1 sm:grid-cols-3',
-                  options: [
-                    { id: 'standard', label: 'Standard', icon: 'fa-star',              desc: 'Quality inclusions, smart value.',            tag: '$2,500 / m²', costs: [ { line: 'base', rate: 2500 }, { line: 'variation', min: 40000,  max: 140000 } ] },
-                    { id: 'premium',  label: 'Premium',  icon: 'fa-star-half-stroke',  desc: 'Upgraded finishes, stone and fixtures.',      tag: '$3,000 / m²', costs: [ { line: 'base', rate: 3000 }, { line: 'variation', min: 140000, max: 320000 } ] },
-                    { id: 'luxury',   label: 'Luxury',   icon: 'fa-gem',               desc: 'Designer selections throughout.',             tag: '$3,500 / m²', costs: [ { line: 'base', rate: 3500 }, { line: 'variation', min: 320000, max: 540000 } ] }
-                  ] },
-
-                { id: 'facade', summary: 'Facade', title: 'Pick a facade style', default: 'hamptons', cols: 'grid-cols-1 sm:grid-cols-2',
-                  options: [
-                    { id: 'hamptons',      label: 'Hamptons',      icon: 'fa-house',          desc: 'Classic coastal look.',                     tag: 'Included',   costs: [] },
-                    { id: 'modern',        label: 'Modern',        icon: 'fa-building',       desc: 'Clean lines and contemporary materials.',   tag: '+$20,000',   costs: [ { line: 'facade', fixed: 20000 } ] },
-                    { id: 'provincial',    label: 'Provincial',    icon: 'fa-house-chimney',  desc: 'French-inspired detailing and mouldings.',  tag: '+$50,000',   costs: [ { line: 'facade', fixed: 50000 } ] },
-                    { id: 'mediterranean', label: 'Mediterranean', icon: 'fa-sun',            desc: 'Rendered arches and warm textures.',        tag: '+$60,000',   costs: [ { line: 'facade', fixed: 60000 } ] }
-                  ] },
-
-                { id: 'addons', type: 'multi', summary: 'Extras', title: 'Add optional extras', subtitle: 'Select as many as you like.', default: [], compact: true, cols: 'grid-cols-1 sm:grid-cols-2 xl:grid-cols-3',
-                  options: [
-                    { id: 'pool',      label: 'Swimming pool',       icon: 'fa-water-ladder',      tag: '$55k – $95k', costs: [ { line: 'addons', min: 55000, max: 95000 } ] },
-                    { id: 'landscape', label: 'Full landscaping',    icon: 'fa-tree',              tag: '$25k – $55k', costs: [ { line: 'addons', min: 25000, max: 55000 } ] },
-                    { id: 'driveway',  label: 'Driveway & paths',    icon: 'fa-road',              tag: '$28k – $40k', costs: [ { line: 'addons', min: 28000, max: 40000 } ] },
-                    { id: 'kitchen',   label: 'Premium kitchen',     icon: 'fa-kitchen-set',       tag: '$20k – $45k', costs: [ { line: 'addons', min: 20000, max: 45000 } ] },
-                    { id: 'alfresco',  label: 'Alfresco upgrade',    icon: 'fa-umbrella-beach',    tag: '$18k – $35k', costs: [ { line: 'addons', min: 18000, max: 35000 } ] },
-                    { id: 'solar',     label: 'Solar + battery',     icon: 'fa-solar-panel',       tag: '$18k – $32k', costs: [ { line: 'addons', min: 18000, max: 32000 } ] },
-                    { id: 'theatre',   label: 'Home theatre',        icon: 'fa-film',              tag: '$15k – $30k', costs: [ { line: 'addons', min: 15000, max: 30000 } ] },
-                    { id: 'smart',     label: 'Smart home pre-wire', icon: 'fa-wifi',              tag: '$8k – $16k',  costs: [ { line: 'addons', min: 8000,  max: 16000 } ] },
-                    { id: 'ev',        label: 'EV charger',          icon: 'fa-charging-station',  tag: '$2.5k – $5k', costs: [ { line: 'addons', min: 2500,  max: 5000 } ] }
-                  ] }
-            ]
-        };
+                result: {
+                    sub: (label) => `${label('storeys')} · ${label('beds')} per dwelling · ${label('facade')} look · ${label('tier')} finish`,
+                    stats: (label) => [[label('facade'), 'Style'], [label('tier'), 'Finish'], [label('area'), 'Floor area'], [String(label('extras').length), 'Extras']]
+                }
+            };
+        })();
     </script>
-    <script src="scripts/calculator.js" defer></script>
+    <script src="scripts/calculator.js"></script>
     <script src="scripts/scripts.js"></script>
 </body>
 </html>
