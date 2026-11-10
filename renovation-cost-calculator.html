@@ -1,0 +1,712 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ========================================== -->
+    <!-- ADVANCED SEO META TAGS                     -->
+    <!-- ========================================== -->
+    <title>Renovation Cost Calculator Sydney | Sena Constructions</title>
+    <meta name="description" content="Estimate the cost of your Sydney kitchen, bathroom, laundry, deck or flooring renovation. Free, instant renovation cost calculator from Sena Constructions.">
+    <link rel="canonical" href="https://senaconstructions.com.au/renovation-cost-calculator">
+    <meta property="og:title" content="Renovation Cost Calculator Sydney | Sena Constructions">
+    <meta property="og:description" content="Get a free, instant estimate for your Sydney renovation.">
+    <meta property="og:type" content="website">
+    
+    <!-- Preload Hero Image -->
+    <link rel="preload" as="image" href="images/kitchenreno.webp">
+
+    <!-- EmailJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- Google Fonts: Inter (Modern) + Playfair Display (Luxury Serif) & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sena: {
+                            red: '#e3000f',
+                            dark: '#050505',
+                            light: '#f9f9f9',
+                            gray: '#333333',
+                            border: '#e5e7eb'
+                        }
+                    },
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'] 
+                    }
+                }
+            }
+        }
+    </script>
+<link rel="icon" type="image/png" href="/images/senasmalllogo.png">
+    <style>
+        .wiz-enter { animation: wizIn .35s ease both; }
+        @keyframes wizIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+        @media (prefers-reduced-motion: reduce) { .wiz-enter { animation: none; } }
+    </style>
+</head>
+<body class="font-sans text-sena-gray bg-gray-50 overflow-x-hidden antialiased pb-16 md:pb-0">
+
+    <!-- ========================================== -->
+    <!-- TOP CONTACT BAR                            -->
+    <!-- ========================================== -->
+    <div class="bg-black text-gray-400 text-xs py-2 hidden md:block border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex gap-6">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-sena-red"></i> 74A Ringrose Ave, Greystanes NSW 2145</span>
+                <span class="flex items-center gap-2"><i class="fa-solid fa-clock text-sena-red"></i> Mon - Fri: 9:00 AM - 5:00 PM</span>
+            </div>
+            <div class="flex gap-6 items-center">
+                <a href="mailto:office@senaconstructions.com.au" class="hover:text-white transition"><i class="fa-solid fa-envelope text-sena-red mr-2"></i> office@senaconstructions.com.au</a>
+                <a href="tel:0298850797" class="text-white font-bold hover:text-sena-red transition"><i class="fa-solid fa-phone text-sena-red mr-2"></i> (02) 9885 0797</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- MAIN NAVIGATION                            -->
+    <!-- ========================================== -->
+    <header class="bg-sena-dark text-white py-4 sticky top-0 z-50 shadow-xl border-b border-sena-red/20">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="/" class="flex items-center group">
+                <img src="images/senalogo.png" alt="Sena Constructions" class="h-12 w-auto group-hover:scale-105 transition-transform duration-300">
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide">
+                <a href="/" class="hover:text-sena-red transition-colors">Home</a>
+                <a href="/about" class="hover:text-sena-red transition-colors">About</a>
+                <a href="/process" class="hover:text-sena-red transition-colors">Our Process</a>
+                
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <a href="/services" class="hover:text-sena-red transition-colors flex items-center gap-1 py-2">Services <i class="fa-solid fa-chevron-down text-[10px]"></i></a>
+                    <div class="absolute left-0 mt-0 w-64 bg-white text-sena-dark shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border-t-2 border-sena-red rounded-xl z-50 overflow-hidden">
+                        <a href="/luxury-homes" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Luxury Homes</a>
+                        <a href="/granny-flats" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Granny Flats</a>
+                        <a href="/duplexes" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Duplexes</a>
+                        <a href="/knockdown-rebuilds" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Knockdown Rebuilds</a>
+                        <a href="/renovations-extensions" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Renovations & Extensions</a>
+                        <a href="/building-maintenance" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red transition-colors">Building Maintenance</a>
+                    </div>
+                </div>
+
+                <a href="/projects" class="hover:text-sena-red transition-colors">Projects</a>
+                <a href="/blogs" class="hover:text-sena-red transition-colors">Blogs</a>
+                <a href="/contact" class="bg-sena-red text-white px-6 py-2.5 rounded-xl hover:bg-red-700 transition shadow-lg shadow-sena-red/20">Contact</a>
+            </nav>
+
+            <!-- Mobile Hamburger -->
+            <button id="mobile-menu-btn" class="lg:hidden text-2xl focus:outline-none text-white hover:text-sena-red">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden flex-col items-start gap-0 bg-sena-dark w-full absolute top-full left-0 py-4 border-t border-gray-800 shadow-2xl overflow-y-auto max-h-[80vh]">
+            <a href="/" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Home</a>
+            <a href="/about" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">About</a>
+            <a href="/process" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Our Process</a>
+            
+            <!-- Mobile Services Accordion -->
+            <div class="w-full">
+                <button id="mobile-services-btn" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800  flex justify-between items-center">
+                    Services <i class="fa-solid fa-chevron-down text-sm transition-transform duration-300" id="mobile-services-icon"></i>
+                </button>
+                <div id="mobile-services-menu" class="hidden bg-black w-full flex-col">
+                    <a href="/luxury-homes" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Luxury Homes</a>
+                    <a href="/granny-flats" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Granny Flats</a>
+                    <a href="/duplexes" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Duplexes</a>
+                    <a href="/knockdown-rebuilds" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Knockdown Rebuilds</a>
+                    <a href="/renovations-extensions" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Renovations & Extensions</a>
+                    <a href="/building-maintenance" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Building Maintenance</a>
+                </div>
+            </div>
+
+            <a href="/projects" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Projects</a>
+            <a href="/blogs" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Blogs</a>
+            <div class="px-6 py-4 w-full">
+                <a href="/contact" class="block w-full bg-sena-red text-white text-center py-3 rounded-xl font-bold shadow-lg">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========================================== -->
+        <!-- RENOVATION CALCULATOR WIZARD               -->
+        <!-- Steps are rendered by scripts/calculator.js -->
+        <!-- ========================================== -->
+        <section class="bg-gray-100 py-6 md:py-14">
+            <div class="max-w-6xl mx-auto px-3 sm:px-6">
+                <div id="wiz" class="bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-gray-100 scroll-mt-24">
+
+                    <!-- Card header -->
+                    <div class="flex items-center justify-between gap-4 px-5 md:px-10 pt-6 md:pt-8 pb-5">
+                        <div class="flex items-center gap-4">
+                            <span class="flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-sena-dark text-white flex items-center justify-center shadow-md"><i class="fa-solid fa-calculator"></i></span>
+                            <div class="leading-tight">
+                                <p class="hidden sm:block text-[11px] font-bold uppercase tracking-[0.25em] text-gray-400">Sena Constructions</p>
+                                <p class="font-serif text-base sm:text-lg md:text-xl font-bold text-sena-dark">Renovation Cost Calculator</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <p id="wiz-counter" class="hidden whitespace-nowrap text-[11px] uppercase tracking-[0.2em] text-gray-400 font-semibold"></p>
+                            <a href="tel:0298850797" class="hidden md:flex items-center gap-2 font-bold text-sena-dark hover:text-sena-red transition-colors"><span class="w-2 h-2 rounded-full bg-sena-red"></span>(02) 9885 0797</a>
+                        </div>
+                    </div>
+
+                    <!-- Progress -->
+                    <div id="wiz-progress" class="flex gap-1.5 md:gap-2 px-5 md:px-10 pb-5 border-b border-gray-100" aria-hidden="true"></div>
+
+                    <!-- Screens -->
+                    <div class="px-4 sm:px-6 md:px-10 py-8 md:py-12">
+
+                        <!-- INTRO -->
+                        <div data-screen="intro" class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                            <div>
+                                <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-sena-red bg-red-50 rounded-full px-4 py-2 mb-6">Free instant estimate</span>
+                                <h1 class="font-serif text-4xl md:text-6xl font-bold text-sena-dark leading-[1.05] mb-6">What will your <em class="text-sena-red italic">renovation</em> cost?</h1>
+                                <p class="text-gray-600 text-lg leading-relaxed mb-8">Pick the rooms you're renovating, answer a few quick questions about each one, and get an indicative Sydney price range. Kitchens, bathrooms, laundries, decks and flooring.</p>
+                                <ul class="space-y-4 mb-10">
+                                    <li class="flex items-center gap-4"><span class="w-8 h-8 rounded-full bg-red-50 text-sena-red flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-check text-sm"></i></span><span><b class="text-sena-dark">Combine several rooms</b> into one project budget</span></li>
+                                    <li class="flex items-center gap-4"><span class="w-8 h-8 rounded-full bg-red-50 text-sena-red flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-check text-sm"></i></span><span><b class="text-sena-dark">Sydney pricing</b> including compliance items like waterproofing</span></li>
+                                    <li class="flex items-center gap-4"><span class="w-8 h-8 rounded-full bg-red-50 text-sena-red flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-check text-sm"></i></span><span><b class="text-sena-dark">See your estimate straight away</b>, no sign-up needed</span></li>
+                                </ul>
+                                <div class="grid grid-cols-3 gap-4 pt-8 border-t border-gray-100">
+                                    <div><p class="font-serif text-3xl font-bold text-sena-dark">5</p><p class="text-[10px] uppercase tracking-[0.18em] text-gray-400 mt-1">Room types</p></div>
+                                    <div><p class="font-serif text-3xl font-bold text-sena-dark">~2 min</p><p class="text-[10px] uppercase tracking-[0.18em] text-gray-400 mt-1">To complete</p></div>
+                                    <div><p class="font-serif text-3xl font-bold text-sena-dark">Free</p><p class="text-[10px] uppercase tracking-[0.18em] text-gray-400 mt-1">No obligation</p></div>
+                                </div>
+                            </div>
+                            <div class="relative rounded-3xl overflow-hidden min-h-[320px] lg:min-h-[520px] bg-sena-dark text-white flex flex-col justify-end p-6 md:p-8">
+                                <img src="images/kitchenreno.webp" alt="Kitchen renovation by Sena Constructions" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                                <div class="absolute inset-0 bg-gradient-to-t from-sena-dark via-sena-dark/40 to-transparent"></div>
+                                <div class="relative">
+                                    <p class="font-serif italic text-3xl md:text-4xl font-bold mb-3">From concept to creation.</p>
+                                    <p class="text-[11px] font-bold uppercase tracking-[0.25em] text-sena-red mb-6">Sena Constructions · Sydney</p>
+                                    <div class="flex items-start gap-3 bg-white/10 backdrop-blur border border-white/15 rounded-2xl p-4">
+                                        <i class="fa-solid fa-star text-sena-red mt-1"></i>
+                                        <div>
+                                            <p class="font-bold text-sm">Renovation specialists</p>
+                                            <p class="text-sm text-gray-300">Kitchens, bathrooms, extensions and full home renovations across Greater Sydney.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- STEPS (rendered by JS) -->
+                        <div data-screen="step" class="hidden"></div>
+
+                        <!-- RESULT -->
+                        <div data-screen="result" class="hidden">
+                            <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-sena-red bg-red-50 rounded-full px-4 py-2 mb-5">Your indicative estimate</span>
+                            <h2 class="font-serif text-3xl md:text-5xl font-bold text-sena-dark leading-tight mb-3 md:mb-4">Your <em class="text-sena-red italic">renovation</em> estimate.</h2>
+                            <p class="hidden sm:block text-gray-600 md:text-lg leading-relaxed max-w-3xl mb-6 md:mb-8">Based on your answers and current Sydney renovation costs. Request a callback and we'll prepare an accurate quote for your home.</p>
+
+                            <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] gap-6 items-start">
+                                <div class="relative overflow-hidden rounded-3xl bg-sena-dark text-white p-6 md:p-10" aria-live="polite">
+                                    <div class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-sena-red/25 blur-3xl pointer-events-none"></div>
+                                    <div class="relative">
+                                        <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-sena-red mb-4">Indicative renovation cost (incl. GST)</p>
+                                        <p id="res-range" class="font-serif text-3xl sm:text-5xl font-bold leading-tight mb-4"></p>
+                                        <p id="res-sub" class="text-gray-300"></p>
+                                        <div data-rows-wrap class="mt-6">
+                                            <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-gray-400 mb-1">By room</p>
+                                            <ul id="res-rows" class="text-sm"></ul>
+                                        </div>
+                                        <div id="res-stats" class="grid grid-cols-3 gap-5 mt-6 pt-6 border-t border-white/10"></div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-4">
+                                    <div id="res-notes" class="space-y-3"></div>
+                                    <form id="quote-form" class="rounded-3xl border border-gray-100 bg-gray-50 p-6 md:p-8 space-y-3">
+                                        <h3 class="font-serif text-2xl font-bold text-sena-dark">Get an accurate quote</h3>
+                                        <p class="text-gray-600 text-sm mb-2">A Sena specialist will review your answers and call you to talk through your renovation.</p>
+                                        <input type="hidden" name="service_type" value="Extension/Renovation">
+                                        <input type="hidden" name="message" id="calc-message">
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                            <input type="text" name="user_name" required autocomplete="name" placeholder="Your name *" aria-label="Your name" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white">
+                                            <input type="tel" name="user_phone" required autocomplete="tel" placeholder="Phone *" aria-label="Phone" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white">
+                                        </div>
+                                        <input type="email" name="user_email" required autocomplete="email" placeholder="Email *" aria-label="Email" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white">
+                                        <input type="text" name="project_suburb" placeholder="Suburb or postcode" aria-label="Suburb or postcode" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white">
+                                        <button type="submit" id="submit-btn" class="w-full bg-sena-red hover:bg-red-700 text-white font-bold py-4 rounded-xl transition-all shadow-[0_8px_20px_rgba(227,0,15,0.25)] hover:-translate-y-0.5 flex justify-center items-center gap-2">Request my callback <i class="fa-solid fa-arrow-right"></i></button>
+                                        <div id="form-status" class="hidden p-4 rounded-xl text-center font-semibold"></div>
+                                        <p class="text-xs text-gray-400 text-center">By submitting, you agree to be contacted by Sena Constructions.</p>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 rounded-3xl border border-gray-100 p-6 md:p-8">
+                                <h3 class="font-serif text-xl font-bold text-sena-dark mb-5">What's included in your estimate</h3>
+                                <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3 text-gray-700">
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check text-sena-red mt-1"></i>Supply and installation at your chosen finish level</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check text-sena-red mt-1"></i>Sydney trades and labour rates</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check text-sena-red mt-1"></i>Waterproofing to AS 3740 for bathrooms and laundries</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check text-sena-red mt-1"></i>Lead-free plumbing fittings (AS/NZS 4020) for wet areas</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check text-sena-red mt-1"></i>An allowance for current copper and materials prices</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check text-sena-red mt-1"></i>Any upgrades, removal and site prep you selected</li>
+                                </ul>
+                            </div>
+
+                            <div class="mt-6 rounded-2xl bg-amber-50 border-l-4 border-amber-400 p-5 text-sm text-gray-700 leading-relaxed">
+                                <b class="text-sena-dark">Indicative guide only.</b> This is not a quote. Your final price depends on your home, access, design choices and a site inspection. Excludes council or certifier fees, structural work and HBCF insurance premiums.
+                            </div>
+
+                            <div class="mt-6 flex flex-wrap gap-6">
+                                <button type="button" data-wiz-back class="text-sm font-semibold text-gray-500 hover:text-sena-red transition-colors"><i class="fa-solid fa-arrow-left mr-1"></i> Change my answers</button>
+                                <button type="button" data-wiz-restart class="text-sm font-semibold text-gray-500 hover:text-sena-red transition-colors"><i class="fa-solid fa-rotate-left mr-1"></i> Start again</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card footer / navigation (sticks to the bottom of the screen while scrolling) -->
+                    <div id="wiz-footer" class="sticky bottom-[60px] md:bottom-0 z-20 bg-white/95 backdrop-blur border-t border-gray-100 rounded-b-3xl px-4 sm:px-6 md:px-10 py-4 flex items-center justify-between gap-4">
+                        <p class="hidden sm:flex items-center gap-2 text-sm text-gray-500 min-w-0"><span class="w-1.5 h-1.5 rounded-full bg-sena-red flex-shrink-0"></span><span id="wiz-hint" class="truncate"></span></p>
+                        <div class="flex gap-3 ml-auto w-full sm:w-auto">
+                            <button type="button" id="wiz-back" class="hidden flex-1 sm:flex-none border-2 border-gray-200 hover:border-sena-dark text-sena-dark font-bold px-6 py-3 rounded-xl transition-colors"><i class="fa-solid fa-arrow-left mr-1"></i> Back</button>
+                            <button type="button" id="wiz-next" class="flex-[2] sm:flex-none bg-sena-red hover:bg-red-700 text-white font-bold px-8 py-3 rounded-xl transition-all shadow-[0_8px_20px_rgba(227,0,15,0.25)] hover:-translate-y-0.5"><span id="wiz-next-label">Let's start</span> <i class="fa-solid fa-arrow-right ml-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- FAQ                                        -->
+        <!-- ========================================== -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                <div class="mb-10">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-sena-dark">Renovation cost FAQs</h2>
+                    <div class="w-20 h-1.5 bg-sena-red rounded-full"></div>
+                </div>
+                <div class="space-y-4">
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-white">
+                        <button class="faq-btn w-full text-left px-6 md:px-8 py-6 hover:bg-gray-50 font-bold text-lg flex justify-between items-center transition text-sena-dark">
+                            How is my renovation estimate calculated?
+                            <div class="bg-red-50 text-sena-red w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ml-4"><i class="fa-solid fa-chevron-down transition-transform duration-300"></i></div>
+                        </button>
+                        <div class="faq-content hidden px-6 md:px-8 py-6 text-gray-600 bg-gray-50 border-t border-gray-100 leading-relaxed">
+                            Each room starts from a base rate for its size and finish level, adjusted for Sydney labour and materials costs. Wet areas include waterproofing, lead-free fittings and an allowance for copper prices. We then show a planning range around the total, because every home is different.
+                        </div>
+                    </div>
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-white">
+                        <button class="faq-btn w-full text-left px-6 md:px-8 py-6 hover:bg-gray-50 font-bold text-lg flex justify-between items-center transition text-sena-dark">
+                            Do I need HBCF insurance for my renovation?
+                            <div class="bg-red-50 text-sena-red w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ml-4"><i class="fa-solid fa-chevron-down transition-transform duration-300"></i></div>
+                        </button>
+                        <div class="faq-content hidden px-6 md:px-8 py-6 text-gray-600 bg-gray-50 border-t border-gray-100 leading-relaxed">
+                            In NSW, Home Building Compensation Fund (HBCF) insurance is required for residential building work over $20,000 (including GST). Your builder arranges the cover before work starts. Check current requirements with icare NSW.
+                        </div>
+                    </div>
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-white">
+                        <button class="faq-btn w-full text-left px-6 md:px-8 py-6 hover:bg-gray-50 font-bold text-lg flex justify-between items-center transition text-sena-dark">
+                            Why are small bathrooms more expensive per square metre?
+                            <div class="bg-red-50 text-sena-red w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ml-4"><i class="fa-solid fa-chevron-down transition-transform duration-300"></i></div>
+                        </button>
+                        <div class="faq-content hidden px-6 md:px-8 py-6 text-gray-600 bg-gray-50 border-t border-gray-100 leading-relaxed">
+                            Every bathroom needs demolition, plumbing, electrical work and waterproofing regardless of size. Those fixed costs are spread over fewer square metres in a small bathroom or ensuite.
+                        </div>
+                    </div>
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-white">
+                        <button class="faq-btn w-full text-left px-6 md:px-8 py-6 hover:bg-gray-50 font-bold text-lg flex justify-between items-center transition text-sena-dark">
+                            Is this a fixed price?
+                            <div class="bg-red-50 text-sena-red w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ml-4"><i class="fa-solid fa-chevron-down transition-transform duration-300"></i></div>
+                        </button>
+                        <div class="faq-content hidden px-6 md:px-8 py-6 text-gray-600 bg-gray-50 border-t border-gray-100 leading-relaxed">
+                            No. The calculator gives an indicative range to help you plan your budget. We provide a detailed, fixed-price quote after inspecting your home and confirming your selections.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================== -->
+    <!-- COMPREHENSIVE FOOTER                       -->
+    <!-- ========================================== -->
+    <footer class="bg-black text-white pt-16 pb-8 border-t-[4px] border-sena-red">
+        
+        <!-- MAIN 4-COLUMN GRID -->
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            
+            <!-- Column 1: Brand -->
+            <div>
+                <a href="/" class="inline-block mb-6">
+                    <img src="images/senalogo.png" alt="Sena Constructions" loading="lazy" class="h-16 w-auto hover:opacity-80 transition-opacity">
+                </a>
+                <p class="text-gray-400 text-sm mb-6 leading-relaxed">Building Quality Homes and Lasting Relationships in Sydney. Proudly servicing Greater Sydney.</p>
+                <div class="flex gap-4">
+                    <a href="https://www.facebook.com/p/Sena-Constructions-100040335197985/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-gray-900 flex items-center justify-center hover:bg-sena-red transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/senaconstructions/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-gray-900 flex items-center justify-center hover:bg-sena-red transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 uppercase tracking-wider text-gray-200">Company</h4>
+                <ul class="space-y-3 text-sm text-gray-400 font-medium">
+                    <li><a href="/" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Home</a></li>
+                    <li><a href="/about" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> About Us</a></li>
+                    <li><a href="/process" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Our Process</a></li>
+                    <li><a href="/projects" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Portfolio</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Services -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 uppercase tracking-wider text-gray-200">Services</h4>
+                <ul class="space-y-3 text-sm text-gray-400 font-medium">
+                    <li><a href="/luxury-homes" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Luxury Homes</a></li>
+                    <li><a href="/knockdown-rebuilds" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Knockdown Rebuilds</a></li>
+                    <li><a href="/duplexes" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Duplexes & Granny Flats</a></li>
+                    <li><a href="/renovations-extensions" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Renovations & Extensions</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact Details -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 uppercase tracking-wider text-gray-200">Contact</h4>
+                <ul class="space-y-4 text-sm text-gray-400">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-phone text-sena-red mt-1"></i>
+                        <div>
+                            <p class="font-bold text-white mb-1">Phone</p>
+                            <a href="tel:0298850797" class="hover:text-sena-red transition-colors">(02) 9885 0797</a>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-envelope text-sena-red mt-1"></i>
+                        <div>
+                            <p class="font-bold text-white mb-1">Email</p>
+                            <a href="mailto:office@senaconstructions.com.au" class="hover:text-sena-red transition-colors">office@senaconstructions.com.au</a>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot text-sena-red mt-1"></i>
+                        <div>
+                            <p class="font-bold text-white mb-1">Office</p>
+                            <p>74A Ringrose Ave<br>Greystanes NSW 2145</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM COPYRIGHT BAR -->
+        <div class="border-t border-gray-900 pt-8 text-center md:flex justify-between items-center max-w-7xl mx-auto px-6 text-sm text-gray-600 font-medium">
+            <p>Copyright &copy; 2026 Sena Constructions. All Rights Reserved.</p>
+            <div class="mt-4 md:mt-0 space-x-4">
+                <a href="/sitemap" class="hover:text-sena-red transition-colors">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- STICKY MOBILE ACTION BAR (PHONE ONLY)      -->
+    <!-- ========================================== -->
+    <div class="md:hidden fixed bottom-0 left-0 w-full bg-sena-dark z-[100] flex border-t border-sena-red/30 shadow-[0_-10px_20px_rgba(0,0,0,0.2)]">
+        <a href="tel:0298850797" class="flex-1 py-4 flex items-center justify-center gap-2 border-r border-gray-700 active:bg-gray-800 transition text-white">
+            <i class="fa-solid fa-phone text-sena-red text-lg"></i> 
+            <span class="font-bold text-sm tracking-wide">Call Now</span>
+        </a>
+        <a href="/contact" class="flex-1 py-4 flex items-center justify-center gap-2 bg-sena-red active:bg-red-700 transition text-white">
+            <i class="fa-solid fa-calendar-check text-white text-lg"></i> 
+            <span class="font-bold text-sm tracking-wide">Book Consult</span>
+        </a>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- INTERACTIVE SCRIPTS                        -->
+    <!-- ========================================== -->
+    <!-- ========================================== -->
+    <!-- CALCULATOR CONFIG: PRICES + QUESTIONS      -->
+    <!-- Edit prices in PRICES below. AUD incl. GST -->
+    <!-- Customers only ever see the final range.   -->
+    <!-- ========================================== -->
+    <script>
+        (function () {
+            const PRICES = {
+                sydney: 1.28,        // regional multiplier on labour + materials
+                copper: 0.20,        // copper loading on scaled wet-area cost (capped at 20%)
+                leadFree: 420,       // AS/NZS 4020 lead-free fittings, per wet area
+                waterproofBase: 800, // AS 3740 waterproofing: base fee
+                waterproofSqm: 120,  //   + per m²
+                range: 0.15,         // planning range ±15%
+                flooringRange: 0.12, // flooring ±12%
+                hbcfThreshold: 20000,
+
+                kitchenPerMetre: { budget: 2800, mid: 5500, premium: 8500, luxury: 13500 },
+                kitchenCabinetry: { none: 0, flatpack: 5000, semi: 14000, custom: 32000 },
+
+                bathroom: { budget: { fixed: 4200, sqm: 1050 }, mid: { fixed: 6500, sqm: 2200 }, premium: { fixed: 9500, sqm: 3800 }, luxury: { fixed: 14000, sqm: 6000 } },
+
+                deckPerSqm: { pine: 225, hardwood: 355, composite: 425, premiumComposite: 550 },
+                deckHeightSteps: { ground: 0, raised: 1, elevated: 2 }, // × $180/m² per 0.5 m step
+                deckHeightPerStep: 180,
+                deckBal: { low: 0, bal19: 2500, bal29: 5000, bal40: 9500, balfz: 18000 },
+
+                laundry: { budget: { fixed: 2000, sqm: 650 }, mid: { fixed: 3500, sqm: 1300 }, premium: { fixed: 5500, sqm: 2200 } },
+                laundryPlumbing: { none: 0, minor: 1500, major: 3500 },
+                laundryJoinery: { none: 0, flatpack: 2500, semi: 6000, custom: 14000 },
+
+                floorPerSqm: { lvp: 75, hybrid: 88, engineered: 155, hardwood: 265, tiles: 130 },
+                floorPattern: { straight: 0, herringbone: 20 },
+                floorRemoval: { none: 0, carpet: 12, tiles: 22, timber: 15 },
+                floorSubfloor: { good: 0, fair: 20, poor: 40 }
+            };
+
+            const P = PRICES;
+            const wetArea = (base) => base * P.sydney * (1 + P.copper) + P.leadFree;
+            const waterproof = (sqm) => P.waterproofBase + sqm * P.waterproofSqm;
+
+            const ROOMS = [
+                { id: 'kitchen',  label: 'Kitchen',  icon: 'fa-kitchen-set' },
+                { id: 'bathroom', label: 'Bathroom', icon: 'fa-bath' },
+                { id: 'laundry',  label: 'Laundry',  icon: 'fa-jug-detergent' },
+                { id: 'deck',     label: 'Deck',     icon: 'fa-tree' },
+                { id: 'flooring', label: 'Flooring', icon: 'fa-border-all' }
+            ];
+            const has = (room) => (s) => s.rooms.has(room);
+            const roomStats = [['Sydney', 'Pricing'], ['GST', 'Included'], ['Free', 'Site visit']];
+
+            window.SENA_CALC = {
+                name: 'Renovation Cost Calculator estimate',
+                money: 'full',
+                introHint: 'Indicative Sydney estimate, incl. GST',
+                resultHint: 'Subject to site inspection',
+
+                compute(s) {
+                    const rows = [];
+                    const add = (room, total, spread) => {
+                        const r = ROOMS.find((x) => x.id === room);
+                        rows.push({ label: r.label, icon: r.icon, low: total * (1 - spread), high: total * (1 + spread), mid: total });
+                    };
+                    if (s.rooms.has('kitchen')) {
+                        add('kitchen', wetArea(s.k_metres * P.kitchenPerMetre[s.k_tier]) + P.kitchenCabinetry[s.k_cab], P.range);
+                    }
+                    if (s.rooms.has('bathroom')) {
+                        const t = P.bathroom[s.b_tier];
+                        add('bathroom', wetArea(t.fixed + s.b_sqm * t.sqm) + waterproof(s.b_sqm), P.range);
+                    }
+                    if (s.rooms.has('laundry')) {
+                        const t = P.laundry[s.l_tier];
+                        add('laundry', wetArea(t.fixed + s.l_sqm * t.sqm) + waterproof(s.l_sqm) + P.laundryJoinery[s.l_join] + P.laundryPlumbing[s.l_plumb] * P.sydney, P.range);
+                    }
+                    if (s.rooms.has('deck')) {
+                        const base = s.d_sqm * P.deckPerSqm[s.d_mat];
+                        const height = s.d_sqm * P.deckHeightSteps[s.d_height] * P.deckHeightPerStep;
+                        add('deck', (base + height) * P.sydney + P.deckBal[s.d_bal], P.range);
+                    }
+                    if (s.rooms.has('flooring')) {
+                        const rate = P.floorPerSqm[s.f_type];
+                        const pattern = s.f_type === 'tiles' ? 0 : P.floorPattern[s.f_pattern];
+                        const materials = s.f_sqm * rate * 0.55;                       // not scaled
+                        const labour = s.f_sqm * (rate * 0.45 + pattern) * P.sydney;
+                        const prep = s.f_sqm * (P.floorRemoval[s.f_removal] + P.floorSubfloor[s.f_subfloor]) * P.sydney;
+                        add('flooring', materials + labour + prep, P.flooringRange);
+                    }
+                    const low = rows.reduce((a, r) => a + r.low, 0);
+                    const high = rows.reduce((a, r) => a + r.high, 0);
+                    const mid = rows.reduce((a, r) => a + r.mid, 0);
+                    const notes = [];
+                    if (mid > P.hbcfThreshold) notes.push('<b>HBCF insurance required.</b> NSW residential work over $20,000 needs Home Building Compensation Fund cover. Sena arranges this as part of your contract.');
+                    return { low, high, rows, notes };
+                },
+
+                steps: [
+                    {
+                        eyebrow: 'Your project', title: 'What are you *renovating*?',
+                        text: 'Pick every area you want to include. You can combine rooms to build a complete project budget.',
+                        tip: { label: 'Tip', text: 'Renovating several rooms at once usually saves on trades call-outs, waterproofing and site set-up compared with doing them one by one.' },
+                        stats: [['5', 'Room types'], ['Mix', '& match'], ['1', 'Combined budget']],
+                        hint: 'Select one or more areas',
+                        validate: (s) => (s.rooms.size ? '' : 'Please pick at least one area to renovate.'),
+                        fields: [
+                            { id: 'rooms', type: 'multi', summary: 'Areas', default: ['kitchen'], cols: 'grid-cols-1 sm:grid-cols-2', options: [
+                                { id: 'kitchen',  label: 'Kitchen',  desc: 'Cabinetry, benchtops, appliances', icon: 'fa-kitchen-set' },
+                                { id: 'bathroom', label: 'Bathroom', desc: 'Main bathroom or ensuite',         icon: 'fa-bath' },
+                                { id: 'laundry',  label: 'Laundry',  desc: 'Joinery, tiling, tapware',         icon: 'fa-jug-detergent' },
+                                { id: 'deck',     label: 'Deck',     desc: 'New outdoor deck',                 icon: 'fa-tree' },
+                                { id: 'flooring', label: 'Flooring', desc: 'Timber, hybrid, vinyl or tiles',   icon: 'fa-border-all' }
+                            ] }
+                        ]
+                    },
+                    {
+                        showIf: has('kitchen'),
+                        eyebrow: 'Kitchen', title: 'Tell us about your *kitchen*.',
+                        text: 'Measure the combined run of your upper and lower cabinets. Most Sydney kitchens are 4 to 7 linear metres.',
+                        tip: { label: "What's included", text: 'Cabinetry, benchtops, an appliance allowance, plumbing and electrical. Choose a cabinetry upgrade if you want fully custom joinery or a butler’s pantry.' },
+                        stats: roomStats,
+                        hint: 'A typical kitchen is 4–7 linear metres',
+                        fields: [
+                            { id: 'k_metres', type: 'slider', label: 'Cabinetry length', sublabel: 'Upper + lower cabinets combined', summary: 'Kitchen length', unit: 'm', min: 1, max: 20, step: 0.5, default: 5,
+                              ticks: () => ['1 m', '10 m', '20 m'] },
+                            { id: 'k_tier', type: 'choice', label: 'Finish level', summary: 'Kitchen finish', default: 'mid', options: [
+                                { id: 'budget',  label: 'Budget',    desc: 'Flat-pack cabinets, laminate benchtop',    icon: 'fa-star' },
+                                { id: 'mid',     label: 'Mid-range', desc: 'Semi-custom joinery, stone benchtop',      icon: 'fa-star-half-stroke' },
+                                { id: 'premium', label: 'Premium',   desc: 'Custom cabinetry, integrated appliances',  icon: 'fa-gem' },
+                                { id: 'luxury',  label: 'Luxury',    desc: 'Fully bespoke, European appliances',      icon: 'fa-crown' }
+                            ] },
+                            { id: 'k_cab', type: 'choice', label: 'Cabinetry upgrade', sublabel: 'optional', summary: 'Kitchen cabinetry upgrade', default: 'none', options: [
+                                { id: 'none',     label: 'No upgrade',   desc: 'Standard cabinetry allowance',      icon: 'fa-check' },
+                                { id: 'flatpack', label: 'Flat-pack',    desc: 'Quality flat-pack upgrade',         icon: 'fa-box-open' },
+                                { id: 'semi',     label: 'Semi-custom',  desc: 'Painted MDF, soft-close hardware',  icon: 'fa-paint-roller' },
+                                { id: 'custom',   label: 'Full custom',  desc: 'Solid timber or 2-pac joinery',     icon: 'fa-hammer' }
+                            ] }
+                        ]
+                    },
+                    {
+                        showIf: has('bathroom'),
+                        eyebrow: 'Bathroom', title: 'Tell us about your *bathroom*.',
+                        text: 'Measure length × width of the floor. Ensuites are usually 3–5 m² and main bathrooms 6–10 m².',
+                        tip: { label: 'Good to know', text: 'Every bathroom includes licensed waterproofing to AS 3740 with a certificate before tiling starts. It is already in your estimate.' },
+                        stats: roomStats,
+                        hint: 'Waterproofing is included',
+                        fields: [
+                            { id: 'b_sqm', type: 'slider', label: 'Bathroom floor area', summary: 'Bathroom size', unit: 'm²', min: 2, max: 20, step: 0.5, default: 6,
+                              ticks: () => ['2 m²', '10 m²', '20 m²'] },
+                            { id: 'b_tier', type: 'choice', label: 'Finish level', summary: 'Bathroom finish', default: 'mid', options: [
+                                { id: 'budget',  label: 'Budget',    desc: 'Basic fixtures, ceramic tiles',          icon: 'fa-star' },
+                                { id: 'mid',     label: 'Mid-range', desc: 'Quality fixtures, full retile',          icon: 'fa-star-half-stroke' },
+                                { id: 'premium', label: 'Premium',   desc: 'Designer tiles, freestanding bath',      icon: 'fa-gem' },
+                                { id: 'luxury',  label: 'Luxury',    desc: 'Full wet room, custom vanity',           icon: 'fa-crown' }
+                            ] }
+                        ]
+                    },
+                    {
+                        showIf: has('laundry'),
+                        eyebrow: 'Laundry', title: 'Tell us about your *laundry*.',
+                        text: 'Keeping your plumbing where it is will save the most. Moving the washing machine, tub or floor waste adds plumbing work.',
+                        tip: { label: 'Good to know', text: 'Laundries are wet areas, so waterproofing to AS 3740 and lead-free fittings are included in your estimate.' },
+                        stats: roomStats,
+                        hint: 'Waterproofing is included',
+                        fields: [
+                            { id: 'l_sqm', type: 'slider', label: 'Laundry floor area', summary: 'Laundry size', unit: 'm²', min: 2, max: 20, step: 0.5, default: 5,
+                              ticks: () => ['2 m²', '10 m²', '20 m²'] },
+                            { id: 'l_tier', type: 'choice', label: 'Finish level', summary: 'Laundry finish', default: 'mid', cols: 'grid-cols-1 sm:grid-cols-3', options: [
+                                { id: 'budget',  label: 'Budget',    desc: 'Flat-pack, ceramic tiles',            icon: 'fa-star' },
+                                { id: 'mid',     label: 'Mid-range', desc: 'Semi-custom joinery, stone bench',    icon: 'fa-star-half-stroke' },
+                                { id: 'premium', label: 'Premium',   desc: 'Custom cabinetry, premium finishes',  icon: 'fa-gem' }
+                            ] },
+                            { id: 'l_plumb', type: 'choice', label: 'Plumbing changes', summary: 'Laundry plumbing', default: 'none', cols: 'grid-cols-1 sm:grid-cols-3', options: [
+                                { id: 'none',  label: 'Keep layout',     desc: 'No relocation',               icon: 'fa-check' },
+                                { id: 'minor', label: 'Minor move',      desc: 'Shift one connection point',  icon: 'fa-arrows-left-right' },
+                                { id: 'major', label: 'New layout',      desc: 'Major relocation',            icon: 'fa-wrench' }
+                            ] },
+                            { id: 'l_join', type: 'choice', label: 'Joinery upgrade', sublabel: 'optional', summary: 'Laundry joinery upgrade', default: 'none', options: [
+                                { id: 'none',     label: 'No upgrade',  desc: 'Standard allowance',                 icon: 'fa-check' },
+                                { id: 'flatpack', label: 'Flat-pack',   desc: 'Quality flat-pack laundry set',      icon: 'fa-box-open' },
+                                { id: 'semi',     label: 'Semi-custom', desc: 'Painted MDF, stone benchtop',        icon: 'fa-paint-roller' },
+                                { id: 'custom',   label: 'Full custom', desc: 'Timber or 2-pac, integrated tub',    icon: 'fa-hammer' }
+                            ] }
+                        ]
+                    },
+                    {
+                        showIf: has('deck'),
+                        eyebrow: 'Deck', title: 'Tell us about your *deck*.',
+                        text: 'Material, height and bushfire rating have the biggest effect on deck costs.',
+                        tip: { label: 'Bushfire rating', text: "Not sure of your BAL rating? It's on your council's planning certificate, or our team can check it for you. Choose BAL-LOW if you're unsure." },
+                        stats: roomStats,
+                        hint: 'Raised decks may need council approval',
+                        fields: [
+                            { id: 'd_sqm', type: 'slider', label: 'Deck area', summary: 'Deck size', unit: 'm²', min: 5, max: 100, step: 1, default: 20,
+                              ticks: () => ['5 m²', '50 m²', '100 m²'] },
+                            { id: 'd_mat', type: 'choice', label: 'Decking material', summary: 'Deck material', default: 'hardwood', options: [
+                                { id: 'pine',             label: 'Treated pine',       desc: 'Most affordable',                icon: 'fa-tree' },
+                                { id: 'hardwood',         label: 'Hardwood',           desc: 'Merbau or spotted gum',          icon: 'fa-tree' },
+                                { id: 'composite',        label: 'Composite',          desc: 'Low maintenance',                icon: 'fa-layer-group' },
+                                { id: 'premiumComposite', label: 'Premium composite',  desc: 'Capped, longest lasting',        icon: 'fa-gem' }
+                            ] },
+                            { id: 'd_height', type: 'choice', label: 'Deck height', summary: 'Deck height', default: 'ground', cols: 'grid-cols-1 sm:grid-cols-3', options: [
+                                { id: 'ground',   label: 'Ground level', desc: 'Up to 300 mm',           icon: 'fa-grip-lines' },
+                                { id: 'raised',   label: 'Raised',       desc: '300 mm to 1 m',          icon: 'fa-stairs' },
+                                { id: 'elevated', label: 'Elevated',     desc: '1 m+, permit likely',    icon: 'fa-building' }
+                            ] },
+                            { id: 'd_bal', type: 'choice', label: 'Bushfire Attack Level (BAL)', summary: 'BAL rating', default: 'low', cols: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3', options: [
+                                { id: 'low',   label: 'BAL-LOW / 12.5', desc: 'Most suburban blocks',     icon: 'fa-shield' },
+                                { id: 'bal19', label: 'BAL-19',         desc: 'Minor ember protection',   icon: 'fa-fire' },
+                                { id: 'bal29', label: 'BAL-29',         desc: 'Moderate upgrade',         icon: 'fa-fire' },
+                                { id: 'bal40', label: 'BAL-40',         desc: 'Non-combustible spec',     icon: 'fa-fire-flame-curved' },
+                                { id: 'balfz', label: 'BAL-FZ',         desc: 'Flame zone construction',  icon: 'fa-fire-flame-curved' }
+                            ] }
+                        ]
+                    },
+                    {
+                        showIf: has('flooring'),
+                        eyebrow: 'Flooring', title: 'Tell us about your *flooring*.',
+                        text: 'Enter the total area of new flooring. Prices include supply, installation and underlay or adhesive.',
+                        tip: { label: 'Good to know', text: 'Hybrid flooring can often go straight over existing level tiles, saving the cost and mess of removal.' },
+                        stats: roomStats,
+                        hint: 'Includes supply, installation and underlay',
+                        fields: [
+                            { id: 'f_sqm', type: 'slider', label: 'Flooring area', summary: 'Flooring area', unit: 'm²', min: 5, max: 300, step: 5, default: 40,
+                              ticks: () => ['5 m²', '150 m²', '300 m²'] },
+                            { id: 'f_type', type: 'choice', label: 'Flooring type', summary: 'Flooring type', default: 'hybrid', rerender: true, cols: 'grid-cols-1 sm:grid-cols-2 lg:grid-cols-3', options: [
+                                { id: 'lvp',        label: 'Vinyl planks',     desc: 'Budget-friendly, water resistant', icon: 'fa-grip-lines' },
+                                { id: 'hybrid',     label: 'Hybrid',           desc: 'Durable and waterproof',           icon: 'fa-layer-group' },
+                                { id: 'engineered', label: 'Engineered timber', desc: 'Real timber top layer',           icon: 'fa-tree' },
+                                { id: 'hardwood',   label: 'Solid hardwood',   desc: 'Classic and long lasting',         icon: 'fa-tree' },
+                                { id: 'tiles',      label: 'Porcelain tiles',  desc: 'Hard-wearing, easy to clean',      icon: 'fa-border-all' }
+                            ] },
+                            { id: 'f_pattern', type: 'choice', label: 'Lay pattern', summary: 'Lay pattern', default: 'straight', options: [
+                                { id: 'straight',    label: 'Straight lay',          desc: 'Standard',                     icon: 'fa-bars' },
+                                { id: 'herringbone', label: 'Herringbone / chevron', desc: 'More cuts and labour',         icon: 'fa-chevron-right',
+                                  disabledIf: (s) => (s.f_type === 'tiles' ? 'Not available for tiles' : false) }
+                            ] },
+                            { id: 'f_removal', type: 'choice', label: 'Existing floor removal', summary: 'Floor removal', default: 'none', options: [
+                                { id: 'none',   label: 'No removal',      desc: 'Laying over a clean subfloor',  icon: 'fa-check' },
+                                { id: 'carpet', label: 'Remove carpet',   desc: 'Quick and simple',              icon: 'fa-broom' },
+                                { id: 'tiles',  label: 'Remove tiles',    desc: 'Slower, more labour',           icon: 'fa-hammer' },
+                                { id: 'timber', label: 'Remove timber',   desc: 'Existing boards or floating',   icon: 'fa-tree' }
+                            ] },
+                            { id: 'f_subfloor', type: 'choice', label: 'Subfloor condition', summary: 'Subfloor', default: 'good', cols: 'grid-cols-1 sm:grid-cols-3', options: [
+                                { id: 'good', label: 'Good', desc: 'Minimal prep',           icon: 'fa-check' },
+                                { id: 'fair', label: 'Fair', desc: 'Minor levelling',        icon: 'fa-ruler-horizontal' },
+                                { id: 'poor', label: 'Poor', desc: 'Significant prep',       icon: 'fa-triangle-exclamation' }
+                            ] }
+                        ]
+                    },
+                    {
+                        eyebrow: 'Almost done', title: 'When would you like to *start*?',
+                        text: "One last question to help our team prepare. Nothing is binding.",
+                        tip: { label: 'What happens next', text: 'You will see your estimate straight away. If you request a callback, a Sena specialist reviews your answers and contacts you to discuss next steps.' },
+                        stats: [['Free', 'Consultation'], ['No', 'Obligation'], ['Local', 'Sydney team']],
+                        hint: 'Your estimate is on the next screen',
+                        fields: [
+                            { id: 'timeline', type: 'choice', label: 'When are you looking to start?', summary: 'Timeline', default: '3-6', cols: 'grid-cols-1 sm:grid-cols-2', options: [
+                                { id: 'asap',  label: 'ASAP',        desc: 'Ready now',   icon: 'fa-bolt' },
+                                { id: '3-6',   label: '3–6 months',  desc: 'Planning',    icon: 'fa-calendar' },
+                                { id: '6-12',  label: '6–12 months', desc: 'Researching', icon: 'fa-calendar-days' },
+                                { id: '12+',   label: '12 months+',  desc: 'Early stage', icon: 'fa-hourglass-half' }
+                            ] }
+                        ]
+                    }
+                ],
+
+                result: {
+                    sub: (label) => label('rooms').join(' · '),
+                    stats: (label, s) => [[String(s.rooms.size), s.rooms.size === 1 ? 'Area' : 'Areas'], ['Sydney', 'Pricing'], ['Incl.', 'GST']]
+                }
+            };
+        })();
+    </script>
+    <script src="scripts/calculator.js"></script>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>

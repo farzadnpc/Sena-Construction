@@ -72,6 +72,8 @@
     // Maths
     // ------------------------------------------------------------
     function compute() {
+        // A calculator can supply its own formula: cfg.compute(state) -> { low, high, rows?, notes? }
+        if (cfg.compute) return cfg.compute(state);
         const areaField = fields.find((f) => f.isArea);
         const area = areaField ? state[areaField.id] : 0;
         let low = 0, high = 0;
@@ -208,10 +210,9 @@
         </aside>`;
     }
 
-    function renderStep(i) {
-        const s = cfg.steps[i];
-        const n = i + 1;
-        const body = s.fields.map(renderField).join('');
+    function renderStep(s, n) {
+        const error = `<p data-error class="hidden flex items-center gap-3 rounded-xl bg-red-50 border border-red-200 text-sena-red font-semibold p-4"><i class="fa-solid fa-circle-exclamation"></i><span></span></p>`;
+        const body = error + s.fields.map(renderField).join('');
         if (s.layout === 'wide') {
             return `<div>
                 <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-sena-red bg-red-50 rounded-full px-4 py-2 mb-5">Step ${n} · ${esc(s.eyebrow)}</span>
@@ -228,8 +229,9 @@
 
     // ------------------------------------------------------------
     // Navigation
+    // Steps can declare showIf(state) (e.g. only show the rooms picked)
+    // and validate(state) -> error message string, or '' when OK.
     // ------------------------------------------------------------
-    const total = cfg.steps.length;
     const screens = { intro: $('[data-screen="intro"]'), step: $('[data-screen="step"]'), result: $('[data-screen="result"]') };
     const progress = $('#wiz-progress');
     const counter = $('#wiz-counter');
@@ -237,30 +239,30 @@
     const backBtn = $('#wiz-back');
     const nextBtn = $('#wiz-next');
     const nextLabel = $('#wiz-next-label');
-    let pos = -1; // -1 = intro, 0..total-1 = steps, total = result
-
-    progress.innerHTML = Array.from({ length: total + 2 }, () => '<span class="h-1 flex-1 rounded-full bg-gray-200 transition-colors duration-500"></span>').join('');
+    const visibleSteps = () => cfg.steps.filter((s) => !s.showIf || s.showIf(state));
+    let pos = -1; // -1 = intro, 0..n-1 = steps, n = result
 
     function show(p, scroll = true) {
-        pos = p;
+        const steps = visibleSteps();
+        const total = steps.length;
+        pos = Math.max(-1, Math.min(p, total));
+        p = pos;
         enforceRules();
         const which = p < 0 ? 'intro' : p >= total ? 'result' : 'step';
         Object.entries(screens).forEach(([k, el]) => el.classList.toggle('hidden', k !== which));
 
         if (which === 'step') {
-            screens.step.innerHTML = renderStep(p);
+            screens.step.innerHTML = renderStep(steps[p], p + 1);
             $$('input[type="range"]', screens.step).forEach((el) => paintSlider(el, fieldById[el.name]));
         }
         if (which === 'result') renderResult();
 
-        [...progress.children].forEach((seg, i) => {
-            seg.className = `h-1 flex-1 rounded-full transition-colors duration-500 ${i < p + 1 ? 'bg-sena-dark' : i === p + 1 ? 'bg-sena-red' : 'bg-gray-200'}`;
-        });
+        progress.innerHTML = Array.from({ length: total + 2 }, (_, i) =>
+            `<span class="h-1 flex-1 rounded-full transition-colors duration-500 ${i < p + 1 ? 'bg-sena-dark' : i === p + 1 ? 'bg-sena-red' : 'bg-gray-200'}"></span>`).join('');
         counter.classList.toggle('hidden', which !== 'step');
         counter.innerHTML = `<span class="hidden sm:inline">Step </span><b class="text-sena-dark">${p + 1}</b> <span class="hidden sm:inline">of</span><span class="sm:hidden">/</span> <b class="text-sena-dark">${total}</b>`;
 
-        const s = cfg.steps[p];
-        hint.textContent = which === 'intro' ? cfg.introHint : which === 'result' ? cfg.resultHint : (s.hint || '');
+        hint.textContent = which === 'intro' ? cfg.introHint : which === 'result' ? cfg.resultHint : (steps[p].hint || '');
         backBtn.classList.toggle('hidden', which === 'intro');
         $('#wiz-footer').classList.toggle('hidden', which === 'result');
         nextLabel.textContent = which === 'intro' ? "Let's start" : p === total - 1 ? 'See my estimate' : 'Continue';
@@ -272,10 +274,23 @@
         if (scroll && root.getBoundingClientRect().top < 0) root.scrollIntoView({ behavior: 'smooth', block: 'start' });
     }
 
-    nextBtn.addEventListener('click', () => show(Math.min(pos + 1, total)));
-    backBtn.addEventListener('click', () => show(Math.max(pos - 1, -1)));
+    nextBtn.addEventListener('click', () => {
+        const s = visibleSteps()[pos];
+        const err = s && s.validate ? s.validate(state) : '';
+        const errEl = $('[data-error]', screens.step);
+        if (err) {
+            if (errEl) {
+                errEl.querySelector('span').textContent = err;
+                errEl.classList.remove('hidden');
+                errEl.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+            return;
+        }
+        show(pos + 1);
+    });
+    backBtn.addEventListener('click', () => show(pos - 1));
     $$('[data-wiz-restart]').forEach((b) => b.addEventListener('click', () => show(-1)));
-    $$('[data-wiz-back]').forEach((b) => b.addEventListener('click', () => show(total - 1)));
+    $$('[data-wiz-back]').forEach((b) => b.addEventListener('click', () => show(visibleSteps().length - 1)));
 
     // ------------------------------------------------------------
     // Input events (delegated)
@@ -287,6 +302,16 @@
         if (f.type === 'multi') t.checked ? state[f.id].add(t.value) : state[f.id].delete(t.value);
         else if (f.type === 'toggle') state[f.id] = t.checked;
         else if (f.type === 'choice') state[f.id] = t.value;
+        const errEl = $('[data-error]', screens.step);
+        if (errEl) errEl.classList.add('hidden');
+        // Options on this step may depend on each other (e.g. pattern vs tiles)
+        if (f.rerender) {
+            enforceRules();
+            const y = window.scrollY;
+            screens.step.innerHTML = renderStep(visibleSteps()[pos], pos + 1);
+            $$('input[type="range"]', screens.step).forEach((el) => paintSlider(el, fieldById[el.name]));
+            window.scrollTo(0, y);
+        }
     });
     screens.step.addEventListener('input', (e) => {
         const t = e.target;
@@ -304,22 +329,43 @@
     // ------------------------------------------------------------
     // Results
     // ------------------------------------------------------------
+    // 'compact' => $1.62M / $850k (low end rounded down, high end up); 'full' => $27,600
+    const fmtLow = (n) => (cfg.money === 'full' ? money(Math.floor(n / 100) * 100) : short(n, 'down'));
+    const fmtHigh = (n) => (cfg.money === 'full' ? money(Math.ceil(n / 100) * 100) : short(n, 'up'));
+
     function renderResult() {
         const r = compute();
-        $('#res-range').innerHTML = `${short(r.low, 'down')} <span class="text-gray-500">–</span> <span class="text-sena-red">${short(r.high, 'up')}</span>`;
-        $('#res-sub').textContent = cfg.result.sub(label, state);
-        $('#res-stats').innerHTML = cfg.result.stats(label, state).map(([v, l]) => `
+        $('#res-range').innerHTML = `${fmtLow(r.low)} <span class="text-gray-500">–</span> <span class="text-sena-red">${fmtHigh(r.high)}</span>`;
+        $('#res-sub').textContent = cfg.result.sub(label, state, r);
+        $('#res-stats').innerHTML = cfg.result.stats(label, state, r).map(([v, l]) => `
             <div><p class="font-serif text-xl md:text-2xl font-bold text-white">${esc(v)}</p><p class="text-[10px] uppercase tracking-[0.18em] text-gray-400 mt-1">${esc(l)}</p></div>`).join('');
-        if (cfg.perUnit) $('#res-per').textContent = `${short(r.low / cfg.perUnit, 'down')} – ${short(r.high / cfg.perUnit, 'up')}`;
+        if (cfg.perUnit && $('#res-per')) $('#res-per').textContent = `${short(r.low / cfg.perUnit, 'down')} – ${short(r.high / cfg.perUnit, 'up')}`;
+
+        const rowsEl = $('#res-rows');
+        if (rowsEl) {
+            rowsEl.innerHTML = (r.rows || []).map((row) => `
+                <li class="flex items-start justify-between gap-4 py-3 border-b border-white/10 last:border-0">
+                    <span class="flex items-center gap-3 min-w-0"><span class="w-8 h-8 rounded-lg bg-white/10 text-sena-red flex items-center justify-center flex-shrink-0"><i class="fa-solid ${row.icon || 'fa-circle'} text-sm"></i></span><span class="font-medium text-white">${esc(row.label)}</span></span>
+                    <span class="text-right font-semibold whitespace-nowrap text-white">${fmtLow(row.low)} – ${fmtHigh(row.high)}</span>
+                </li>`).join('');
+            rowsEl.closest('[data-rows-wrap]')?.classList.toggle('hidden', !(r.rows || []).length);
+        }
+        const notesEl = $('#res-notes');
+        if (notesEl) {
+            notesEl.innerHTML = (r.notes || []).map((n) => `
+                <p class="flex gap-3 rounded-2xl bg-amber-50 border border-amber-200 p-4 text-sm text-gray-700"><i class="fa-solid fa-triangle-exclamation text-amber-500 mt-0.5"></i><span>${n}</span></p>`).join('');
+        }
 
         const msg = $('#calc-message');
         if (msg) {
-            const rows = [`${cfg.name}: ${money(r.low)} – ${money(r.high)}`, ''];
-            cfg.steps.forEach((s) => s.fields.forEach((f) => {
+            const lines = [`${cfg.name}: ${money(r.low)} – ${money(r.high)}`];
+            (r.rows || []).forEach((row) => lines.push(`  ${row.label}: ${money(row.low)} – ${money(row.high)}`));
+            lines.push('');
+            visibleSteps().forEach((s) => s.fields.forEach((f) => {
                 const v = label(f.id);
-                rows.push(`${f.summary || f.label || f.title}: ${Array.isArray(v) ? (v.join(', ') || 'None') : v}`);
+                lines.push(`${f.summary || f.label || f.title}: ${Array.isArray(v) ? (v.join(', ') || 'None') : v}`);
             }));
-            msg.value = rows.join('\n');
+            msg.value = lines.join('\n');
         }
     }
 
