@@ -335,7 +335,10 @@
 
     function renderResult() {
         const r = compute();
-        $('#res-range').innerHTML = `${fmtLow(r.low)} <span class="text-gray-500">–</span> <span class="text-sena-red">${fmtHigh(r.high)}</span>`;
+        // A single figure (low === high) is shown on its own instead of as a range
+        $('#res-range').innerHTML = Math.round(r.low) === Math.round(r.high)
+            ? `<span class="text-white">${cfg.money === 'full' ? money(r.low) : short(r.low)}</span>`
+            : `${fmtLow(r.low)} <span class="text-gray-500">–</span> <span class="text-sena-red">${fmtHigh(r.high)}</span>`;
         $('#res-sub').textContent = cfg.result.sub(label, state, r);
         $('#res-stats').innerHTML = cfg.result.stats(label, state, r).map(([v, l]) => `
             <div><p class="font-serif text-xl md:text-2xl font-bold text-white">${esc(v)}</p><p class="text-[10px] uppercase tracking-[0.18em] text-gray-400 mt-1">${esc(l)}</p></div>`).join('');
@@ -358,7 +361,7 @@
 
         const msg = $('#calc-message');
         if (msg) {
-            const lines = [`${cfg.name}: ${money(r.low)} – ${money(r.high)}`];
+            const lines = [`${cfg.name}: ${Math.round(r.low) === Math.round(r.high) ? money(r.low) : `${money(r.low)} – ${money(r.high)}`}`];
             (r.rows || []).forEach((row) => lines.push(`  ${row.label}: ${money(row.low)} – ${money(row.high)}`));
             lines.push('');
             visibleSteps().forEach((s) => s.fields.forEach((f) => {

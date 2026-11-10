@@ -22,6 +22,7 @@ let sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
   <url><loc>https://senaconstructions.com.au/blogs</loc><priority>0.8</priority></url>
   <url><loc>https://senaconstructions.com.au/duplex-cost-calculator</loc><priority>0.8</priority></url>
   <url><loc>https://senaconstructions.com.au/renovation-cost-calculator</loc><priority>0.8</priority></url>
+  <url><loc>https://senaconstructions.com.au/custom-home-cost-calculator</loc><priority>0.8</priority></url>
 `;
 
 console.log('Generating sitemap exclusively...');
@@ -35,4 +36,4 @@ suburbsData.forEach(suburb => {
 sitemapXml += `</urlset>`;
 fs.writeFileSync(path.join(__dirname, '../sitemap.xml'), sitemapXml);
 
-console.log(`🎉 Success! Generated sitemap.xml with ${suburbsData.length + 15} URLs. No HTML pages were altered.`);
+console.log(`🎉 Success! Generated sitemap.xml with ${suburbsData.length + 16} URLs. No HTML pages were altered.`);

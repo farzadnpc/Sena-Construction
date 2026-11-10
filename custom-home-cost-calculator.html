@@ -1,0 +1,578 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- ========================================== -->
+    <!-- ADVANCED SEO META TAGS                     -->
+    <!-- ========================================== -->
+    <title>Custom Home Cost Calculator Sydney | Sena Constructions</title>
+    <meta name="description" content="How much does a custom luxury home cost to build in Sydney? Choose your size, rooms, inclusions and extras for a free, instant estimate from Sena Constructions.">
+    <link rel="canonical" href="https://senaconstructions.com.au/custom-home-cost-calculator">
+    <meta property="og:title" content="Custom Home Cost Calculator Sydney | Sena Constructions">
+    <meta property="og:description" content="Get a free, instant estimate for your custom Sydney home.">
+    <meta property="og:type" content="website">
+    
+    <!-- Preload Hero Image -->
+    <link rel="preload" as="image" href="images/luxuryhome.jpg">
+
+    <!-- EmailJS Script -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+
+    <!-- Google Fonts: Inter (Modern) + Playfair Display (Luxury Serif) & FontAwesome -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        sena: {
+                            red: '#e3000f',
+                            dark: '#050505',
+                            light: '#f9f9f9',
+                            gray: '#333333',
+                            border: '#e5e7eb'
+                        }
+                    },
+                    fontFamily: { 
+                        sans: ['Inter', 'sans-serif'],
+                        serif: ['Playfair Display', 'serif'] 
+                    }
+                }
+            }
+        }
+    </script>
+<link rel="icon" type="image/png" href="/images/senasmalllogo.png">
+    <style>
+        .wiz-enter { animation: wizIn .35s ease both; }
+        @keyframes wizIn { from { opacity: 0; transform: translateY(10px); } to { opacity: 1; transform: none; } }
+        @media (prefers-reduced-motion: reduce) { .wiz-enter { animation: none; } }
+    </style>
+</head>
+<body class="font-sans text-sena-gray bg-gray-50 overflow-x-hidden antialiased pb-16 md:pb-0">
+
+    <!-- ========================================== -->
+    <!-- TOP CONTACT BAR                            -->
+    <!-- ========================================== -->
+    <div class="bg-black text-gray-400 text-xs py-2 hidden md:block border-b border-gray-800">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <div class="flex gap-6">
+                <span class="flex items-center gap-2"><i class="fa-solid fa-location-dot text-sena-red"></i> 74A Ringrose Ave, Greystanes NSW 2145</span>
+                <span class="flex items-center gap-2"><i class="fa-solid fa-clock text-sena-red"></i> Mon - Fri: 9:00 AM - 5:00 PM</span>
+            </div>
+            <div class="flex gap-6 items-center">
+                <a href="mailto:office@senaconstructions.com.au" class="hover:text-white transition"><i class="fa-solid fa-envelope text-sena-red mr-2"></i> office@senaconstructions.com.au</a>
+                <a href="tel:0298850797" class="text-white font-bold hover:text-sena-red transition"><i class="fa-solid fa-phone text-sena-red mr-2"></i> (02) 9885 0797</a>
+            </div>
+        </div>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- MAIN NAVIGATION                            -->
+    <!-- ========================================== -->
+    <header class="bg-sena-dark text-white py-4 sticky top-0 z-50 shadow-xl border-b border-sena-red/20">
+        <div class="max-w-7xl mx-auto px-6 flex justify-between items-center">
+            <a href="/" class="flex items-center group">
+                <img src="images/senalogo.png" alt="Sena Constructions" class="h-12 w-auto group-hover:scale-105 transition-transform duration-300">
+            </a>
+            
+            <!-- Desktop Nav -->
+            <nav class="hidden lg:flex items-center gap-8 text-sm font-medium tracking-wide">
+                <a href="/" class="hover:text-sena-red transition-colors">Home</a>
+                <a href="/about" class="hover:text-sena-red transition-colors">About</a>
+                <a href="/process" class="hover:text-sena-red transition-colors">Our Process</a>
+                
+                <!-- Services Dropdown -->
+                <div class="relative group">
+                    <a href="/services" class="hover:text-sena-red transition-colors flex items-center gap-1 py-2">Services <i class="fa-solid fa-chevron-down text-[10px]"></i></a>
+                    <div class="absolute left-0 mt-0 w-64 bg-white text-sena-dark shadow-2xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 border-t-2 border-sena-red rounded-xl z-50 overflow-hidden">
+                        <a href="/luxury-homes" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Luxury Homes</a>
+                        <a href="/granny-flats" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Granny Flats</a>
+                        <a href="/duplexes" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Duplexes</a>
+                        <a href="/knockdown-rebuilds" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Knockdown Rebuilds</a>
+                        <a href="/renovations-extensions" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red border-b border-gray-100 transition-colors">Renovations & Extensions</a>
+                        <a href="/building-maintenance" class="block px-5 py-3 hover:bg-red-50 hover:text-sena-red transition-colors">Building Maintenance</a>
+                    </div>
+                </div>
+
+                <a href="/projects" class="hover:text-sena-red transition-colors">Projects</a>
+                <a href="/blogs" class="hover:text-sena-red transition-colors">Blogs</a>
+                <a href="/contact" class="bg-sena-red text-white px-6 py-2.5 rounded-xl hover:bg-red-700 transition shadow-lg shadow-sena-red/20">Contact</a>
+            </nav>
+
+            <!-- Mobile Hamburger -->
+            <button id="mobile-menu-btn" class="lg:hidden text-2xl focus:outline-none text-white hover:text-sena-red">
+                <i class="fa-solid fa-bars"></i>
+            </button>
+        </div>
+
+        <!-- Mobile Menu Dropdown -->
+        <div id="mobile-menu" class="hidden flex-col items-start gap-0 bg-sena-dark w-full absolute top-full left-0 py-4 border-t border-gray-800 shadow-2xl overflow-y-auto max-h-[80vh]">
+            <a href="/" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Home</a>
+            <a href="/about" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">About</a>
+            <a href="/process" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Our Process</a>
+            
+            <!-- Mobile Services Accordion -->
+            <div class="w-full">
+                <button id="mobile-services-btn" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800  flex justify-between items-center">
+                    Services <i class="fa-solid fa-chevron-down text-sm transition-transform duration-300" id="mobile-services-icon"></i>
+                </button>
+                <div id="mobile-services-menu" class="hidden bg-black w-full flex-col">
+                    <a href="/luxury-homes" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Luxury Homes</a>
+                    <a href="/granny-flats" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Granny Flats</a>
+                    <a href="/duplexes" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Duplexes</a>
+                    <a href="/knockdown-rebuilds" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Knockdown Rebuilds</a>
+                    <a href="/renovations-extensions" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Renovations & Extensions</a>
+                    <a href="/building-maintenance" class="text-base text-gray-300 hover:text-sena-red w-full px-10 py-3 border-b border-gray-900">Building Maintenance</a>
+                </div>
+            </div>
+
+            <a href="/projects" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Projects</a>
+            <a href="/blogs" class="text-lg hover:text-sena-red transition-colors w-full px-6 py-3 border-b border-gray-800">Blogs</a>
+            <div class="px-6 py-4 w-full">
+                <a href="/contact" class="block w-full bg-sena-red text-white text-center py-3 rounded-xl font-bold shadow-lg">Contact Us</a>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- ========================================== -->
+        <!-- CUSTOM HOME CALCULATOR WIZARD               -->
+        <!-- Steps are rendered by scripts/calculator.js -->
+        <!-- ========================================== -->
+        <section class="bg-gray-100 py-6 md:py-14">
+            <div class="max-w-6xl mx-auto px-3 sm:px-6">
+                <div id="wiz" class="bg-white rounded-3xl shadow-[0_20px_60px_rgba(0,0,0,0.08)] border border-gray-100 scroll-mt-24">
+
+                    <!-- Card header -->
+                    <div class="flex items-center justify-between gap-4 px-5 md:px-10 pt-6 md:pt-8 pb-5">
+                        <div class="flex items-center gap-4">
+                            <span class="flex-shrink-0 w-10 h-10 sm:w-11 sm:h-11 rounded-xl bg-sena-dark text-white flex items-center justify-center shadow-md"><i class="fa-solid fa-calculator"></i></span>
+                            <div class="leading-tight">
+                                <p class="hidden sm:block text-[11px] font-bold uppercase tracking-[0.25em] text-gray-400">Sena Constructions</p>
+                                <p class="font-serif text-base sm:text-lg md:text-xl font-bold text-sena-dark">Custom Home Calculator</p>
+                            </div>
+                        </div>
+                        <div class="flex items-center gap-6">
+                            <p id="wiz-counter" class="hidden whitespace-nowrap text-[11px] uppercase tracking-[0.2em] text-gray-400 font-semibold"></p>
+                            <a href="tel:0298850797" class="hidden md:flex items-center gap-2 font-bold text-sena-dark hover:text-sena-red transition-colors"><span class="w-2 h-2 rounded-full bg-sena-red"></span>(02) 9885 0797</a>
+                        </div>
+                    </div>
+
+                    <!-- Progress -->
+                    <div id="wiz-progress" class="flex gap-1.5 md:gap-2 px-5 md:px-10 pb-5 border-b border-gray-100" aria-hidden="true"></div>
+
+                    <!-- Screens -->
+                    <div class="px-4 sm:px-6 md:px-10 py-8 md:py-12">
+
+                        <!-- INTRO -->
+                        <div data-screen="intro" class="grid grid-cols-1 lg:grid-cols-2 gap-10 items-center">
+                            <div>
+                                <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-sena-red bg-red-50 rounded-full px-4 py-2 mb-6">Free instant estimate</span>
+                                <h1 class="font-serif text-4xl md:text-6xl font-bold text-sena-dark leading-[1.05] mb-6">What will your <em class="text-sena-red italic">custom home</em> cost to build?</h1>
+                                <p class="text-gray-600 text-lg leading-relaxed mb-8">Answer six quick questions about your site, size, rooms and inclusions. We'll give you an indicative build cost based on Sena's luxury home packages.</p>
+                                <ul class="space-y-4 mb-10">
+                                    <li class="flex items-center gap-4"><span class="w-8 h-8 rounded-full bg-red-50 text-sena-red flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-check text-sm"></i></span><span><b class="text-sena-dark">See your estimate straight away</b>, no sign-up needed</span></li>
+                                    <li class="flex items-center gap-4"><span class="w-8 h-8 rounded-full bg-red-50 text-sena-red flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-check text-sm"></i></span><span><b class="text-sena-dark">Based on Sena packages</b> from 40 squares, 4 bed, 3 bath</span></li>
+                                    <li class="flex items-center gap-4"><span class="w-8 h-8 rounded-full bg-red-50 text-sena-red flex items-center justify-center flex-shrink-0"><i class="fa-solid fa-check text-sm"></i></span><span><b class="text-sena-dark">Tailored to you</b>: size, rooms, finishes and extras</span></li>
+                                </ul>
+                                <div class="grid grid-cols-3 gap-4 pt-8 border-t border-gray-100">
+                                    <div><p class="font-serif text-3xl font-bold text-sena-dark">6</p><p class="text-[10px] uppercase tracking-[0.18em] text-gray-400 mt-1">Quick steps</p></div>
+                                    <div><p class="font-serif text-3xl font-bold text-sena-dark">~2 min</p><p class="text-[10px] uppercase tracking-[0.18em] text-gray-400 mt-1">To complete</p></div>
+                                    <div><p class="font-serif text-3xl font-bold text-sena-dark">Free</p><p class="text-[10px] uppercase tracking-[0.18em] text-gray-400 mt-1">No obligation</p></div>
+                                </div>
+                            </div>
+                            <div class="relative rounded-3xl overflow-hidden min-h-[320px] lg:min-h-[520px] bg-sena-dark text-white flex flex-col justify-end p-6 md:p-8">
+                                <img src="images/luxuryhome.jpg" alt="Custom home built by Sena Constructions" class="absolute inset-0 w-full h-full object-cover opacity-60">
+                                <div class="absolute inset-0 bg-gradient-to-t from-sena-dark via-sena-dark/40 to-transparent"></div>
+                                <div class="relative">
+                                    <p class="font-serif italic text-3xl md:text-4xl font-bold mb-3">From concept to creation.</p>
+                                    <p class="text-[11px] font-bold uppercase tracking-[0.25em] text-sena-red mb-6">Sena Constructions · Sydney</p>
+                                    <div class="flex items-start gap-3 bg-white/10 backdrop-blur border border-white/15 rounded-2xl p-4">
+                                        <i class="fa-solid fa-star text-sena-red mt-1"></i>
+                                        <div>
+                                            <p class="font-bold text-sm">Custom home builders</p>
+                                            <p class="text-sm text-gray-300">Luxury custom homes and knockdown rebuilds across Greater Sydney.</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- STEPS (rendered by JS) -->
+                        <div data-screen="step" class="hidden"></div>
+
+                        <!-- RESULT -->
+                        <div data-screen="result" class="hidden">
+                            <span class="inline-block text-[11px] font-bold uppercase tracking-[0.2em] text-sena-red bg-red-50 rounded-full px-4 py-2 mb-5">Your indicative estimate</span>
+                            <h2 class="font-serif text-3xl md:text-5xl font-bold text-sena-dark leading-tight mb-3 md:mb-4">Your <em class="text-sena-red italic">custom home</em> estimate.</h2>
+                            <p class="hidden sm:block text-gray-600 md:text-lg leading-relaxed max-w-3xl mb-6 md:mb-8">Based on your answers and Sena's luxury home packages. Request a callback and we'll prepare an accurate quote for your site and design.</p>
+
+                            <div class="grid grid-cols-1 lg:grid-cols-[minmax(0,1.3fr)_minmax(0,1fr)] gap-6 items-start">
+                                <div class="relative overflow-hidden rounded-3xl bg-sena-dark text-white p-6 md:p-10" aria-live="polite">
+                                    <div class="absolute -top-24 -right-24 w-80 h-80 rounded-full bg-sena-red/25 blur-3xl pointer-events-none"></div>
+                                    <div class="relative">
+                                        <p class="text-[11px] font-bold uppercase tracking-[0.2em] text-sena-red mb-4">Estimated build cost</p>
+                                        <p id="res-range" class="font-serif text-3xl sm:text-5xl font-bold leading-tight mb-4"></p>
+                                        <p id="res-sub" class="text-gray-300"></p>
+                                        <div id="res-stats" class="grid grid-cols-3 gap-5 mt-6 pt-6 border-t border-white/10"></div>
+                                    </div>
+                                </div>
+
+                                <div class="space-y-4">
+                                    <div id="res-notes" class="space-y-3"></div>
+                                    <form id="quote-form" class="rounded-3xl border border-gray-100 bg-gray-50 p-6 md:p-8 space-y-3">
+                                        <h3 class="font-serif text-2xl font-bold text-sena-dark">Get an accurate quote</h3>
+                                        <p class="text-gray-600 text-sm mb-2">A Sena specialist will review your answers and call you to talk through your new home.</p>
+                                        <input type="hidden" name="service_type" value="Custom Home">
+                                        <input type="hidden" name="message" id="calc-message">
+                                        <div class="grid grid-cols-1 sm:grid-cols-2 gap-3">
+                                            <input type="text" name="user_name" required autocomplete="name" placeholder="Your name *" aria-label="Your name" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white">
+                                            <input type="tel" name="user_phone" required autocomplete="tel" placeholder="Phone *" aria-label="Phone" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white">
+                                        </div>
+                                        <input type="email" name="user_email" required autocomplete="email" placeholder="Email *" aria-label="Email" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white">
+                                        <input type="text" name="project_suburb" placeholder="Suburb or postcode" aria-label="Suburb or postcode" class="w-full border border-gray-200 p-4 rounded-xl focus:outline-none focus:border-sena-red focus:ring-1 focus:ring-sena-red bg-white">
+                                        <button type="submit" id="submit-btn" class="w-full bg-sena-red hover:bg-red-700 text-white font-bold py-4 rounded-xl transition-all shadow-[0_8px_20px_rgba(227,0,15,0.25)] hover:-translate-y-0.5 flex justify-center items-center gap-2">Request my callback <i class="fa-solid fa-arrow-right"></i></button>
+                                        <div id="form-status" class="hidden p-4 rounded-xl text-center font-semibold"></div>
+                                        <p class="text-xs text-gray-400 text-center">By submitting, you agree to be contacted by Sena Constructions.</p>
+                                    </form>
+                                </div>
+                            </div>
+
+                            <div class="mt-6 rounded-3xl border border-gray-100 p-6 md:p-8">
+                                <h3 class="font-serif text-xl font-bold text-sena-dark mb-5">What's included in your estimate</h3>
+                                <ul class="grid grid-cols-1 md:grid-cols-2 gap-x-10 gap-y-3 text-gray-700">
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check text-sena-red mt-1"></i>Your home at the size you selected</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check text-sena-red mt-1"></i>Inclusions at your chosen finish level</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check text-sena-red mt-1"></i>4 bedrooms and 3 bathrooms, plus any extra rooms</li>
+                                    <li class="flex gap-3"><i class="fa-solid fa-circle-check text-sena-red mt-1"></i>Any optional extras you selected</li>
+                                </ul>
+                            </div>
+
+                            <div class="mt-6 rounded-2xl bg-amber-50 border-l-4 border-amber-400 p-5 text-sm text-gray-700 leading-relaxed">
+                                <b class="text-sena-dark">Indicative guide only.</b> This is not a quote. Your final price depends on your block, council requirements, design choices and a site assessment. Excludes land, demolition, and DA/CDC and authority fees.
+                            </div>
+
+                            <div class="mt-6 flex flex-wrap gap-6">
+                                <button type="button" data-wiz-back class="text-sm font-semibold text-gray-500 hover:text-sena-red transition-colors"><i class="fa-solid fa-arrow-left mr-1"></i> Change my answers</button>
+                                <button type="button" data-wiz-restart class="text-sm font-semibold text-gray-500 hover:text-sena-red transition-colors"><i class="fa-solid fa-rotate-left mr-1"></i> Start again</button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Card footer / navigation (sticks to the bottom of the screen while scrolling) -->
+                    <div id="wiz-footer" class="sticky bottom-[60px] md:bottom-0 z-20 bg-white/95 backdrop-blur border-t border-gray-100 rounded-b-3xl px-4 sm:px-6 md:px-10 py-4 flex items-center justify-between gap-4">
+                        <p class="hidden sm:flex items-center gap-2 text-sm text-gray-500 min-w-0"><span class="w-1.5 h-1.5 rounded-full bg-sena-red flex-shrink-0"></span><span id="wiz-hint" class="truncate"></span></p>
+                        <div class="flex gap-3 ml-auto w-full sm:w-auto">
+                            <button type="button" id="wiz-back" class="hidden flex-1 sm:flex-none border-2 border-gray-200 hover:border-sena-dark text-sena-dark font-bold px-6 py-3 rounded-xl transition-colors"><i class="fa-solid fa-arrow-left mr-1"></i> Back</button>
+                            <button type="button" id="wiz-next" class="flex-[2] sm:flex-none bg-sena-red hover:bg-red-700 text-white font-bold px-8 py-3 rounded-xl transition-all shadow-[0_8px_20px_rgba(227,0,15,0.25)] hover:-translate-y-0.5"><span id="wiz-next-label">Let's start</span> <i class="fa-solid fa-arrow-right ml-1"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- ========================================== -->
+        <!-- FAQ                                        -->
+        <!-- ========================================== -->
+        <section class="py-16 md:py-24 bg-white">
+            <div class="max-w-4xl mx-auto px-4 sm:px-6">
+                <div class="mb-10">
+                    <h2 class="text-3xl md:text-4xl font-serif font-bold mb-4 text-sena-dark">Custom home cost FAQs</h2>
+                    <div class="w-20 h-1.5 bg-sena-red rounded-full"></div>
+                </div>
+                <div class="space-y-4">
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-white">
+                        <button class="faq-btn w-full text-left px-6 md:px-8 py-6 hover:bg-gray-50 font-bold text-lg flex justify-between items-center transition text-sena-dark">
+                            How is my custom home estimate calculated?
+                            <div class="bg-red-50 text-sena-red w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ml-4"><i class="fa-solid fa-chevron-down transition-transform duration-300"></i></div>
+                        </button>
+                        <div class="faq-content hidden px-6 md:px-8 py-6 text-gray-600 bg-gray-50 border-t border-gray-100 leading-relaxed">
+                            We start from the base package price for your chosen inclusions, which covers a 40-square home with 4 bedrooms and 3 bathrooms. Extra squares, extra bedrooms and bathrooms, and any optional extras you select are then added on top.
+                        </div>
+                    </div>
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-white">
+                        <button class="faq-btn w-full text-left px-6 md:px-8 py-6 hover:bg-gray-50 font-bold text-lg flex justify-between items-center transition text-sena-dark">
+                            What is a square?
+                            <div class="bg-red-50 text-sena-red w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ml-4"><i class="fa-solid fa-chevron-down transition-transform duration-300"></i></div>
+                        </button>
+                        <div class="faq-content hidden px-6 md:px-8 py-6 text-gray-600 bg-gray-50 border-t border-gray-100 leading-relaxed">
+                            A square is the traditional Australian measure for home size. One square is about 9.3 m², so a 40-square home is roughly 372 m² under roof, including garage, alfresco and porch.
+                        </div>
+                    </div>
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-white">
+                        <button class="faq-btn w-full text-left px-6 md:px-8 py-6 hover:bg-gray-50 font-bold text-lg flex justify-between items-center transition text-sena-dark">
+                            Does the estimate include land or demolition?
+                            <div class="bg-red-50 text-sena-red w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ml-4"><i class="fa-solid fa-chevron-down transition-transform duration-300"></i></div>
+                        </button>
+                        <div class="faq-content hidden px-6 md:px-8 py-6 text-gray-600 bg-gray-50 border-t border-gray-100 leading-relaxed">
+                            No. The estimate covers the build itself. Land, demolition for knockdown rebuilds, and council or authority fees are quoted separately once we have assessed your site.
+                        </div>
+                    </div>
+                    <div class="border border-gray-200 rounded-2xl overflow-hidden shadow-sm bg-white">
+                        <button class="faq-btn w-full text-left px-6 md:px-8 py-6 hover:bg-gray-50 font-bold text-lg flex justify-between items-center transition text-sena-dark">
+                            Is this a fixed price?
+                            <div class="bg-red-50 text-sena-red w-8 h-8 rounded-full flex items-center justify-center flex-shrink-0 ml-4"><i class="fa-solid fa-chevron-down transition-transform duration-300"></i></div>
+                        </button>
+                        <div class="faq-content hidden px-6 md:px-8 py-6 text-gray-600 bg-gray-50 border-t border-gray-100 leading-relaxed">
+                            No. The calculator gives an indicative figure to help you plan your budget. We provide a detailed, fixed-price quote after reviewing your site, design and selections.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- ========================================== -->
+    <!-- COMPREHENSIVE FOOTER                       -->
+    <!-- ========================================== -->
+    <footer class="bg-black text-white pt-16 pb-8 border-t-[4px] border-sena-red">
+        
+        <!-- MAIN 4-COLUMN GRID -->
+        <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+            
+            <!-- Column 1: Brand -->
+            <div>
+                <a href="/" class="inline-block mb-6">
+                    <img src="images/senalogo.png" alt="Sena Constructions" loading="lazy" class="h-16 w-auto hover:opacity-80 transition-opacity">
+                </a>
+                <p class="text-gray-400 text-sm mb-6 leading-relaxed">Building Quality Homes and Lasting Relationships in Sydney. Proudly servicing Greater Sydney.</p>
+                <div class="flex gap-4">
+                    <a href="https://www.facebook.com/p/Sena-Constructions-100040335197985/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-gray-900 flex items-center justify-center hover:bg-sena-red transition-colors"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/senaconstructions/" target="_blank" rel="noopener noreferrer" class="w-10 h-10 rounded-xl bg-gray-900 flex items-center justify-center hover:bg-sena-red transition-colors"><i class="fa-brands fa-instagram"></i></a>
+                </div>
+            </div>
+
+            <!-- Column 2: Quick Links -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 uppercase tracking-wider text-gray-200">Company</h4>
+                <ul class="space-y-3 text-sm text-gray-400 font-medium">
+                    <li><a href="/" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Home</a></li>
+                    <li><a href="/about" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> About Us</a></li>
+                    <li><a href="/process" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Our Process</a></li>
+                    <li><a href="/projects" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Portfolio</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 3: Services -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 uppercase tracking-wider text-gray-200">Services</h4>
+                <ul class="space-y-3 text-sm text-gray-400 font-medium">
+                    <li><a href="/luxury-homes" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Luxury Homes</a></li>
+                    <li><a href="/knockdown-rebuilds" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Knockdown Rebuilds</a></li>
+                    <li><a href="/duplexes" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Duplexes & Granny Flats</a></li>
+                    <li><a href="/renovations-extensions" class="hover:text-sena-red transition flex items-center gap-2"><i class="fa-solid fa-angle-right text-sena-red text-xs"></i> Renovations & Extensions</a></li>
+                </ul>
+            </div>
+
+            <!-- Column 4: Contact Details -->
+            <div>
+                <h4 class="text-lg font-bold mb-6 uppercase tracking-wider text-gray-200">Contact</h4>
+                <ul class="space-y-4 text-sm text-gray-400">
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-phone text-sena-red mt-1"></i>
+                        <div>
+                            <p class="font-bold text-white mb-1">Phone</p>
+                            <a href="tel:0298850797" class="hover:text-sena-red transition-colors">(02) 9885 0797</a>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-envelope text-sena-red mt-1"></i>
+                        <div>
+                            <p class="font-bold text-white mb-1">Email</p>
+                            <a href="mailto:office@senaconstructions.com.au" class="hover:text-sena-red transition-colors">office@senaconstructions.com.au</a>
+                        </div>
+                    </li>
+                    <li class="flex items-start gap-3">
+                        <i class="fa-solid fa-location-dot text-sena-red mt-1"></i>
+                        <div>
+                            <p class="font-bold text-white mb-1">Office</p>
+                            <p>74A Ringrose Ave<br>Greystanes NSW 2145</p>
+                        </div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <!-- BOTTOM COPYRIGHT BAR -->
+        <div class="border-t border-gray-900 pt-8 text-center md:flex justify-between items-center max-w-7xl mx-auto px-6 text-sm text-gray-600 font-medium">
+            <p>Copyright &copy; 2026 Sena Constructions. All Rights Reserved.</p>
+            <div class="mt-4 md:mt-0 space-x-4">
+                <a href="/sitemap" class="hover:text-sena-red transition-colors">Sitemap</a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ========================================== -->
+    <!-- STICKY MOBILE ACTION BAR (PHONE ONLY)      -->
+    <!-- ========================================== -->
+    <div class="md:hidden fixed bottom-0 left-0 w-full bg-sena-dark z-[100] flex border-t border-sena-red/30 shadow-[0_-10px_20px_rgba(0,0,0,0.2)]">
+        <a href="tel:0298850797" class="flex-1 py-4 flex items-center justify-center gap-2 border-r border-gray-700 active:bg-gray-800 transition text-white">
+            <i class="fa-solid fa-phone text-sena-red text-lg"></i> 
+            <span class="font-bold text-sm tracking-wide">Call Now</span>
+        </a>
+        <a href="/contact" class="flex-1 py-4 flex items-center justify-center gap-2 bg-sena-red active:bg-red-700 transition text-white">
+            <i class="fa-solid fa-calendar-check text-white text-lg"></i> 
+            <span class="font-bold text-sm tracking-wide">Book Consult</span>
+        </a>
+    </div>
+
+    <!-- ========================================== -->
+    <!-- INTERACTIVE SCRIPTS                        -->
+    <!-- ========================================== -->
+    <!-- ========================================== -->
+    <!-- CALCULATOR CONFIG: PRICES + QUESTIONS      -->
+    <!-- Edit prices in PRICES below. All AUD.      -->
+    <!-- Customers only ever see the final figure.  -->
+    <!-- ========================================== -->
+    <script>
+        (function () {
+            const PRICES = {
+                baseSquares: 40,   // base package size (1 square ≈ 9.29 m²)
+                baseBedrooms: 4,
+                baseBathrooms: 3,
+                tiers: {
+                    luxury:    { base: 850000,  perExtraSquare: 18500 },
+                    signature: { base: 1040000, perExtraSquare: 22000 },
+                    ultimate:  { base: 1580000, perExtraSquare: 30000 }
+                },
+                extraBedroom: 10000,
+                extraBathroom: 28000,
+                extras: { media: 20000, automation: 30000 }
+            };
+            const P = PRICES;
+
+            window.SENA_CALC = {
+                name: 'Custom Home Calculator estimate',
+                money: 'full',
+                introHint: 'Indicative estimate based on Sena build rates',
+                resultHint: 'Excludes land · Subject to site assessment',
+
+                compute(s) {
+                    const t = P.tiers[s.tier];
+                    let total = t.base;
+                    total += Math.max(0, s.squares - P.baseSquares) * t.perExtraSquare;
+                    total += Math.max(0, Number(s.beds) - P.baseBedrooms) * P.extraBedroom;
+                    total += Math.max(0, Number(s.baths) - P.baseBathrooms) * P.extraBathroom;
+                    s.extras.forEach((x) => { total += P.extras[x] || 0; });
+                    return { low: total, high: total };
+                },
+
+                steps: [
+                    {
+                        eyebrow: 'Your site', title: 'Where will your *home* be built?',
+                        text: "Tell us about your land and the kind of home you're imagining. This helps our team plan your design and site work.",
+                        tip: { label: 'Good to know', text: "Still looking for land? That's fine. We can help you check whether a block suits the home you want before you buy." },
+                        stats: [['Custom', 'Designs'], ['Sydney', 'Wide'], ['Free', 'Site advice']],
+                        hint: 'Tell us about your land',
+                        fields: [
+                            { id: 'site', type: 'choice', label: 'Your land', summary: 'Land', default: 'vacant', cols: 'grid-cols-1 sm:grid-cols-3', options: [
+                                { id: 'vacant',    label: 'Vacant block',      desc: 'Ready to build',            icon: 'fa-map-location-dot' },
+                                { id: 'knockdown', label: 'Knockdown rebuild', desc: 'Existing home to demolish', icon: 'fa-house-crack' },
+                                { id: 'looking',   label: 'Still looking',     desc: 'Land not yet secured',      icon: 'fa-magnifying-glass-location' }
+                            ] },
+                            { id: 'storeys', type: 'choice', label: 'Storeys', summary: 'Storeys', default: 'double', options: [
+                                { id: 'single', label: 'Single storey', desc: 'Easy living, no stairs',            icon: 'fa-house' },
+                                { id: 'double', label: 'Double storey', desc: 'More space on a smaller footprint', icon: 'fa-building' }
+                            ] }
+                        ]
+                    },
+                    {
+                        eyebrow: 'Home size', title: 'How *big* is your dream home?',
+                        text: 'Builders measure homes in squares. One square is about 9.3 m². Our packages start at 40 squares, which suits a spacious four-bedroom family home.',
+                        tip: { label: "What's counted", text: 'Squares cover the total area under roof, including garage, alfresco and porch.' },
+                        stats: [['40 sq', 'Base size'], ['≈ 372 m²', 'Base area'], ['4 + 3', 'Bed + bath']],
+                        hint: 'One square is about 9.3 m²',
+                        fields: [
+                            { id: 'squares', type: 'slider', label: 'Home size', sublabel: 'Total area under roof', summary: 'Home size', unit: 'squares', min: 40, max: 80, step: 1, default: 40,
+                              ticks: (v) => ['40 sq', `≈ ${Math.round(v * 9.29)} m²`, '80 sq'],
+                              note: (v) => v <= 40
+                                ? '<b>40 squares is our base size.</b> It comfortably fits 4 bedrooms, 3 bathrooms and generous living areas.'
+                                : `<b>${v} squares</b> gives you about ${Math.round((v - 40) * 9.29)} m² more than our base size for extra living, entertaining or storage.` }
+                        ]
+                    },
+                    {
+                        eyebrow: 'Your rooms', title: 'How many *rooms* do you need?',
+                        text: 'Every home includes 4 bedrooms and 3 bathrooms. Add more if your family needs them.',
+                        tip: { label: 'Tip', text: 'A guest suite with its own ensuite on the ground floor is a popular choice for visiting family or multi-generational living.' },
+                        stats: [['4', 'Bedrooms incl.'], ['3', 'Bathrooms incl.'], ['Custom', 'Layouts']],
+                        hint: '4 bedrooms and 3 bathrooms are included',
+                        fields: [
+                            { id: 'beds', type: 'choice', label: 'Bedrooms', summary: 'Bedrooms', default: '4', cols: 'grid-cols-2 sm:grid-cols-4', options: [
+                                { id: '4', label: '4 bedrooms', desc: 'Included', iconText: '4' },
+                                { id: '5', label: '5 bedrooms', desc: '+1 room',  iconText: '5' },
+                                { id: '6', label: '6 bedrooms', desc: '+2 rooms', iconText: '6' },
+                                { id: '7', label: '7 bedrooms', desc: '+3 rooms', iconText: '7' }
+                            ] },
+                            { id: 'baths', type: 'choice', label: 'Bathrooms', summary: 'Bathrooms', default: '3', cols: 'grid-cols-2 sm:grid-cols-4', options: [
+                                { id: '3', label: '3 bathrooms', desc: 'Included', iconText: '3' },
+                                { id: '4', label: '4 bathrooms', desc: '+1 room',  iconText: '4' },
+                                { id: '5', label: '5 bathrooms', desc: '+2 rooms', iconText: '5' },
+                                { id: '6', label: '6 bathrooms', desc: '+3 rooms', iconText: '6' }
+                            ] }
+                        ]
+                    },
+                    {
+                        layout: 'wide', eyebrow: 'Inclusions', title: 'Choose your *inclusions*.',
+                        text: 'Every Sena home is built to a luxury standard. Step up for more premium materials, fixtures and finishes throughout.',
+                        hint: 'Inclusions set the finish level throughout',
+                        fields: [
+                            { id: 'tier', type: 'choice', variant: 'tier', summary: 'Inclusions', default: 'signature', cols: 'grid-cols-1 md:grid-cols-3', options: [
+                                { id: 'luxury', number: '1', label: 'Luxury', desc: 'Bespoke luxury finishes as standard.',
+                                  swatch: 'bg-gradient-to-br from-gray-100 to-gray-300', swatchText: 'text-sena-dark' },
+                                { id: 'signature', number: '2', label: 'Signature', desc: 'Elevated premium finishes and fixtures.',
+                                  swatch: 'bg-gradient-to-br from-sena-red to-red-900', swatchText: 'text-white' },
+                                { id: 'ultimate', number: '3', label: 'Ultimate', desc: 'Our highest-end finishes and detailing.',
+                                  swatch: 'bg-gradient-to-br from-sena-dark via-zinc-800 to-amber-700', swatchText: 'text-white' }
+                            ] }
+                        ]
+                    },
+                    {
+                        eyebrow: 'Optional extras', title: 'Add the *finishing* touches.',
+                        text: "Tick anything you'd like included in your estimate. Our design team can tailor both to your home.",
+                        tip: { label: 'Tip', text: 'Smart-home wiring is far easier to install during the build than to retrofit later.' },
+                        stats: [['2', 'Extras'], ['Mix', '& match'], ['Tailored', 'Design']],
+                        hint: 'Select either, both or none',
+                        fields: [
+                            { id: 'extras', type: 'multi', summary: 'Extras', default: [], options: [
+                                { id: 'media',      label: 'Media room',      desc: 'Dedicated theatre or media space', icon: 'fa-film' },
+                                { id: 'automation', label: 'Home automation', desc: 'Integrated smart-home package',    icon: 'fa-house-signal' }
+                            ] }
+                        ]
+                    },
+                    {
+                        eyebrow: 'Almost done', title: 'When would you like to *start*?',
+                        text: 'One last question to help our team prepare. Nothing is binding.',
+                        tip: { label: 'What happens next', text: 'You will see your estimate straight away. If you request a callback, a Sena specialist reviews your answers and contacts you to discuss your design.' },
+                        stats: [['Free', 'Consultation'], ['No', 'Obligation'], ['Local', 'Sydney team']],
+                        hint: 'Your estimate is on the next screen',
+                        fields: [
+                            { id: 'timeline', type: 'choice', label: 'When are you looking to start?', summary: 'Timeline', default: '6-12', cols: 'grid-cols-1 sm:grid-cols-2', options: [
+                                { id: 'asap',  label: 'ASAP',        desc: 'Ready now',   icon: 'fa-bolt' },
+                                { id: '3-6',   label: '3–6 months',  desc: 'Planning',    icon: 'fa-calendar' },
+                                { id: '6-12',  label: '6–12 months', desc: 'Researching', icon: 'fa-calendar-days' },
+                                { id: '12+',   label: '12 months+',  desc: 'Early stage', icon: 'fa-hourglass-half' }
+                            ] }
+                        ]
+                    }
+                ],
+
+                result: {
+                    sub: (label) => `${label('storeys')} · ${label('beds')} · ${label('baths')} · ${label('tier')} inclusions`,
+                    stats: (label, s) => [[`${s.squares} sq`, 'Home size'], [label('tier'), 'Inclusions'], [String(s.extras.size), 'Extras']]
+                }
+            };
+        })();
+    </script>
+    <script src="scripts/calculator.js"></script>
+    <script src="scripts/scripts.js"></script>
+</body>
+</html>
