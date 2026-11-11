@@ -21,6 +21,15 @@ A high-conversion, luxury custom home builder website for the Greater Sydney mar
 ## 🧮 Changing calculator prices
 Open the calculator page (for example `renovation-cost-calculator.html`) and edit the clearly marked **CALCULATOR CONFIG** block near the bottom. No build step is needed.
 
+## 📸 Project galleries
+Project pages (e.g. `/57-hyssop-crescent-melonba`) and category pages (e.g. `/projects-luxury-homes`) are generated from `projects-data.json`.
+
+To add a project:
+1. Put the original photos in a folder under `images/` (originals are never changed).
+2. Add an entry to `projects-data.json` with its category, address, suburb, folder and cover photo.
+3. Run `pip3 install pillow` (first time only), then `python3 scripts/build-projects.py`. This makes web-sized copies in `images/projects/` and builds the pages.
+4. Add the new page address to the list in `scripts/build-sitemap.js` and run `node scripts/build-sitemap.js`.
+
 ## 🛠️ How to Build
 
 Rebuild after you edit a template or `suburbs-data.json`. Don't edit the generated suburb pages or `sitemap.html` directly, because a rebuild will overwrite them.
