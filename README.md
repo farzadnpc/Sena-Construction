@@ -1,28 +1,36 @@
 # Sena Constructions - Official Website 🏗️
 
-A high-conversion, luxury custom home builder website tailored for the Greater Sydney market. The site features a sophisticated UI, a custom project estimation calculator, EmailJS lead capture, and a Node.js build system that generates 175 localized SEO suburb pages.
+A high-conversion, luxury custom home builder website for the Greater Sydney market. It features step-by-step cost calculators, EmailJS lead capture, and a Node.js build system that generates 741 localised suburb pages.
 
 ## 🚀 Tech Stack
 * **Frontend:** HTML5, Tailwind CSS (via CDN)
-* **Interactivity:** Vanilla JavaScript (`scripts/scripts.js`)
-* **Lead Capture:** [EmailJS](https://www.emailjs.com/)
-* **Build System:** Node.js (`scripts/build-pages.js`)
-* **Hosting:** GitHub Pages (Configured with Custom Domain for Clean URLs)
+* **Interactivity:** Vanilla JavaScript (`scripts/scripts.js`, `scripts/calculator.js`)
+* **Lead Capture:** [EmailJS](https://www.emailjs.com/) (with a hidden spam-trap field)
+* **Build System:** Node.js scripts in `scripts/`
+* **Hosting:** GitHub Pages with a custom domain and clean URLs (`/about`, not `/about.html`)
 
 ## 📁 Project Architecture
-* `template.html` - The master layout for all localized SEO pages.
-* `service-areas-template.html` - The master layout for the Service Directory.
-* `suburbs-data.json` - The database containing SEO metadata, regions, and council info for 175 Sydney suburbs.
-* `scripts/scripts.js` - Handles all frontend logic: mobile menus, FAQ accordions, the estimator calculator, and the EmailJS form submission.
-* `scripts/build-pages.js` - The Node.js script that injects the JSON data into the HTML templates to dynamically generate the site.
-* `images/` - Local storage for optimized `.webp` and `.png` image assets.
+* `_templates/suburb-template.html` - Master layout for every suburb page. Folders starting with `_` are not published, so its `{{placeholders}}` never appear on the live site.
+* `_templates/sitemap-template.html` - Layout for the Site Map & Service Areas page (`sitemap.html`).
+* `suburbs-data.json` - SEO details, council and region for each of the 741 Sydney suburbs.
+* `scripts/scripts.js` - Site-wide logic: mobile menu, accordions, FAQs, testimonials and the EmailJS quote form.
+* `scripts/calculator.js` - The step-by-step calculator engine. Each calculator page sets its questions and prices in a `window.SENA_CALC` config block near the bottom of the page.
+* `*-cost-calculator.html` + `calculators.html` - The duplex, renovation and custom home calculators, and the hub page that links them.
+* `images/` - Image assets.
 
-## 🛠️ How to Build & Run Locally
+## 🧮 Changing calculator prices
+Open the calculator page (for example `renovation-cost-calculator.html`) and edit the clearly marked **CALCULATOR CONFIG** block near the bottom. No build step is needed.
 
-Whenever a structural change is made to `template.html`, or a new suburb is added to the `suburbs-data.json` database, the site must be rebuilt.
+## 🛠️ How to Build
 
-1. **Install Node.js:** Ensure [Node.js](https://nodejs.org/) is installed on your machine.
-2. **Make Edits:** Edit `template.html` or `suburbs-data.json`.
-3. **Run the Build Script:** Open your terminal, navigate to the project root, and run:
+Rebuild after you edit a template or `suburbs-data.json`. Don't edit the generated suburb pages or `sitemap.html` directly, because a rebuild will overwrite them.
+
+1. **Install Node.js:** Make sure [Node.js](https://nodejs.org/) is installed.
+2. **Make edits:** Edit the files in `_templates/` or `suburbs-data.json`.
+3. **Run the build scripts** from the project root:
    ```bash
-   node scripts/build-pages.js
+   node scripts/build-pages.js        # suburb pages
+   node scripts/build-html-sitemap.js # sitemap.html (visitor Site Map page)
+   node scripts/build-sitemap.js      # sitemap.xml (for Google)
+   ```
+4. **Adding a page or blog post?** Add its address to the list in `scripts/build-sitemap.js` so Google can find it.

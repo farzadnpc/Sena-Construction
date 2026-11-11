@@ -26,6 +26,18 @@ let sitemapXml = `<?xml version="1.0" encoding="UTF-8"?>
   <url><loc>https://senaconstructions.com.au/custom-home-cost-calculator</loc><priority>0.8</priority></url>
 `;
 
+// Blog posts (add new posts here)
+const blogPosts = [
+    'top-5-benefits-custom-home-sydney',
+    'Benefits-Of-Building-A-Duplex-In-Sydney',
+    'Granny-Flats-In-Sydney-The-Perfect-Addition-To-Your-Property',
+    'Maximizing-Your-Property-Value-With-Home-Renovations-In-Sydney',
+    'The-Advantages-Of-Knockdown-And-Rebuilds-For-Your-Sydney-Home',
+];
+blogPosts.forEach(slug => {
+    sitemapXml += `  <url><loc>https://senaconstructions.com.au/${slug}</loc><priority>0.7</priority></url>\n`;
+});
+
 console.log('Generating sitemap exclusively...');
 
 // 3. Loop through all 750 suburbs just to grab their slugs for the URLs
@@ -37,4 +49,4 @@ suburbsData.forEach(suburb => {
 sitemapXml += `</urlset>`;
 fs.writeFileSync(path.join(__dirname, '../sitemap.xml'), sitemapXml);
 
-console.log(`🎉 Success! Generated sitemap.xml with ${suburbsData.length + 17} URLs. No HTML pages were altered.`);
+console.log(`🎉 Success! Generated sitemap.xml with ${suburbsData.length + 17 + blogPosts.length} URLs. No HTML pages were altered.`);
