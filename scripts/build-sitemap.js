@@ -34,6 +34,24 @@ const blogPosts = [
     'Maximizing-Your-Property-Value-With-Home-Renovations-In-Sydney',
     'The-Advantages-Of-Knockdown-And-Rebuilds-For-Your-Sydney-Home',
 ];
+
+// Project gallery pages (made by scripts/build-projects.py; add new ones here)
+const projectPages = [
+    'projects-luxury-homes',
+    'projects-duplexes',
+    'projects-renovations',
+    '57-hyssop-crescent-melonba',
+    '59-hyssop-crescent-melonba',
+    'horsley-road-panania',
+    'malvern-street-panania',
+    'ringrose-avenue-greystanes',
+    'fowler-road-merrylands',
+    'paton-street-merrylands',
+    'mclachlan-avenue-darlinghurst',
+];
+projectPages.forEach(slug => {
+    sitemapXml += `  <url><loc>https://senaconstructions.com.au/${slug}</loc><priority>0.7</priority></url>\n`;
+});
 blogPosts.forEach(slug => {
     sitemapXml += `  <url><loc>https://senaconstructions.com.au/${slug}</loc><priority>0.7</priority></url>\n`;
 });
@@ -49,4 +67,4 @@ suburbsData.forEach(suburb => {
 sitemapXml += `</urlset>`;
 fs.writeFileSync(path.join(__dirname, '../sitemap.xml'), sitemapXml);
 
-console.log(`🎉 Success! Generated sitemap.xml with ${suburbsData.length + 17 + blogPosts.length} URLs. No HTML pages were altered.`);
+console.log(`🎉 Success! Generated sitemap.xml with ${suburbsData.length + 17 + blogPosts.length + projectPages.length} URLs. No HTML pages were altered.`);

@@ -1,0 +1,100 @@
+{
+  "categories": [
+    {
+      "slug": "luxury-homes",
+      "title": "Luxury Homes",
+      "service_page": "/luxury-homes",
+      "calculator": { "href": "/custom-home-cost-calculator", "label": "Estimate your custom home" },
+      "intro": "Bespoke, architecturally designed homes built with premium materials and finishes. Explore a selection of luxury homes Sena Constructions has completed across Sydney."
+    },
+    {
+      "slug": "duplexes",
+      "title": "Duplexes",
+      "service_page": "/duplexes",
+      "calculator": { "href": "/duplex-cost-calculator", "label": "Estimate your duplex" },
+      "intro": "Modern duplexes designed to make the most of every block, from knockdown rebuilds to dual-occupancy investments. Take a look inside some of our completed Sydney duplexes."
+    },
+    {
+      "slug": "renovations",
+      "title": "Renovations & Extensions",
+      "service_page": "/renovations-extensions",
+      "calculator": { "href": "/renovation-cost-calculator", "label": "Estimate your renovation" },
+      "intro": "Kitchen, bathroom and whole-home renovations that transform how you live. See before, during and after photos from some of our Sydney renovation projects."
+    }
+  ],
+  "projects": [
+    {
+      "slug": "57-hyssop-crescent-melonba",
+      "category": "luxury-homes",
+      "address": "57 Hyssop Crescent",
+      "suburb": "Melonba",
+      "type": "Luxury Home",
+      "source": "images/57 Hyssop Crescent, Melonba",
+      "cover": "uc.jpg"
+    },
+    {
+      "slug": "59-hyssop-crescent-melonba",
+      "category": "luxury-homes",
+      "address": "59 Hyssop Crescent",
+      "suburb": "Melonba",
+      "type": "Luxury Home",
+      "source": "images/59 Hyssop Crescent, Melonba",
+      "cover": "KELV4656-2_twilight_65e3d99f-5704-4ecc-b2e2-b17cc3f22409-scaled.jpg"
+    },
+    {
+      "slug": "horsley-road-panania",
+      "category": "duplexes",
+      "address": "Horsley Road",
+      "suburb": "Panania",
+      "type": "Duplex",
+      "source": "images/Horsley Rd, Panania",
+      "cover": "print_08-5-scaled.jpg"
+    },
+    {
+      "slug": "malvern-street-panania",
+      "category": "duplexes",
+      "address": "Malvern Street",
+      "suburb": "Panania",
+      "type": "Duplex",
+      "source": "images/Malvern St, Panania",
+      "cover": "Sena-Constructions_Panania-Complete-47.jpg"
+    },
+    {
+      "slug": "ringrose-avenue-greystanes",
+      "category": "duplexes",
+      "address": "Ringrose Avenue",
+      "suburb": "Greystanes",
+      "type": "Duplex",
+      "source": "images",
+      "files": "dup*.jpg",
+      "cover": "dup1.jpg"
+    },
+    {
+      "slug": "fowler-road-merrylands",
+      "category": "renovations",
+      "address": "Fowler Road",
+      "suburb": "Merrylands",
+      "type": "Bathroom Renovation",
+      "source": "images/Fowler Rd, Merrylands",
+      "cover": "IMG-20250708-WA0015.jpg"
+    },
+    {
+      "slug": "paton-street-merrylands",
+      "category": "renovations",
+      "address": "Paton Street",
+      "suburb": "Merrylands",
+      "type": "Apartment Renovation",
+      "source": "images/Paton St, Merrylands",
+      "cover": "119260698_124129852752792_178347447614950158_n-1.jpg"
+    },
+    {
+      "slug": "mclachlan-avenue-darlinghurst",
+      "category": "renovations",
+      "address": "McLachlan Avenue",
+      "suburb": "Darlinghurst",
+      "type": "Apartment Renovation",
+      "source": "images/McLachlan Ave, Darlinghurst",
+      "cover": "IMG_8192.jpg"
+    }
+  ]
+}
