@@ -122,7 +122,7 @@ def project_card(p, photos):
                         <div class="relative aspect-[4/3] overflow-hidden bg-gray-100">
                             <img src="{t['thumb']}" alt="{esc(p['type'])} at {esc(p['address'])}, {esc(p['suburb'])}" loading="lazy" width="{t['w']}" height="{t['h']}" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
                             <span class="absolute top-4 left-4 bg-sena-dark/90 text-white text-xs font-bold uppercase tracking-wider px-3 py-1.5 rounded-full">{esc(p['type'])}</span>
-                            <span class="absolute bottom-4 right-4 bg-white/90 text-sena-dark text-xs font-bold px-3 py-1.5 rounded-full"><i class="fa-solid fa-images text-sena-red mr-1"></i> {len(photos)} photos</span>
+                            <span class="absolute bottom-4 right-4 bg-white/90 text-sena-dark text-xs font-bold px-3 py-1.5 rounded-full"><i class="fa-solid fa-images text-sena-red mr-1"></i> {len(photos)} photos{' <span class="mx-1 text-gray-300">|</span> <i class="fa-solid fa-circle-play text-sena-red mr-1"></i> Video' if p.get('video') else ''}</span>
                         </div>
                         <div class="p-6 flex items-center justify-between gap-4">
                             <div>
@@ -132,6 +132,21 @@ def project_card(p, photos):
                             <span class="w-11 h-11 flex-shrink-0 rounded-full bg-red-50 text-sena-red flex items-center justify-center group-hover:bg-sena-red group-hover:text-white transition-colors"><i class="fa-solid fa-arrow-right"></i></span>
                         </div>
                     </a>'''
+
+
+def video_block(p, name):
+    """Gumlet video (muted, looping, autoplay) shown above the photos."""
+    if not p.get('video'):
+        return ''
+    src = f"https://play.gumlet.io/embed/{p['video']}?background=true&autoplay=true&loop=true&disable_player_controls=true"
+    return f'''                <div class="mb-10 rounded-3xl overflow-hidden shadow-xl bg-sena-dark">
+                    <div class="relative aspect-video">
+                        <iframe loading="lazy" title="Video of {esc(p['type'].lower())} at {esc(name)}" src="{src}"
+                            class="absolute inset-0 w-full h-full border-0" referrerpolicy="origin"
+                            allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture; fullscreen; clipboard-write;"></iframe>
+                    </div>
+                </div>
+'''
 
 
 def cta(cat, heading):
@@ -205,7 +220,7 @@ for p in data['projects']:
         </section>
 ''' if others else ''
     main = hero(photos[0]['full'], [('Projects', '/projects'), (c['title'], f"/projects-{c['slug']}"), (p['address'], None)],
-                f"{p['suburb']}, Sydney", name, f"{p['type']} by Sena Constructions · {len(photos)} photos",
+                f"{p['suburb']}, Sydney", name, f"{p['type']} by Sena Constructions · {len(photos)} photos" + (" · video" if p.get('video') else ''),
                 '<a href="#gallery" class="mt-8 inline-flex bg-sena-red hover:bg-red-700 text-white px-8 py-4 rounded-xl font-semibold transition items-center shadow-[0_10px_20px_rgba(227,0,15,0.3)]">View photos <i class="fa-solid fa-arrow-down ml-3"></i></a>') + f'''
 
         <section id="gallery" class="py-16 md:py-20 bg-gray-50 scroll-mt-24">
@@ -217,14 +232,14 @@ for p in data['projects']:
                     </div>
                     <p class="text-gray-500 text-sm"><i class="fa-solid fa-hand-pointer text-sena-red mr-1"></i> Tap any photo to view it full screen</p>
                 </div>
-                <div data-gallery class="{cols} gap-4">{tiles}
+{video_block(p, name)}                <div data-gallery class="{cols} gap-4">{tiles}
                 </div>
             </div>
         </section>
 {more}
 {cta(c, 'Planning something similar?')}'''
     page(p['slug'], f"{p['type']} – {name} | Sena Constructions",
-         f"See {len(photos)} photos of the {p['type'].lower()} Sena Constructions built at {name}, Sydney.",
+         f"See {len(photos)} photos{' and a video' if p.get('video') else ''} of the {p['type'].lower()} Sena Constructions built at {name}, Sydney.",
          f"images/projects/{p['slug']}/og.jpg", photos[0]['full'], main,
          '    <script src="scripts/gallery.js"></script>\n')
     pages.append(p['slug'])
