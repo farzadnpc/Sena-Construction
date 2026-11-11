@@ -4,21 +4,30 @@
       "slug": "luxury-homes",
       "title": "Luxury Homes",
       "service_page": "/luxury-homes",
-      "calculator": { "href": "/custom-home-cost-calculator", "label": "Estimate your custom home" },
+      "calculator": {
+        "href": "/custom-home-cost-calculator",
+        "label": "Estimate your custom home"
+      },
       "intro": "Bespoke, architecturally designed homes built with premium materials and finishes. Explore a selection of luxury homes Sena Constructions has completed across Sydney."
     },
     {
       "slug": "duplexes",
       "title": "Duplexes",
       "service_page": "/duplexes",
-      "calculator": { "href": "/duplex-cost-calculator", "label": "Estimate your duplex" },
+      "calculator": {
+        "href": "/duplex-cost-calculator",
+        "label": "Estimate your duplex"
+      },
       "intro": "Modern duplexes designed to make the most of every block, from knockdown rebuilds to dual-occupancy investments. Take a look inside some of our completed Sydney duplexes."
     },
     {
       "slug": "renovations",
       "title": "Renovations & Extensions",
       "service_page": "/renovations-extensions",
-      "calculator": { "href": "/renovation-cost-calculator", "label": "Estimate your renovation" },
+      "calculator": {
+        "href": "/renovation-cost-calculator",
+        "label": "Estimate your renovation"
+      },
       "intro": "Kitchen, bathroom and whole-home renovations that transform how you live. See before, during and after photos from some of our Sydney renovation projects."
     }
   ],
@@ -57,7 +66,8 @@
       "suburb": "Panania",
       "type": "Duplex",
       "source": "images/Malvern St, Panania",
-      "cover": "Sena-Constructions_Panania-Complete-47.jpg"
+      "cover": "Sena-Constructions_Panania-Complete-47.jpg",
+      "video": "6af3d80d070a8e414a02f758"
     },
     {
       "slug": "ringrose-avenue-greystanes",
@@ -67,7 +77,8 @@
       "type": "Duplex",
       "source": "images",
       "files": "dup*.jpg",
-      "cover": "dup1.jpg"
+      "cover": "dup1.jpg",
+      "video": "6aced98fff3a37d65a67843d"
     },
     {
       "slug": "fowler-road-merrylands",
@@ -85,7 +96,8 @@
       "suburb": "Merrylands",
       "type": "Apartment Renovation",
       "source": "images/Paton St, Merrylands",
-      "cover": "119260698_124129852752792_178347447614950158_n-1.jpg"
+      "cover": "119260698_124129852752792_178347447614950158_n-1.jpg",
+      "video": "6aced950c2006a01b07a6456"
     },
     {
       "slug": "mclachlan-avenue-darlinghurst",
