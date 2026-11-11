@@ -10,22 +10,34 @@ document.addEventListener('DOMContentLoaded', () => {
     const submitBtn = document.getElementById('submit-btn');
     const formStatus = document.getElementById('form-status');
 
+    const showSuccess = () => {
+        formStatus.textContent = "Message sent successfully! We will contact you soon.";
+        formStatus.classList.remove('hidden', 'bg-red-100', 'text-red-700');
+        formStatus.classList.add('block', 'bg-green-100', 'text-green-700');
+        // Clear what the person typed, but keep hidden fields (e.g. calculator answers)
+        quoteForm.querySelectorAll('input:not([type="hidden"]), textarea, select').forEach((el) => {
+            if (el.tagName === 'SELECT') el.selectedIndex = 0; else el.value = '';
+        });
+    };
+
     if (quoteForm) {
         quoteForm.addEventListener('submit', function(e) {
             e.preventDefault();
-            
-            const originalBtnText = submitBtn.textContent;
+
+            // Spam trap: people never see this field, bots fill it in. Pretend it worked.
+            const trap = quoteForm.querySelector('input[name="company_website"]');
+            if (trap && trap.value.trim() !== '') {
+                showSuccess();
+                return;
+            }
+
+            const originalBtnHtml = submitBtn.innerHTML;
             submitBtn.textContent = "Sending...";
             submitBtn.disabled = true;
             submitBtn.classList.add('opacity-70');
 
             emailjs.sendForm('service_8xgqvse', 'template_raxrkfr', this)
-                .then(() => {
-                    formStatus.textContent = "Message sent successfully! We will contact you soon.";
-                    formStatus.classList.remove('hidden', 'bg-red-100', 'text-red-700');
-                    formStatus.classList.add('block', 'bg-green-100', 'text-green-700');
-                    quoteForm.reset();
-                })
+                .then(showSuccess)
                 .catch((error) => {
                     console.error('EmailJS Error:', error);
                     formStatus.textContent = "Oops! Something went wrong. Please call us directly.";
@@ -33,7 +45,7 @@ document.addEventListener('DOMContentLoaded', () => {
                     formStatus.classList.add('block', 'bg-red-100', 'text-red-700');
                 })
                 .finally(() => {
-                    submitBtn.textContent = originalBtnText;
+                    submitBtn.innerHTML = originalBtnHtml;
                     submitBtn.disabled = false;
                     submitBtn.classList.remove('opacity-70');
                 });
@@ -49,13 +61,11 @@ document.addEventListener('DOMContentLoaded', () => {
         mobileBtn.addEventListener('click', () => {
             mobileMenu.classList.toggle('hidden');
             mobileMenu.classList.toggle('flex');
-            if(mobileMenu.classList.contains('hidden')) {
-                icon.classList.remove('fa-xmark');
-                icon.classList.add('fa-bars');
-            } else {
-                icon.classList.remove('fa-bars');
-                icon.classList.add('fa-xmark');
-            }
+            const closed = mobileMenu.classList.contains('hidden');
+            icon.classList.toggle('fa-bars', closed);
+            icon.classList.toggle('fa-xmark', !closed);
+            mobileBtn.setAttribute('aria-expanded', String(!closed));
+            mobileBtn.setAttribute('aria-label', closed ? 'Open menu' : 'Close menu');
         });
     }
 
@@ -99,40 +109,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
     });
 
-    // 5. Estimation Calculator Logic
-    const calculateBtn = document.getElementById('calculate-btn');
-    const serviceSelect = document.getElementById('service-type');
-    const floorSpaceInput = document.getElementById('floor-space');
-    const resultContainer = document.getElementById('result-container');
-    const estimatedCostDisplay = document.getElementById('estimated-cost');
-
-    if (calculateBtn) {
-        calculateBtn.addEventListener('click', () => {
-            const rate = parseFloat(serviceSelect.value);
-            const sqm = parseFloat(floorSpaceInput.value);
-
-            if (!rate) {
-                alert('Please select what you would like to build.');
-                return;
-            }
-            if (!sqm || sqm < 50) {
-                alert('Please enter a valid floor space (minimum 50 sqm).');
-                return;
-            }
-
-            const totalCost = rate * sqm;
-
-            const formattedCost = new Intl.NumberFormat('en-AU', {
-                style: 'currency',
-                currency: 'AUD',
-                maximumFractionDigits: 0
-            }).format(totalCost);
-
-            estimatedCostDisplay.textContent = formattedCost;
-            resultContainer.classList.remove('hidden');
-        });
-    }
-// 6. Testimonial Carousel Arrow Logic (Looping)
+    // 6. Testimonial Carousel Arrow Logic (Looping)
 const testimonialTrack = document.getElementById('testimonial-track');
 const prevTestimonialBtn = document.getElementById('prev-testimonial');
 const nextTestimonialBtn = document.getElementById('next-testimonial');
